@@ -20,382 +20,157 @@
 % -----------------------------------------
 \begin{document}
 
-% ----------------------------
-% REMOVE FROM HERE ONCE COPIED
-% ----------------------------
+    \begin{SimpleTable}[s{1}s{.3}s{.3}]{}{}
+        \TableHeader{TERM & LATEX & LATEX COMMAND}
+        \TableRow{1. there exists at least one & \exists & \verb|\exists|}
+        \TableRow{2. there exists one and only one & \exists! & \verb|\exists!|}
+        \TableRow{3. there is no & \nexists & \verb|\nexists|}
+        \TableRow{4. for all & \forall & \verb|\forall|}
+        \TableRow{5. not (logical not) & \neg & \verb|\neg|}
+        \TableRow{6. or (logical or) & \lor & \verb|\lor|}
+        \TableRow{7. division & \div & \verb|\div|}
+        \TableRow{8. and (logical and) & \land & \verb|\land|}
+        \TableRow{9. implies & \implies & \verb|\implies|}
+        \TableRow{10. right implication & \Rightarrow & \verb|\Rightarrow|}
+        \TableRow{11. is implied by (only if) & \Longleftarrow & \verb|\Longleftarrow|}
+        \TableRow{12. left implication & \Leftarrow & \verb|\Leftarrow|}
+        \TableRow{13. if and only if, iff & \iff & \verb|\iff|}
+        \TableRow{14. equivalence & \Leftrightarrow & \verb|\Leftrightarrow|}
+        \TableRow{15.Subset & \subset & \verb|\subset|}
+        \TableRow{16. Logical XOR (exclusive or) & \oplus & \verb|\oplus|}
+        \TableRow{17. Union of sets & \cup & \verb|\cup|}
+        \TableRow{18. Empty set & \emptyset & \verb|\emptyset|}
+        \TableRow{19. Intersection of sets & \cap & \verb|\cap|}
+        \TableRow{20. Union of sets & \cup & \verb|\cup|}
+    \end{SimpleTable}
 
-    \begin{center}
-        \small
-        Repository: \url{https://github.com/MattterSteege/Universitaire-papers} \\
-        This document explains how to use the template, the meaning of settings,
-        and demonstrates every custom command from \texttt{standardCommands.tex}.
-    \end{center}
-
-    \vmed
     \clearpage
-
     \onecolumn
 
-% -------------
-% INTRO SECTION
-% -------------
+    \section{Propositielogica}
+    Propositielogica is de studie van bewijzen
+    
+    \subsection{Proposities}
+    We gebruiken in logica variabelen zoals P en Q, dit zijn \textit{atomisch} proposities, deze zijn altijd geschreven in HOOFDLETTERS.
+    Deze zijn niet verder op te delen, dus niet opgebouwd van kleinere delen zoals implicaties etc. deze waardes zijn Waar/True/1 of Onwaar/False/0.
 
+    Je hebt ook kleine letters p, q, \ldots, dit zijn niet-atomische proposities, het zijn geen propositionele formules, maar eerder \textit{metavariabelen}.
 
-    \section{Introduction — what this repo gives you}
-    This repository is a compact but opinionated LaTeX template intended to make writing short academic papers and reports fast and consistent.
+    \begin{multicols}{2}
 
-    In short, you get:
+    Elke propositionele formule bestaat uit:
     \begin{itemize}
-        \item \textbf{A small settings file} (\texttt{paperSettings.tex}) that centralizes document-level choices (margins, fonts, packages).
-        \item \textbf{A macro library} (\texttt{standardCommands.tex}) that provides frequently used helpers: spacing utilities, quote formatting, editor-only notes, simple table helpers, and tiny text-processing utilities.
-        \item \textbf{A bibliography file} (\texttt{main.bib}) for references.
-        \item \textbf{This documentation} (\texttt{main.tex}) for your main entry point, explaining how to use the settings and macros.
-        \vmed
-        \item \textbf{Bash build scripts} to compile the document locally or on Overleaf.
+        \item Atomitsche proposities (P, Q, R, \ldots)
+        \item true, (T, Waar, 1)
+        \item false, (F, Onwaar, 0)
     \end{itemize}
 
-    This `main.tex` acts as a \emph{user manual} and a demonstration. Open it, compile it, and you will see rendered examples next to the explanation.
+    Deze kunnen ook kleiner opgedeeld zijn, dan zijn dit ook propositionele formules:
+    \begin{itemize}
+        \item $P \implies Q$ - \textbf{implicatie} als P, dan Q
+        \item $P \land Q$ - \textbf{conjunctie} P én Q
+        \item $P \lor Q$ - \textbf{disjunctie} P of Q
+        \item $\neg P$ - \textbf{negatie} (niet P / P houd geen stand)
+    \end{itemize}
 
-% -------------
-% QUICK START
-% -------------
+    \end{multicols}
 
-
-    \section{Quick start — clone and compile}
-    If you just want to get going:
-
+    Zoals in de wiskunde ook is heeft propositielogica óók een volgorde, deze is:
     \begin{enumerate}
-        \item Clone the repo:
-        \begin{verbatim}
-git clone https://github.com/MattterSteege/Universitaire-papers.git
-cd Universitaire-papers
-        \end{verbatim}
-
-        \item Compile locally (recommended):
-        \begin{verbatim}
-./buildLatexDocument.sh # or for a full clean build:
-# OR
-./fullBuild.sh # cleans aux files, rebuilds bibliography, rebuilds doc
-        \end{verbatim}
-
-        \item Or upload the repo to Overleaf (drag-and-drop) and press Compile.
+        \item Haakjes ()
+        \item Negatie $\neg$
+        \item Conjunctie $\land$
+        \item Disjunctie $\lor$
+        \item Implicatie $\implies$
     \end{enumerate}
 
-    Common compile issues:
-    \begin{itemize}
-        \item \texttt{Package xstring} / \texttt{tcolorbox} missing $\to$ install via TeX Live or MikTeX.
-        \item If font differences appear on different machines, check \texttt{paperSettings.tex} for font/encoding directives.
-    \end{itemize}
+    $\neg P \lor Q \implies Q \land P$ moet gelezen worden als $((\neg P) \lor Q) \implies (Q \land P)$
 
-% -------------
-% FILE OVERVIEW
-% -------------
+    Om dit te onthouden kan je deze zij onthouden: ``Hoe Navigeert Connie De Ijssel''
 
+    \subsection{Semantiek van propositie operatoren}
 
-    \section{File overview}
-    \begin{description}[leftmargin=!,labelwidth=3.5cm]
-        \item[\texttt{main.tex}] This file — the manual and demo.
-        \item[\texttt{paperSettings.tex}] Document-level settings (margins, title behaviors, optional flags).
-        \item[\texttt{standardCommands.tex}] The macro library we document below.
-        \item[\texttt{main.bib}] Bibliography file used by examples.
-        \item[\texttt{buildLatexDocument.sh}] Simple build script to compile the document.
-        \item[\texttt{fullBuild.sh}] Full build script that cleans aux files and
-        \item[\texttt{renewBibliography.sh}] Script to regenerate the bibliography only.
-    \end{description}
+    \begin{center}
+% ======== Row 1 ========
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}]{Truthtable van negatie/NOT}{}
+                \TableHeader{$P$ & $\neg P$}
+                \TableRow{0 & 1}
+                \TableRow{1 & 0}
+            \end{SimpleTable}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van Conjunctie/AND}{}
+                \TableHeader{$P$ & $Q$ & $P \land Q$}
+                \TableRow{0 & 0 & 0}
+                \TableRow{0 & 1 & 0}
+                \TableRow{1 & 0 & 0}
+                \TableRow{1 & 1 & 1}
+            \end{SimpleTable}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van Disjunctie/OR}{}
+                \TableHeader{$P$ & $Q$ & $P \lor Q$}
+                \TableRow{0 & 0 & 0}
+                \TableRow{0 & 1 & 1}
+                \TableRow{1 & 0 & 1}
+                \TableRow{1 & 1 & 1}
+            \end{SimpleTable}
+        \end{minipage}
 
-% -------------
-% PAPERSETTINGS EXPLAINED
-% -------------
+        \vspace{1em}
 
+% ======== Row 2 ========
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van XOR}{}
+                \TableHeader{$P$ & $Q$ & $P \oplus Q$}
+                \TableRow{0 & 0 & 0}
+                \TableRow{0 & 1 & 1}
+                \TableRow{1 & 0 & 1}
+                \TableRow{1 & 1 & 0}
+            \end{SimpleTable}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van implicatie}{}
+                \TableHeader{$P$ & $Q$ & $P \implies Q$}
+                \TableRow{0 & 0 & 1}
+                \TableRow{0 & 1 & 1}
+                \TableRow{1 & 0 & 0}
+                \TableRow{1 & 1 & 1}
+            \end{SimpleTable}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.32\textwidth}
+            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van equivalent/==}{}
+                \TableHeader{$P$ & $Q$ & $P \equiv Q$}
+                \TableRow{0 & 0 & 1}
+                \TableRow{0 & 1 & 0}
+                \TableRow{1 & 0 & 0}
+                \TableRow{1 & 1 & 1}
+            \end{SimpleTable}
+        \end{minipage}
+    \end{center}
 
-    \section{Explaining \texttt{paperSettings.tex}}
-    Open \texttt{paperSettings.tex} in an editor. Typical contents and intent:
-
-    This file centralizes document-level settings so you don't have to hunt through the main document for margin tweaks or package options. Typical sections:
-    \begin{itemize}
-        \item \textbf{Page layout} — automatic title page or table of contents
-        \item \textbf{editor data} — author names, affiliations, etc.
-        \item \textbf{editor version} — toggle editor notes on/off
-    \end{itemize}
-
-    Why separate settings? Because when you move from one paper to another you often want the same macros and same visuals, so keeping them in an settings file makes sure that all your documents stay consistent.
-
-% -------------
-% STANDARD COMMANDS: OVERVIEW
-% -------------
-
-
-    \section{standardCommands.tex — overview and philosophy}
-    This file is a small-but-practical macro library. The design goals:
-    \begin{itemize}
-        \item Reduce repetitive formatting tasks (spacing, simple block quotes).
-        \item Give editors lightweight in-line commentary tools that can be toggled off.
-        \item Offer a compact table helper for quickly making consistent tabular output.
-        \item Provide tiny text utilities to avoid retyping small helpers.
-    \end{itemize}
-
-    Below we explain each macro or group of macros and show usage examples. The examples below are live — compile this document to see real output.
-
-% -----------------------
-% SPACING & LAYOUT UTILITIES
-% -----------------------
-
-
-    \section{Spacing \& layout utilities}
-    These utilities are tiny vertical-space shortcuts:
-    \begin{itemize}
-        \item \verb|\vsmall| — small vertical gap (~0.1 cm)
-        \item \verb|\vmed| — medium vertical gap (~0.3 cm)
-        \item \verb|\vlarge| — larger vertical gap (~0.6 cm)
-    \end{itemize}
-
-    \subsection*{Example}
-    Text above the gap.\vsmall
-
-    This line follows a \verb|\vsmall| gap.
-
-    \vmed
-
-    This one follows a \verb|\vmed| gap.
-
-    \vlarge
-
-    And this follows a \verb|\vlarge| gap.
+    Maar stel, je wilt iets moeilijks bewijzen zoals $\neg P \lor Q \implies Q \land P$, dan kan je dat op de volgende manier doen:
 
     \vsmall
 
-    \noindent\textit{Why use these:} consistent vertical rhythm. Instead of sprinkling magic numbers everywhere, use named gaps that can be tuned centrally.
-
-% -----------------------
-% LOREM PLACEHOLDER
-% -----------------------
-
-
-    \section{Text placeholder \& formatting utilities}
-
-    \subsection[\textbackslash lorem]{\textbackslash lorem}
-    Use \verb|\lorem| for draft sections to hold spacing while writing.
-
-    \lorem
-
-    \subsection{\textbackslash uitspraak{<quote>}{<bibkey>}{<page>}}
-    This macro automatically switches between inline short quotes and block long quotes using a word count threshold (short = inline, long = right-aligned block). It expects a BibTeX key so it can print author/year.
-
-    \smallskip
-    \noindent\textbf{Inline example} (short quote):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective reality}{PhysRev.47.777}{47}
-
-    \smallskip
-    \noindent\textbf{Block quote example} (longer quote — we simulate length):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective realitywhich is independent of any theory, and the physical concepts with which the theory operates. These concepts are intended to correspond with the objective reality, and by means of these concepts we picture this reality to ourselves.}{PhysRev.47.777}{7}
-
-    \noindent\textit{Notes:}
-    \begin{itemize}
-        \item The macro uses \verb|\StrCount| to decide length; be careful with unusual punctuation that might miscount words.
-        \item It outputs citations using \verb|\citeauthor| and \verb|\citeyear| (so if you see a value like \textbf{PhysRev.47.777}, then try to use the fullBuild script to refresh references).
-    \end{itemize}
-
-    \subsection{\textbackslash prepostparencite[<pre>][<post>]{<bibkey>}}
-    Usage: \verb|\prepostparencite[see][, for more info]{PhysRev.47.777}|
-
-    The macro prints: \verb|(see Author, Year, for more info)| using \texttt{natbib}'s \verb|\parencite| internally, adding optional pre- and post-text around the citation.
-
-    \noindent Example:
-    \prepostparencite[nagemaakt van][]{PhysRev.47.777}
-
-% -----------------------
-% QUESTION COMMAND
-% -----------------------
-
-    \subsection{\textbackslash question{<text>}}
-    Usage: \verb|\question{What is the impact of this design choice?}|
-
-    This produces a centered, italic prompt inside the page width, good for highlighting reflective questions or section prompts.
-
-    \subsection*{Example}
-    \question{What happens to readability when margins are tightened?}
-
-    \noindent You can use these prompts inside methodology sections or to flag points you want to discuss later.
-
-% -----------------------
-% EDITOR TOOLS & COMMENTS
-% -----------------------
-
-    \newpage
-
-
-    \section{Editor tools \& comments}
-    These macros are controlled by a boolean \verb|\boolean{editorsversion}| (defined in \texttt{paperSettings.tex}). When \verb|true|, editor notes show in red; when \verb|false|, they vanish.
-
-    \begin{itemize}
-        \item \verb|\editorsonly{<text>}| — inserts a small red inline editor note.
-        \item \verb|editorsonlyBox| environment — boxed comment for reviewers.
-        \item \verb|\editorsfootnote{<text>}| — red footnote used only in editors mode.
-        \item When editors mode is active the file also runs \verb|\nocite{*}| so all bib entries are visible in review drafts. (required a full build to refresh)
-    \end{itemize}
-
-    \subsection*{Example (simulating editors mode)}
-
-    \par\vspace{0.05in}%
-    {\footnotesize\noindent\textcolor{red!70!black}{\textbf{Editor's note:} This is an inline editor note visible only in editors mode.}}%
-    \par\vspace{0.05in}%
-
-    \par\medskip%
-    \begin{tcolorbox}
-    [%
-        enhanced,
-        breakable,
-        colback=red!5,
-        colframe=red!20!white,
-        boxrule=0pt,
-        borderline north={1pt}{0pt}{red!40!white},
-        sharp corners,
-        before skip=6pt,
-        after skip=6pt,
-        title={\textcolor{red!60!black}{\footnotesize Comment for editors:}},
-        coltitle=red!70!black,
-        fonttitle=\bfseries,
-        top=2pt,
-        bottom=2pt,
-        left=4pt,
-        right=4pt
-    ]%
-        This box is shown to editors only. Use it for long comments that you don't want in the final text. \\\\ \lorem
-    \end{tcolorbox}%
-
-    \noindent\textit{Note:} Toggle \verb|\setboolean{editorsversion}{true}| in \texttt{paperSettings.tex} while drafting, and set to \verb|false| when producing the student/readable version. \textcolor{red!70!black}{\footnote{\textcolor{red!70!black}{Editor's note: Can't forget the footnoot :)}}}%
-
-% -----------------------
-% TEXT PROCESSING UTILITIES
-% -----------------------
-
-
-    \section{Text processing utilities}
-
-    \subsection{\textbackslash spliteveryn{<n>}{<text>}}
-    Splits the input text into lines with a maximum of \verb|n| characters. Useful for creating artificially wrapped blocks in narrow contexts.
-
-    \smallskip
-    \noindent Example (split every 20 chars):\\
-    \spliteveryn{20}{This is an example of splitting text every twenty characters so you can see the behavior.}
-
-    \subsection{\textbackslash IfNonEmpty{<text>}{<action>}}
-    Run \verb|<action>| only when \verb|<text>| is not empty. Useful for optional elements like captions. (mostly meant for internal use in other macros)
-
-% -----------------------
-% SIMPLE TABLE ENVIRONMENT
-% -----------------------
-
-
-    \section{SimpleTable environment}
-    A small helper that wraps \texttt{tabularx} to produce consistent minimal tables. Usage skeleton:
-
-    \begin{verbatim}
-\begin{SimpleTable}[<col spec>]{<caption>}{<label>}
-    \TableHeader{Col A & Col B & Col C}
-    \TableRow{Data 1 & Data 2 & Data 3}
-    \TableNote{This is a footnote for the table.}
-\end{SimpleTable}
-    \end{verbatim}
-
-    Key components:
-    \begin{itemize}
-        \item \verb|<col spec>|: column specification using the following syntax (e.g., \texttt{s\{2\} s\{1\} s\{.5\}} for three columns with relative widths).
-        \item \verb|\TableHeader{\ldots}|: prints the header row in bold with a rule below.
-        \item \verb|\TableSubHeader{\ldots}|: prints a sub-header row with a thinner rule below.
-        \item \verb|\TableRow{\ldots}|: prints a data row with a thin separator below.
-        \item \verb|\TableHighlightRow{\ldots}|: prints a highlighted row for emphasis.
-        \item \verb|\TableNote{\ldots}|: adds a small footnote-like line below the table.
-    \end{itemize}
-
-    Note, that the \ldots means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
-    \begin{itemize}
-        \item The table width automatically matches the text width.
-        \item The table caption and label are set in the environment arguments.
-        \item Column widths are relative, so you can use decimal values to create flexible layouts.
-        \item Some rows have automatic rules, and/or text formatting (bold, underline, etc.) to ensure consistency.
-    \end{itemize}
-
-    \subsection*{Rendered example}
-    \begin{SimpleTable}[s{1} s{1} s{1}]{Example table showing the SimpleTable environment.}{tab:example}
-        \TableHeader{Metric & Value & Note}
-        \TableRow{Accuracy & 92\% & Sampled}
-        \TableRow{Precision & 88\% & Early stage}
-        \TableNote{This table is produced by the SimpleTable helper.}
+    \begin{SimpleTable}[s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}]{Truthtable van moeilijkere propositie formule}{}
+        \TableHeader{$P$ & $Q$ & $\neg P$ & $\neg P \lor Q$ & $ Q \land P$ &  $\neg P \lor Q \implies Q \land P$}
+        \TableRow{0 & 0 & 1 & 1 & 0 & 0}
+        \TableRow{0 & 1 & 1 & 1 & 0 & 0}
+        \TableRow{1 & 0 & 0 & 0 & 0 & 1}
+        \TableRow{1 & 1 & 0 & 1 & 1 & 1}
     \end{SimpleTable}
 
-% -----------------------
-% BIBLIOGRAPHY
-% -----------------------
+    Je kan ook met verschillende kleuren pennen een kleine thruthtable schrijven, maar dit is een hele nette manier om het ook te doen.
 
+    \subsection{Voorbij thruth tables}
+    Je kan d.m.v een truth table bewijzen of een formule wel of niet houd, maar dat kan ook anders, bijvoorbeeld door het versimpelen van de formules.
 
-    \section{Bibliography — how to use the \texttt{.bib} file}
-    This document uses \texttt{main.bib} in the repo. Keep your BibTeX keys tidy, prefer short descriptive keys like \verb|kelly2023ring|.
-
-    Compile steps if using BibTeX:
-    \begin{enumerate}
-        \item \verb|./fullBuild.sh| (runs pdflatex, biber, pdflatex x2)
-        \item[] Or manually:
-        \item \verb|pdflatex main.tex|
-        \item \verb|biber main|
-        \item \verb|pdflatex main.tex|
-        \item \verb|pdflatex main.tex|
-    \end{enumerate}
-
-    Below is the auto-generated references list using APA style.:
-    \printbibliography
-
-
-% -----------------------
-% TROUBLESHOOTING & TIPS
-% -----------------------
-
-
-    \section{Troubleshooting \& tips}
-    \begin{itemize}
-        \item \textbf{Undefined macros or missing packages:} Install missing packages or ensure you are compiling with an up-to-date TeX distribution.
-        \item \textbf{Editor notes still visible in final PDF:} Check \texttt{paperSettings.tex} for the boolean controlling editor mode.
-        \item \textbf{Citation macros not printing author/year:} Ensure \texttt{natbib} is loaded and the BibTeX process runs.
-        \item \textbf{Tables too wide:} Adjust the column spec or reduce content; the SimpleTable wrapper uses \texttt{tabularx} so you can use X-like specifiers.
-    \end{itemize}
-
-% -----------------------
-% FINAL NOTES
-% -----------------------
-
-
-    \section{Final notes (a small rant)}
-    I wrote these helpers because I wanted the same style across projects — and because it felt faster to reach for a small macro than to remember the obscure package flag I used the last time. If something in \texttt{standardCommands.tex} annoys you, change it. These files are meant to be edited, extended, and — yes — occasionally abused when you're in a hurry.
-
-    \section*{Acknowledgments}
-    Thanks to all the open-source LaTeX package authors whose work makes documents like this possible
-
-    \section*{License}
-    This repository is licensed under the MIT License:
-    \begin{verbatim}
-MIT License
-Copyright (c) 2025 Matt
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-    \end{verbatim}
-
-% ----------------------------
-% REMOVE TILL HERE ONCE COPIED
-% ----------------------------
+    %TODO: powerpoihnt vanaf hier https://uu.brightspace.com/content/enforced/44250-BETA--2025--2--INFOB1LI--V/slides/02-slides.pdf#page=90.98
 
 \end{document}
