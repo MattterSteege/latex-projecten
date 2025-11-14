@@ -15,8 +15,8 @@
 
 % ----------- Document settings -----------
 \documentclass[nonacm, sigconf, balance=true]{acmart}
-\include{paperSettings} % import custom general paper settings
-\include{standardCommands} % import custom commands and packages
+\include{core/paperSettings} % import custom general paper settings
+\include{core/standardCommands} % import custom commands and packages
 % -----------------------------------------
 \begin{document}
 
@@ -303,14 +303,14 @@ cd Universitaire-papers
     Key components:
     \begin{itemize}
         \item \verb|<col spec>|: column specification using the following syntax (e.g., \texttt{s\{2\} s\{1\} s\{.5\}} for three columns with relative widths).
-        \item \verb|\TableHeader{...}|: prints the header row in bold with a rule below.
-        \item \verb|\TableSubHeader{...}|: prints a sub-header row with a thinner rule below.
-        \item \verb|\TableRow{...}|: prints a data row with a thin separator below.
-        \item \verb|\TableHighlightRow{...}|: prints a highlighted row for emphasis.
-        \item \verb|\TableNote{...}|: adds a small footnote-like line below the table.
+        \item \verb|\TableHeader{\ldots}|: prints the header row in bold with a rule below.
+        \item \verb|\TableSubHeader{\ldots}|: prints a sub-header row with a thinner rule below.
+        \item \verb|\TableRow{\ldots}|: prints a data row with a thin separator below.
+        \item \verb|\TableHighlightRow{\ldots}|: prints a highlighted row for emphasis.
+        \item \verb|\TableNote{\ldots}|: adds a small footnote-like line below the table.
     \end{itemize}
 
-    Note, that the ... means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
+    Note, that the \ldots means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
     \begin{itemize}
         \item The table width automatically matches the text width.
         \item The table caption and label are set in the environment arguments.
