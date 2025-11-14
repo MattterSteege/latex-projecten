@@ -49,7 +49,7 @@
 
     \section{Propositielogica}
     Propositielogica is de studie van bewijzen
-    
+
     \subsection{Proposities}
     We gebruiken in logica variabelen zoals P en Q, dit zijn \textit{atomisch} proposities, deze zijn altijd geschreven in HOOFDLETTERS.
     Deze zijn niet verder op te delen, dus niet opgebouwd van kleinere delen zoals implicaties etc. deze waardes zijn Waar/True/1 of Onwaar/False/0.
@@ -170,6 +170,78 @@
 
     \subsection{Voorbij thruth tables}
     Je kan d.m.v een truth table bewijzen of een formule wel of niet houd, maar dat kan ook anders, bijvoorbeeld door het versimpelen van de formules.
+
+    \begin{multicols}{2}
+
+        \begin{SimpleTable}[s{.1}s{.5}s{.4}]{}{}
+            \TableHeader{ & Expression & Law}
+            \TableRow{                  & $(p \implies q) \lor (q \implies p)$      & original}
+            \TableRow{$\Leftrightarrow$ & $(\neg p \lor q) \lor (\neg q \lor p)$    & implication}
+            \TableRow{$\Leftrightarrow$ & $\neg p \lor ((q \lor \neg q) \lor p)$    & associativity / rearrangement}
+            \TableRow{$\Leftrightarrow$ & $\neg p \lor (T \lor p)$                  & tertium non datur}
+            \TableRow{$\Leftrightarrow$ & $\neg p \lor T$                           & absorbing property of \(T\)}
+            \TableRow{$\Leftrightarrow$ & $T$                                       & absorbing property of \(T\)}
+        \end{SimpleTable}
+
+        Deze afleiding kan je maken door de regels te gebruiken die hieronder stan geschreven (er zijn er nog meer).
+
+    \end{multicols}
+
+    \begin{multicols}{3}
+
+    Commutativity:
+    \begin{itemize}
+        \item $p \land q \Leftrightarrow q \land p$
+        \item $p \lor q \Leftrightarrow q \lor p$
+    \end{itemize}
+
+    Associativity:
+    \begin{itemize}
+        \item $p \land (q \land r) \Leftrightarrow (p \land q) \land r$
+        \item $p \lor (q \lor r) \Leftrightarrow (p \lor q) \lor r$
+    \end{itemize}
+
+    Tertium non datur:
+    \begin{itemize}
+        \item $p \lor \neg p \Leftrightarrow T$
+    \end{itemize}
+
+    Idempotence:
+    \begin{itemize}
+        \item $p \land p \Leftrightarrow p$
+        \item $p \lor p \Leftrightarrow p$
+    \end{itemize}
+
+    De Morgan:
+    \begin{itemize}
+        \item $\neg (p \lor q) \Leftrightarrow \neg p \land \neg q$
+        \item $\neg (p \land q) \Leftrightarrow \neg p \lor \neg q$
+    \end{itemize}
+
+    Double negation (niet niet is wel):
+    \begin{itemize}
+        \item $p \Leftrightarrow \neg(\neg p)$
+    \end{itemize}
+
+    Properties of T en F:
+    \begin{itemize}
+        \item $p \lor F \Leftrightarrow p$
+        \item $p \land F \Leftrightarrow F$
+        \item $q \lor T \Leftrightarrow T$
+        \item $q \land T \Leftrightarrow q$
+    \end{itemize}
+
+    Implication:
+    \begin{itemize}
+        \item $(p \implies q) \Leftrightarrow (\neg p \lor q)$
+    \end{itemize}
+
+    Contraposition:
+    \begin{itemize}
+        \item $(p \implies q) \Leftrightarrow (\neg q \implies \neg p)$
+    \end{itemize}
+
+        \end{multicols}
 
     %TODO: powerpoihnt vanaf hier https://uu.brightspace.com/content/enforced/44250-BETA--2025--2--INFOB1LI--V/slides/02-slides.pdf#page=90.98
 
