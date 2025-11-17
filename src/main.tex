@@ -47,6 +47,7 @@
     \clearpage
     \onecolumn
 
+
     \section{Propositielogica}
     Propositielogica is de studie van bewijzen
 
@@ -58,20 +59,20 @@
 
     \begin{multicols}{2}
 
-    Elke propositionele formule bestaat uit:
-    \begin{itemize}
-        \item Atomitsche proposities (P, Q, R, \ldots)
-        \item true, (T, Waar, 1)
-        \item false, (F, Onwaar, 0)
-    \end{itemize}
+        Elke propositionele formule bestaat uit:
+        \begin{itemize}
+            \item Atomitsche proposities (P, Q, R, \ldots)
+            \item true, (T, Waar, 1)
+            \item false, (F, Onwaar, 0)
+        \end{itemize}
 
-    Deze kunnen ook kleiner opgedeeld zijn, dan zijn dit ook propositionele formules:
-    \begin{itemize}
-        \item $P \implies Q$ - \textbf{implicatie} als P, dan Q
-        \item $P \land Q$ - \textbf{conjunctie} P én Q
-        \item $P \lor Q$ - \textbf{disjunctie} P of Q
-        \item $\neg P$ - \textbf{negatie} (niet P / P houd geen stand)
-    \end{itemize}
+        Deze kunnen ook kleiner opgedeeld zijn, dan zijn dit ook propositionele formules:
+        \begin{itemize}
+            \item $P \implies Q$ - \textbf{implicatie} als P, dan Q
+            \item $P \land Q$ - \textbf{conjunctie} P én Q
+            \item $P \lor Q$ - \textbf{disjunctie} P of Q
+            \item $\neg P$ - \textbf{negatie} (niet P / P houd geen stand)
+        \end{itemize}
 
     \end{multicols}
 
@@ -90,69 +91,13 @@
 
     \subsection{Semantiek van propositie operatoren}
 
-    \begin{center}
-% ======== Row 1 ========
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}]{Truthtable van negatie/NOT}{}
-                \TableHeader{$P$ & $\neg P$}
-                \TableRow{0 & 1}
-                \TableRow{1 & 0}
-            \end{SimpleTable}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van Conjunctie/AND}{}
-                \TableHeader{$P$ & $Q$ & $P \land Q$}
-                \TableRow{0 & 0 & 0}
-                \TableRow{0 & 1 & 0}
-                \TableRow{1 & 0 & 0}
-                \TableRow{1 & 1 & 1}
-            \end{SimpleTable}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van Disjunctie/OR}{}
-                \TableHeader{$P$ & $Q$ & $P \lor Q$}
-                \TableRow{0 & 0 & 0}
-                \TableRow{0 & 1 & 1}
-                \TableRow{1 & 0 & 1}
-                \TableRow{1 & 1 & 1}
-            \end{SimpleTable}
-        \end{minipage}
-
-        \vspace{1em}
-
-% ======== Row 2 ========
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van XOR}{}
-                \TableHeader{$P$ & $Q$ & $P \oplus Q$}
-                \TableRow{0 & 0 & 0}
-                \TableRow{0 & 1 & 1}
-                \TableRow{1 & 0 & 1}
-                \TableRow{1 & 1 & 0}
-            \end{SimpleTable}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van implicatie}{}
-                \TableHeader{$P$ & $Q$ & $P \implies Q$}
-                \TableRow{0 & 0 & 1}
-                \TableRow{0 & 1 & 1}
-                \TableRow{1 & 0 & 0}
-                \TableRow{1 & 1 & 1}
-            \end{SimpleTable}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.32\textwidth}
-            \begin{SimpleTable}[s{.3}s{.3}s{.3}]{Truthtable van equivalent/==}{}
-                \TableHeader{$P$ & $Q$ & $P \equiv Q$}
-                \TableRow{0 & 0 & 1}
-                \TableRow{0 & 1 & 0}
-                \TableRow{1 & 0 & 0}
-                \TableRow{1 & 1 & 1}
-            \end{SimpleTable}
-        \end{minipage}
-    \end{center}
+    \begin{SimpleTable}[s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}]{Truthtable van basisoperaties}{}
+        \TableHeader{$P$ & $Q$ & $\neg P$ & $P \land Q$ & $P \lor Q$ & $P \oplus Q$ & $P \implies Q$ & $P \equiv Q$}
+        \TableRow{0 & 0 & 1 & 0 & 0 & 0 & 1 & 1}
+        \TableRow{0 & 1 &   & 0 & 1 & 1 & 1 & 0}
+        \TableRow{1 & 0 & 0 & 0 & 1 & 1 & 0 & 0}
+        \TableRow{1 & 1 &   & 1 & 1 & 0 & 1 & 1}
+    \end{SimpleTable}
 
     Maar stel, je wilt iets moeilijks bewijzen zoals $\neg P \lor Q \implies Q \land P$, dan kan je dat op de volgende manier doen:
 
@@ -171,77 +116,74 @@
     \subsection{Voorbij thruth tables}
     Je kan d.m.v een truth table bewijzen of een formule wel of niet houd, maar dat kan ook anders, bijvoorbeeld door het versimpelen van de formules.
 
-    \begin{multicols}{2}
+    \begin{SimpleTable}[s{.1}s{.5}s{.4}]{}{}
+        \TableHeader{ & Expression & Law}
+        \TableRow{                  & $(p \implies q) \lor (q \implies p)$      & original}
+        \TableRow{$\Leftrightarrow$ & $(\neg p \lor q) \lor (\neg q \lor p)$    & implication}
+        \TableRow{$\Leftrightarrow$ & $\neg p \lor ((q \lor \neg q) \lor p)$    & associativity / rearrangement}
+        \TableRow{$\Leftrightarrow$ & $\neg p \lor (T \lor p)$                  & tertium non datur}
+        \TableRow{$\Leftrightarrow$ & $\neg p \lor T$                           & absorbing property of \(T\)}
+        \TableRow{$\Leftrightarrow$ & $T$                                       & absorbing property of \(T\)}
+    \end{SimpleTable}
 
-        \begin{SimpleTable}[s{.1}s{.5}s{.4}]{}{}
-            \TableHeader{ & Expression & Law}
-            \TableRow{                  & $(p \implies q) \lor (q \implies p)$      & original}
-            \TableRow{$\Leftrightarrow$ & $(\neg p \lor q) \lor (\neg q \lor p)$    & implication}
-            \TableRow{$\Leftrightarrow$ & $\neg p \lor ((q \lor \neg q) \lor p)$    & associativity / rearrangement}
-            \TableRow{$\Leftrightarrow$ & $\neg p \lor (T \lor p)$                  & tertium non datur}
-            \TableRow{$\Leftrightarrow$ & $\neg p \lor T$                           & absorbing property of \(T\)}
-            \TableRow{$\Leftrightarrow$ & $T$                                       & absorbing property of \(T\)}
-        \end{SimpleTable}
-
-        Deze afleiding kan je maken door de regels te gebruiken die hieronder stan geschreven (er zijn er nog meer).
-
-    \end{multicols}
+    Deze afleiding kan je maken door de regels te gebruiken die hieronder stan geschreven (er zijn er nog meer).
 
     \begin{multicols}{3}
 
-    Commutativity:
-    \begin{itemize}
-        \item $p \land q \Leftrightarrow q \land p$
-        \item $p \lor q \Leftrightarrow q \lor p$
-    \end{itemize}
+        Commutativity:
+        \begin{itemize}
+            \item $p \land q \Leftrightarrow q \land p$
+            \item $p \lor q \Leftrightarrow q \lor p$
+        \end{itemize}
 
-    Associativity:
-    \begin{itemize}
-        \item $p \land (q \land r) \Leftrightarrow (p \land q) \land r$
-        \item $p \lor (q \lor r) \Leftrightarrow (p \lor q) \lor r$
-    \end{itemize}
+        Associativity:
+        \begin{itemize}
+            \item $p \land (q \land r) \Leftrightarrow (p \land q) \land r$
+            \item $p \lor (q \lor r) \Leftrightarrow (p \lor q) \lor r$
+        \end{itemize}
 
-    Tertium non datur:
-    \begin{itemize}
-        \item $p \lor \neg p \Leftrightarrow T$
-    \end{itemize}
+        Tertium non datur:
+        \begin{itemize}
+            \item $p \lor \neg p \Leftrightarrow T$
+        \end{itemize}
 
-    Idempotence:
-    \begin{itemize}
-        \item $p \land p \Leftrightarrow p$
-        \item $p \lor p \Leftrightarrow p$
-    \end{itemize}
+        Idempotence:
+        \begin{itemize}
+            \item $p \land p \Leftrightarrow p$
+            \item $p \lor p \Leftrightarrow p$
+        \end{itemize}
 
-    De Morgan:
-    \begin{itemize}
-        \item $\neg (p \lor q) \Leftrightarrow \neg p \land \neg q$
-        \item $\neg (p \land q) \Leftrightarrow \neg p \lor \neg q$
-    \end{itemize}
+        De Morgan:
+        \begin{itemize}
+            \item $\neg (p \lor q) \Leftrightarrow \neg p \land \neg q$
+            \item $\neg (p \land q) \Leftrightarrow \neg p \lor \neg q$
+        \end{itemize}
 
-    Double negation (niet niet is wel):
-    \begin{itemize}
-        \item $p \Leftrightarrow \neg(\neg p)$
-    \end{itemize}
+        Double negation (niet niet is wel):
+        \begin{itemize}
+            \item $p \Leftrightarrow \neg(\neg p)$
+        \end{itemize}
 
-    Properties of T en F:
-    \begin{itemize}
-        \item $p \lor F \Leftrightarrow p$
-        \item $p \land F \Leftrightarrow F$
-        \item $q \lor T \Leftrightarrow T$
-        \item $q \land T \Leftrightarrow q$
-    \end{itemize}
+        Properties of T en F:
+        \begin{itemize}
+            \item $p \lor F \Leftrightarrow p$
+            \item $p \land F \Leftrightarrow F$
+            \item $q \lor T \Leftrightarrow T$
+            \item $q \land T \Leftrightarrow q$
+        \end{itemize}
 
-    Implication:
-    \begin{itemize}
-        \item $(p \implies q) \Leftrightarrow (\neg p \lor q)$
-    \end{itemize}
+        Implication:
+        \begin{itemize}
+            \item $(p \implies q) \Leftrightarrow (\neg p \lor q)$
+        \end{itemize}
 
-    Contraposition:
-    \begin{itemize}
-        \item $(p \implies q) \Leftrightarrow (\neg q \implies \neg p)$
-    \end{itemize}
+        Contraposition:
+        \begin{itemize}
+            \item $(p \implies q) \Leftrightarrow (\neg q \implies \neg p)$
+        \end{itemize}
 
-        \end{multicols}
+    \end{multicols}
+
 
     \section{sets}
     Propositielogica heeft ook een manier om over een groep dingen te redeneren, \textit{\textbf{sets}}.
@@ -282,7 +224,8 @@
     Een \textit{\textbf{subset}} is een set waarin minstens een deel van de waardes van de superset in voorkomen.
 
     \begin{multicols}{2}
-        Dus $\{1, 2, 3\}$ is een subset van $\{1, 2, 3, 4\}$, hierin is de tweede een \textit{\textbf{superset}} van de eerste.
+        Dus $A = \{1, 2, 3\}$ is een subset van $B = \{1, 2, 3, 4\}$, hierin is B een \textit{\textbf{superset}} van A en A een \textit{\textbf{subset}} van B
+        Dit schrijf je als volgt: $A \subseteq B$ \textit{(A is included or contained in B)} en vice versa $B \supseteq A$ \textit{(B includes or contains A)}.
 
         \begin{tikzpicture}
             \tikzstyle{every node}=[font=\LARGE]
