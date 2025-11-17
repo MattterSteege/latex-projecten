@@ -243,6 +243,55 @@
 
         \end{multicols}
 
-    %TODO: powerpoihnt vanaf hier https://uu.brightspace.com/content/enforced/44250-BETA--2025--2--INFOB1LI--V/slides/02-slides.pdf#page=90.98
+    \section{sets}
+    Propositielogica heeft ook een manier om over een groep dingen te redeneren, \textit{\textbf{sets}}.
+    Deze schrijf tussen accolades met comma's tussen de items: $\{ false, true \}$, $\{ 3, 7, 14 \}$, $\{ red, blue, yellow\}$.
+    Dit kan voor kleine sets met de hand, maar als je grote setws wilt schrijven, dan kost dat heel veel tijd, daarom kan je ook: ${ 1, 3, 5, ..., 99}$ om alle oneven cijfers van 1 t/m 99 als set te hebben.
+    Of als ${1, 2, 3, ...}$ om alle cijfers vanaf 1 te hebben (oneindig).
+
+    Ook kan je de \textit{\textbf{set-builder notation}} gebruiken, hierbij schrijf je het soort element dat je wilt en wat het element kan zijn:
+    $\{\text{x : x has property P}\}$
+
+    \begin{voorbeeld}{Set-builder notation}
+        Een collectie van alle prime numbers: $\{\text{x : x is een priemgetal}\}$\\
+        Of $\{\text{s : s is een strand in Nederland}\}$.
+    \end{voorbeeld}
+
+    Er zijn ook een paar basis sets, die al vantevoren zijn gedefineerd:
+
+    \begin{itemize}
+        \item $\emptyset = \{ \}$ & (the empty set)
+        \item $\mathbb{B} = \{ 0, 1 \} $ & (the binaire set)
+        \item $\mathbb{N} = \{ 0, 1, 2, 3, ... \}$ & (De natuurlijke nummers)
+        \item $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ... \}$ & (De integers)
+        \item $\mathbb{Q} = \{\dfrac{m}{n} : \text{m, n} \in\text{, n} \neq \text{0} \}$ & (De rationele nummers)
+        \item $\mathbb{R} =  \{ x : \text{x is a real number} \}$ & (De real nummers)
+    \end{itemize}
+
+    \textbf{$\emptyset$ en \{ $\emptyset$ \} zijn twee verschillende dingen, de een is namelijk: \{ \}, terwijl de ander \{ \{ \} \} is!}
+
+    \subsection{leden en gelijkheid}
+    Je kan bekijken of een set een bepaalde member heeft door $7 \in \{3,7,14\}$ te doen.
+    Hier is $\in$ te lezen als \textit{"is element onderdeel van"}
+    Je hebt ook de negatie vorm, \not\in, wat \texit{"is element niet onderdeel van"}, oftwel $6 \not\in \{3,7,14\}$
+
+    Ook is goed om te weten dat gelijkheid op basis van unieke element rust, dus $\{1, 2, 3, 2, 1\} \eq \{1, 3, 2\}$.
+    Ongelijkheid is dus te bepalen door te kijken of een van de twee sets een waarde heeft die niet in de ander voorkomt.
+
+    \subsection{subsets and supersets}
+    Een \textit{\textbf{subset}} is een set waarin minstens een deel van de waardes van de superset in voorkomen.
+
+    \begin{multicols}{2}
+        Dus $\{1, 2, 3\}$ is een subset van $\{1, 2, 3, 4\}$, hierin is de tweede een \textit{\textbf{superset}} van de eerste.
+
+        \begin{tikzpicture}
+            \tikzstyle{every node}=[font=\LARGE]
+            \draw [ line width=1pt , rounded corners = 6.0] (3,9) rectangle (7.25,7.75);
+            \draw [ line width=1pt , rounded corners = 6.0] (3,8.75) rectangle (5.5,7.75);
+            \node [font=\LARGE] at (4.25,8.25) {$1, 2, 3$};
+            \node [font=\LARGE] at (6.25,8.25) {$4, 5$};
+        \end{tikzpicture}
+
+    \end{multicols}
 
 \end{document}
