@@ -188,25 +188,27 @@
     \section{sets}
     Propositielogica heeft ook een manier om over een groep dingen te redeneren, \textit{\textbf{sets}}.
     Deze schrijf tussen accolades met comma's tussen de items: $\{ false, true \}$, $\{ 3, 7, 14 \}$, $\{ red, blue, yellow\}$.
-    Dit kan voor kleine sets met de hand, maar als je grote setws wilt schrijven, dan kost dat heel veel tijd, daarom kan je ook: ${ 1, 3, 5, ..., 99}$ om alle oneven cijfers van 1 t/m 99 als set te hebben.
+    Dit kan voor kleine sets met de hand, maar als je grote sets wilt schrijven, dan kost dat heel veel tijd, daarom kan je ook: ${ 1, 3, 5, ..., 99}$ om alle oneven cijfers van 1 t/m 99 als set te hebben.
     Of als ${1, 2, 3, ...}$ om alle cijfers vanaf 1 te hebben (oneindig).
+    De lengte van een sets is op te schrijven door |A| of #A, waar A een set is met een lengte, de \textbf{cardinality} hier tel je alleen het aantal unieke elementen.
+    Als er maar 1 element in een set zit, dan heet dat een \textbf{singleton}.
 
     Ook kan je de \textit{\textbf{set-builder notation}} gebruiken, hierbij schrijf je het soort element dat je wilt en wat het element kan zijn:
-    $\{\text{x : x has property P}\}$
+    $\{\text{x : x has the  property P}\}$
 
     \begin{voorbeeld}{Set-builder notation}
         Een collectie van alle prime numbers: $\{\text{x : x is een priemgetal}\}$\\
         Of $\{\text{s : s is een strand in Nederland}\}$.
     \end{voorbeeld}
 
-    Er zijn ook een paar basis sets, die al vantevoren zijn gedefineerd:
+    Er zijn ook een paar basis sets, die al van tevoren zijn gedefinieerd:
 
     \begin{itemize}
         \item $\emptyset = \{ \}$ & (the empty set)
         \item $\mathbb{B} = \{ 0, 1 \} $ & (the binaire set)
         \item $\mathbb{N} = \{ 0, 1, 2, 3, ... \}$ & (De natuurlijke nummers)
         \item $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ... \}$ & (De integers)
-        \item $\mathbb{Q} = \{\dfrac{m}{n} : \text{m, n} \in\text{, n} \neq \text{0} \}$ & (De rationele nummers)
+        \item $\mathbb{Q} = \{\dfrac{m}{n} : \text{m, n} \in \mathbb{Z} \text{, n} \neq \text{0} \}$ & (De rationele nummers)
         \item $\mathbb{R} =  \{ x : \text{x is a real number} \}$ & (De real nummers)
     \end{itemize}
 
@@ -215,10 +217,11 @@
     \subsection{leden en gelijkheid}
     Je kan bekijken of een set een bepaalde member heeft door $7 \in \{3,7,14\}$ te doen.
     Hier is $\in$ te lezen als \textit{"is element onderdeel van"}
-    Je hebt ook de negatie vorm, \not\in, wat \texit{"is element niet onderdeel van"}, oftwel $6 \not\in \{3,7,14\}$
+    Je hebt ook de negatie vorm, $\not\in$, wat \textit{"is element niet onderdeel van"}, oftwel $6 \not\in \{3,7,14\}$ betekend.
 
     Ook is goed om te weten dat gelijkheid op basis van unieke element rust, dus $\{1, 2, 3, 2, 1\} \eq \{1, 3, 2\}$.
     Ongelijkheid is dus te bepalen door te kijken of een van de twee sets een waarde heeft die niet in de ander voorkomt.
+    Dus volgorde maakt niet uit, en hoeveelheid elementen die dan welniet hetzelfde zijn maakt ook niet uit.
 
     \subsection{subsets and supersets}
     Een \textit{\textbf{subset}} is een set waarin minstens een deel van de waardes van de superset in voorkomen.
@@ -236,5 +239,33 @@
         \end{tikzpicture}
 
     \end{multicols}
+
+    \subsection{Operaties op sets}
+    Union $A \cup B = \{x : x \in A \lor x \in B \}$ Combineert A en B met elkaar\\
+    Intersection $A \cap B = \{x : x \in A \land x \in B\}$ Het deel wat zowel in A als in B zit\\
+    Complement $\overline{A} = \{x : x \not\in A\}$, alles wat niet in A zit.\\
+    Difference $A\B = \{x: x \in A \land X \not\in B\}$ Alles wat in A zit, maar niet in B\\
+
+    Zo heb je ook de \textit{powerset P(A)}, dit is een set waarin alle mogelijke subsets van A zitten: $P(A) = \{ X : X \subseteq A \}$.
+    Deze heeft $n^2$ elementen, waar n het aantal elementen van set A is.
+
+    \begin{voorbeeld}{powerset/matchsset}
+        Stel je hebt een computer scherm, van 1680 x 1050, je wilt elke mogelijke configuratie van zwart/witte pixels opschrijven.
+        Een set geeft aan welke pixels wit zijn, dus je wilt elke set met elke mogelijke manier van pixelcoordinaten, dat kan je zo schrijven:
+
+        $W = \{0,1, ..., 1697\}$ voor elke X coordinaat\\
+        $H = \{0,1,...,1049\}$ Voor elke Y coordinaat\\
+        $W\times H = \{\{0,0\}, \{0,1\}, \{0,2\},...,\{1,0\},...\{1679,1049\}\}$ dit is een volledig wit scherm, elke pixel is gerepresentateerd in deze set\\
+        $P(W\times H)$ = elke configuratie van witte pixels
+    \end{voorbeeld}
+
+    \subsection{Partities}
+    Je kan een set A opdelen in meerdere sets, zoals $A_1$ en $A_2$, hier zijn de regels: $A_1 \cup A_2 = A$ en $A_1 \cap A_2 = \emptyset$
+    Zo kan je A = $\mathbb{N}$ opsplitsen in $A_1$ en $A_2$ waar $A_1$ de even getallen zijn en $A_2$ de oneven getallen zijn.
+
+    \subsection{Naive set theory}
+
+
+
 
 \end{document}
