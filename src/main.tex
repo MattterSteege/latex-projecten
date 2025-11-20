@@ -194,7 +194,7 @@
     Als er maar 1 element in een set zit, dan heet dat een \textbf{singleton}.
 
     Ook kan je de \textit{\textbf{set-builder notation}} gebruiken, hierbij schrijf je het soort element dat je wilt en wat het element kan zijn:
-    $\{\text{x : x has the  property P}\}$
+    $\{\text{x : x has the property P}\}$
 
     \begin{voorbeeld}{Set-builder notation}
         Een collectie van alle prime numbers: $\{\text{x : x is een priemgetal}\}$\\
@@ -264,8 +264,48 @@
     Zo kan je A = $\mathbb{N}$ opsplitsen in $A_1$ en $A_2$ waar $A_1$ de even getallen zijn en $A_2$ de oneven getallen zijn.
 
     \subsection{Naive set theory}
+    %TODO
 
 
+    \section{Boolean algebra}
+    korte notitie* in Bolean algebra is de $+$ hetzelfde als de OR operator, $\cdot$ hetzelfde als de AND operator, $^{-1}$ hetzelfde als NOT
 
+    \subsection{monoïde}
+    Monoide is een verzameling A, is niet ledig en heeft minstens 1 element e, en een binaire operator $\oplus$ %TODO: verder uitschrijven
+    Een monoide heeft een nul-element, dit is een waarde die niks doet in de operatie. $x + 0 = x$, hier doet de 0 helemenaal niks, dus 0 is het 0-element in de "+" operatie.
+    $x \times 1 = x$, hier is 1 het nul-element in de monoide $\times$ 1; het doet niks in de operatie.
+    het is dus een neutrale waarde.
+
+    \subsection{Bool's algebra}
+
+    Boolean algebra heeft een paar regels:
+
+    \begin{itemize}
+        \item een set B
+        \item Twee elementen $0 \in B$ en $1 \in B$, genaamd \textbf{zero} en \textbf{unit}
+        \item Twee binaire operatoren $+$ en $\cdot$ som/OR en product/AND respectievelijk.
+        \item Een Unaire operator $^{-1}$ de inverse genoemd ofwel NOT (kan ook als $x'$ zijn genoteerd).
+    \end{itemize}
+
+    \begin{voorbeeld}{Bewijs dat $x + x = x$}
+        We willen bewijzen dat voor elke $x, x + x = x$\\
+        \begin{SimpleTable}[s{.3}s{1}s{.3}]{}{}
+            \TableRow{$x + x$ & $= (x + x) \cdot 1$               & Ident}
+            \TableRow{        & $= (x + x)\cdot (x \cdot x^{-1})$ & Complement}
+            \TableRow{        & $= x + (x \cdot x^{-1})$          & Distrobution}
+            \TableRow{        & $= x + ()$                        & Complement}
+            \TableRow{        & $= x$                             & Ident}
+        \end{SimpleTable}
+    \end{voorbeeld}
+
+    \subsection{duality}
+    Je kan voor elke vergelijking die je opschrijft een soort duale tweede vergelijking maken door hetvoglende te doen:
+
+    \begin{itemize}
+        \item 0 met 1 vervangen
+        \item 1 met 0 te vervangen
+        \item $+$ met $\cdot$ te vervangen
+        \item $\cdot$ met $+$ te vervangen
+    \end{itemize}
 
 \end{document}
