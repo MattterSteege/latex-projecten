@@ -298,7 +298,7 @@
         \end{SimpleTable}
     \end{voorbeeld}
 
-    \subsection{duality}
+    \subsection{dualiteit}
     Je kan voor elke vergelijking die je opschrijft een soort duale tweede vergelijking maken door hetvoglende te doen:
 
     \begin{itemize}
@@ -307,5 +307,66 @@
         \item $+$ met $\cdot$ te vervangen
         \item $\cdot$ met $+$ te vervangen
     \end{itemize}
+
+    \subsection{waarheidstabel naar formule/circuit}
+    Stel je krijgt een waarheidstabel zoals deze:
+
+    \begin{multicols}{2}
+        \begin{SimpleTable}[s{.3}s{.3}s{.3}]{}{}
+            \TableHeader{$x$ & $y$ & $z$}
+            \TableRow{0 & 0 & 0}
+            \TableRow{0 & 1 & 1}
+            \TableRow{1 & 0 & 1}
+            \TableRow{1 & 1 & 0}
+        \end{SimpleTable}
+
+        Als je dit omzet naar een propositie, dan moet je kijken naar alle rijen waar de uitkomst 1 is.
+        Voor elke 0 waarde schrijf je de variabele (hier x of y), op als $\overline{x}\text{ of }\overline{y}$.
+        Elke 1 waarde schrijf je alleen de variabele op, dus x of y.
+        Als je dat hier zou doen dan krijg je hetvolgende antwoord: $(\overline{x} \land y) \lor (x \land \overline{y})$.
+        Dit kan je dan vervolgens omzetten naar een circuit:
+    \end{multicols}
+
+    \begin{figure}[h]
+        \raggedright
+        \includegraphics[width=40mm]{images/boolean_circuit}
+    \end{figure}
+
+
+    \newpage
+    \section{Predikatenlogica}
+
+    \subsection{Predicaten en vrije variabelen}
+    Hierboven staat iets over de set-builder notatie $\{x : x\text{ has property }P\}$ waar \textit{P} een voorwaarde is.
+    Een voorbeeld van \textit{P} zou dan\\ $P = Prime(x) = \text{``x is a priemgetal''}$ kunnen zijn als propositie.
+    Dit soort proposities geven dan waar of niet waar terug om te bepalen of \textit{x} in de set moet komen.
+    Hieruit heb je de \textit{\textbf{truth set}}, dit is de set die uit alle waardes bestaat die voldoen aan het propositie
+
+    \begin{voorbeeld}{Eendjes}
+        Je hebt 7 hele lieve eendje:\\
+        \hspace{4mm} $\text{Eendjes} = \{Kwik, Kwek, Kwak, Dagobert, Donald, Katrien, Dumbella\}$\\
+        We defineren dan een propositie:\\
+        \hspace{4mm} $Female(x) = \text{``x is a female''}$\\\\
+        - $Female(Katrien)\text{ \&\& }Female(Dumbella)$ is waar.\\
+        - $Female(Kwik)\text{ \&\& }Female(Kwek)\text{ \&\& }\dots\text{ \&\& }Female(Donald)$ is niet waar\\
+        - De truth set van $Female(x)$ is dan $\{Katrien, Dumbella\}$
+    \end{voorbeeld}
+
+    \subsection{Kwantificatoren en gebonden variabelen}
+
+    Het kan zijn dat je wilt checken of elke waarde in een lijst voldoet aan een bepaalde voorwaarde, het boek schrijft:
+
+    Er zijn 4 kinderen:
+    $Kinderen = {Joel, Felix, Oskar, Amanda}$.
+    Één van de kinderen moet op de passagiersstoel voorin zitten, aangezien er slechts ruimte is voor drie passagiers op de achterbank.
+    Het predicaat $Front(x)$, dat aangeeft dat kind $x$ op de voorstoel zit, moet dus voor één van hen gelden.
+    De samengestelde propositie: $Front(Joel) \lor Front(Felix) \lor Front(Oskar) \lor Front(Amanda)$ moet dus op een manier waar zijn.
+    Dus moet je 4 $\times$ 4 checks doen, telkens waar 1 kind voorin zit en 3 niet, dat wordt een gigatische popositie.
+    \\\\
+    Daarom is er een nieuwe manier om dit soort checks te doen: $\forall$.
+    Die gebruik je als volgt: $\forall x P(x)$, ``voor elke x die voldoet aan $P(x)$''.
+    Deze propositie is alleen waar als ELKE waarde voldoet.
+    Zo wordt $Happy(Joel) \land Happy(Felix) \land Happy(Oskar) \land Happy(Amanda)$ geschreven als $\forall x Happy(x)$ (zijn Joel, Felix, Oskar én Amanda allemaal blij?)
+
 
 \end{document}
