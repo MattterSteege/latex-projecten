@@ -337,36 +337,101 @@
     \section{Predikatenlogica}
 
     \subsection{Predicaten en vrije variabelen}
-    Hierboven staat iets over de set-builder notatie $\{x : x\text{ has property }P\}$ waar \textit{P} een voorwaarde is.
-    Een voorbeeld van \textit{P} zou dan\\ $P = Prime(x) = \text{``x is a priemgetal''}$ kunnen zijn als propositie.
-    Dit soort proposities geven dan waar of niet waar terug om te bepalen of \textit{x} in de set moet komen.
-    Hieruit heb je de \textit{\textbf{truth set}}, dit is de set die uit alle waardes bestaat die voldoen aan het propositie
+
+    We zagen eerder de \textit{set-builder}-notatie
+    \[
+        \{x \mid x \text{ heeft eigenschap } P\},
+    \]
+    waarbij \(P\) een voorwaarde is. Een voorbeeld van zo’n voorwaarde is
+    \[
+        P(x) = Prime(x) = \text{``$x$ is een priemgetal''}.
+    \]
+    Het predicaat geeft voor elke waarde \(x\) waar of onwaar terug, en op basis daarvan bepalen we of \(x\) tot de verzameling behoort. De bijbehorende \textit{truth set} bestaat uit alle waarden die voldoen aan het predicaat.
 
     \begin{voorbeeld}{Eendjes}
-        Je hebt 7 hele lieve eendje:\\
-        \hspace{4mm} $\text{Eendjes} = \{Kwik, Kwek, Kwak, Dagobert, Donald, Katrien, Dumbella\}$\\
-        We defineren dan een propositie:\\
-        \hspace{4mm} $Female(x) = \text{``x is a female''}$\\\\
-        - $Female(Katrien)\text{ \&\& }Female(Dumbella)$ is waar.\\
-        - $Female(Kwik)\text{ \&\& }Female(Kwek)\text{ \&\& }\dots\text{ \&\& }Female(Donald)$ is niet waar\\
-        - De truth set van $Female(x)$ is dan $\{Katrien, Dumbella\}$
+        We hebben zeven eendjes:
+        \[
+            Eendjes = \{Kwik, Kwek, Kwak, Dagobert, Donald, Katrien, Dumbella\}.
+        \]
+
+        We definiëren het predicaat
+        \[
+            Female(x) = \text{``$x$ is vrouwelijk''}.
+        \]
+
+        \begin{itemize}
+            \item \(Female(Katrien) \land Female(Dumbella)\) is waar.
+            \item \(Female(Kwik) \land Female(Kwek) \land \dots \land Female(Donald)\) is niet waar.
+            \item De truth set van \(Female(x)\) is dus \(\{Katrien, Dumbella\}\).
+        \end{itemize}
     \end{voorbeeld}
 
     \subsection{Kwantificatoren en gebonden variabelen}
 
-    Het kan zijn dat je wilt checken of elke waarde in een lijst voldoet aan een bepaalde voorwaarde, het boek schrijft:
+    Stel dat we willen controleren of elke waarde in een lijst aan een voorwaarde voldoet. Het boek geeft het volgende voorbeeld:
 
-    Er zijn 4 kinderen:
-    $Kinderen = {Joel, Felix, Oskar, Amanda}$.
-    Één van de kinderen moet op de passagiersstoel voorin zitten, aangezien er slechts ruimte is voor drie passagiers op de achterbank.
-    Het predicaat $Front(x)$, dat aangeeft dat kind $x$ op de voorstoel zit, moet dus voor één van hen gelden.
-    De samengestelde propositie: $Front(Joel) \lor Front(Felix) \lor Front(Oskar) \lor Front(Amanda)$ moet dus op een manier waar zijn.
-    Dus moet je 4 $\times$ 4 checks doen, telkens waar 1 kind voorin zit en 3 niet, dat wordt een gigatische popositie.
-    \\\\
-    Daarom is er een nieuwe manier om dit soort checks te doen: $\forall$.
-    Die gebruik je als volgt: $\forall x P(x)$, ``voor elke x die voldoet aan $P(x)$''.
-    Deze propositie is alleen waar als ELKE waarde voldoet.
-    Zo wordt $Happy(Joel) \land Happy(Felix) \land Happy(Oskar) \land Happy(Amanda)$ geschreven als $\forall x Happy(x)$ (zijn Joel, Felix, Oskar én Amanda allemaal blij?)
+    Er zijn vier kinderen:
+    \[
+        Kinderen = \{Joel, Felix, Oskar, Amanda\}.
+    \]
 
+    Eén van hen moet voorin op de passagiersstoel zitten, omdat er achterin maar drie plekken zijn. Het predicaat \(Front(x)\) betekent dat kind \(x\) voorin zit. We weten dus zeker dat voor één waarde van \(x\) het predicaat waar moet zijn.
+
+    De samengestelde propositie
+    \[
+        Front(Joel) \lor Front(Felix) \lor Front(Oskar) \lor Front(Amanda)
+    \]
+    moet waar zijn. Dat levert in principe een grote lijst aan mogelijke combinaties op, wat snel onoverzichtelijk wordt.
+
+    \subsection{Universele kwantificator}
+
+    Om dit compacter te schrijven gebruiken we de universele kwantor \(\forall\).
+    De notatie \(\forall x\, P(x)\) betekent: “voor elke \(x\) geldt \(P(x)\)”.
+    De propositie is alleen waar wanneer alle waarden voldoen aan \(P\).
+
+    Het voorbeeld
+    \[
+        Happy(Joel) \land Happy(Felix) \land Happy(Oskar) \land Happy(Amanda)
+    \]
+    kun je schrijven als
+    \[
+        \forall x\, Happy(x),
+    \]
+    waarbij de vraag is: zijn Joel, Felix, Oskar én Amanda allemaal blij?
+
+    \subsection{Existentiële kwantificator}
+
+    Als je wilt uitdrukken dat er minstens één waarde is waarvoor het predicaat waar is, gebruik je de existentiële kwantor \(\exists\).
+
+    De notatie \(\exists x\, P(x)\) betekent: “er bestaat een \(x\) waarvoor \(P(x)\) geldt”.
+    Deze propositie is waar wanneer één of meer waarden voldoen aan \(P\).
+
+    Het voorbeeld
+    \[
+        Happy(Joel) \lor Happy(Felix) \lor Happy(Oskar) \lor Happy(Amanda)
+    \]
+    kan worden geschreven als
+    \[
+        \exists x\, Happy(x).
+    \]
+
+    Daarnaast bestaat er de vorm \(\exists! x\, P(x)\):
+    “Er bestaat precies één \(x\) waarvoor \(P(x)\) geldt.”
+
+    \subsection{Gebonden kwantificatoren}
+
+    Je kunt kwantoren beperken tot een verzameling.
+
+    De universele, beperkte vorm:
+    \[
+        \forall x \in A\; P(x)
+        \quad\text{(alle waarden in \(A\) voldoen aan \(P\)).}
+    \]
+
+    De existentiële, beperkte vorm:
+    \[
+        \exists x \in A\; P(x)
+        \quad\text{(er bestaat minstens één waarde in \(A\) die voldoet aan \(P\)).}
+    \]
 
 \end{document}
