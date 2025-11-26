@@ -50,6 +50,7 @@
 
     \section{Propositielogica}
     Propositielogica is de studie van bewijzen. Een propositie is te beantwoorden met waar of niet waar
+    Een propositie is $3 < 17$, dit kan je checken op waarheid. Een propositie is $x \implies y$
 
     \subsection{Proposities}
     We gebruiken in logica variabelen zoals P en Q, dit zijn \textit{atomisch} proposities, deze zijn altijd geschreven in HOOFDLETTERS.
@@ -382,6 +383,11 @@
         Front(Joel) \lor Front(Felix) \lor Front(Oskar) \lor Front(Amanda)
     \]
     moet waar zijn. Dat levert in principe een grote lijst aan mogelijke combinaties op, wat snel onoverzichtelijk wordt.
+    \\
+    \\
+    Als je een predikaat schrijft zoals $P(x) = \dots x \dots$, dan is x een gebonden variabele.
+    Als je een predikaat schrijft zoals $P(x) = \dots y \dots$, dan is y een vrije variabele.\\
+    Bij gebonden variabelen kan je de x vervangen door een waarde, $P(x) = x > 1337$. $P(10000)$ wordt dan $10000 > 1337$
 
     \subsection{Universele kwantificator}
 
@@ -434,4 +440,43 @@
         \quad\text{(er bestaat minstens één waarde in \(A\) die voldoet aan \(P\)).}
     \]
 
+    \subsection{predikatenlogica lezen}
+
+    \begin{itemize}[leftmargin=*]
+        \item \( \forall x\,P(x)\) \quad → \quad ``Voor alle \(x\) geldt: \(P(x)\)''. ``Elke \underline{[type van $x$]} heeft de eigenschap ...''.
+        \item \( \exists x\,P(x)\) \quad → \quad ``Er bestaat een \(x\) zodanig dat \(P(x)\)''. ``Er is ten minste één \underline{[type]} waarvoor ...''.
+        \item \( \exists! x\,P(x)\) \quad → \quad ``Er bestaat precies één \(x\) zodanig dat \(P(x)\)''. In goed Nederlands: ``Er is precies één ... die/het ...''.
+        \item \(P(x)\wedge Q(x)\) \quad → \quad ``\(P(x)\) en \(Q(x)\)''.
+        \item \(P(x)\vee Q(x)\) \quad → \quad ``\(P(x)\) en/of \(Q(x)\)''.
+        \item \(P(x)\rightarrow Q(x)\) \quad → \quad ``Als \(P(x)\), dan \(Q(x)\)''.
+        \item \(\neg P(x)\) \quad → \quad ``niet \(P(x)\)''.
+        \item \(x = y\) \quad → \quad ``\(x\) en \(y\) zijn hetzelfde object''.
+        \item Meerdere kwantoren: volg strikt de volgorde \(\forall x\exists y\) → ``Voor elke \(x\) bestaat een \(y\) ...'', \(\exists y\forall x\) → ``Er bestaat een \(y\) die voor alle \(x\) ...'' (volgorde verandert betekenis!).
+    \end{itemize}
+
+    \begin{voorbeeld}{Een Predikatenlogica formule lezen}
+    \[
+        \forall x\big( Student(x) \to \exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\big).
+    \]
+
+    \textbf{Stap 1:} Kies domein = ``personen en vakken'': variabele \(x\) = persoon, \(y\) = vak.
+
+    \textbf{Stap 2:}
+    \begin{itemize}
+        \item Buitenste kwantor: \(\forall x\) — ``Voor alle personen \(x\) geldt: ...''
+        \item Binnen: \(Student(x) \to \exists y(\dots)\) — een implicatie: ``als \(x\) student is, dan bestaat er een \(y\) zodanig dat ...''
+        \item Binnenste existentie: \(\exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\).
+    \end{itemize}
+
+    \textbf{Stap 3:}
+    \begin{quote}
+        Voor elke persoon \(x\): als \(x\) een student is, dan bestaat er een vak \(y\) zodanig dat \(y\) een vak is, \(x\) staat ingeschreven voor \(y\), en het is niet zo dat \(x\) voor \(y\) gezakt is.
+    \end{quote}
+
+    \textbf{Stap 4:}
+    Herschrijf de zin:
+    \begin{quote}
+        Elke student is ingeschreven voor minstens één vak waarin die niet gezakt is.
+    \end{quote}
+    \end{voorbeeld}
 \end{document}
