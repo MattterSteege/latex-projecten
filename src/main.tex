@@ -41,7 +41,6 @@
         \TableRow{17. Union of sets & \cup & \verb|\cup|}
         \TableRow{18. Empty set & \emptyset & \verb|\emptyset|}
         \TableRow{19. Intersection of sets & \cap & \verb|\cap|}
-        \TableRow{20. Union of sets & \cup & \verb|\cup|}
     \end{SimpleTable}
 
     \clearpage
@@ -479,4 +478,133 @@
         Elke student is ingeschreven voor minstens één vak waarin die niet gezakt is.
     \end{quote}
     \end{voorbeeld}
+
+    \section{Proof Strategies}
+
+    \begin{multicols}{2}
+
+    \subsection*{Implication ($P \Rightarrow Q$)}
+
+    \noindent\textbf{Introductie (⇒I):}
+    Om $P \Rightarrow Q$ te bewijzen neem je $P$ aan en leid je $Q$ af.
+    $$
+    \text{Assume } P \quad\vdots\quad Q \quad\Rightarrow\quad P \Rightarrow Q
+    $$
+
+    \noindent\textbf{Eliminatie (⇒E):}
+    Als je zowel $P$ als $P\Rightarrow Q$ hebt, mag je $Q$ concluderen.
+    $$
+    P,\ \ P\Rightarrow Q \quad\Rightarrow\quad Q
+    $$
+
+
+    \subsection*{Conjunction ($P \land Q$)}
+
+    \noindent\textbf{Introductie (∧I):}
+    Bewijs beide delen afzonderlijk.
+    $$
+    P,\ Q \quad\Rightarrow\quad P \land Q
+    $$
+
+    \noindent\textbf{Eliminatie (∧E):}
+    Uit $P\land Q$ mag je elk deel los gebruiken.
+    $$
+    P\land Q \Rightarrow P
+    \qquad\qquad
+    P\land Q \Rightarrow Q
+    $$
+
+
+    \subsection*{Disjunction ($P \lor Q$)}
+
+    \noindent\textbf{Introductie (∨I):}
+    Als één van beide waar is, mag je de disjunctie concluderen.
+    $$
+    P \Rightarrow P\lor Q
+    \qquad\qquad
+    Q \Rightarrow P\lor Q
+    $$
+
+    \noindent\textbf{Eliminatie (∨E):}
+    Als je $P\lor Q$ hebt, bewijs je je doel $R$ in twee gevallen: eerst uit $P$, daarna uit $Q$.
+    $$
+    \frac{P\lor Q \qquad (P \Rightarrow R) \qquad (Q \Rightarrow R)}{R}
+    $$
+    Dit is de meest subtiele regel: je moet beide takken afhandelen.
+
+
+    \subsection*{Negation ($\neg P$)}
+
+    \noindent\textbf{Introductie (¬I):}
+    Neem $P$ aan en toon dat dit tot een contradictie leidt.
+    $$
+    \text{Assume } P \quad\vdots\quad \bot \quad\Rightarrow\quad \neg P
+    $$
+
+    \noindent\textbf{Eliminatie (¬E):}
+    Uit $P$ en $\neg P$ volgt onmiddellijk een contradictie.
+    $$
+    P,\ \neg P \quad\Rightarrow\quad \bot
+    $$
+
+
+    \subsection*{Falsity ($\bot$)}
+
+    \noindent\textbf{Eliminatie (⊥E):}
+    Uit een contradictie mag je alles afleiden (ex falso).
+    $$
+    \bot \Rightarrow P
+    $$
+
+
+    \subsection*{Equivalence ($P \Leftrightarrow Q$)}
+
+    \noindent\textbf{Introductie (⇔I):}
+    Bewijs beide implicaties.
+    $$
+    (P \Rightarrow Q) \land (Q \Rightarrow P) \quad\Rightarrow\quad P \Leftrightarrow Q
+    $$
+
+    \noindent\textbf{Eliminatie (⇔E):}
+    Uit een equivalentie mag je één van de twee implicaties halen.
+    $$
+    P\Leftrightarrow Q \quad\Rightarrow\quad P\Rightarrow Q
+    $$
+    $$
+    P\Leftrightarrow Q \quad\Rightarrow\quad Q\Rightarrow P
+    $$
+
+
+    \subsection*{Universele kwantor ($\forall x\,P(x)$)}
+
+    \noindent\textbf{Introductie (∀I):}
+    Kies een volledig willekeurig element $a$ en bewijs dat $P(a)$ geldt.
+    $$
+    \text{Let $a$ be arbitrary.}\quad P(a) \Rightarrow \forall x\,P(x)
+    $$
+
+    \noindent\textbf{Eliminatie (∀E):}
+    Je mag de kwantor instantiëren met een concreet element.
+    $$
+    \forall x\,P(x) \Rightarrow P(a)
+    $$
+
+
+    \subsection*{Existentiële kwantor ($\exists x\,P(x)$)}
+
+    \noindent\textbf{Introductie (∃I):}
+    Geef een concreet voorbeeld $a$ waarvoor $P(a)$ geldt.
+    $$
+    P(a) \Rightarrow \exists x\,P(x)
+    $$
+
+    \noindent\textbf{Eliminatie (∃E):}
+    Neem een nieuw element $a$ waarvan je aanneemt dat $P(a)$ waar is, en bewijs met die aanname je doel $R$.
+    $$
+    \exists x\,P(x),\quad
+    \text{Assume } P(a) \ \vdots\ R
+    \quad\Rightarrow\quad R
+    $$
+    \end{multicols}
+
 \end{document}
