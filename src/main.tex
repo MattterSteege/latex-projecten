@@ -334,6 +334,8 @@
 
 
     \newpage
+
+
     \section{Predikatenlogica}
 
     \subsection{Predicaten en vrije variabelen}
@@ -454,158 +456,160 @@
     \end{itemize}
 
     \begin{voorbeeld}{Een Predikatenlogica formule lezen}
-    \[
-        \forall x\big( Student(x) \to \exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\big).
-    \]
+        \[
+            \forall x\big( Student(x) \to \exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\big).
+        \]
 
-    \textbf{Stap 1:} Kies domein = ``personen en vakken'': variabele \(x\) = persoon, \(y\) = vak.
+        \textbf{Stap 1:} Kies domein = ``personen en vakken'': variabele \(x\) = persoon, \(y\) = vak.
 
-    \textbf{Stap 2:}
-    \begin{itemize}
-        \item Buitenste kwantor: \(\forall x\) — ``Voor alle personen \(x\) geldt: ...''
-        \item Binnen: \(Student(x) \to \exists y(\dots)\) — een implicatie: ``als \(x\) student is, dan bestaat er een \(y\) zodanig dat ...''
-        \item Binnenste existentie: \(\exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\).
-    \end{itemize}
+        \textbf{Stap 2:}
+        \begin{itemize}
+            \item Buitenste kwantor: \(\forall x\) — ``Voor alle personen \(x\) geldt: ...''
+            \item Binnen: \(Student(x) \to \exists y(\dots)\) — een implicatie: ``als \(x\) student is, dan bestaat er een \(y\) zodanig dat ...''
+            \item Binnenste existentie: \(\exists y( Course(y) \land Enrolled(x,y) \land \neg Failed(x,y))\).
+        \end{itemize}
 
-    \textbf{Stap 3:}
-    \begin{quote}
-        Voor elke persoon \(x\): als \(x\) een student is, dan bestaat er een vak \(y\) zodanig dat \(y\) een vak is, \(x\) staat ingeschreven voor \(y\), en het is niet zo dat \(x\) voor \(y\) gezakt is.
-    \end{quote}
+        \textbf{Stap 3:}
+        \begin{quote}
+            Voor elke persoon \(x\): als \(x\) een student is, dan bestaat er een vak \(y\) zodanig dat \(y\) een vak is, \(x\) staat ingeschreven voor \(y\), en het is niet zo dat \(x\) voor \(y\) gezakt is.
+        \end{quote}
 
-    \textbf{Stap 4:}
-    Herschrijf de zin:
-    \begin{quote}
-        Elke student is ingeschreven voor minstens één vak waarin die niet gezakt is.
-    \end{quote}
+        \textbf{Stap 4:}
+        Herschrijf de zin:
+        \begin{quote}
+            Elke student is ingeschreven voor minstens één vak waarin die niet gezakt is.
+        \end{quote}
     \end{voorbeeld}
+
 
     \section{Proof Strategies}
 
     \begin{multicols}{2}
 
-    \subsection*{Implication ($P \Rightarrow Q$)}
+        \subsection*{Implication ($P \Rightarrow Q$)}
 
-    \noindent\textbf{Introductie (⇒I):}
-    Om $P \Rightarrow Q$ te bewijzen neem je $P$ aan en leid je $Q$ af.
-    $$
-    \text{Assume } P \quad\vdots\quad Q \quad\Rightarrow\quad P \Rightarrow Q
-    $$
+        \noindent\textbf{Introductie (⇒I):}
+        Om $P \Rightarrow Q$ te bewijzen neem je $P$ aan en leid je $Q$ af.
+        $$
+        \text{Assume } P \quad\vdots\quad Q \quad\Rightarrow\quad P \Rightarrow Q
+        $$
 
-    \noindent\textbf{Eliminatie (⇒E):}
-    Als je zowel $P$ als $P\Rightarrow Q$ hebt, mag je $Q$ concluderen.
-    $$
-    P,\ \ P\Rightarrow Q \quad\Rightarrow\quad Q
-    $$
-
-
-    \subsection*{Conjunction ($P \land Q$)}
-
-    \noindent\textbf{Introductie (∧I):}
-    Bewijs beide delen afzonderlijk.
-    $$
-    P,\ Q \quad\Rightarrow\quad P \land Q
-    $$
-
-    \noindent\textbf{Eliminatie (∧E):}
-    Uit $P\land Q$ mag je elk deel los gebruiken.
-    $$
-    P\land Q \Rightarrow P
-    \qquad\qquad
-    P\land Q \Rightarrow Q
-    $$
+        \noindent\textbf{Eliminatie (⇒E):}
+        Als je zowel $P$ als $P\Rightarrow Q$ hebt, mag je $Q$ concluderen.
+        $$
+        P,\ \ P\Rightarrow Q \quad\Rightarrow\quad Q
+        $$
 
 
-    \subsection*{Disjunction ($P \lor Q$)}
+        \subsection*{Conjunction ($P \land Q$)}
 
-    \noindent\textbf{Introductie (∨I):}
-    Als één van beide waar is, mag je de disjunctie concluderen.
-    $$
-    P \Rightarrow P\lor Q
-    \qquad\qquad
-    Q \Rightarrow P\lor Q
-    $$
+        \noindent\textbf{Introductie (∧I):}
+        Bewijs beide delen afzonderlijk.
+        $$
+        P,\ Q \quad\Rightarrow\quad P \land Q
+        $$
 
-    \noindent\textbf{Eliminatie (∨E):}
-    Als je $P\lor Q$ hebt, bewijs je je doel $R$ in twee gevallen: eerst uit $P$, daarna uit $Q$.
-    $$
-    \frac{P\lor Q \qquad (P \Rightarrow R) \qquad (Q \Rightarrow R)}{R}
-    $$
-    Dit is de meest subtiele regel: je moet beide takken afhandelen.
-
-
-    \subsection*{Negation ($\neg P$)}
-
-    \noindent\textbf{Introductie (¬I):}
-    Neem $P$ aan en toon dat dit tot een contradictie leidt.
-    $$
-    \text{Assume } P \quad\vdots\quad \bot \quad\Rightarrow\quad \neg P
-    $$
-
-    \noindent\textbf{Eliminatie (¬E):}
-    Uit $P$ en $\neg P$ volgt onmiddellijk een contradictie.
-    $$
-    P,\ \neg P \quad\Rightarrow\quad \bot
-    $$
+        \noindent\textbf{Eliminatie (∧E):}
+        Uit $P\land Q$ mag je elk deel los gebruiken.
+        $$
+        P\land Q \Rightarrow P
+        \qquad\qquad
+        P\land Q \Rightarrow Q
+        $$
 
 
-    \subsection*{Falsity ($\bot$)}
+        \subsection*{Disjunction ($P \lor Q$)}
 
-    \noindent\textbf{Eliminatie (⊥E):}
-    Uit een contradictie mag je alles afleiden (ex falso).
-    $$
-    \bot \Rightarrow P
-    $$
+        \noindent\textbf{Introductie (∨I):}
+        Als één van beide waar is, mag je de disjunctie concluderen.
+        $$
+        P \Rightarrow P\lor Q
+        \qquad\qquad
+        Q \Rightarrow P\lor Q
+        $$
 
-
-    \subsection*{Equivalence ($P \Leftrightarrow Q$)}
-
-    \noindent\textbf{Introductie (⇔I):}
-    Bewijs beide implicaties.
-    $$
-    (P \Rightarrow Q) \land (Q \Rightarrow P) \quad\Rightarrow\quad P \Leftrightarrow Q
-    $$
-
-    \noindent\textbf{Eliminatie (⇔E):}
-    Uit een equivalentie mag je één van de twee implicaties halen.
-    $$
-    P\Leftrightarrow Q \quad\Rightarrow\quad P\Rightarrow Q
-    $$
-    $$
-    P\Leftrightarrow Q \quad\Rightarrow\quad Q\Rightarrow P
-    $$
+        \noindent\textbf{Eliminatie (∨E):}
+        Als je $P\lor Q$ hebt, bewijs je je doel $R$ in twee gevallen: eerst uit $P$, daarna uit $Q$.
+        $$
+        \frac{P\lor Q \qquad (P \Rightarrow R) \qquad (Q \Rightarrow R)}{R}
+        $$
+        Dit is de meest subtiele regel: je moet beide takken afhandelen.
 
 
-    \subsection*{Universele kwantor ($\forall x\,P(x)$)}
+        \subsection*{Negation ($\neg P$)}
 
-    \noindent\textbf{Introductie (∀I):}
-    Kies een volledig willekeurig element $a$ en bewijs dat $P(a)$ geldt.
-    $$
-    \text{Let $a$ be arbitrary.}\quad P(a) \Rightarrow \forall x\,P(x)
-    $$
+        \noindent\textbf{Introductie (¬I):}
+        Neem $P$ aan en toon dat dit tot een contradictie leidt.
+        $$
+        \text{Assume } P \quad\vdots\quad \bot \quad\Rightarrow\quad \neg P
+        $$
 
-    \noindent\textbf{Eliminatie (∀E):}
-    Je mag de kwantor instantiëren met een concreet element.
-    $$
-    \forall x\,P(x) \Rightarrow P(a)
-    $$
+        \noindent\textbf{Eliminatie (¬E):}
+        Uit $P$ en $\neg P$ volgt onmiddellijk een contradictie.
+        $$
+        P,\ \neg P \quad\Rightarrow\quad \bot
+        $$
 
 
-    \subsection*{Existentiële kwantor ($\exists x\,P(x)$)}
+        \subsection*{Falsity ($\bot$)}
 
-    \noindent\textbf{Introductie (∃I):}
-    Geef een concreet voorbeeld $a$ waarvoor $P(a)$ geldt.
-    $$
-    P(a) \Rightarrow \exists x\,P(x)
-    $$
+        \noindent\textbf{Eliminatie (⊥E):}
+        Uit een contradictie mag je alles afleiden (ex falso).
+        $$
+        \bot \Rightarrow P
+        $$
 
-    \noindent\textbf{Eliminatie (∃E):}
-    Neem een nieuw element $a$ waarvan je aanneemt dat $P(a)$ waar is, en bewijs met die aanname je doel $R$.
-    $$
-    \exists x\,P(x),\quad
-    \text{Assume } P(a) \ \vdots\ R
-    \quad\Rightarrow\quad R
-    $$
+
+        \subsection*{Equivalence ($P \Leftrightarrow Q$)}
+
+        \noindent\textbf{Introductie (⇔I):}
+        Bewijs beide implicaties.
+        $$
+        (P \Rightarrow Q) \land (Q \Rightarrow P) \quad\Rightarrow\quad P \Leftrightarrow Q
+        $$
+
+        \noindent\textbf{Eliminatie (⇔E):}
+        Uit een equivalentie mag je één van de twee implicaties halen.
+        $$
+        P\Leftrightarrow Q \quad\Rightarrow\quad P\Rightarrow Q
+        $$
+        $$
+        P\Leftrightarrow Q \quad\Rightarrow\quad Q\Rightarrow P
+        $$
+
+
+        \subsection*{Universele kwantor ($\forall x\,P(x)$)}
+
+        \noindent\textbf{Introductie (∀I):}
+        Kies een volledig willekeurig element $a$ en bewijs dat $P(a)$ geldt.
+        $$
+        \text{Let $a$ be arbitrary.}\quad P(a) \Rightarrow \forall x\,P(x)
+        $$
+
+        \noindent\textbf{Eliminatie (∀E):}
+        Je mag de kwantor instantiëren met een concreet element.
+        $$
+        \forall x\,P(x) \Rightarrow P(a)
+        $$
+
+
+        \subsection*{Existentiële kwantor ($\exists x\,P(x)$)}
+
+        \noindent\textbf{Introductie (∃I):}
+        Geef een concreet voorbeeld $a$ waarvoor $P(a)$ geldt.
+        $$
+        P(a) \Rightarrow \exists x\,P(x)
+        $$
+
+        \noindent\textbf{Eliminatie (∃E):}
+        Neem een nieuw element $a$ waarvan je aanneemt dat $P(a)$ waar is, en bewijs met die aanname je doel $R$.
+        $$
+        \exists x\,P(x),\quad
+        \text{Assume } P(a) \ \vdots\ R
+        \quad\Rightarrow\quad R
+        $$
     \end{multicols}
+
 
     \section{functies}
     Als je op elk element in eens set een verandering wilt doorvoeren, dan kan je daar een functie voor gebruiken.
@@ -613,15 +617,159 @@
 
     Functies zet elke member in een set om in een output (die dan wel niet altijd gelijk of anders is).
 
+    \begin{multicols}{2}
+
+        \centering
+% --- diagram 1 ---
+        \resizebox{.6\columnwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzset{every node/.style={font=\LARGE}}
+                % left column (inputs)
+                \draw (1.25,6.25) rectangle (2.5,1.25);
+                \node at (1.75,5.5) {A};
+                \node at (1.75,4.25) {B};
+                \node at (1.75,3) {C};
+                \node at (1.75,1.75) {D};
+                % right column (outputs)
+                \draw (6.25,6.25) rectangle (7.5,1.25);
+                \node at (6.75,5.5) {1};
+                \node at (6.75,4.25) {2};
+                \node at (6.75,3) {3};
+                \node at (6.75,1.75) {4};
+                % mappings
+                \draw (2.5,5.5) -- (6.25,4.25);
+                \draw (2.5,4.25) -- (6.25,1.75);
+                \draw (2.5,3) -- (6.25,4.25);
+                \draw (2.5,1.75) -- (6.25,1.75);
+            \end{tikzpicture}%
+        }
+
+        \\[1ex]
+        Dit is een functie: elke input geeft een output.
+
+        \vspace{1em}
+
+% --- diagram 2 ---
+        \resizebox{.6\columnwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzset{every node/.style={font=\LARGE}}
+                \draw (1.25,6.25) rectangle (2.5,1.25);
+                \node at (1.75,5.5) {A};
+                \node at (1.75,4.25) {B};
+                \node at (1.75,3) {C};
+                \node at (1.75,1.75) {D};
+                \draw (6.25,6.25) rectangle (7.5,1.25);
+                \node at (6.75,5.5) {1};
+                \node at (6.75,4.25) {2};
+                \node at (6.75,3) {3};
+                \node at (6.75,1.75) {4};
+                \draw (2.5,5.5) -- (6.25,4.25);
+                \draw (2.5,4.25) -- (6.25,1.75);
+                \draw (2.5,1.75) -- (6.25,1.75);
+            \end{tikzpicture}%
+        }
+
+        \\[1ex]
+        Ook dit is een functie, want elke input geeft een output.
+
+        \vspace{1em}
+
+% --- diagram 3 (not a function) ---
+        \resizebox{.6\columnwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzset{every node/.style={font=\LARGE}}
+                \draw (1.25,6.25) rectangle (2.5,1.25);
+                \node at (1.75,5.5) {A};
+                \node at (1.75,4.25) {B};
+                \node at (1.75,3) {C};
+                \node at (1.75,1.75) {D};
+                \draw (6.25,6.25) rectangle (7.5,1.25);
+                \node at (6.75,5.5) {1};
+                \node at (6.75,4.25) {2};
+                \node at (6.75,3) {3};
+                \node at (6.75,1.75) {4};
+                \draw (2.5,5.5) -- (6.25,4.25);
+                \draw (2.5,4.25) -- (6.25,1.75);
+                \draw (2.5,1.75) -- (6.25,1.75);
+                % intentionally leave C without an outgoing line to show "not a function"
+            \end{tikzpicture}%
+        }
+
+        \\[1ex]
+        Dit is geen functie, want C heeft geen output, dat moet wel
+
+        \vspace{1em}
+
+% --- diagram 3 (not a function) ---
+        \resizebox{.6\columnwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzset{every node/.style={font=\LARGE}}
+                \draw (1.25,6.25) rectangle (2.5,1.25);
+                \node at (1.75,5.5) {A};
+                \node at (1.75,4.25) {B};
+                \node at (1.75,3) {C};
+                \node at (1.75,1.75) {D};
+                \draw (6.25,6.25) rectangle (7.5,1.25);
+                \node at (6.75,5.5) {1};
+                \node at (6.75,4.25) {2};
+                \node at (6.75,3) {3};
+                \node at (6.75,1.75) {4};
+                \draw (2.5,4.25) -- (6.25,4.25);
+                \draw (2.5,1.75) -- (6.25,1.75);
+                \draw (2.5,3) -- (6.25,3);
+                \draw (2.5,1.75) -- (5.75,1.75);
+                \draw (2.5,1.75) -- (6.25,3);
+                \draw (2.5,3) -- (6.25,4.25);
+                \draw (2.5,4.25) -- (6.25,5.5);
+                \draw (2.5,5.5) -- (6.25,5.5);
+            \end{tikzpicture}%
+        }
+
+        \\[1ex]
+        Dit is geen functie, input mogen min- en maximaal 1 output hebben
+
+    \end{multicols}
+
+
+    \subsection{terminologie}
     $A$ noemen we het \textbf{domein}, en $B$ noemen we het \textbf{codomein}.
-    Je kan ook meerdere argumenten meegeven: $f : A \times B \times C \longrightarrow D
+    Je kan ook meerdere argumenten meegeven: $f : A \times B \times C \longrightarrow D$
     De hoeveelheid argumenten noem je de \textbf{ariteit}.
 
+    Als je een functie defineerd die 2 variabelen hebt, een \textbf{binaire functie} dan kan je die opeen speciale manier schrijven.
+    Namelijk de functie ``+'' kan je hem tussen de variablene zetten, namelijk $A+B$ wat hetzelfde betekend als $+(A, B)$.
+
     \subsection{afbeelding en pre-afbeelding}
-    de iamge van een set is je begint met een set en die zet je om naar de na-functie set.
+    de image van een set is je begint met een set en die zet je om naar de na-functie set.
     De pre-image is het resultaat en die wil je dan omzetten naar het origineel.
 
     \subsection{speciale functies}
+
+
+    \section{Relaties}
+
+    \subsection{properties of realtions}
+    \begin{itemize}
+        \item Reflexiviteit: als $R(x,x)$ voor alle $x$, bijvoorbeeld gelijkheid
+        \item Symetrie: als $R(x,y) \implies R(y,x)$, bijvoorbeeld gelijkheid, of 'is sibling of (de broer van mijn zus ben ik)'
+        \item Asymetrie: als $R(x,y) \implies \neg R(y,x)$
+        \item Transitief: als $R(x,y) \land R(y,z) \implies R(x,z)$, bijvoorbeeld gelijkheid $3=1+2$ en $1+2=1+1+1$ dus $3=1+1+1$
+    \end{itemize}
+
+    \subsection{relaties defineren}
+
+    \subsection{Equivalentie klasse}
+    Als je bepaalde sets als "gelijk" wil beschouwen dan kan je dit gebruiken.
+    Je kan dan bijvoorbeeld zeggen: auto's zijn gelijk als het model en merk het zelfde zijn, kleur maakt niet uit.
+    Of $1/2$ is gelijk aan $2/4$, het detail dat ze niet 1 op 1 hetzelfde zijn maakt niet meer uit.
+    Ze zijn niet gelijk, maar wel equivalent.
+
+    \subsection{partities}
+    Als je een set A heb met een eindig aantal partities $A_1, A_2, A_3, ..., A_n$
+    Dan is elke partitie $A_i \cap A_j = \emptyset$ wanneer $i \neq j$.
+    En bij elkaar $A_1 \cup A_2 \cup ... \cup A_n = A$.
+    Oftewel, elke parties heeft elementen die niet in een andere set zitten.
+    en als je ze weer samenvoegt, dan krijg je de originele set A weer.
 
 
 \end{document}
