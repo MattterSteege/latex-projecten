@@ -57,7 +57,7 @@
     Je hebt ook \textbf{conjunctie}, wat een chique woord is voor \textit{en}, $a \land b$, b EN a.
     Een andere variant is \textbf{disjunctie}, wat dan staat voor \textit{of}, $a \lor b$, a OF b.
     \textbf{Implicatie} is de er ook een, dat is de $x \implies y$, a IMPLCIEERT b.
-    De allerlaatste is \textbf{equivalentie}, $a \leftrightarrow b$, a is equivalent aan b.
+    De allerlaatste is \textbf{equivalentie}, $a \Leftrightarrow b$, a is equivalent aan b.
     LET OP! Dit betekend niet ``gelijk aan'' 2 rode canta's zijn equivalent, maar niet hetzelfde, het is namelijk niet letterlijk dezelfde auto, maar ze zijn wel identiek aan elkaar.
 
     \subsection{Proposities}
@@ -224,7 +224,7 @@
         \item $\mathbb{B} = \{ 0, 1 \} $ & (the binaire set)
         \item $\mathbb{N} = \{ 0, 1, 2, 3, ... \}$ & (De natuurlijke nummers)
         \item $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ... \}$ & (De integers)
-        \item $\mathbb{Q} = \{\dfrac{m}{n} : \text{m, n} \in \mathbb{Z} \text{, n} \neq \text{0} \}$ & (De rationele nummers)
+        \item $\mathbb{Q} = \{\dfrac{m}{n} : \text{m, n} \in \mathbb{Z} \text{, n} \neg \text{0} \}$ & (De rationele nummers)
         \item $\mathbb{R} =  \{ x : \text{x is a real number} \}$ & (De real nummers)
     \end{itemize}
 
@@ -498,7 +498,9 @@
     \end{voorbeeld}
 
 
-    \section{Proof Strategies}
+    \section{Proof strategies}
+
+    \subsection{Bewijzen voor logische operatoren}
 
     \subsection*{Implicatie-Introductie ($\implies-I$) }
     Deze gaat als volgt: \textbf{Neem aan dat P waar is, bewijs Q, daarom houdt $P \implies Q$}.
@@ -524,21 +526,19 @@
 
     \subsection*{Negatie-Introdcutie ($\neg-I$)}
     Deze valt nog mee: \textbf{Neem aan dat P waar is, bewijs het tegendeel ($\neg P$), daarom houdt P niet.}
-    Want P is altijd waar, totdat je bewijst dat het niet z o is.
+    Want P is altijd waar, totdat je bewijst dat het niet zo is.
 
     \subsection*{Negatie-Eliminatie ($\neg-E$)}
-    TODO: BETER UITWERKEN.
-    Bewijs dat P waar is, Bewijs dat P niet waar is, dan krijg je $P \land \neq P$, en die stelling komt altijd uit op $\neq P$, dus je hebt bewezen dat de stelling niet houdt.
-
-    \subsection*{equivalentie-Introdcutie ($\leftrightarrow-I$)}
-    Als je $P \leftrightarrow Q$ wilt bewijzen, dan moet je dus de 2 onderdelen hiervan bewijzen.
-    Namelijk: \textbf{Bewijs $P \implies Q$, bewijs $Q \implies P$, daarom houdt $P \leftrightarrow Q$}.
+    \textbf{Bewijs dat P waar is én bewijs dat P niet waar is ($\neg P$)}, dan krijg je dus $P \land \neg P$, die stelling komt altijd uit op $\neg P$, want waar én onwaar is onwaar.
+    
+    \subsection*{equivalentie-Introdcutie ($\Leftrightarrow-I$)}
+    Als je $P \Leftrightarrow Q$ wilt bewijzen, dan moet je dus de 2 onderdelen hiervan bewijzen.
+    Namelijk: \textbf{Bewijs $P \implies Q$, bewijs $Q \implies P$, daarom houdt $P \Leftrightarrow Q$}.
     De definitie van equivalentie is namelijk dat beide onderdelen elkaar impliceren, dus daarom moet je ze apart van elkaar bewijzen.
 
-
-    \subsection*{equivalentie-Eliminatie ($\leftrightarrow-E$)}
+    \subsection*{equivalentie-Eliminatie ($\Leftrightarrow-E$)}
     Zoals elke Eliminatie strategie moet je eerst bewijzen dat de gehele stelling houdt en daarna kan je conclusies trekken.
-    Hier is dat zo: \textbf{Bewijs $P \leftrightarrow Q$, daarom houdt $P \implies Q$} óf \textbf{Bewijs $P \leftrightarrow Q$, daarom houdt $Q \implies P$}
+    Hier is dat zo: \textbf{Bewijs $P \Leftrightarrow Q$, daarom houdt $P \implies Q$} óf \textbf{Bewijs $P \Leftrightarrow Q$, daarom houdt $Q \implies P$}
     Omdat (nogmaals de definitie van equivalentie) is een equivalent op te splitsen in twee implicaties.
 
     \subsection*{Disjunctie-Introdcutie ($\lor-I$)}
@@ -554,6 +554,57 @@
     1. Als ik binnen ben, dan heb ik mijn telefoon bij me.
     2. Als ik buiten ben, dan heb ik mijn telefoon bij me.
     Ik ben binnen óf buiten, dus ik heb mijn telefoon bij me.
+
+    \subsection{Bewijzen voor kwantificatoren}
+
+    \subsection*{Universele kwantificering–Introductie ($\forall-I$)}
+    Het is hier de bedoeling dat je bewijst dat een stelling voor elke waar de houdt.
+    Dat doe je dus door te zeggen aan het begin van je bewijs ``let a be arbitrairy''.
+    Dit geeft aan dat je het bewijs gaat geven met een waarde die niet vast staat (misschien wel alleen onderdeel is van de natuurlijke nummers e.d. maar je gaat niet in op een eigenschap van één specifiek element).
+
+    \textbf{Stappen:}
+    \begin{enumerate}
+        \item Neem een element $a$, waarbij je expliciet zegt dat het willekeurig is.
+        \item Bewijs dat $P(a)$ geldt zonder enig speciaal kenmerk van $a$ te gebruiken.
+        \item Concludeer vervolgens dat $P(x)$ voor alle $x$ geldt, dus $\forall x\,P(x)$.
+    \end{enumerate}
+
+    \subsection*{Universele kwantificering–Elimination ($\forall-E$)}
+    Deze is makkelijker, namelijk dat $\forall x.P(x)$, als dat gelukt is, dan weet je al dat voor elke a, P(a) houdt.
+
+    \subsection*{Existentiële kwantificering–Introductie ($\exists-I$)}
+    Deze is een stuk makkelijker dan de introductie van Universele kwantificering, want je hoeft maar één element te kunnen benoemen waarvoor de stelling houdt.
+    En dan ben je al klaar, want de $\exists x$ geeft aan dat er minimaal één element x is waarvoor de stelling houdt.
+
+    \textbf{Stappen:}
+    \begin{enumerate}
+        \item Neem een concreet object $t$.
+        \item Bewijs dat $P(t)$ geldt.
+        \item Concludeer dat er minstens één object bestaat waarvoor $P$ geldt: $\exists x\,P(x)$.
+    \end{enumerate}
+
+    \subsection*{Existentiële kwantificering–Introductie ($\exists-E$)}
+    Deze gaat als volgt: \textbf{Bewijs dat $\exists x.P(x)$ houdt}, dan noem je het/een element waardoor de stelling houdt de naam R (o.i.d.).
+    Je bewijst dat R een van/de rede is dat de propositie houdt, dan heb je bewezen dat R houdt.
+
+    \subsection{Afgeleide bewijzen}
+
+    \subsection*{Contrapositie}
+    Je neemt hier aan: \textbf{Neem aan dat $\neg Q$, bewijs $\neg P$, daarom $P \implies Q$}
+    Dit kan je terugzien in de een waarheidstabel:
+
+    \begin{SimpleTable}[s{.3}s{.3}s{.3}s{.3}s{.3}s{.3}]{}{}
+        \TableHeader{$P$ & $Q$ & $P \implies Q$ & $\neg Q$ & $\neg P$ & $\neg Q \implies \neg P$}
+        \TableRow{0 & 0 & 1 & 1 & 1 & 1}
+        \TableRow{0 & 1 & 1 & 0 & 1 & 1}
+        \TableRow{1 & 0 & 0 & 1 & 0 & 0}
+        \TableRow{1 & 1 & 1 & 0 & 0 & 1}
+    \end{SimpleTable}
+
+    \subsection*{Modus tollens}
+    De omgekeerde variant werkt volgens dezelfde waarheidstabel: \textbf{Bewijs ${P \implies Q}$, bewijs $\neg Q$, daarom $\neg P$}
+
+    \newpage
 
     \section{functies}
     Als je op elk element in eens set een verandering wilt doorvoeren, dan kan je daar een functie voor gebruiken.
@@ -710,7 +761,7 @@
 
     \subsection{partities}
     Als je een set A heb met een eindig aantal partities $A_1, A_2, A_3, ..., A_n$
-    Dan is elke partitie $A_i \cap A_j = \emptyset$ wanneer $i \neq j$.
+    Dan is elke partitie $A_i \cap A_j = \emptyset$ wanneer $i \neg j$.
     En bij elkaar $A_1 \cup A_2 \cup ... \cup A_n = A$.
     Oftewel, elke parties heeft elementen die niet in een andere set zitten.
     en als je ze weer samenvoegt, dan krijg je de originele set A weer.
