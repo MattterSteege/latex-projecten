@@ -48,8 +48,17 @@
 
 
     \section{Propositielogica}
-    Propositielogica is de studie van bewijzen. Een propositie is te beantwoorden met waar of niet waar
-    Een propositie is $3 < 17$, dit kan je checken op waarheid. Een propositie is $x \implies y$
+    Propositielogica is de studie van bewijzen.
+    Een propositie is te beantwoorden met waar of niet waar
+    Een propositie is $3 < 17$, dit kan je checken op waarheid.
+    Een propositie is $x \implies y$.
+
+    Propositielogica komt ook met een hele hoop termen, zo heb je \textbf{negatie} wat (gezien in een waarheidstabel) het omdraaien van waarde betekend, waar wordt onwaar en vice versa.
+    Je hebt ook \textbf{conjunctie}, wat een chique woord is voor \textit{en}, $a \land b$, b EN a.
+    Een andere variant is \textbf{disjunctie}, wat dan staat voor \textit{of}, $a \lor b$, a OF b.
+    \textbf{Implicatie} is de er ook een, dat is de $x \implies y$, a IMPLCIEERT b.
+    De allerlaatste is \textbf{equivalentie}, $a \leftrightarrow b$, a is equivalent aan b.
+    LET OP! Dit betekend niet ``gelijk aan'' 2 rode canta's zijn equivalent, maar niet hetzelfde, het is namelijk niet letterlijk dezelfde auto, maar ze zijn wel identiek aan elkaar.
 
     \subsection{Proposities}
     We gebruiken in logica variabelen zoals P en Q, dit zijn \textit{atomisch} proposities, deze zijn altijd geschreven in HOOFDLETTERS.
@@ -111,7 +120,7 @@
         \TableRow{1 & 1 & 0 & 1 & 1 & 1}
     \end{SimpleTable}
 
-    Je kan ook met verschillende kleuren pennen een kleine thruthtable schrijven, maar dit is een hele nette manier om het ook te doen.
+    Je kan ook met verschillende kleuren pennen een kleine waarheidstabel schrijven, maar dit is een hele nette manier om het ook te doen.
 
     \subsection{Voorbij thruth tables}
     Je kan d.m.v een truth table bewijzen of een formule wel of niet houd, maar dat kan ook anders, bijvoorbeeld door het versimpelen van de formules.
@@ -126,6 +135,11 @@
         \TableRow{$\Leftrightarrow$ & $T$                                       & absorbing property of \(T\)}
     \end{SimpleTable}
 
+
+    Mocht het nou gebeuren dat elke rij waar is, ofwel de combinatie van input waardes maakt niet uit voor de uitkomst; deze is altijd waar.
+    Dan heet dat een \textbf{tautologie}.
+    Voor het omgekeerde (altijd onwaar), geld dat dit een \textbf{contradictie} heet.
+    
     Deze afleiding kan je maken door de regels te gebruiken die hieronder stan geschreven (er zijn er nog meer).
 
     \begin{multicols}{3}
@@ -183,6 +197,8 @@
         \end{itemize}
 
     \end{multicols}
+
+
 
 
     \section{sets}
@@ -484,132 +500,60 @@
 
     \section{Proof Strategies}
 
-    \begin{multicols}{2}
+    \subsection*{Implicatie-Introductie ($\implies-I$) }
+    Deze gaat als volgt: \textbf{Neem aan dat P waar is, bewijs Q, daarom houdt $P \implies Q$}.
+    Dit werkt omdat de waarheidstabel van inplicatie altijd waar is, behalve als P waar is en Q niet.
+    Dus als we ervanuit gaan dat P waar is en we bewijzen dat Q ook waar is, dan klopt de stelling.
+    Namelijk als P niet waar blijkt te zijn, dan maakt Q niet meer uit, want de uitkomst is dan (volgens de waarheidstabel) toch waar.
+    En Q kan onwaar zijn, want we hebben het tegendeel bewezen.
 
-        \subsection*{Implication ($P \Rightarrow Q$)}
+    \subsection*{Implicatie-Eliminatie ($\implies-E$)}
+    Deze gaat als volgt: \textbf{Bewijs $P \implies Q$, bewijs P, daarom houdt Q}.
+    Dit werkt, omdat we de volledige stelling bewijzen, daardoor weten we dat in een waarheidstabel alleen de 1e,2e en 4e rijen nog opties zijn.
+    Als we dan bewijzen dat P waar is, dan weten we met 100\% zekerheid dat Q dus ook waar moet zijn, want er is maar 1 optie waar P waar is en de stelling in zijn geheel waar is (4e rij).
 
-        \noindent\textbf{Introductie (⇒I):}
-        Om $P \Rightarrow Q$ te bewijzen neem je $P$ aan en leid je $Q$ af.
-        $$
-        \text{Assume } P \quad\vdots\quad Q \quad\Rightarrow\quad P \Rightarrow Q
-        $$
+    \subsection*{Conjunctie-Introductie ($\land-I$)}
+    Deze is heel simple, als je $P \land Q$ wilt bewijzen, dan moet je deze natuurlijk los bewijzen.
+    Ofwel, \textbf{Bewijs P, Bewijs Q, daarom houdt $P \land Q$}.
 
-        \noindent\textbf{Eliminatie (⇒E):}
-        Als je zowel $P$ als $P\Rightarrow Q$ hebt, mag je $Q$ concluderen.
-        $$
-        P,\ \ P\Rightarrow Q \quad\Rightarrow\quad Q
-        $$
+    \subsection*{Conjunctie-Eliminatie ($\land-E$)}
+    Hier zijn twee varianten van.
+    De eerste is \textbf{Bewijs $P \land Q$, bewijs P, daarom houdt Q}, de ander is \textbf{Bewijs $P \land Q$, bewijs Q, daarom houdt P}.
+    Je bewijst namelijk al dat de gehele stelling moet waar zijn, en dat kan alleen als allebei de delen waar zijn.
+    Als je dus bewijst dat de linker- of rechterzijde waar is, dan weet je dat de andere zijde ook waar moet zijn.
 
+    \subsection*{Negatie-Introdcutie ($\neg-I$)}
+    Deze valt nog mee: \textbf{Neem aan dat P waar is, bewijs het tegendeel ($\neg P$), daarom houdt P niet.}
+    Want P is altijd waar, totdat je bewijst dat het niet z o is.
 
-        \subsection*{Conjunction ($P \land Q$)}
+    \subsection*{Negatie-Eliminatie ($\neg-E$)}
+    TODO: BETER UITWERKEN.
+    Bewijs dat P waar is, Bewijs dat P niet waar is, dan krijg je $P \land \neq P$, en die stelling komt altijd uit op $\neq P$, dus je hebt bewezen dat de stelling niet houdt.
 
-        \noindent\textbf{Introductie (∧I):}
-        Bewijs beide delen afzonderlijk.
-        $$
-        P,\ Q \quad\Rightarrow\quad P \land Q
-        $$
-
-        \noindent\textbf{Eliminatie (∧E):}
-        Uit $P\land Q$ mag je elk deel los gebruiken.
-        $$
-        P\land Q \Rightarrow P
-        \qquad\qquad
-        P\land Q \Rightarrow Q
-        $$
-
-
-        \subsection*{Disjunction ($P \lor Q$)}
-
-        \noindent\textbf{Introductie (∨I):}
-        Als één van beide waar is, mag je de disjunctie concluderen.
-        $$
-        P \Rightarrow P\lor Q
-        \qquad\qquad
-        Q \Rightarrow P\lor Q
-        $$
-
-        \noindent\textbf{Eliminatie (∨E):}
-        Als je $P\lor Q$ hebt, bewijs je je doel $R$ in twee gevallen: eerst uit $P$, daarna uit $Q$.
-        $$
-        \frac{P\lor Q \qquad (P \Rightarrow R) \qquad (Q \Rightarrow R)}{R}
-        $$
-        Dit is de meest subtiele regel: je moet beide takken afhandelen.
+    \subsection*{equivalentie-Introdcutie ($\leftrightarrow-I$)}
+    Als je $P \leftrightarrow Q$ wilt bewijzen, dan moet je dus de 2 onderdelen hiervan bewijzen.
+    Namelijk: \textbf{Bewijs $P \implies Q$, bewijs $Q \implies P$, daarom houdt $P \leftrightarrow Q$}.
+    De definitie van equivalentie is namelijk dat beide onderdelen elkaar impliceren, dus daarom moet je ze apart van elkaar bewijzen.
 
 
-        \subsection*{Negation ($\neg P$)}
+    \subsection*{equivalentie-Eliminatie ($\leftrightarrow-E$)}
+    Zoals elke Eliminatie strategie moet je eerst bewijzen dat de gehele stelling houdt en daarna kan je conclusies trekken.
+    Hier is dat zo: \textbf{Bewijs $P \leftrightarrow Q$, daarom houdt $P \implies Q$} óf \textbf{Bewijs $P \leftrightarrow Q$, daarom houdt $Q \implies P$}
+    Omdat (nogmaals de definitie van equivalentie) is een equivalent op te splitsen in twee implicaties.
 
-        \noindent\textbf{Introductie (¬I):}
-        Neem $P$ aan en toon dat dit tot een contradictie leidt.
-        $$
-        \text{Assume } P \quad\vdots\quad \bot \quad\Rightarrow\quad \neg P
-        $$
+    \subsection*{Disjunctie-Introdcutie ($\lor-I$)}
+    Deze is heel simpel en je hebt hier 2 vormen van als je $P \lor Q$ wilt bewijzen.
+    Namelijk: \textbf{bewijs P, daarom houdt $P \lor Q$}, de ander is \textbf{bewijs Q, daarom houdt $P \lor Q$}.
+    In een disjunctie (OR) is namelijk of links waar of rechts waar (of beide) dus als je er één bewijst, dan maakt het niet meer uit wat de ander is.
 
-        \noindent\textbf{Eliminatie (¬E):}
-        Uit $P$ en $\neg P$ volgt onmiddellijk een contradictie.
-        $$
-        P,\ \neg P \quad\Rightarrow\quad \bot
-        $$
-
-
-        \subsection*{Falsity ($\bot$)}
-
-        \noindent\textbf{Eliminatie (⊥E):}
-        Uit een contradictie mag je alles afleiden (ex falso).
-        $$
-        \bot \Rightarrow P
-        $$
-
-
-        \subsection*{Equivalence ($P \Leftrightarrow Q$)}
-
-        \noindent\textbf{Introductie (⇔I):}
-        Bewijs beide implicaties.
-        $$
-        (P \Rightarrow Q) \land (Q \Rightarrow P) \quad\Rightarrow\quad P \Leftrightarrow Q
-        $$
-
-        \noindent\textbf{Eliminatie (⇔E):}
-        Uit een equivalentie mag je één van de twee implicaties halen.
-        $$
-        P\Leftrightarrow Q \quad\Rightarrow\quad P\Rightarrow Q
-        $$
-        $$
-        P\Leftrightarrow Q \quad\Rightarrow\quad Q\Rightarrow P
-        $$
-
-
-        \subsection*{Universele kwantor ($\forall x\,P(x)$)}
-
-        \noindent\textbf{Introductie (∀I):}
-        Kies een volledig willekeurig element $a$ en bewijs dat $P(a)$ geldt.
-        $$
-        \text{Let $a$ be arbitrary.}\quad P(a) \Rightarrow \forall x\,P(x)
-        $$
-
-        \noindent\textbf{Eliminatie (∀E):}
-        Je mag de kwantor instantiëren met een concreet element.
-        $$
-        \forall x\,P(x) \Rightarrow P(a)
-        $$
-
-
-        \subsection*{Existentiële kwantor ($\exists x\,P(x)$)}
-
-        \noindent\textbf{Introductie (∃I):}
-        Geef een concreet voorbeeld $a$ waarvoor $P(a)$ geldt.
-        $$
-        P(a) \Rightarrow \exists x\,P(x)
-        $$
-
-        \noindent\textbf{Eliminatie (∃E):}
-        Neem een nieuw element $a$ waarvan je aanneemt dat $P(a)$ waar is, en bewijs met die aanname je doel $R$.
-        $$
-        \exists x\,P(x),\quad
-        \text{Assume } P(a) \ \vdots\ R
-        \quad\Rightarrow\quad R
-        $$
-    \end{multicols}
-
+    \subsection*{Disjunctie-Eliminatie ($\lor-E$)}
+    Hoe simpel de introductie was, zo lastig is de eliminatie.
+    Je moet namelijk heel veel stappen doorlopen om $P \lor Q$ te bewijzen.
+    Namelijk: \textbf{Bewijs $P \lor Q$, 1. neem aan dat P waar is, bewijs R; 2. neem aan dat Q waar is, bewijs R; Daarom is R waar onafhankelijk of P of Q waar is.}
+    Deze is wat lastiger om te bedenken, maar bekijk het zo:
+    1. Als ik binnen ben, dan heb ik mijn telefoon bij me.
+    2. Als ik buiten ben, dan heb ik mijn telefoon bij me.
+    Ik ben binnen óf buiten, dus ik heb mijn telefoon bij me.
 
     \section{functies}
     Als je op elk element in eens set een verandering wilt doorvoeren, dan kan je daar een functie voor gebruiken.
