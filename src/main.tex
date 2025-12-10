@@ -610,7 +610,10 @@
     Als je op elk element in eens set een verandering wilt doorvoeren, dan kan je daar een functie voor gebruiken.
     $f : A \longrightarrow B$ betekend dat je op elke element in $A$ een functie uitvoerd en deze in de set $B$ zet.
 
-    Functies zet elke member in een set om in een output (die dan wel niet altijd gelijk of anders is).
+    Het is mogelijk dat er verschillende inputs zijn, die dezelfde output geven.
+    Zo kan er functie $even(x)$ bestaan die de set $\{1,2,3,4,5,6\} \rightarrow \{0,1,0,1,0,1\}$ (0 betekend oneven, 1 betekend even).
+    Je kan dus schrijven: $even(1) = even(3) = even(5) = 0$.
+    Het is wel zo dat de functie elke input om moet zetten en een output, hieronder staan mogelijkheden en of deze wel of te niet correcte functies zijn.
 
     \begin{multicols}{2}
 
@@ -726,7 +729,7 @@
     \end{multicols}
 
 
-    \subsection{terminologie}
+    \subsection{terminologie ONAF VANAF HIER}
     $A$ noemen we het \textbf{domein}, en $B$ noemen we het \textbf{codomein}.
     Je kan ook meerdere argumenten meegeven: $f : A \times B \times C \longrightarrow D$
     De hoeveelheid argumenten noem je de \textbf{ariteit}.
@@ -738,7 +741,19 @@
     de image van een set is je begint met een set en die zet je om naar de na-functie set.
     De pre-image is het resultaat en die wil je dan omzetten naar het origineel.
 
-    \subsection{speciale functies}
+    \begin{voorbeeld}{image en pre-image}
+        Dit voorbeeld met de functie: $sqrt(x)$ die inhoudt dat de output $x \times x$ bedraagt.
+        We nemen ook de set $S = \{1,4,9,16\}$.\\
+        Dan is de image van de set $sqrt(S)$ gelijk aan $\{1, 16, 81, 256\}$, dit is ná de functie is uitgevoerd op de input set.\\
+        De Pre-image is het tegenovergestelde, die is namelijk $\{1, 2, 3, 4\}$.
+        Hier kijk je naar de input set en ga je ervanuit dat de functie al is uitgevoerd en moet je dus kijken welke zet heeft dit als resultaat.
+    \end{voorbeeld}
+
+    \subsection{grafieken}
+    Zoals we kennen in de wiskunde van $y = 2x$, kan je een grafiek maken van de functie.
+    In de functie $f : A \rightarrow B$ defineren we de subset $A \times B$
+
+    G = {(a, f(a)) : a ∈ A}
 
 
     \section{Relaties}
@@ -765,6 +780,42 @@
     En bij elkaar $A_1 \cup A_2 \cup ... \cup A_n = A$.
     Oftewel, elke parties heeft elementen die niet in een andere set zitten.
     en als je ze weer samenvoegt, dan krijg je de originele set A weer.
+
+    \ruleline{Alles hierboven is stof voor de eerste midterm}
+
+    \section{Inductie}
+    Elke inductie is omschreven met 3 stappen:
+    \begin{enumerate}
+        \item De \textbf{base case}, die verteld dat er sommige elementen in een set zit
+        \item De \textbf{inductieove case}, die verteld dat als een bepaalde waarde in de set zit, dat die waarde er ook bij moet. Bijv. je hebt een set met 1 iemand, en dan voeg je alle mensen toe die hij/zij kent, en die kennen ook weer mensen die je dan toe voegt etc.
+        \item De \textbf{external clause}, die geeft aan dat elementen die niet toegevoegd zijn door case 1 en 2 niet worden toegevoegd.
+    \end{enumerate}
+    \\\\
+
+    \begin{multicols}{2}
+
+    \noindent Voor de set $\mathbb{N}$ natuurlijke nummers, gaat het als volgt:
+    \begin{itemize}
+        \item $0 \in \mathbb{N}$.
+        \item voor elke $n \in \mathbb{N}$, voeg $(n + 1) \in \mathbb{N}$.
+        \item Er zijn geen andere getallen uit $\mathbb{N}$.
+    \end{itemize}
+
+    \noindent Voor de set even natuurlijke nummers, gaat het als volgt:
+    \begin{itemize}
+        \item $0 \in \mathbb{N}$.
+        \item voor elke $n \in \mathbb{N}$, voeg $(n + 2) \in \mathbb{N}$, wanneer $(n - 2) \in \mathbb{N}$, waar $n \neq 0$ bestaat
+        \item Er zijn geen andere getallen uit $\mathbb{N}$.
+    \end{itemize}
+
+    \end{multicols}
+
+    \subsection{Backus-Naur Form}
+    Dit is een hele korte manier om inductie te schrijven:
+    $w::= \epsilon | 0w | 1w$, hier staat dat $\epsilon$ is een word w, dan is 0w een word in de set én 1w is ook een word in de set.
+    Dus dan kan je bijv. $w = {0}$ nemen, dan krijg je na een iteratie $w = {0, 10, 00}$
+
+
 
 
 \end{document}
