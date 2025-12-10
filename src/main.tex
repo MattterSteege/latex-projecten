@@ -20,32 +20,7 @@
 % -----------------------------------------
 \begin{document}
 
-    \begin{SimpleTable}[s{1}s{.3}s{.3}]{}{}
-        \TableHeader{TERM & LATEX & LATEX COMMAND}
-        \TableRow{1. there exists at least one & \exists & \verb|\exists|}
-        \TableRow{2. there exists one and only one & \exists! & \verb|\exists!|}
-        \TableRow{3. there is no & \nexists & \verb|\nexists|}
-        \TableRow{4. for all & \forall & \verb|\forall|}
-        \TableRow{5. not (logical not) & \neg & \verb|\neg|}
-        \TableRow{6. or (logical or) & \lor & \verb|\lor|}
-        \TableRow{7. division & \div & \verb|\div|}
-        \TableRow{8. and (logical and) & \land & \verb|\land|}
-        \TableRow{9. implies & \implies & \verb|\implies|}
-        \TableRow{10. right implication & \Rightarrow & \verb|\Rightarrow|}
-        \TableRow{11. is implied by (only if) & \Longleftarrow & \verb|\Longleftarrow|}
-        \TableRow{12. left implication & \Leftarrow & \verb|\Leftarrow|}
-        \TableRow{13. if and only if, iff & \iff & \verb|\iff|}
-        \TableRow{14. equivalence & \Leftrightarrow & \verb|\Leftrightarrow|}
-        \TableRow{15.Subset & \subset & \verb|\subset|}
-        \TableRow{16. Logical XOR (exclusive or) & \oplus & \verb|\oplus|}
-        \TableRow{17. Union of sets & \cup & \verb|\cup|}
-        \TableRow{18. Empty set & \emptyset & \verb|\emptyset|}
-        \TableRow{19. Intersection of sets & \cap & \verb|\cap|}
-    \end{SimpleTable}
-
-    \clearpage
     \onecolumn
-
 
     \section{Propositielogica}
     Propositielogica is de studie van bewijzen.
@@ -198,15 +173,12 @@
 
     \end{multicols}
 
-
-
-
     \section{sets}
     Propositielogica heeft ook een manier om over een groep dingen te redeneren, \textit{\textbf{sets}}.
     Deze schrijf tussen accolades met comma's tussen de items: $\{ false, true \}$, $\{ 3, 7, 14 \}$, $\{ red, blue, yellow\}$.
     Dit kan voor kleine sets met de hand, maar als je grote sets wilt schrijven, dan kost dat heel veel tijd, daarom kan je ook: ${ 1, 3, 5, ..., 99}$ om alle oneven cijfers van 1 t/m 99 als set te hebben.
     Of als ${1, 2, 3, ...}$ om alle cijfers vanaf 1 te hebben (oneindig).
-    De lengte van een sets is op te schrijven door |A| of #A, waar A een set is met een lengte, de \textbf{cardinality} hier tel je alleen het aantal unieke elementen.
+    De lengte van een sets is op te schrijven door |A| of #A, waar A een set is met een lengte, de \textbf{cardinality} hier tel je alleen het aantal unieke elementen, maar dit werkt alleen voor eindige sets, dus $|{1,2,3,4}| = 4$.
     Als er maar 1 element in een set zit, dan heet dat een \textbf{singleton}.
 
     Ook kan je de \textit{\textbf{set-builder notation}} gebruiken, hierbij schrijf je het soort element dat je wilt en wat het element kan zijn:
@@ -729,7 +701,7 @@
     \end{multicols}
 
 
-    \subsection{terminologie ONAF VANAF HIER}
+    \subsection{terminologie}
     $A$ noemen we het \textbf{domein}, en $B$ noemen we het \textbf{codomein}.
     Je kan ook meerdere argumenten meegeven: $f : A \times B \times C \longrightarrow D$
     De hoeveelheid argumenten noem je de \textbf{ariteit}.
@@ -739,7 +711,12 @@
 
     \subsection{afbeelding en pre-afbeelding}
     de image van een set is je begint met een set en die zet je om naar de na-functie set.
+    Deze is gedefinieerd als: $f(S) = \{f(a) : a \in S\}$.
+    Te lezen als: "De set S wordt door functie f omgezet naar een nieuwe set, die bestaat uit alle outputs van f voor elk element a in S".
+
     De pre-image is het resultaat en die wil je dan omzetten naar het origineel.
+    Deze is gedefinieerd als: $f^{-1}(T) = \{a : a \in A \land f(a) \in T\}$.
+    Te lezen als: "De set T wordt door de inverse van functie f omgezet naar een nieuwe set, die bestaat uit alle inputs a in A waarvoor de output van f in T zit".
 
     \begin{voorbeeld}{image en pre-image}
         Dit voorbeeld met de functie: $sqrt(x)$ die inhoudt dat de output $x \times x$ bedraagt.
@@ -749,11 +726,94 @@
         Hier kijk je naar de input set en ga je ervanuit dat de functie al is uitgevoerd en moet je dus kijken welke zet heeft dit als resultaat.
     \end{voorbeeld}
 
-    \subsection{grafieken}
+    \subsection{grafieken en identiteit functies}
     Zoals we kennen in de wiskunde van $y = 2x$, kan je een grafiek maken van de functie.
-    In de functie $f : A \rightarrow B$ defineren we de subset $A \times B$
+    In de functie $f : A \rightarrow B$ defineren we de subset $A \times B$ als de grafiek van f.
+    Dit houdt in dat elk element in A gekoppeld is aan zijn output in B. (zoals in een xy-grafiek).
+    Een graph functie is dus een verzameling van paren (a, b) waarbij a in A zit en b de output is van f(a) is.
+    Zo krijg je dus de grafiek van f als: $G = \{(a, f(a)) : a \in A\}$.
+    Te lezen als: "De grafiek G is de verzameling van alle paren (a, f(a)) waarbij a in A zit".
+    \\\\
+    De identiteit functie is een speciale functie die elk element in A koppelt aan zichzelf in B.
+    Dit is dus $id : A \rightarrow A$ met $id(a) = a$ voor alle a in A.
+    Dit houdt in dat de output van de functie altijd hetzelfde is als de input.
 
-    G = {(a, f(a)) : a ∈ A}
+    Voor een Subset S van A, kunnen we een characteristieke functie definiëren, deze is meestal genoteerd als $\chi: A \rightarrow \{0,1\}$.
+    Deze functie werkt als volgt:
+    \[
+        \chi(a) =
+        \begin{cases}
+            1 & \text{als } a \in S \\
+            0 & \text{als } a \notin S
+        \end{cases}
+    \]
+    Dit betekent dat de functie 1 teruggeeft als het element a in de subset S zit, en 0 als het element a niet in S zit.
+
+    \subsection{injectief, surjectief en bijectief}
+    Een functie kan op verschillende manieren de elementen in de sets koppelen.
+    \begin{itemize}
+        \item \textbf{Injectief}: Elk element in A wordt gekoppeld aan een uniek element in B.
+        Dit betekent dat er geen twee verschillende elementen in A zijn die naar hetzelfde element in B wijzen.
+        Dus als $f(a_1) = f(a_2)$, dan moet $a_1 = a_2$ zijn.
+        \\
+        De functie $f: \mathbb{R} \rightarrow \mathbb{R}$ gedefinieerd door $f(x) = 2x$ is injectief, omdat verschillende waarden van $x$ verschillende waarden van $f(x)$ opleveren, maar niet alle waarden in B worden bereikt (want, $x = 0.5$ is geen reëel getal).
+        \\
+        Als je een injectieve functie hebt tussen twee sets, dan kan je dat noteren als $A \preceq B$.
+        Te lezen als: ``Er is een injectieve functie van A naar B.''
+
+        \item \textbf{Surjectief}: Elk element in B wordt bereikt door ten minste één element in A.
+        Dit betekent dat de functie alle elementen in B "bedient".
+        Dus voor elke $b$ in B, is er minstens één $a$ in A zodat $f(a) = b$.
+        \\
+        De functie $g: \mathbb{R} \rightarrow \mathbb{R}$ gedefinieerd door $g(x) = x^2$ is niet surjectief, omdat negatieve waarden in B niet worden bereikt door enige waarde van $x$ in A.
+        \\
+        Als je een surjectieve functie hebt tussen twee sets, dan kan je dat noteren als $A \succeq B$.
+        Te lezen als: ``Er is een surjectieve functie van A naar B.''
+        \item \textbf{Bijectief}: De functie is zowel injectief als surjectief.
+        Dit betekent dat er een één-op-één correspondentie is tussen de elementen in A en B.
+        Dus elk element in A wijst naar een uniek element in B, en elk element in B wordt bereikt door precies één element in A.
+        \\
+        De functie $h: \mathbb{R} \rightarrow \mathbb{R}$ gedefinieerd door $h(x) = x + 1$ is bijectief, omdat elke waarde van $x$ een unieke waarde van $h(x)$ oplevert, en elke waarde in B wordt bereikt door precies één waarde van $x$.
+    \end{itemize}
+
+    Bij Bijectieve functies zijn belangrijk omdat ze een perfecte "match" tussen de twee sets creëren, wat betekent dat de lengte van beide sets gelijk is als ze eindig zijn.
+    Maar dat wil je wel kunnen noteren, daarvoor is de $\simeq$ notatie.
+    Dus als er een bijectie is tussen set A en set B, dan noteren we dit als $A \simeq B$.
+    Dit betekent dat de cardinaliteit (grootte) van A gelijk is aan die van B.
+    Dit werkt voor eindige sets, maar ook voor oneindige sets.
+
+    Dit is niet alleen bij bijectieve functies zo, dit geldt altijd:
+    \begin{itemize}
+        \item De set van dagen in de week $\{Ma, Di, Wo, Do, Vr, Za, Zo\} \simeq \{1, 2, 3, 4, 5, 6, 7\}$
+        \item De set van natuurlijke getallen groter dan nul $\mathbb{N}_{\eqslantgtr 0} \simeq \mathbb{N}$
+
+    \subsection{compositie van functies}
+    Stel je hebt twee functies: $f : A \rightarrow B$ en $g : B \rightarrow C$.
+    De compositie van deze twee functies, genoteerd als $g \circ f$, is een nieuwe functie die elementen van A naar C brengt door eerst f toe te passen en daarna g.
+    Je leest dit dus als "g na f".
+    De compositie wordt gedefinieerd als:
+    \[
+        (g \circ f)(a) = g(f(a))
+    \]
+    voor alle $a$ in A.
+    Dit betekent dat je eerst de functie f toepast op het element a om een element in B te krijgen, en vervolgens pas je de functie g toe op dat resultaat om een element in C te krijgen.
+
+    Het is goed om te weten dat als beide functies injectief zijn, dan is hun compositie ook injectief.
+    Als beide functies surjectief zijn, dan is hun compositie ook surjectief.
+    En als beide functies bijectief zijn, dan is hun compositie ook bijectief.
+
+    \begin{voorbeeld}{Bijectieve functies en compositie}
+        Stel je hebt de functie $f(x) = 2x + 3$, deze is bijectief omdat elke waarde van x een unieke waarde van f(x) oplevert, en elke waarde in de codomein wordt bereikt door precies één waarde van x (ervan uitgaande dat de codomein alle reële getallen bevat).
+        Als je wilt bewijzen dat $f$ bijectief is, kun je de volgende stappen volgen:
+        Je splitst de functie op in twee delen: eerst $g(x) = 2x$ en daarna $h(x) = x + 3$.
+        Beide functies zijn bijectief:
+        \begin{itemize}
+            \item $g(x) = 2x$ is injectief omdat verschillende waarden van x verschillende waarden van g(x) opleveren, en het is surjectief omdat elke waarde in de codomein wordt bereikt door precies één waarde van x.
+            \item $h(x) = x + 3$ is ook injectief en surjectief om dezelfde redenen.
+        \end{itemize}
+        Omdat zowel $g$ als $h$ bijectief zijn, is hun compositie $f(x) = h(g(x)) = 2x + 3$ ook bijectief.
+    \end{voorbeeld}
+
 
 
     \section{Relaties}
