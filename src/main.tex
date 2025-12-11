@@ -181,6 +181,9 @@
     De lengte van een sets is op te schrijven door |A| of #A, waar A een set is met een lengte, de \textbf{cardinality} hier tel je alleen het aantal unieke elementen, maar dit werkt alleen voor eindige sets, dus $|{1,2,3,4}| = 4$.
     Als er maar 1 element in een set zit, dan heet dat een \textbf{singleton}.
 
+    Het \textbf{cartesisch product} van twee sets A en B is de set van alle mogelijke paren (a, b) waarbij a een element is van A en b een element is van B.
+    Dit schrijf je als $A \times B$, en stel A = {1, 2} en B = {x, y}, dan is $A \times B = \{(1,x), (1,y), (2,x), (2,y)\}$.
+
     Ook kan je de \textit{\textbf{set-builder notation}} gebruiken, hierbij schrijf je het soort element dat je wilt en wat het element kan zijn:
     $\{\text{x : x has the property P}\}$
 
@@ -257,6 +260,47 @@
 
     \section{Boolean algebra}
     korte notitie* in Bolean algebra is de $+$ hetzelfde als de OR operator, $\cdot$ hetzelfde als de AND operator, $^{-1}$ hetzelfde als NOT
+
+    \subsection{Bools algebra regels}
+
+    \begin{multicols}{3}
+
+        Commutativity:
+        \begin{itemize}
+            \item $x + y = y + x$
+            \item $x \cdot y = y \cdot x$
+        \end{itemize}
+
+        Associativity:
+        \begin{itemize}
+            \item $x + (y + z) = (x + y) + z$
+            \item $x \cdot (y \cdot z) = (x \cdot y) \cdot z$
+        \end{itemize}
+
+        Distributivity:
+        \begin{itemize}
+            \item $x \cdot (y + z) = (x \cdot y) + (x \cdot z)$
+            \item $x + (y \cdot z) = (x + y) \cdot (x + z)$
+        \end{itemize}
+
+        Identity:
+        \begin{itemize}
+            \item $x + 0 = x$
+            \item $x \cdot 1 = x$
+        \end{itemize}
+
+        Complement:
+        \begin{itemize}
+            \item $x + \overline{x} = 1$
+            \item $x \cdot \overline{x} = 0$
+        \end{itemize}
+
+        \vphantom{Extra ruimte}
+        \\
+        \vphantom{Extra ruimte}
+        \\
+        \vphantom{Extra ruimte}
+    \end{multicols}
 
     \subsection{monoïde}
     Monoide is een verzameling A, is niet ledig en heeft minstens 1 element e, en een binaire operator $\oplus$ %TODO: verder uitschrijven
@@ -634,7 +678,8 @@
                 \node at (6.75,3) {3};
                 \node at (6.75,1.75) {4};
                 \draw (2.5,5.5) -- (6.25,4.25);
-                \draw (2.5,4.25) -- (6.25,1.75);
+                \draw (2.5,4.25) -- (6.25,4.25);
+                \draw (2.5,3) -- (6.25,1.75);
                 \draw (2.5,1.75) -- (6.25,1.75);
             \end{tikzpicture}%
         }
@@ -819,28 +864,47 @@
 
     \section{Relaties}
 
-    \subsection{properties of realtions}
+    Een relatie is een manier om elementen van een set met elkaar te verbinden.
+    Formeel is een relatie R op de sets A en B een subset van het Cartesisch product $A \times B$.
+    Een relatie R tussen A en B schrijf je als $ARB$, zo ziet het er slecht te lezen uit, maar ``>'' is ook een relatie die je als $X>Y$ schrijft, dat is logischer te lezen.
+    Je kan de relatie R ook schrijven als $R(A, B)$ of $(A,B) \in R$.
+
+    Het verschil tussen functies en relaties, is dat een functie elke input koppelt aan precies één output, terwijl een relatie meerdere outputs kan hebben voor een enkele input, of zelfs geen output.
+    Bijvoorbeeld, de relatie ``is ouder dan'' tussen mensen kan meerdere mensen omvatten die ouder zijn dan een bepaalde persoon, terwijl een functie zoals ``geef de leeftijd van'' elke persoon koppelt aan precies één leeftijd.
+
+    De relatie R heeft ook een domein en een bereik.
+    Het domein van R is de set van alle eerste elementen in de paren van R, en het bereik van R is de set van alle tweede elementen in de paren van R.
+    Ofwel:\\
+    $domain(R) = \{a \in A : \exists b \in B, (a,b) \in R\}$\\
+    $range(R) = \{b \in B : \exists a \in A, (a,b) \in R\}$.
+
+    \subsection{Eigenschappen van relaties}
+    Relaties kunnen verschillende eigenschappen hebben, afhankelijk van hoe de elementen in de sets met elkaar verbonden zijn.
+    Hier zijn enkele belangrijke eigenschappen van relaties:
+
     \begin{itemize}
-        \item Reflexiviteit: als $R(x,x)$ voor alle $x$, bijvoorbeeld gelijkheid
-        \item Symetrie: als $R(x,y) \implies R(y,x)$, bijvoorbeeld gelijkheid, of 'is sibling of (de broer van mijn zus ben ik)'
-        \item Asymetrie: als $R(x,y) \implies \neg R(y,x)$
-        \item Transitief: als $R(x,y) \land R(y,z) \implies R(x,z)$, bijvoorbeeld gelijkheid $3=1+2$ en $1+2=1+1+1$ dus $3=1+1+1$
+        \item \textbf{Reflexief}: Een relatie R op een set A is reflexief als voor alle elementen a in A, het paar (a, a) in R zit.
+        Bijvoorbeeld, de relatie ``is gelijk aan'' is reflexief omdat elke persoon gelijk is aan zichzelf.
+        Als dit nooit het geval is, dan noem je het \textbf{irreflexief}.
+        \item \textbf{Symmetrisch}: Een relatie R op een set A is symmetrisch als voor alle elementen a en b in A, als (a, b) in R zit, dan ook (b, a) in R zit.
+        Bijvoorbeeld, de relatie ``is getrouwd met'' is symmetrisch omdat als persoon A getrouwd is met persoon B, dan is persoon B ook getrouwd met persoon A.
+        \item \textbf{Antisymmetrisch}: Een relatie R op een set A is antisymmetrisch als voor alle elementen a en b in A, als (a, b) en (b, a) in R zitten, dan moet a gelijk zijn aan b.
+        Bijvoorbeeld, de relatie ``is ouder dan'' is antisymmetrisch omdat als persoon A ouder is dan persoon B, en persoon B ouder is dan persoon A, dan moeten ze dezelfde leeftijd hebben (wat onmogelijk is).
+        \item \textbf{Transitief}: Een relatie R op een set A is transitief als voor alle elementen a, b, en c in A, als (a, b) en (b, c) in R zitten, dan ook (a, c) in R zit.
+        Bijvoorbeeld, de relatie ``is een voorouder van'' is transitief omdat als persoon A een voorouder is van persoon B, en persoon B een voorouder is van persoon C, dan is persoon A ook een voorouder van persoon C.
     \end{itemize}
 
-    \subsection{relaties defineren}
+    \subsection{equivalentie klassen}
+    Je kan een equivalentie relatie gebruiken om een set op te delen in verschillende subsets, die we equivalentie klassen noemen.
+    Elke equivalentie klasse bevat elementen die allemaal met elkaar gerelateerd zijn volgens de equivalentie relatie.
+    Bijvoorbeeld, als we de set van auto's hebben en de relatie ``heeft dezelfde kleur als'', dan kunnen we de auto's opdelen in equivalentie klassen op basis van hun kleur.
+    Dus alle rode auto's vormen één equivalentie klasse, alle blauwe auto's vormen een andere klasse, enzovoort.
 
-    \subsection{Equivalentie klasse}
-    Als je bepaalde sets als "gelijk" wil beschouwen dan kan je dit gebruiken.
-    Je kan dan bijvoorbeeld zeggen: auto's zijn gelijk als het model en merk het zelfde zijn, kleur maakt niet uit.
-    Of $1/2$ is gelijk aan $2/4$, het detail dat ze niet 1 op 1 hetzelfde zijn maakt niet meer uit.
-    Ze zijn niet gelijk, maar wel equivalent.
+    Deze kan je vervolgens opdelen in partities, waarbij elke element in de set precies in één subset zit.
+    Dus in het bovenstaande voorbeeld, zou elke auto precies in één kleurklasse zitten, en deze zouden samen de hele set van auto's vormen zonder overlap.
+    De definitie hiervan is $A_1 \cap A_2 = \emptyset$ voor alle $A_1, A_2$ in de partitie, waarbij $A_1 \neq A_2$.
+    En $A_1 \cup A_2 \cup ... \cup A_n = A$.
 
-    \subsection{partities}
-    Als je een set A heb met een eindig aantal partities $A_1, A_2, A_3, ..., A_n$
-    Dan is elke partitie $A_i \cap A_j = \emptyset$ wanneer $i \neg j$.
-    En bij elkaar $A_1 \cup A_2 \cup ... \cup A_n = A$.
-    Oftewel, elke parties heeft elementen die niet in een andere set zitten.
-    en als je ze weer samenvoegt, dan krijg je de originele set A weer.
 
     \ruleline{Alles hierboven is stof voor de eerste midterm}
 
