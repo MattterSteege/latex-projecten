@@ -1,18 +1,3 @@
-% main.tex
-% Universitaire Papers - Full Documentation & Usage Guide
-% Author: Matt
-% Purpose: A self-contained manual that explains paperSettings.tex,
-%          standardCommands.tex and demonstrates how to use the macros.
-%
-% Save this file as main.tex in the root of the repo alongside:
-%   - paperSettings.tex
-%   - standardCommands.tex
-%   - main.bib
-%
-% Compile with: buildLatexDocument.sh (or fullBuild.sh)
-% Or upload to Overleaf and compile there.
-% -----------------------------------------
-
 % ----------- Document settings -----------
 \documentclass[nonacm, sigconf, balance=true]{acmart}
 \include{core/paperSettings} % import custom general paper settings
@@ -23,94 +8,31 @@
     \clearpage
     \onecolumn
 
-% ====================================================
-    \section[Semiotiek: \textbf{Mens-Informatie}]{Semiotiek}
-    Semiotiek is het zelfde als 'tekenleer'. Denk hierbij aan:
-    \begin{itemize}
-        \item letters (A-Z)
-        \item Karakters (chinees alfabet)
-        \item Woorden
-        \item Morsetekens/braille
-        \item verkeerdborden, pictogrammern
-        \item gebaren
-        \item voorwerpen (witte vlag, e.d)
-    \end{itemize}
-
-    Semiotiek houd zich bezeig met elke activiteit, handeling of preces waarbij tekens worden gebruitk.
-    Een teken defineren we als: "Alles dat een booschap communiceert van de zender naar de ontvanger"
-
-    \subsection{De semiotische ladder}
-
-    \subsection{Fysieke tekens (Technische laag)}
-    Dit houd alles in van Klanken die je met je mond maakt tot gebaren, letters, Geuren e.d.
-    Tekens kunnen op zichzelf al een betekenis hebben, maar kunnen ook met elkaar een betekenis hebben.
-
-    \subsection{Het empirische niveau (Technische laag)}
-    De manier waarop alle tekens (theoretisch) kunnen worden gecombineerd, geobserveerd of verstoord.
-
-    % TODO: create a voorbeeld enviroment, that is an indented square box with some basic text at the top, and where you can write an explaination of what im telling
-
-    Bijvoorbeeld: een systeem dat vier tekens kan produceren: a,b,c,d. Dan kan je op empirisch niveau analyseren hoe vaak elk van die tekens voorkomt (18,91\% van het NL lettergebruik is 'e')
-
-    Zo kan je analyseren of een reeks tekens zinvol lijtk te zijn door of de hoeveelheid bepaalde letters "Nederlands" is.
-    Of de hoeveelheid ruis op de lijn de communicatie niet in de weg zit.
-    Welke waardes de letters voor Scrabble in verschillende talen zou moeten hebben (in NL is 'e' laag, 'Y' hoog bv)
-
-    \subsection{Syntax}
-    Syntax betekend kort gezegd, welke reeks tekens is geldig en welke niet.
+    \section{Webnavigatie}
+    \subsection{Web usage mining}
+    Dit gaat over het ontdekken van patronen in webdata, zoals gebruikersgedrag op websites.
+    Het doel is om inzicht te krijgen in veel bezochte pagina's en websites of veel voorkomende paden van navigatie.
+    Zo kan je begrijpen welke taken en behoeften gebruikers hebben, wat gebruiksonvriendelijke elementen zijn en hoe je de website kunt verbeteren (UI/UX of snelhied etc.).
+    Het volgende zijn ook voorbeelden:
 
     \begin{itemize}
-        \item \textbf{Morfologie} is de leer van woordstructuur e de woordvorming. Het houd zich bezig met morfemen\footnote{boekenkast kan je opsplitesen in de morfemen "boek" en "kast", deze kan je niet verder opslitsen}
-        \item \textbf{Syntaxis} bestaat uit woordontleding en zinsontleding
-    \end{itemize}
-
-    Moderne theorieën over syntax ijn sterk beïnvloed door de generatieve grammatica van de Amerikaans taalkundige Noam Chomsky.
-    Voor het Nederlands gelden bijvoorbeeld deze \texit{contextvrije herschrijvregels}.
-
-    \begin{multicols}{2}
-        \begin{itemize}
-            \item Zin → \textit{NC VC}
-            \item VC → \textit{PC V}
-            \item PC → \textit{P NC}
-            \item NC → \textit{lidwoord N}
-        \end{itemize}
-        \columnbreak
-        \begin{itemize}
-            \item NC → \textit{noun phrase (de auto)}
-            \item VC → \textit{verb phrase (gaat in de morgen rijden)}
-            \item PC → \textit{prepositional phrase (in de morgen)}
-            \item V → \textit{verb (rijden)}
-            \item P → \textit{preposition (in)}
-            \item N → \textit{noun (auto)}
-        \end{itemize}
-    \end{multicols}
-
-    \subsection{Semantiek}
-    Semantiek houdt zich bezig met de \textbf{betekenis} van woorden, zinnen, langere teksten of andere talige uitingen.
-    Die betekenis kan bijvoorbeeld een defenties in de Van Dale zijn, jouw kennis van een bepaald onderwerp, de persoon/personen die jij met het onderwerp associeert met de naam Roderick.
-    Dit is dus het niveau waarbij de propositie Roderick een betekenis in de "echte wereld" krijgt.
-
-    \textbf{Objectivisme}: de vertaling van een syntactische structuur naar de fysieke wereld is voor iedereen hetzelfde.
-    \newline → \textit{De wereld is objectief te kennen.}
-
-    \textbf{Constructivisme}: Legt nadruk of het feit dat kennis tot stand komt door een actieve constructie, eerder dan een passieve representatie vand e werkelijkheid.
-    \newline → \textit{Wij creeëren, passen aan (, of vergeten) de defentieis van woorden of zinnen altijd, vooral waarneer er een spraakverwarring of misverstand kan ontstaan.}
-
-    \subsection{pragmatiek}
-    Doorgaans wordt een bepaalde communicatie-uiting gedaan een bepaalde bedoeling, een bepaalde \textit{intentie}
-    We verwachten dan dat de andere pratijen (mensen of systemen) reageren zoals wij het bedoeld hebben:
-
-    \begin{itemize}
-        \item Dat iemand het licht uitschakelt als je zegt dat het licht nog aan is.
-        \item Dat een gesprek wordt afgerond als jij demonstratief telkens op je horloge kijkt.
-        \item Dat een zoekmachine je meest relevante, informatieve website voor de zoekopdracht toont
-        \item Dat diezelfde zoekmachine je direct nieuws, defenities en statistieken toont voor een query
+        \item Identificeren van advertentielocaties.
+        \item Optimaliseren van menu-desing.
+        \item Herkennen van bots en frauduleuze activiteiten.
+        \item Personaliseren van content en aanbevelingen.
+        \item Voorspellen van de volgende actie van een gebruiker
     \end{itemize}
 
 
-    \section{kennisbanken}
-    Het is een manier van beheer van 'kennis'. Denk aan kennis die in een bepaald bedrijf zit en opgeslagen moet worden.
-    Je hebt hiervoor relationele databases, verschillende tabellen in een database kunnen aan eklaar gekoppeld worden dmv id's e.d.
-    Deze tabellen hebben allemaal een unieke key.
+    \subsection{gebruikersdata}
+    \textbf{Gebruikersprofielen}: zijn gegevens die door de gebruiker zelf zijn verstrekt, zoals naam, leeftijd, geslacht, locatie en interesses.
+    \textbf{Gebruiksdata}: omvat informatie over hoe gebruikers omgaan met een website, zoals bezochte pagina's, klikgedrag, tijd besteed op pagina's en navigatiepaden.
+
+    Deze data kan je op verschillende manieren verzamelen, zoals:
+    \begin{itemize}
+        \item \textvf{Webserver}: Voornamelijk klikgedrag, bezochte pagina's en tijd op pagina.
+        \item \textvf{Webclient}: Data van één gebruiker op verschillende sites, zoals muisbewegingen, scrollgedrag en interacties.
+        \item \textvf{Proxyservers}: Data van meerdere gebruikers, zoals bezochte sites en algemene navigatiepatronen.
+    \end{itemize}
 
 \end{document}
