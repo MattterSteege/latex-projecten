@@ -278,7 +278,7 @@
     Een handeling noemen we (a). De kans dat deze handeling voorkomt ligt altijd tussen 0 en 1:
 
     \[
-    0 \leq P(a) \leq 1
+        0 \leq P(a) \leq 1
     \]
 
     Deze kans heet de a-priori kans. Die staat los van context. Sommige handelingen gebeuren vaak (homepage bezoeken), andere zelden (voorwaardenpagina openen).
@@ -289,7 +289,7 @@
     Dat schrijven we als:
 
     \[
-    P(a \mid b)
+        P(a \mid b)
     \]
 
     Dit lees je als: \textit{de kans op a, gegeven dat b heeft plaatsgevonden}.
@@ -297,7 +297,7 @@
     Concreet:
 
     \[
-    P(a \mid b) = \frac{\text{aantal keren dat b gevolgd wordt door a}}{\text{aantal keren dat b voorkomt}}
+        P(a \mid b) = \frac{\text{aantal keren dat b gevolgd wordt door a}}{\text{aantal keren dat b voorkomt}}
     \]
 
     Dit is nog steeds simpel tellen, maar nu mét context.
@@ -308,7 +308,7 @@
     De formule:
 
     \[
-    P(a \mid E) = \frac{P(E \mid a) \cdot P(a)}{P(E)}
+        P(a \mid E) = \frac{P(E \mid a) \cdot P(a)}{P(E)}
     \]
 
     Wat hier gebeurt:
@@ -345,7 +345,7 @@
     LRU kijkt alleen naar \textit{recentheid}.
 
     \[
-    LRU(m_i, I_{m_i}, i_n) = \frac{1}{i_n - i_k + 1}
+        LRU(m_i, I_{m_i}, i_n) = \frac{1}{i_n - i_k + 1}
     \]
 
     Waar:
@@ -364,7 +364,7 @@
     MFU kijkt alleen naar \textit{frequentie}.
 
     \[
-    MFU(m_i, I_{m_i}, i_n) = \frac{|I_{m_i}|}{i_n}
+        MFU(m_i, I_{m_i}, i_n) = \frac{|I_{m_i}|}{i_n}
     \]
 
     Pagina’s die vaak bezocht zijn in het verleden krijgen een hogere kans, ongeacht hoe lang geleden dat was.
@@ -373,7 +373,7 @@
     Polynomial Decay combineert frequentie en recentheid.
 
     \[
-    PD(m_i, I_{m_i}, i_n) = \sum_{j=1}^{|I_{m_i}|} \frac{1}{1 + (i_n - i_j)^\alpha}, \quad 0 < \alpha \leq 1
+        PD(m_i, I_{m_i}, i_n) = \sum_{j=1}^{|I_{m_i}|} \frac{1}{1 + (i_n - i_j)^\alpha}, \quad 0 < \alpha \leq 1
     \]
 
     Recente bezoeken tellen zwaarder dan oude. De parameter $(\alpha)$ is bepalend:
@@ -393,7 +393,7 @@
     Een eerste-orde Markov-model gaat ervan uit dat alleen de \textit{laatste} actie relevant is.
 
     \[
-    P(s_n) = P(s_1) \prod_{t=2}^{n} P(s_t \mid s_{t-1})
+        P(s_n) = P(s_1) \prod_{t=2}^{n} P(s_t \mid s_{t-1})
     \]
 
     Dit model kan worden weergegeven als een transitiematrix:
@@ -401,10 +401,10 @@
 
     \begin{tabular}{c|cccc|c}
         From/To & A & B & C & D & Totaal \\ \hline
-        A & & 3 & 5 & 8 & 16 \\
-        B & 3 & & 7 & 4 & 14 \\
-        C & 2 & 4 & & 6 & 12 \\
-        D & 1 & 6 & 2 & & 9 \\
+        A       &   & 3 & 5 & 8 & 16     \\
+        B       & 3 &   & 7 & 4 & 14     \\
+        C       & 2 & 4 &   & 6 & 12     \\
+        D       & 1 & 6 & 2 &   & 9      \\
     \end{tabular}
 
 
@@ -419,7 +419,7 @@
     Een regel heeft de vorm:
 
     \[
-    X \Rightarrow Y
+        X \Rightarrow Y
     \]
 
     Waarbij (X) en (Y) verzamelingen van items zijn zonder overlap.
@@ -428,13 +428,13 @@
     Support:
 
     \[
-    support(X \Rightarrow Y) = \frac{|{t_i \in D : X \cup Y \subset t_i}|}{|D|}
+        support(X \Rightarrow Y) = \frac{|{t_i \in D : X \cup Y \subset t_i}|}{|D|}
     \]
 
     Confidence:
 
     \[
-    confidence(X \Rightarrow Y) = \frac{|{t_i \in D : X \cup Y \subset t_i}|}{|{t_i \in D : X \subset t_i}|}
+        confidence(X \Rightarrow Y) = \frac{|{t_i \in D : X \cup Y \subset t_i}|}{|{t_i \in D : X \subset t_i}|}
     \]
 
     Support is vaak laag, confidence moet hoog zijn om de regel bruikbaar te maken.
@@ -456,6 +456,7 @@
     Niet elk product of elke pagina volgt hetzelfde patroon.
     Wat werkt voor media en smaakgevoelige producten, faalt bij seizoensgebonden of functionele aankopen.
     Voorspellende modellen zijn krachtig, maar alleen zolang je accepteert dat gebruikersgedrag niet netjes, stabiel of symmetrisch is.
+
 
     \section{Kennis zoeken}
 
@@ -539,7 +540,6 @@
         Als je dit doet, dan verhoog je de totale informatieopbrengst per patch, wat de winstverwachting verhoogt.
     \end{itemize}
 
-
     \subsubsection{Informatiezoekers}
     Informatiezoekers zijn als jagers die op zoek zijn naar informatie.
     Denk aan studenten, onderzoekers, kantoorpersoneel, enzovoort.
@@ -551,5 +551,45 @@
     \end{itemize}
 
 
+    \section{Afstemming in Communicatie}
+
+    Communicatie lijkt vaak simpel: iemand zegt iets, iemand anders begrijpt het. In de praktijk is het zelden zo rechtlijnig. Woorden en symbolen krijgen pas betekenis binnen een gedeelde context en binnen het sociale spel dat gesprekspartners samen spelen. Afstemming is het geheel aan processen dat ervoor zorgt dat dit spel soepel verloopt.
+
+    \subsection{Beperkingen van klassieke modellen}
+
+    Het klassieke zender-ontvanger model is nuttig maar beperkt. Het verklaart niet waarom gesprekken met correcte woorden toch mislopen, of waarom minimale uitwisselingen soms perfect werken. Het verschil zit in de mate waarin gesprekspartners op elkaar zijn afgestemd.
+
+    \subsection{Drie pijlers van afstemming}
+
+    \textbf{1. Achtergrondinformatie}
+    \begin{itemize}
+        \item Gesprekspartners hebben kennis nodig van relevante objecten, relaties, aannames en spelregels
+        \item Deze informatie is grotendeels impliciet en blijft onuitgesproken
+        \item Veel wordt verondersteld: niemand hoeft uit te leggen dat je met griep thuisblijft
+    \end{itemize}
+
+    \textbf{2. Activatie}
+    \begin{itemize}
+        \item Achtergrondinformatie moet op het juiste moment beschikbaar zijn
+        \item Dit gebeurt via aandacht, taalkeuze, framing en focussering
+        \item Voorbeeld: een instructietekst wordt pas begrijpelijk als je weet dat het over vliegeren gaat
+    \end{itemize}
+
+    \textbf{3. Common ground \& coördinatie}
+    \begin{itemize}
+        \item \textit{Common ground}: informatie waarvan beide partijen weten dat ze die delen, en weten dat de ander dat ook weet
+        \item Dit is recursief, dynamisch en altijd onvolledig
+        \item Coördinatie via bevestigen, verifiëren en corrigeren houdt de gemeenschappelijke basis op orde
+        \item Uitingen als ``bedoel je dat?'' zijn geen beleefdheden maar cruciale mechanismen
+    \end{itemize}
+
+    \subsection{Wanneer het misgaat}
+
+    Verkeerde aannames over wat de ander weet kunnen ernstige gevolgen hebben, bijvoorbeeld in:
+    \begin{itemize}
+        \item Luchtvaart, zorg en helpdesks
+        \item Ontwerp van interfaces (stereotiepe aannames over gebruikers)
+        \item Hiërarchische situaties (niet durven vragen of corrigeren)
+    \end{itemize}
 
 \end{document}
