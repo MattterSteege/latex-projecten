@@ -399,12 +399,12 @@
     Dit model kan worden weergegeven als een transitiematrix:
 
 
-    \begin{tabular}{c|cccc}
-        From/To & A & B & C & D \\ \hline
-        A & 3 & 5 & 8 & 16 \\
-        B & 3 & 7 & 4 & 14 \\
-        C & 2 & 4 & 6 & 12 \\
-        D & 1 & 6 & 2 & 9 \\
+    \begin{tabular}{c|cccc|c}
+        From/To & A & B & C & D & Totaal \\ \hline
+        A & & 3 & 5 & 8 & 16 \\
+        B & 3 & & 7 & 4 & 14 \\
+        C & 2 & 4 & & 6 & 12 \\
+        D & 1 & 6 & 2 & & 9 \\
     \end{tabular}
 
 
@@ -453,7 +453,103 @@
     Dit maakt het vinden van associatieregels praktisch uitvoerbaar.
 
     \subsection*{Praktische realiteit}
-    Niet elk product of elke pagina volgt hetzelfde patroon. Wat werkt voor media en smaakgevoelige producten, faalt bij seizoensgebonden of functionele aankopen. Voorspellende modellen zijn krachtig, maar alleen zolang je accepteert dat gebruikersgedrag niet netjes, stabiel of symmetrisch is.
+    Niet elk product of elke pagina volgt hetzelfde patroon.
+    Wat werkt voor media en smaakgevoelige producten, faalt bij seizoensgebonden of functionele aankopen.
+    Voorspellende modellen zijn krachtig, maar alleen zolang je accepteert dat gebruikersgedrag niet netjes, stabiel of symmetrisch is.
+
+    \section{Kennis zoeken}
+
+    \subsection{Interfaces ontwerpen}
+    \textbf{Waarom ontwerpen gebruikers geen interfaces?}
+    Nou, dat komt door een paar dingen, zoals:
+
+    \begin{itemize}
+        \item Gebrek aan technische kennis, het idee hebben ze misschien wel, maar niet de vaardigheden om het uit te voeren.
+        \item Gebruikers zien vaak niet of er andere interfaces zijn die beter bij hun behoeften passen.
+        Zo heb je in het begin van het gebruik van een interface hulp nodig met alles vinden, leren en begrijpen (dmv wizards, menu's etc.).
+        Maar als je het eenmaal onder de knie hebt, dan wil je graag sneltoetsen en shortcuts gebruiken, omdat dat nou eenmaal sneller werkt.
+        \item Gebruikers weten simpelweg niet of ze de interface fijn vinden totdat het af is.
+    \end{itemize}
+
+    \subsection{verschillende categorieën van informatie zoeken}
+
+    \begin{itemize}
+        \item \textbf{Serendipitous browsing}: Je bent niet echt op zoek, je kijkt gewoon rond en hoopt iets interessants te vinden.
+        \item \textbf{Exploratory seeking}: Je hebt een vaag doel, maar je moet alleen nog meer informatie vinden om dat doel te bereiken.
+        \item \textbf{Semi-directed browsing}: Je hebt een specifiek doel, maar je weet niet precies waar je moet zoeken.
+        \item \textbf{Known-item searching}: Je weet precies wat je zoekt en waar je het kunt vinden.
+        \item \textbf{Re-finding}: Je hebt eerder iets gevonden, maar je moet het opnieuw vinden.
+    \end{itemize}
+
+    \subsection{Information Foraging}
+    De information foraging theorie is gebaseerd op het idee dat mensen die op zoek zijn naar informatie zich net zo gedragen als dieren op zoek naar eten.
+    We hebben ingebouwde zoek- en jachtstrategieën die we automatisch toepassen.
+    Deze strategieën zijn het resultaat van millennia aan evolutie.
+    De theorie gaat ervan uit dat mensen (en dieren), binnen hun mogelijkheden, de beste strategie kiezen om met zo weinig mogelijk moeite (verbruikte energie) het beste resultaat krijgen (een volle maag, de benodigde kennis).
+
+    \subsection{Modellen van information foraging}
+    \textbf{Information patch model}: Dit model stelt dat informatie zich bevindt in ``patches'` of clusters, vergelijkbaar met voedselbronnen in de natuur.
+    Gebruikers moeten beslissen wanneer ze een patch moeten verlaten en naar een nieuwe moeten gaan, gebaseerd op de hoeveelheid beschikbare informatie en de moeite die het kost om deze te verkrijgen.\\
+    \textbf{Information scent model}: Dit model richt zich op de signalen of ``scent'' die gebruikers volgen om informatie te vinden.
+    Deze signalen kunnen bestaan uit hyperlinks, zoekresultaten of andere aanwijzingen die gebruikers helpen te navigeren naar de gewenste informatie.\\
+    \textbf{Information diet model}: Dit model vergelijkt informatieconsumptie met voedselinname.
+    Het suggereert dat gebruikers een ``dieet'' van informatie kiezen op basis van hun behoeften, voorkeuren en beschikbare tijd.\\
+
+    Information Foraging gaat er niet van uit dat we ons volledig rationeel en logisch gedragen.
+    We maken fouten, omdat we incomplete informatie hebben.
+    We wegen de benodigde inspanning af tegen de verwachte opbrengst.
+    Dit kan leiden tot suboptimale keuzes, maar het is vaak goed genoeg in de praktijk.
+
+    Stel je voor, je bent een roofvogel die op zoek is naar voedsel.
+    \begin{itemize}
+        \item Hoeveel prooi kun ik vinden in een bepaald gebied?
+        \item Zijn de dieren makkelijk of moeilijk te vangen? En zit er genoeg vlees aan?
+        \item Hoeveel energie kost het om te jagen in dit gebied?
+    \end{itemize}
+
+    \subsubsection{Information patches}
+    Informatie is vaak verdeeld is clusters of ``patches''.
+    Denk aan een bibliotheek met verschillende secties (geschiedenis, wetenschap, kunst, enzovoort).
+    Elke sectie is een informatiepatch met gerelateerde informatie.
+    Gebruikers moeten beslissen wanneer ze een patch moeten verlaten en naar een nieuwe moeten gaan.
+    Dit hangt af van de hoeveelheid beschikbare informatie en de moeite die het kost om deze te verkrijgen.
+
+    Dit patch-model heeft een wiskundige formule centraal staan:
+    \[
+        R = \frac{G}{T_B + T_W}
+    \]
+    Waarbij:
+    \begin{itemize}
+        \item \( R \) is de opbrengst (reward rate)
+        \item \( G \) is de hoeveelheid verkregen informatie (gain)
+        \item \( T_B \) is de tijd besteed aan het vinden van een patch
+        \item \( T_W \) is de tijd besteed aan het verwerken van informatie binnen een patch
+    \end{itemize}
+    Het doel is om \( R \) te maximaliseren door een optimale balans te vinden tussen \( G \), \( T_B \) en \( T_W \).
+
+    Deze winstmaximalisatie kan je dus op 2(of 3) manieren bereiken:
+    \begin{itemize}
+        \item De tijd tussen de bossen verkleinen (sneller nieuwe patches vinden)
+        Aks je dit doet dan gaat de winstverwachting omhoog.
+        \item De tijd in de bossen verkleinen (sneller informatie verwerken)
+        Als je dit doet, dan kan je meer patches bezoeken in dezelfde tijd, wat de totale informatieopbrengst verhoogt.
+        De optimale ``within-patch'' tijd gaat hierdoor ook omlaag, want stel 75\% van de informatie is optimaal, dan ben je daar sneller als je sneller door de patch heen gaat.
+
+        \item De hoeveelheid informatie per patch verhogen (betere kwaliteit informatie, maar kan je van tevoren niet weten)
+        Als je dit doet, dan verhoog je de totale informatieopbrengst per patch, wat de winstverwachting verhoogt.
+    \end{itemize}
+
+
+    \subsubsection{Informatiezoekers}
+    Informatiezoekers zijn als jagers die op zoek zijn naar informatie.
+    Denk aan studenten, onderzoekers, kantoorpersoneel, enzovoort.
+    Deze hebben informatie nodig om hun taken uit te voeren, beslissingen te nemen of problemen op te lossen.
+    \begin{itemize}
+        \item De informatie is aanwezig in boeken, emails, chatlogs, websites, databases, enzovoort.
+        \item Sommige zijn uitgebreid en complex, andere zijn simpel en rechttoe rechtaan.
+        \item Online bronnen zijn sneller toegankelijk, maar een boek lenen kost tijd.
+    \end{itemize}
+
 
 
 \end{document}
