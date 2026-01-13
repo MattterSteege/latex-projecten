@@ -17,6 +17,9 @@
 \documentclass[nonacm, sigconf, balance=true]{acmart}
 \include{core/paperSettings} % import custom general paper settings
 \include{core/standardCommands} % import custom commands and packages
+\def\documentTitle      {Logica voor informatica} % replace with actual document title
+\def\documentSubtitle   {} % replace with actual subtitle if any, else leave empty
+\def\dueDate            {} % replace with actual due date
 % -----------------------------------------
 \begin{document}
 
@@ -900,7 +903,7 @@
 
     \ruleline{Alles hierboven is stof voor de eerste midterm}
 
-    \section{Inductie}
+    \section{Inductie incomplete}
     Elke inductie is omschreven met 3 stappen:
     \begin{enumerate}
         \item De \textbf{base case}, die verteld dat er sommige elementen in een set zit
@@ -939,7 +942,7 @@
     Door deze definitie kan je inductie gebruiken. Om te bewijzen dat een property R houdt voor alle propositonele formules, moet je de volgende stappen volgen:
 
 
-    \section{Games}
+    \section{Games incomplete}
     Een paar definitie's:
     \begin{itemize}
         \item \textbf{Game of chance}, Zoals roulette of dobbelstenen, waarbij de uitkomst volledig afhankelijk is van toeval.
@@ -951,6 +954,94 @@
     \end{itemize}
 
     \subsection{Game trees}
+
+    \section{Natural deduction}
+    \subsection{Inference rules}
+    Deze relaties kun je dmv een formule weergeven.
+    Bijvoorbeeld:
+    $\frac{}{0\le n}\le-Base$ en $\frac{n \le m}{s(n) \le s(m)}\le-Step$
+    Als je hier wilt bewijzen dat $2 \le 5$, dan kan je dat zo doen:
+    \[
+        \frac{
+            \frac{
+                \frac{}{
+                    0 \le s(s(s(0)))
+                }
+                \le-Base
+            }{
+                s(0) \le s(s(s(s(0))))
+            }
+            \le-Step
+        }{
+            s(s(0)) \le s(s(s(s(s(0)))))
+        }
+        \le-Step
+    \]
+
+    Je kan dit ook in een tabel zetten:\\
+    \begin{SimpleTable}[s{.5}s{.5}]{}{}
+        \TableHeader{Stelling & Reden}
+        \TableRow{$0 \le s(s(s(0)))$ & $\le-Base$}
+        \TableRow{$s(0) \le s(s(s(s(0))))$ & $\le-Step$ op 1}
+        \TableRow{$s(s(0)) \le s(s(s(s(s(0)))))$ & $\le-Step$ op 2}
+    \end{SimpleTable}
+
+    Hoe werkt dit nou?
+    Het is de bedoeling dat je met de regels die je hebt, een stelling kunt bewijzen.
+    Elke regel heeft een aantal premissen (boven de streep) en een conclusie (onder de streep).
+    Als je alle premissen kunt bewijzen, dan mag je de conclusie aannemen.
+    Dit doe je net zolang totdat je de stelling die je wilt bewijzen hebt bereikt.
+    De rede dat ik gelijk $0 \le s(s(s(0)))$ mag aannemen is omdat dit de basis is van de inductie.
+    $s(0)$ is (per definitie) wat komt ná $0$, dus $s(0) = 1$, daarom is $0 \le s(0)$ altijd waar en mag je dat aannemen.
+    \\\\
+    \begin{voorbeeld}{Even en Oneven getallen}
+        Stel we defineren de Base en Step regels voor Even en Oneven getallen als volgt:
+        \begin{gather*}
+            \frac{}{\text{isEven}(0)}\text{isEven-Base}\\
+            \frac{isEven(n)}{isEven(s(s(n)))}\text{isEven-Step}\\
+        \end{gather*}
+
+        Hieruit kan je bijvoorbeeld opmaken dat $s(s(s(s(0))))$ even is (makkelijker in tabelvorm):
+        \begin{SimpleTable}[s{.5}s{.5}]{}{}
+            \TableHeader{Stelling & Reden}
+            \TableRow{$isEven(0)$ & $isEven-Base$}
+            \TableRow{$isEven(s(s(0)))$ & $isEven-Step$ op 1}
+            \TableRow{$isEven(s(s(s(s(0)))))$ & $isEven-Step$ op 2}
+        \end{SimpleTable}
+    \end{voorbeeld}
+
+    Nog een voorbeeld
+    \\\\
+
+    \begin{voorbeeld}{isSorted}
+        Stel we defineren 3 regels voor isSorted (isSorted-empty, isSorted-singleton, isSorted-step) als volgt:
+        \begin{gather*}
+            \frac{}{\text{isSorted}([])}\text{isSorted-empty}\\
+            \frac{}{\text{isSorted}(n : [])}\text{isSorted-singleton}\\
+            \frac{n \le m \quad \text{isSorted}(m : w)}{\text{isSorted}(n : m : w)}\text{isSorted-step}\\
+        \end{gather*}
+
+        Hieruit kan je bijvoorbeeld opmaken dat de lijst $[0, 2, 5, 7]$ gesorteerd is (makkelijker in tabelvorm):
+        \begin{SimpleTable}[s{.5}s{.5}]{}{}
+            \TableHeader{Stelling & Reden}
+            \TableRow{$isSorted([])$ & $isSorted-empty$}
+            \TableRow{$isSorted(7 : [])$ & $isSorted-singleton$}
+            \TableRow{$isSorted(5 : 7 : [])$ & $isSorted-step$ op 2, omdat $5 \le 7$}
+            \TableRow{$isSorted(2 : 5 : 7 : [])$ & $isSorted-step$ op 3, omdat $2 \le 5$}
+            \TableRow{$isSorted(0 : 2 : 5 : 7 : [])$ & $isSorted-step$ op 4, omdat $0 \le 2$}
+        \end{SimpleTable}
+        \\\\
+        Maar wat nou als n \textbf{niet} kleiner is dan m (ofwel de lijst is niet gesorteerd)?
+        Dan kan je dat ook bewijzen (op de lijst $[0, 2, 7, 5]$):
+        \begin{SimpleTable}[s{.5}s{.5}]{}{}
+            \TableHeader{Stelling & Reden}
+            \TableRow{$isSorted([])$ & $isSorted-empty$}
+            \TableRow{$isSorted(5 : [])$ & $isSorted-singleton$}
+            \TableRow{(geen regel toepasbaar op $isSorted(7 : 5 : [])$) & $7 \nleq 5$}
+        \end{SimpleTable}
+    \end{voorbeeld}
+
+    \subsection{aannames}
 
 
 \end{document}
