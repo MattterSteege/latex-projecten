@@ -592,4 +592,64 @@
         \item Hiërarchische situaties (niet durven vragen of corrigeren)
     \end{itemize}
 
+    \section[visualisatietechnieken - \textbf{InformatieVisualisatie}]{visualisatietechnieken}
+
+    \subsection{Definitie}
+    ``Een visuele representatie van gegevens om mensen sneller taken uit te kunnen laten voeren'' \& ``punten, lijnen, coordinaten, kleuren, vormen en texturen gebruiken om data te representeren''
+
+    Je kan denken aan bijvoorbeeld (lijn-, staaf-, cirkel- en spreidings-)diagrammen, maar ook aan meer complexe visualisaties zoals heatmaps, boomstructuren en netwerkdiagrammen.
+    Dit kan je dan allemaal gebruiken om dashboards, rapporten en presentaties (overzichtelijker) te maken.
+
+    Informatievisualisatie is \textbf{niet} gestructureerde data.
+    Wetenschapelijke visualisatie is \textbf{wel} gestructureerde data.
+    Dit zijn allebij onderdelen van het grote Data Visualisatie veld.
+
+    Het is een belangrijk, omdat het helpt om patronen, trends en inzichten te ontdekken die anders moeilijk te zien zouden zijn in grote datasets.
+    Ook kan je door middel van verschillende visualisaties van dezelfde data verschillende inzichten krijgen.
+
+    %TODO: 2 visualisaties, een met 15 random cirkels op een plot, en de ander met 3x5 cirkels in een grid.
+
+    Zo is het makkelijker om bij figuur 2 te zien hoeveel cirkels er zijn, terwijl je bij figuur 1 veel langer bezig bent (en makkelijker telfouten maakt).
+
+    \subsection{geschiendenis}
+    (Geen idee of het nuttig is)\\
+    IN 1786 maakte William Playfair de eerste grafieken.
+    In 1854 gebruikte John Snow een kaart om een cholera-uitbraak in Londen te analyseren.
+    Een grafiek die visualiseert hoeveel mensen tijdens de oorlog van napoleon nog leefden na de veldslag:
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\linewidth]{image/Minard}
+        \caption{grafiek oorlog napoleon}
+        \label{fig:minard}
+    \end{figure}
+
+    \subsection{Algemene visualisatie principes}
+
+    Sowieso: Vermijd onnodige 3D grafieken, omdat deze vaak verwarrend zijn en de interpretatie van de data bemoeilijken.
+
+    \subsection{Principes van Edward Tufte}
+
+    Edward Tufte heeft een aantal principes opgesteld voor effectieve informatievisualisatie:
+    \begin{itemize}
+        \item \textbf{Grafische integriteit}: Zorg ervoor dat de visualisatie de data nauwkeurig en eerlijk weergeeft, zonder misleiding.
+        \item \textbf{Designesthetiek}: Maak de visualisatie visueel aantrekkelijk en gemakkelijk te begrijpen.
+    \end{itemize}
+
+    Hij zegt bij Designesthetiek:
+
+    \begin{enumerate}
+        \item Laat vooral de data zien, geen poespas.
+        \item Maximalisser redeliojkerwijs de \textbf{data-ink ratio} (de hoeveelheid inkt die daadwerkelijk data representeert versus de totale hoeveelheid inkt gebruikt in de visualisatie). $Data\text{-}ink\ ratio = \frac{Data\ ink}{Total\ ink}$
+        \item Verwijder inkt die geen data representeert (zoals overbodige lijnen, kaders en decoraties).
+        \item Kijk en doe opnieuw (iteratief proces).
+    \end{enumerate}
+
+    \subsection{Wat is er te vinden in een visualisatie?}
+    \begin{itemize}
+        \item \textbf{Marks}: Dit is de data die je wilt visualiseren, zoals punten, lijnen of vlakken. In een bar chart zijn de balken de marks. In een scatter plot zijn de punten de marks.
+        \item \textbf{Channels}: Dit zijn de visuele eigenschappen die je gebruikt om de marks te representeren, zoals kleur, grootte, vorm en positie. In een bar chart kan de hoogte van de balken de waarde van de data representeren, terwijl de kleur van de balken een categorie kan aangeven.
+    \end{itemize}
+
+
 \end{document}
