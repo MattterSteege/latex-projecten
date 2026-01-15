@@ -957,7 +957,7 @@
 
     \section{Natural deduction}
     \subsection{Inference rules}
-    Deze relaties kun je dmv een formule weergeven.
+    Deze relaties kun je door middel van een formule weergeven.
     Bijvoorbeeld:
     $\frac{}{0\le n}\le-Base$ en $\frac{n \le m}{s(n) \le s(m)}\le-Step$
     Als je hier wilt bewijzen dat $2 \le 5$, dan kan je dat zo doen:
@@ -977,6 +977,10 @@
         }
         \le-Step
     \]
+
+    Je zet als het ware elke stap in een breuk, waarbij de bovenkant de premissen zijn en de onderkant de conclusie.
+    En dit Kan je ``nesten'' totdat je bij de stelling komt die je wilt bewijzen.
+    \\\\
 
     Je kan dit ook in een tabel zetten:\\
     \begin{SimpleTable}[s{.5}s{.5}]{}{}
@@ -1022,6 +1026,28 @@
         \end{gather*}
 
         Hieruit kan je bijvoorbeeld opmaken dat de lijst $[0, 2, 5, 7]$ gesorteerd is (makkelijker in tabelvorm):
+
+        \[
+            \frac{
+                \frac{
+                    \frac{
+                        \frac{}{
+                            isSorted([])
+                        }
+                        isSorted-empty
+                    }{
+                        isSorted(7 : [])
+                    }
+                    isSorted-singleton
+                }{
+                    isSorted(5 : 7 : [])
+                }
+                isSorted-step
+            }{
+                isSorted(2 : 5 : 7 : [])
+            }
+        \]
+
         \begin{SimpleTable}[s{.5}s{.5}]{}{}
             \TableHeader{Stelling & Reden}
             \TableRow{$isSorted([])$ & $isSorted-empty$}
@@ -1033,6 +1059,7 @@
         \\\\
         Maar wat nou als n \textbf{niet} kleiner is dan m (ofwel de lijst is niet gesorteerd)?
         Dan kan je dat ook bewijzen (op de lijst $[0, 2, 7, 5]$):
+        \\
         \begin{SimpleTable}[s{.5}s{.5}]{}{}
             \TableHeader{Stelling & Reden}
             \TableRow{$isSorted([])$ & $isSorted-empty$}
@@ -1041,7 +1068,65 @@
         \end{SimpleTable}
     \end{voorbeeld}
 
-    \subsection{aannames}
+    \subsection{aannames incompleet}
+    Als we $P \implies Q$ wilt bewijzen, dan neem je aan dat P waar is, en dan bewijs je Q.
+    Maar P is alleen een geldige aannname binnen de context van dit specifieke bewijs en niet daarbuiten.
+
+    Om dit te bewijzen moeten we dus ook buiten de context van P kunnen bewijzen dat P waar is.
+    Dit wordt vervolgens bijgehouden in een Set, een set met alle aannames die we hebben gemaakt.
+    Zo kan je dus in de set zetten: $\Gamma\vdash P$ wat in woorden ``Uit de aannames in de set $\Gamma$ volgt dat P waar is'' betekend.
+
+    Je kan tijdens het bewijzen ook nieuwe aannames maken, deze worden dan toegevoegd aan de set.
+
+    \subsection{natuurlijke deductie in propositielogica incompleet}
+    Je kan dit doen aan de hand van een waarheidstabel zoals helemaal in het begin besproken is.
+    Je kent nog wel $p$ en $q$, deze kan je in BNF (Backus-Naur Form) schrijven als:
+    $p, q ::= true | false | p \land q | p \lor q | \neg p | p \implies q | p \Leftrightarrow q$
+    \begin{itemize}
+        \item Als p waar is: \textbf{T}
+        \item Als p onwaar is: \textbf{F}
+        \item Wat nou als p een variabele is?
+        Dan kan die zowel T als F zijn.
+        Dan gebruiken we een functie die alle mogelijke waardes van p en q neemt en daar de uitkomst van de formule op toepast.
+    \end{itemize}
+
+    Deze functie: $v : P \rightarrow Bool$, waarbij P een propositonele formule is, en Bool uitkomst.
+
+    %--
+    Als je die breuk-achtige dingen maakt, dan zijn het zegmaar herschrijf regels.
+
+    Je hebt dan allemaal regels die al kant en klaar zijn en die moet je dan invullen met de data die je hebt
+
+    dus bijvoorbeeld:
+
+    $\frac{P   Q}{P \land Q}$, P moet waar zijn en Q moet waar zijn en dan is P en Q waar.
+    Maar je kan voor P bijvoorbeeld ook $P = A \lor B$ invullen, en dan moet je dus bewijzen dat $A \lor B$ waar is.
+    dan krijg je een nieuwe regel:
+    $\frac{A \lor B   Q}{(A \lor B) \land Q}$
+    Die A of B is dan op zichzelf ook weer een breuk en zo gaat dat door.
+
+    Een lijst van alle regels van natuurlijke deductie in propositielogica:
+    \begin{multicols}{3}
+        \[\frac{P \in \Gamma}{\Gamma \vdash P}\text{-Assumption}\] ``Als P in de aannameset zit, dan volgt P''\\
+        \[\frac{}{\Gamma \vdash \top}\text{T-Introduction}\] ``Waarheid is altijd waar''\\
+        \[\frac{\Gamma \vdash \bot}{\Gamma \vdash P}\text{F-Elimination}\] ``Als je een onwaarheid hebt, kan je alles bewijzen''\\
+        \[\frac{\Gamma, P \vdash Q}{\Gamma \vdash P \implies Q}\text{Implication-Introduction}\] ``Als je vanuit P kan bewijzen dat Q waar is, dan volgt dat P impliceert Q''\newcolumn
+        \[\frac{\Gamma \vdash P \quad \Gamma \vdash Q}{\Gamma \vdash P \land Q}\text{And-Introduction}\] ``Als P waar is en Q waar is, dan is P en Q waar''\\
+        \[\frac{\Gamma \vdash P \implies Q \quad \Gamma \vdash P}{\Gamma \vdash Q}\text{Implication-Elimination}\] ``Als P Q impliceert, en P waar is, dan volgt Q''\\
+        \[\frac{\Gamma \vdash P \land Q}{\Gamma \vdash P}\text{And-Elimination-1}\] ``Als P en Q waar is, dan is P waar''\\
+        \[\frac{\Gamma \vdash P \land Q}{\Gamma \vdash Q}\text{And-Elimination-2}\] ``Als P en Q waar is, dan is Q waar''\newcolumn
+        \[\frac{\Gamma \vdash P}{\Gamma \vdash P \lor Q}\text{Or-Introduction-1}\] ``Als P waar is, dan is P of Q waar''\\
+        \[\frac{\Gamma \vdash Q}{\Gamma \vdash P \lor Q}\text{Or-Introduction-2}\] ``Als Q waar is, dan is P of Q waar''\\
+        \[\frac{\Gamma, P \vdash R \quad \Gamma, Q \vdash R}{\Gamma \vdash P \lor Q \implies R}\text{Or-Elimination}\] ``Als vanuit P kan bewijzen dat R waar is, en vanuit Q kan bewijzen dat R waar is, dan volgt dat P of Q R impliceert''\newcolumn
+        \[\frac{\Gamma \vdash P}{\Gamma \vdash \neg \neg P}\text{Negation-Introduction}\] ``Als P waar is, dan is niet niet P waar''\\
+        \[\frac{\Gamma \vdash \neg \neg P}{\Gamma \vdash P}\text{Negation-Elimination}\] ``Als niet niet P waar is, dan is P waar''\\
+        \[\frac{\Gamma, P \vdash Q \quad \Gamma, Q \vdash \bot}{\Gamma \vdash P \Leftrightarrow Q}\text{Biconditional-Introduction}\] ``Als vanuit P kan bewijzen dat Q waar is, en vanuit Q kan bewijzen dat onwaarheid waar is, dan volgt dat P als en slechts als Q''\newcolumn
+        \[\frac{\Gamma \vdash P \Leftrightarrow Q}{\Gamma \vdash P \implies Q}\text{Biconditional-Elimination-1}\] ``Als P als en slechts als Q waar is, dan volgt dat P Q impliceert''\\
+        \[\frac{\Gamma \vdash P \Leftrightarrow Q}{\Gamma \vdash Q \implies P}\text{Biconditional-Elimination-2}\] ``Als P als en slechts als Q waar is, dan volgt dat Q P impliceert''\newcolumn
+        \[\frac{\Gamma, \neg P \vdash \bot}{\Gamma \vdash P}\text{Proof by Contradiction}\] ``Als vanuit niet P kan bewijzen dat onwaarheid waar is, dan volgt dat P waar is''
+    \end{multicols}
+
+    \section{Redenering over progamma's}
 
 
 \end{document}

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f047d-d874-470b-ae8a-2756d2b48e7c" name="Changes" comment="" />
+    <list default="true" id="a37f047d-d874-470b-ae8a-2756d2b48e7c" name="Changes" comment="revise document structure and add new sections">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Shell Script.Build Latex Document.executor": "Run",
+    "Shell Script.Build Latex Document.executor": "Debug",
     "Shell Script.Full build.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "Logica-Voor-Informatica",
@@ -66,12 +70,25 @@
       <option name="presentableId" value="Default" />
       <updated>1768299671424</updated>
       <workItem from="1768299674047" duration="647000" />
-      <workItem from="1768306395736" duration="3408000" />
+      <workItem from="1768306395736" duration="13724000" />
     </task>
+    <task id="LOCAL-00001" summary="revise document structure and add new sections">
+      <option name="closed" value="true" />
+      <created>1768310000188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768310000188</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="revise document structure and add new sections" />
+    <option name="LAST_COMMIT_MESSAGE" value="revise document structure and add new sections" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
