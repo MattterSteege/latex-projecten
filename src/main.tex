@@ -1068,35 +1068,18 @@
         \end{SimpleTable}
     \end{voorbeeld}
 
-    \subsection{aannames incompleet}
+    \subsection{natuurlijke deductie in propositielogica (Derivation)}
     Als we $P \implies Q$ wilt bewijzen, dan neem je aan dat P waar is, en dan bewijs je Q.
     Maar P is alleen een geldige aannname binnen de context van dit specifieke bewijs en niet daarbuiten.
 
     Om dit te bewijzen moeten we dus ook buiten de context van P kunnen bewijzen dat P waar is.
     Dit wordt vervolgens bijgehouden in een Set, een set met alle aannames die we hebben gemaakt.
     Zo kan je dus in de set zetten: $\Gamma\vdash P$ wat in woorden ``Uit de aannames in de set $\Gamma$ volgt dat P waar is'' betekend.
-
     Je kan tijdens het bewijzen ook nieuwe aannames maken, deze worden dan toegevoegd aan de set.
 
-    \subsection{natuurlijke deductie in propositielogica incompleet}
-    Je kan dit doen aan de hand van een waarheidstabel zoals helemaal in het begin besproken is.
-    Je kent nog wel $p$ en $q$, deze kan je in BNF (Backus-Naur Form) schrijven als:
-    $p, q ::= true | false | p \land q | p \lor q | \neg p | p \implies q | p \Leftrightarrow q$
-    \begin{itemize}
-        \item Als p waar is: \textbf{T}
-        \item Als p onwaar is: \textbf{F}
-        \item Wat nou als p een variabele is?
-        Dan kan die zowel T als F zijn.
-        Dan gebruiken we een functie die alle mogelijke waardes van p en q neemt en daar de uitkomst van de formule op toepast.
-    \end{itemize}
 
-    Deze functie: $v : P \rightarrow Bool$, waarbij P een propositonele formule is, en Bool uitkomst.
-
-    %--
     Als je die breuk-achtige dingen maakt, dan zijn het zegmaar herschrijf regels.
-
     Je hebt dan allemaal regels die al kant en klaar zijn en die moet je dan invullen met de data die je hebt
-
     dus bijvoorbeeld:
 
     $\frac{P   Q}{P \land Q}$, P moet waar zijn en Q moet waar zijn en dan is P en Q waar.
@@ -1125,6 +1108,11 @@
         \[\frac{\Gamma \vdash P \Leftrightarrow Q}{\Gamma \vdash Q \implies P}\text{Biconditional-Elimination-2}\] ``Als P als en slechts als Q waar is, dan volgt dat Q P impliceert''\newcolumn
         \[\frac{\Gamma, \neg P \vdash \bot}{\Gamma \vdash P}\text{Proof by Contradiction}\] ``Als vanuit niet P kan bewijzen dat onwaarheid waar is, dan volgt dat P waar is''
     \end{multicols}
+
+    Dit zijn alle natuurlijke deductie regels die je nodig hebt om propositielogica te bewijzen.
+    Deze kan je vervolgens samenvoegen om complexere stellingen te bewijzen.
+
+    \begin{voorbeeld}{$P \land Q \imp$}
 
     \section{Redenering over progamma's}
 
