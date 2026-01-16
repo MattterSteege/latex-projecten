@@ -607,28 +607,76 @@
     Het is een belangrijk, omdat het helpt om patronen, trends en inzichten te ontdekken die anders moeilijk te zien zouden zijn in grote datasets.
     Ook kan je door middel van verschillende visualisaties van dezelfde data verschillende inzichten krijgen.
 
-    %TODO: 2 visualisaties, een met 15 random cirkels op een plot, en de ander met 3x5 cirkels in een grid.
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{0.25\textwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzstyle{every node}=[font=\LARGE]
+                \draw  (1,9.75) rectangle (1,9.75);
+
+
+
+                \draw  (0,8.75) rectangle (3.75,3.75);
+                \draw  (0.25,8.75) rectangle (0.25,8.75);
+                \draw  (0.5,8.25) circle (0.25cm);
+                \draw  (1,7.5) circle (0.25cm);
+                \draw  (2.25,7.5) circle (0.25cm);
+                \draw  (2.25,6.75) circle (0.25cm);
+                \draw  (1.25,6) circle (0cm);
+                \draw  (1,6.25) circle (0.25cm);
+                \draw  (1.5,6) circle (0.25cm);
+                \draw  (2.5,5.5) circle (0.25cm);
+                \draw  (1.75,5) circle (0.25cm);
+                \draw  (0.75,5) circle (0.25cm);
+                \draw  (3,6.75) circle (0.25cm);
+                \draw  (2,8.25) circle (0.25cm);
+                \draw  (2.75,8.25) circle (0.25cm);
+                \draw  (3,4.25) circle (0cm);
+                \draw  (2.5,4.5) circle (0.25cm);
+                \draw  (1.25,4.25) circle (0.25cm);
+                \draw  (1.25,7) circle (0.25cm);
+                \draw  (5,8.75) rectangle (8.75,3.75);
+                \draw  (5.5,8.25) circle (0.25cm);
+                \draw  (6.25,8.25) circle (0.25cm);
+                \draw  (7,8.25) circle (0.25cm);
+                \draw  (5.5,7.5) circle (0.25cm);
+                \draw  (6.25,7.5) circle (0.25cm);
+                \draw  (7,7.5) circle (0.25cm);
+                \draw  (5.5,6.75) circle (0.25cm);
+                \draw  (6.25,6.75) circle (0.25cm);
+                \draw  (7,6.75) circle (0.25cm);
+                \draw  (5.5,6) circle (0.25cm);
+                \draw  (6.25,6) circle (0.25cm);
+                \draw  (7,6) circle (0.25cm);
+                \draw  (5.5,5.25) circle (0.25cm);
+                \draw  (6.25,5.25) circle (0.25cm);
+                \draw  (7,5.25) circle (0.25cm);
+            \end{tikzpicture}
+        }%
+
+        \caption{Slechte en goede manier om cirkel hoeveelheid te visualiseren}
+        \label{fig:circle_visualisatie}
+    \end{figure}
 
     Zo is het makkelijker om bij figuur 2 te zien hoeveel cirkels er zijn, terwijl je bij figuur 1 veel langer bezig bent (en makkelijker telfouten maakt).
 
     \subsection{geschiendenis}
     (Geen idee of het nuttig is)\\
-    IN 1786 maakte William Playfair de eerste grafieken.
+    In 1786 maakte William Playfair de eerste grafieken.
     In 1854 gebruikte John Snow een kaart om een cholera-uitbraak in Londen te analyseren.
-    Een grafiek die visualiseert hoeveel mensen tijdens de oorlog van napoleon nog leefden na de veldslag:
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=\linewidth]{image/Minard}
-        \caption{grafiek oorlog napoleon}
-        \label{fig:minard}
-    \end{figure}
+    In 1958 ontwikkelde Florence Nightingale de coxcomb chart om sterfteoorzaken in het leger te visualiseren.
+    In 1869 introduceerde Charles Minard de beroemde kaart van Napoleon's Russische veldtocht.
+    In 1933 maakte Harry Beck de eerste metrokaart van Londen.
 
     \subsection{Algemene visualisatie principes}
+    Er zijn een hele boel dingen die je kan doen om je visualisaties beter te maken
 
-    Sowieso: Vermijd onnodige 3D grafieken, omdat deze vaak verwarrend zijn en de interpretatie van de data bemoeilijken.
+    \textbf{Vermijd onnodige 3D-effecten}.
+    Dit maakt het moeilijker om data te interpreteren én door diepte printen gaat er informatie verloren/worden de verhoudingen vertekend.
+    \textbf{Pie charts werken vaak niet goed}.
+    Het is lastig om oppervlakte te vergelijken, vooral bij meerdere segmenten.
+    Om deze reden moet je \textbf{oppervlakte vergelijken vermijden}.
 
-    \subsection{Principes van Edward Tufte}
 
     Edward Tufte heeft een aantal principes opgesteld voor effectieve informatievisualisatie:
     \begin{itemize}
@@ -640,16 +688,220 @@
 
     \begin{enumerate}
         \item Laat vooral de data zien, geen poespas.
-        \item Maximalisser redeliojkerwijs de \textbf{data-ink ratio} (de hoeveelheid inkt die daadwerkelijk data representeert versus de totale hoeveelheid inkt gebruikt in de visualisatie). $Data\text{-}ink\ ratio = \frac{Data\ ink}{Total\ ink}$
+        \item Maximaliseer redelijkerwijs de \textbf{data-ink ratio} (de hoeveelheid inkt die daadwerkelijk data representeert versus de totale hoeveelheid inkt gebruikt in de visualisatie). $Data\text{-}ink\ ratio = \frac{Data\ ink}{Total\ ink}$
         \item Verwijder inkt die geen data representeert (zoals overbodige lijnen, kaders en decoraties).
         \item Kijk en doe opnieuw (iteratief proces).
     \end{enumerate}
 
-    \subsection{Wat is er te vinden in een visualisatie?}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{image/bad_and_good_vis}
+        \caption{Slechte en goede visualisatie}
+        \label{fig:bad_and_good_vis}
+    \end{figure}
+
+    Hier zie je een voorbeeld van een slechte en een goede visualisatie.
+    De slechte visualisatie heeft veel onnodige elementen die de data verbergen en heel veel poespas toevoegen.
+    De goede visualisatie is veel eenvoudiger en laat de data duidelijker zien.
+    Bij de linker is de data-ink ratio heel laag, terwijl die bij de rechter hoog is.
+
+    \subsection{Mark en channels}
+    \subsubsection{Marks}
+    zijn de basisvormen die worden gebruikt om data te representeren in een visualisatie.
+    De meest voorkomende marks zijn punten, lijnen en vlakken.
+    Deze marks kunnen worden gecombineerd en aangepast om verschillende soorten visualisaties te creëren, zoals scatterplots, lijndiagrammen en staafdiagrammen.
+
+    Marks kunnen punten zijn (zoals in een scatterplot), lijnen (zoals in een lijndiagram) of vlakken (zoals in een staafdiagram).
+    Ook kan je Marks as Links gebruiken, dit zijn lijnen die twee of meer punten verbinden om relaties tussen data-elementen te tonen (zoals in een netwerkdiagram).
+
+    Marktypes zijn voor hoeveel Dimensies:
     \begin{itemize}
-        \item \textbf{Marks}: Dit is de data die je wilt visualiseren, zoals punten, lijnen of vlakken. In een bar chart zijn de balken de marks. In een scatter plot zijn de punten de marks.
-        \item \textbf{Channels}: Dit zijn de visuele eigenschappen die je gebruikt om de marks te representeren, zoals kleur, grootte, vorm en positie. In een bar chart kan de hoogte van de balken de waarde van de data representeren, terwijl de kleur van de balken een categorie kan aangeven.
+        \item 0D: punten (groote kan variëren, alleen locatie is relevant)
+        \item 1D: lijnen (lengte kan variëren, locatie en oriëntatie zijn relevant)
+        \item 2D: vlakken (oppervlakte kan variëren, locatie, oriëntatie en vorm zijn relevant)
+        \item 3D: volumes (volume kan variëren, locatie, oriëntatie en vorm zijn relevant)
     \end{itemize}
 
+    \subsubsection{Channels}
+    zijn de visuele eigenschappen die worden gebruikt om marks te coderen en informatie over te brengen.
+    Veelvoorkomende channels zijn positie, kleur, vorm, draaiing, grootte, oppervlakte, volume en textuur.
+    Deze channels kunnen worden aangepast om verschillende aspecten van de data te benadrukken en om patronen en trends te identificeren.
+    Bijvoorbeeld, in een scatterplot kan de positie van de punten de waarden van twee variabelen representeren, terwijl de kleur van de punten een derde variabele kan aangeven.
+
+    \begin{multicols}{2}
+
+        Dit is de lijst van beste naar slechtste channels (voor georganiseerde data):
+        \begin{enumerate}
+            \item Positie op een gemeenschappelijke schaal
+            \item Positie op niet-gemeenschappelijke schalen
+            \item Lengte
+            \item Hoek/oriëntatie
+            \item Oppervlakte (2D)
+            \item diepte (3D)
+            \item Kleurintensiteit
+            \item kleursaturatie
+            \item ronding
+            \item volume
+        \end{enumerate}
+
+        \newcolumn
+
+        Dit is de lijst voor categorische data:
+        \begin{enumerate}
+            \item relatieve positie
+            \item kleur/hue
+            \item beweging
+            \item vorm
+        \end{enumerate}
+
+    \end{multicols}
+
+    \section{Theoretische fundamenten}
+
+    \subsection{Visuele perceptie}
+    Mensen zijn in sommige soorten perceptie erg goed, zoals het herkennen van patronen, kleuren en bewegingen.
+    Maar op sommige erg slecht, zo zijn we niet goed in het inschatten van oppervlakten, volumes en hoeken.
+
+    Dit kan je ook in je voordeel gebruiken.
+    Zo kan je gebruik maken van ``popout'' Dit is wanneer een object zich onderscheidt van de rest door een uniek kenmerk, zoals kleur, vorm of grootte.
+    Hierdoor valt het object direct op en trekt het de aandacht van de kijker.
+    Bijvoorbeeld, in een afbeelding met allemaal blauwe cirkels, zal een rode cirkel direct opvallen en de aandacht trekken.
+
+    \subsection{kleurgebruik}
+    Kleurgebruik is belangrijk om voor iedereen de visualisatie goed te kunnen begrijpen.
+
+    \begin{multicols}{2}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{image/kleurenblindheid}
+        \caption{}
+        \label{fig:kleurenblindheid}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{image/kleurenblindheid_pallete}
+        \caption{}
+        \label{fig:kleurenblindheid_pallete}
+    \end{figure}
+
+    \end{multicols}
+
+    Hier zie je heel goed dat er mensen zijn die rood en groen niet goed kunnen onderscheiden.
+    Daarom is het belangrijk om kleuren te kiezen die voor iedereen goed te onderscheiden zijn.
+    Hiervoor zijn verschillende kleurpalleten voor om goede kleuren te kiezen.
+
+    Je kan verschillende soorten oplossingen gebruiken om kleurenblindheid te omzeilen, zoals:
+    \begin{itemize}
+        \item Gebruik patronen of texturen in plaats van alleen kleuren.
+        \item Gebruik symbolen of vormen om verschillende categorieën aan te duiden.
+        \item Gebruik kleuren die goed te onderscheiden zijn voor mensen met kleurenblindheid, zoals blauw en geel.
+    \end{itemize}
+
+    \textbf{Simultaan contrast}: Dit is een optische illusie waarbij de kleur van een object wordt beïnvloed door de kleuren eromheen.
+    Bijvoorbeeld, een grijs vlak kan er lichter of donkerder uitzien afhankelijk van de achtergrondkleur.
+    Dit kan leiden tot misinterpretaties van de data als de kleuren niet goed gekozen zijn.
+
+    \textbf{Chromostereopsis}: Dit is een optische illusie waarbij kleuren op verschillende afstanden lijken te liggen.
+    Bijvoorbeeld, rode objecten lijken dichterbij te zijn dan blauwe objecten.
+
+    \subsection{Het geneste model INCOMPLEET}
+    Tamara Munzner heeft het geneste model ontwikkeld om het proces van het ontwerpen van informatievisualisaties te structureren.
+    Het model bestaat uit vier niveaus:
+    \begin{itemize}
+        \item \textbf{Domain problem and data character}: Begrijp het probleem en de data.
+        \item \textbf{Data and task abstraction}: Abstracteer de data en taken.
+        \item \textbf{Visual encoding and interaction design}: Ontwerp de visuele representatie en interactie.
+        \item \textbf{Algorithm design}: Ontwerp de algoritmen voor het genereren van de visualisatie.
+    \end{itemize}
+
+    \subsection{Klassieke visualisatie-types}
+
+    Welke visualisatie moet je gebruiken?
+
+    \begin{tikzpicture}[
+        every node/.style={
+            draw,
+            rectangle,
+            rounded corners,
+            align=center,
+            minimum width=34mm,
+            minimum height=8mm
+        },
+        decision/.style={
+            fill=blue!20,
+            font=\bfseries
+        },
+        arrow/.style={
+            ->,
+            thick
+        }
+    ]
+
+% --- Left column (top to bottom) ---
+        \node[decision] (datatype)    at (0, 8)  {Welke soort data?};
+        \node          (aantallen)   at (0, 6)  {Aantallen};
+        \node          (distributies)at (0, 4)  {Distributies};
+        \node          (proporties)  at (0, 2)  {Proporties};
+        \node          (geospatial)  at (0, 0)  {Geospatiaal};
+
+% --- Middle ---
+        \node[decision] (variables)  at (5, 6)  {Hoeveel variabelen?};
+
+% --- Variable choices ---
+        \node (onevar) at (9, 7) {1 variabele};
+        \node (twovar) at (9, 5) {2 variabelen};
+
+% --- Plot types ---
+        \node (onevarplots) at (13, 7) {Staafdiagram, heatmap, \ldots};
+        \node (twovarplots) at (13, 5) {Scatterplot, lijngrafiek, \ldots};
+
+        \node (distplots) at (5, 4) {Histogram, density plot, boxplot, \ldots};
+        \node (propplots) at (5, 2) {Pie chart, stacked bar chart, treemap, \ldots};
+        \node (geoplots)  at (5, 0) {Kaart, choropleth, \ldots};
+
+% --- Uncertainty ---
+        \node[decision] (uncertainty) at (13, 3) {Onzekerheid in de data?};
+        \node (uncplots)             at (13, 1) {Error bars, spaghetti plot, \ldots};
+
+% --- Arrows: vertical ---
+        \draw[arrow] (datatype) -- (aantallen);
+        \draw[arrow] (aantallen) -- (distributies);
+        \draw[arrow] (distributies) -- (proporties);
+        \draw[arrow] (proporties) -- (geospatial);
+
+% --- Arrows: aantallen path ---
+        \draw[arrow] (aantallen) -- (variables);
+        \draw[arrow] (variables) -- (onevar);
+        \draw[arrow] (variables) -- (twovar);
+        \draw[arrow] (onevar) -- (onevarplots);
+        \draw[arrow] (twovar) -- (twovarplots);
+
+% --- Arrows: other paths ---
+        \draw[arrow] (distributies) -- (distplots);
+        \draw[arrow] (proporties) -- (propplots);
+        \draw[arrow] (geospatial) -- (geoplots);
+
+% --- Uncertainty arrows ---
+        \draw[arrow] (distplots) -- (uncertainty);
+        \draw[arrow] (propplots) -- (uncertainty);
+        \draw[arrow] (geoplots) -- (uncertainty);
+        \draw[arrow] (onevarplots) -- (uncertainty);
+        \draw[arrow] (twovarplots) -- (uncertainty);
+        \draw[arrow] (uncertainty) -- (uncplots);
+
+    \end{tikzpicture}
+
+    \section{misleiden met visualisaties}
+    Het is heel makkelijk om mensen te misleiden met visualisaties.
+    Bijvoorbeeld door de y-as niet bij 0 te laten beginnen, of door 3D-effecten te gebruiken die de verhoudingen vertekend weergeven.
+    Ook kan je door kleuren en vormen te gebruiken die de aandacht afleiden van de data zelf.
+
+    \begin{itemize}
+        \item Slecht ontwerp, zoals onduidelijke labels, slechte kleurkeuzes en onjuiste schalen kunnen misleiden.
+        \item proporties kunnen vertekend worden weergegeven, bijvoorbeeld door de y-as niet bij 0 te laten beginnen.
+        \item 3D-effecten kunnen de verhoudingen vertekend weergeven.
+    \end{itemize}
 
 \end{document}
