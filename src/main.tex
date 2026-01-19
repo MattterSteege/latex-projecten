@@ -592,6 +592,8 @@
         \item Hiërarchische situaties (niet durven vragen of corrigeren)
     \end{itemize}
 
+    \ruleline{Alles hierboven is voor de midterm, alles hieronder is voor de final}
+
     \section[visualisatietechnieken - \textbf{InformatieVisualisatie}]{visualisatietechnieken}
 
     \subsection{Definitie}
@@ -820,88 +822,106 @@
 
     Welke visualisatie moet je gebruiken?
 
-    \begin{tikzpicture}[
-        every node/.style={
-            draw,
-            rectangle,
-            rounded corners,
-            align=center,
-            minimum width=34mm,
-            minimum height=8mm
-        },
-        decision/.style={
-            fill=blue!20,
-            font=\bfseries
-        },
-        arrow/.style={
-            ->,
-            thick
-        }
-    ]
 
-% --- Left column (top to bottom) ---
-        \node[decision] (datatype)    at (0, 8)  {Welke soort data?};
-        \node          (aantallen)   at (0, 6)  {Aantallen};
-        \node          (distributies)at (0, 4)  {Distributies};
-        \node          (proporties)  at (0, 2)  {Proporties};
-        \node          (geospatial)  at (0, 0)  {Geospatiaal};
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{1\textwidth}{!}{%
+            \begin{tikzpicture}
+                \tikzstyle{every node}=[font=\LARGE]
 
-% --- Middle ---
-        \node[decision] (variables)  at (5, 6)  {Hoeveel variabelen?};
+                \draw [ fill={rgb,255:red,124; green,204; blue,254} , rounded corners = 6.0] (2.5,12.25) rectangle node {\LARGE Welke soort data?} (8.75,11);
+                \draw [ rounded corners = 6.0] (2.5,9.75) rectangle node {\LARGE Aantallen} (8.75,8.5);
+                \draw [ rounded corners = 0.0] (3.5,11.5) rectangle (3.5,11.5);
+                \draw [ rounded corners = 0.0] (3.5,11.75) rectangle (3.5,11.75);
+                \draw [ rounded corners = 0.0] (3.75,11.75) rectangle (3.75,11.75);
+                \draw [ rounded corners = 6.0] (2.5,7.25) rectangle node {\LARGE Distributies} (8.75,6);
+                \draw [ rounded corners = 6.0] (2.5,4.75) rectangle node {\LARGE Proporties} (8.75,3.5);
+                \draw [ rounded corners = 6.0] (2.5,2.25) rectangle node {\LARGE Geospatiaal} (8.75,1);
+                \draw [ fill={rgb,255:red,124; green,204; blue,254} , rounded corners = 6.0] (10,9.75) rectangle node {\LARGE Hoeveel variabelen?} (16.25,8.5);
+                \draw [ rounded corners = 6.0] (17.5,12.25) rectangle node {\LARGE 1 variabele} (23.75,11);
+                \draw [ rounded corners = 6.0] (17.5,9.75) rectangle node {\LARGE 2 Variabelen} (23.75,8.5);
+                \draw [short] (5.5,11) -- (5.5,9.75);
+                \draw [short] (5.5,8.5) -- (5.5,7.25);
+                \draw [short] (5.5,6) -- (5.5,4.75);
+                \draw [short] (5.5,3.5) -- (5.5,2.25);
+                \draw [short] (16.25,9.25) -- (17.5,9.25);
+                \draw [short] (16.75,9.25) -- (16.75,11.75);
+                \draw [short] (16.75,11.75) -- (17.5,11.75);
+                \node [font=\LARGE] at (14.5,6.5) {\textbf{Histogram, density plot, boxplot …}};
+                \node [font=\LARGE] at (15,4) {\textbf{Pie chart, stacked bar chart, treemap …}};
+                \node [font=\LARGE] at (12.75,1.5) {\textbf{Kaart, chloropleth …}};
+                \draw (10,6) to[short] (19,6);
+                \draw (10,3.5) to[short] (20,3.5);
+                \draw (10,1) to[short] (15.75,1);
+                \draw [->, >=Stealth] (8.75,6.75) -- (9.75,6.75);
+                \draw [->, >=Stealth] (9.75,6.75) -- (9.75,6.75);
+                \draw [->, >=Stealth] (8.75,4.25) -- (9.75,4.25);
+                \draw [->, >=Stealth] (8.75,1.75) -- (9.75,1.75);
+                \draw [->, >=Stealth] (8.75,9.25) -- (9.75,9.25);
+                \node [font=\LARGE] at (28.25,11.5) {\textbf{Staafdiagram, heatmap …}};
+                \node [font=\LARGE] at (28.25,9) {\textbf{Scatterplot, lijngrafiek …}};
+                \draw [->, >=Stealth] (23.75,11.75) -- (24.75,11.75);
+                \draw [->, >=Stealth] (23.75,9.25) -- (24.75,9.25);
+                \draw [short] (31.75,11.75) -- (33,11.75);
+                \draw [short] (31.75,9.25) -- (33,9.25);
+                \draw [short] (33,11.75) -- (33,7.25);
+                \draw [ fill={rgb,255:red,124; green,204; blue,254} , rounded corners = 6.0] (30,7.25) rectangle node {\LARGE Onzekerheid i/d data?} (36.25,6);
+                \draw [short] (30,6.75) -- (19.25,6.75);
+                \draw [short] (21.75,6.75) -- (21.75,1.75);
+                \draw [short] (21.75,1.75) -- (15.75,1.75);
+                \draw [short] (21.75,4.25) -- (20.25,4.25);
+                \draw [->, >=Stealth] (33,6) -- (33,5);
+                \node [font=\LARGE] at (33,4) {\textbf{Error bars, spaghetti plot …}};
+                \draw [short] (29.5,3.5) -- (36.5,3.5);
+                \draw [short] (25,8.5) -- (31.5,8.5);
+                \draw [short] (25,11) -- (31.75,11);
+            \end{tikzpicture}
 
-% --- Variable choices ---
-        \node (onevar) at (9, 7) {1 variabele};
-        \node (twovar) at (9, 5) {2 variabelen};
-
-% --- Plot types ---
-        \node (onevarplots) at (13, 7) {Staafdiagram, heatmap, \ldots};
-        \node (twovarplots) at (13, 5) {Scatterplot, lijngrafiek, \ldots};
-
-        \node (distplots) at (5, 4) {Histogram, density plot, boxplot, \ldots};
-        \node (propplots) at (5, 2) {Pie chart, stacked bar chart, treemap, \ldots};
-        \node (geoplots)  at (5, 0) {Kaart, choropleth, \ldots};
-
-% --- Uncertainty ---
-        \node[decision] (uncertainty) at (13, 3) {Onzekerheid in de data?};
-        \node (uncplots)             at (13, 1) {Error bars, spaghetti plot, \ldots};
-
-% --- Arrows: vertical ---
-        \draw[arrow] (datatype) -- (aantallen);
-        \draw[arrow] (aantallen) -- (distributies);
-        \draw[arrow] (distributies) -- (proporties);
-        \draw[arrow] (proporties) -- (geospatial);
-
-% --- Arrows: aantallen path ---
-        \draw[arrow] (aantallen) -- (variables);
-        \draw[arrow] (variables) -- (onevar);
-        \draw[arrow] (variables) -- (twovar);
-        \draw[arrow] (onevar) -- (onevarplots);
-        \draw[arrow] (twovar) -- (twovarplots);
-
-% --- Arrows: other paths ---
-        \draw[arrow] (distributies) -- (distplots);
-        \draw[arrow] (proporties) -- (propplots);
-        \draw[arrow] (geospatial) -- (geoplots);
-
-% --- Uncertainty arrows ---
-        \draw[arrow] (distplots) -- (uncertainty);
-        \draw[arrow] (propplots) -- (uncertainty);
-        \draw[arrow] (geoplots) -- (uncertainty);
-        \draw[arrow] (onevarplots) -- (uncertainty);
-        \draw[arrow] (twovarplots) -- (uncertainty);
-        \draw[arrow] (uncertainty) -- (uncplots);
-
-    \end{tikzpicture}
+        }%
+    \end{figure}
 
     \section{misleiden met visualisaties}
     Het is heel makkelijk om mensen te misleiden met visualisaties.
     Bijvoorbeeld door de y-as niet bij 0 te laten beginnen, of door 3D-effecten te gebruiken die de verhoudingen vertekend weergeven.
     Ook kan je door kleuren en vormen te gebruiken die de aandacht afleiden van de data zelf.
 
-    \begin{itemize}
-        \item Slecht ontwerp, zoals onduidelijke labels, slechte kleurkeuzes en onjuiste schalen kunnen misleiden.
-        \item proporties kunnen vertekend worden weergegeven, bijvoorbeeld door de y-as niet bij 0 te laten beginnen.
-        \item 3D-effecten kunnen de verhoudingen vertekend weergeven.
-    \end{itemize}
+    \subsection{Slecht ontwerp}
+    Als een grafiek slecht ontworpen is, dan kan het (onbewust) misleidend zijn.
+    Bijvoorbeeld door onduidelijke labels, onjuiste schalen of onlogische indelingen.
+    3D-effecten kunnen ook de verhoudingen vertekend weergeven, waardoor de data anders lijkt dan het is.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.25linewidth]{image/Slecht_ontwerp}
+        \caption{}
+        \label{fig:slecht_ontwerp}
+    \end{figure}
+
+    Links ziet er veel dramatischer uit dan rechts, terwijl de data hetzelfde is.
+
+    \subsection{Dubieuze data}
+    Als de data zelf al dubieus is, dan kan de visualisatie ook misleidend zijn.
+    Bijvoorbeeld door selectieve dataweergave, waarbij alleen de data wordt getoond die het gewenste verhaal ondersteunt.
+    Of door het gebruik van onjuiste statistische methoden die de data verkeerd interpreteren.
+
+    \subsection{Te weinig data}
+    Als er te weinig data is, dan kan de visualisatie ook misleidend zijn.
+    Bijvoorbeeld door het gebruik van kleine steekproeven die niet representatief zijn voor de populatie.
+    Of door het gebruik van gemiddelden die de variabiliteit in de data verbergen.
+
+    \subsection{verborgen of onduidelijke onzekerheid}
+    Als de onzekerheid in de data niet duidelijk wordt weergegeven, dan kan de visualisatie ook misleidend zijn.
+    Bijvoorbeeld door het weglaten van foutenmarges of betrouwbaarheidsintervallen.
+    Of door het gebruik van grafieken die de onzekerheid verbergen, zoals lijngrafieken zonder foutbalken.
+
+    \subsection{suggestieve patronen}
+    Data kan soms patronen lijken te tonen die er in werkelijkheid niet zijn.
+    Bijvoorbeeld door een grafiek te tonen die levensverwachting tegenover sigarettenconsumptie per land weergeeft.
+    Dit kan de suggestie wekken dat er een verband is, terwijl er in werkelijkheid veel andere factoren meespelen.
+    De visualisatie toont dan dat je langer leeft als je meer rookt.
+    Dit komt, omdat rijke landen zowel een hogere levensverwachting als een hogere sigarettenconsumptie hebben.
+
+    Ook kan je door toeval patronen zien die er niet zijn.
+    Grappige voorbeelden hiervan kan je op de website \url{https://www.tylervigen.com/spurious-correlations} vinden.
 
 \end{document}
