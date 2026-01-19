@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="8-1-2026, echt onaf">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Enhance visualizations and clarify design principles in main.tex; update workspace configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
@@ -149,7 +149,7 @@
       <workItem from="1767882106058" duration="4462000" />
       <workItem from="1768417164334" duration="105000" />
       <workItem from="1768574074429" duration="36000" />
-      <workItem from="1768836665858" duration="2664000" />
+      <workItem from="1768836665858" duration="2871000" />
     </task>
     <task id="LOCAL-00001" summary="Add project configuration files and standard LaTeX commands">
       <option name="closed" value="true" />
@@ -463,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768417244419</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Enhance visualizations and clarify design principles in main.tex; update workspace configuration">
+      <option name="closed" value="true" />
+      <created>1768839489714</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1768839489714</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update editor commands and improve content clarity in main text" />
     <MESSAGE value="Add text splitting command and new table macros for improved document formatting" />
     <MESSAGE value="Update editor settings and enhance table commands for improved clarity and structure" />
     <MESSAGE value="Enhance table formatting and commands for improved clarity and usability" />
@@ -506,7 +513,8 @@
     <MESSAGE value="t/m Mens-info 07 (Beun) - Afstemming in Communicatie" />
     <MESSAGE value="Add build configurations for LaTeX document processing and migration state" />
     <MESSAGE value="8-1-2026, echt onaf" />
-    <option name="LAST_COMMIT_MESSAGE" value="8-1-2026, echt onaf" />
+    <MESSAGE value="Enhance visualizations and clarify design principles in main.tex; update workspace configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance visualizations and clarify design principles in main.tex; update workspace configuration" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
