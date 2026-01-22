@@ -18,14 +18,14 @@
 \include{core/paperSettings} % import custom general paper settings
 \include{core/standardCommands} % import custom commands and packages
 
-\def\documentTitle      {} % replace with actual document title
+\def\documentTitle      {IJsselmeer Yachts} % replace with actual document title
 \def\documentSubtitle   {} % replace with actual subtitle if any, else leave empty
-\def\authorName         {} % replace with actual author name
+\def\authorName         {Max Harmsen - 2335778, Tom Huisman - 1484397,\\ Mika Kalshoven - 0000000, Matt ter Steege - 9932003} % replace with actual author name
 \def\authorEmail        {} % replace with actual author email
 \def\institutionName    {Universiteit Utrecht} % replace with actual institution name
 \def\institutionCountry {Nederland} % replace with actual institution location
 \def\institutionCity    {Utrecht} % replace with actual institution location
-\def\dueDate            {} % replace with actual due date
+\def\dueDate            {23-01-2026} % replace with actual due date
 
 \def\editorsVersion     {false} % true om editorsnote e.d. te tonen, false voor verbergen
 \def\makeTitlePage      {true}  % true om titelpagina te maken, false om over te slaan
@@ -36,382 +36,353 @@
 % -----------------------------------------
 \begin{document}
 
-% ----------------------------
-% REMOVE FROM HERE ONCE COPIED
-% ----------------------------
-
-    \begin{center}
-        \small
-        Repository: \url{https://github.com/MattterSteege/Universitaire-papers} \\
-        This document explains how to use the template, the meaning of settings,
-        and demonstrates every custom command from \texttt{standardCommands.tex}.
-    \end{center}
-
-    \vmed
-    \clearpage
-
-    \onecolumn
-
-% -------------
-% INTRO SECTION
-% -------------
-
-
-    \section{Introduction — what this repo gives you}
-    This repository is a compact but opinionated LaTeX template intended to make writing short academic papers and reports fast and consistent.
-
-    In short, you get:
-    \begin{itemize}
-        \item \textbf{A small settings file} (\texttt{paperSettings.tex}) that centralizes document-level choices (margins, fonts, packages).
-        \item \textbf{A macro library} (\texttt{standardCommands.tex}) that provides frequently used helpers: spacing utilities, quote formatting, editor-only notes, simple table helpers, and tiny text-processing utilities.
-        \item \textbf{A bibliography file} (\texttt{main.bib}) for references.
-        \item \textbf{This documentation} (\texttt{main.tex}) for your main entry point, explaining how to use the settings and macros.
-        \vmed
-        \item \textbf{Bash build scripts} to compile the document locally or on Overleaf.
-    \end{itemize}
-
-    This `main.tex` acts as a \emph{user manual} and a demonstration. Open it, compile it, and you will see rendered examples next to the explanation.
-
-% -------------
-% QUICK START
-% -------------
 
+    \section{Abstract}
+
+
+    \section{Achtergrond onderzoek}
+    Binnen ons groepje hebben we redelijk veel ervaring met HTML, CSS en JavaScript.
+    De een wat meer dan de ander, maar we hebben allemaal op de middelbare school informatica gehad of we hebben in onze vrije tijd geëxperimenteerd.
+    Dit geeft onze groep een enorm voordeel, omdat we de benodigde basis voor ons project hebben.
+    We hoeven niet zozeer in te gaan op de werking en syntax, omdat we dit zo goed als uit ons hoofd kunnen doen.
+    Als we toch tegen problemen aanliepen, hebben we de website ``W3Schools'' gebruikt om onze problemen op te lossen.
+    Dit is een website die alles rondom het leren van webdesign aanbiedt \parencite{w3schools}.
+    W3Schools was vooral handig voor als we niet bij elkaar waren.
+    Het merendeel van de tijd hebben we samen aan onze website gewerkt, waardoor meestal iemand anders het antwoord wist op bepaalde vragen.
+
+    Dit achtergrondonderzoek is meer gericht op het onderzoek achter de gemaakte keuzes voor de opmaak, lay-out en API-implementatie voor onze website.
+    Dit komt omdat wij als team de kennis voor het development van een website al bezitten, waardoor we ons meer richten op de keuzes eromheen.
+
+    Voor onze webapplicatie hadden we bedacht dat we een website wilden maken waarmee we een probleem voor mensen kunnen oplossen.
+    Al brainstormend tijdens de het eerste werkcollege kwamen we erachter dat we iets wilden doen met verhuur; we wisten alleen nog niet wat we wilden verhuren.
+    Ons eerste plan was om een verhuursite voor huisjes te maken.
+    Met dat we onderzoek naar dit idee gingen doen, kwamen we erachter dat het lastig was om voor dit idee een goede API te vinden die we konden gebruiken.
+    Daarnaast kwamen we ook al heel erg veel verhuursites tegen die huisjes verhuurden, dus het was ook niet een origineel idee.
+    Vervolgens kwam het idee op om een verhuursite voor boten te maken, maar dan wel specifiek op het IJsselmeer.
+    Nog steeds hadden we het probleem dat we het geen origineel idee vonden, want er zijn ook meer dan genoeg bootverhuursites, en daarom besloten we alleen jachten te verhuren op het IJsselmeer.
+    Dit bestaat namelijk nog zeker niet.
+
+    Nu is het belangrijk dat we goed onderzoek doen naar hoe we onze website willen weergeven, welke kleuren we willen gebruiken en welke API\textquotesingle s we zouden kunnen gebruiken.
+    Volgens het Nederlands Kleurinstituut hebben kleuren een diepgaande invloed op diverse aspecten, waaronder marketing en ontwerp.
+    Daarom is het belangrijk om onderzoek te doen naar wat de website zou moeten uitstralen en welke kleuren daarvoor gebruikt moesten worden.
+    In het onderzoek kwam al snel naar boven dat jachten geassocieerd worden met luxe.
+    Daarom is het van belang dat er een royale en betrouwbare website gemaakt wordt, waar klanten een vertrouwelijk en luxueus gevoel bij krijgen.
+
+    De kleuren paars en blauw stralen deze aspecten uit \parencite{kleurinstituut2024}.
+    Daarom is er gekozen om deze 2 kleuren als basis te gebruiken voor de website.
+
+    Als er veel boten verhuurd moeten worden, moet de website beter zijn dan de website van de concurrent.
+    Daarom is het noodzakelijk dat er onderzoek gedaan wordt naar hoe de website van de concurrent eruitziet.
+    Als groep is het van belang om de websites goed te evalueren.
+    Door de evaluatie kunnen we bedenken wat we wel en niet moeten implementeren in onze website.
+    We denken dat de concurrenten in twee groepen onderscheiden kunnen worden: verhuurbedrijven van boten buiten het IJsselmeer, en verhuurbedrijven op specifiek het IJsselmeer.
+
+    Een verhuurbedrijf dat buiten het IJsselmeer aanbiedt, is: YachtCharter Westerdijk \parencite{westerdijkMotorboat} Dit bedrijf heeft een duidelijke website, met een overzichtelijke navigatie.
+    Er is zichtbaar moeite gedaan om een goed ontwerp en een goede lay-out van de website.
+    Dit maakt het overzichtelijk en biedt de mogelijkheid om makkelijk door de website te navigeren.
+    Ook maakt de website gebruik van uitgebreide, maar vanzelfsprekende filtermogelijkheden, met visuele plaatjes van hun aanbod.
+    Uit deze analyse volgde de conclusie dat de website van IJsselmeer Yachts deze aspecten ook zou moeten bevatten.
+    Wel is er veel tekst te vinden op de website, wat naar onze mening te veel is.
+    Een voorbeeld hiervan is de beschrijving van de boten, die meteen weergegeven wordt op de homepagina.
+    Wij vinden dit onnodig.
+    Dit zal daarom ook niet op deze manier geïmplementeerd worden op de website van IJsselmeer Yachts, omdat dit naar onze mening het doel van de website weghaalt.
+    Verder maakt de website het gemakkelijk om het bedrijf te contacteren.
+    Dit wordt dus ook bij onze website geïmplementeerd.
+
+    Een ander verhuurbedrijf buiten het IJsselmeer is YachtCharter Sneek \parencite{yachtcharterSneek2025} .
+    Deze website is vergelijkbaar met de website van YachtCharter Westerdijk.
+    De website oogt wederom goed, duidelijk ontworpen en goede lay-out.
+    Wij vinden de manier waarop de recensies van de klanten weergegeven worden wel overzichtelijker.
+    Dit zal dus op zo'n zelfde manier worden geïmplementeerd op onze site.
+    Ook oogt deze website een stuk `schoner'.
+    Dit komt omdat er geen grote stukken tekst te zien zijn op de homepagina, in tegenstelling tot YachtCharter Westerdijk.
+    Ook zien we dat dit bedrijf verschillende vaarroutes aanbiedt en dus kan dit ook voor ons een slimme implementatie zijn om bezoekers nog meer te kunnen bieden.
+
+    Een verhuurbedrijf specifiek gericht op onder andere het IJsselmeer is: Andijk Jacht Verhuur \parencite{andijkZeiljacht} .
+    Deze website is een wereld van verschil met de website van YachtCharter Westerdijk.
+    De website oogt op het eerste gezicht veel minder professioneel.
+    Dit komt door de onoverzichtelijkheid en het ontwerp en de lay-out van de website.
+    We zien dat er weinig gebruik is gemaakt van CSS voor de opmaak van de website.
+    Dit kunnen we beter doen, zodat we een concurrentievoordeel kunnen krijgen.
+
+    We zien veel overeenkomsten tussen de websites.
+    Zo hebben ze allemaal een navigatie-header en -footer, ze laten allemaal boten zien op de homepagina en de recensies van oude klanten.
+    Ook hebben alle websites mogelijkheden om te filteren op verschillende voorkeuren van de gebruiker.
+    Denk dan aan de datum van het boeken, de hoeveelheid mensen waarmee ze willen varen en de lengte van de boot.
+    Alle websites maken het de gebruiker ook heel makkelijk om contact op te nemen.
+    Deze aspecten van de website zijn essentieel voor onze website en zullen dus ook geïmplementeerd worden.
+
+    Verschillend tussen de websites is de opmaak en lay-out.
+    De ene is professioneler dan de andere.
+    Ook zien we verschillen in de positie van verschillende secties op de websites.
+    Denk dan bijvoorbeeld aan de informatie van de boten, klantenreviews.
+    Filterpagina of de plek waar contact op genomen kan worden.
+
+    Voor onze website wilden we het groots aanpakken.
+    Zo worden er niet alleen boten aangeboden, maar ook een platform bieden waar bezoekers inspiratie kunnen vinden voor hun bestemmingen, net zoals YachtCharter Sneek.
+    Daarom zijn er ook bestemmingen toegevoegd aan deze website, om de bezoekers net dat beetje extra te geven.
+
+    De website moet gebruikmaken van API\textquotesingle s, wat Application Programming Interface betekent.
+    Dit zorgt ervoor dat applicaties gegevens met elkaar kunnen uitwisselen \parencite{logiusApiStandards}.
+    De API zorgt voor een communicatieverbinding tussen input en output \parencite{ncscApiSecurity}.
+    Voor deze website zijn 2 API-endpoints nodig.
+    We gaan voor deze website gebruikmaken van een API die recensies kan leveren.
+    Dit geeft klanten meer vertrouwen in het bedrijf, en zorgt voor een professionele look and feel.
+    Ook wordt er een API gebruikt die het weer voor de aankomende dagen kan aanleveren.
+    Hierdoor kunnen de bezoekers het weer checken voordat ze een boot huren.
+    Zo wordt de kans op negatieve reviews door externe factoren beperkt.
+
+    Om klantrecensies te implementeren, is het wel van belang om een API-endpoint te vinden dat ook daadwerkelijk recensies teruggeeft.
+    Een probleem hiervoor is wel dat, omdat we een nieuwe website hebben, we nog geen recensies hebben.
+    We kiezen er daarom voor om een DummyJSON API te gebruiken.
+    Dit is een zogenaamde ``Mock'' API die voor gegenereerde data kan ophalen Ovi \parencite{dummyjson}.
+    Deze API haalt externe informatie op en levert deze data in een JSON-format.
+    Mocht dit namelijk een echte website (van een verhuurbedrijf) zijn geweest, dan waren de reviews ook extern opgevraagd.
+    Dit kan bijvoorbeeld uit een database of een platform als Trustpilot zijn.
+    Het gebruik van deze API komt door de kennis van groepsgenoten in voorgaande webprojecten.
+    Hierdoor hoefden we niet uitbundig onderzoek te doen naar hoe we deze API zouden kunnen integreren in onze website.
+
+    De andere API die we wilden gebruiken is een weer-API.
+    Hierdoor zullen de klanten het actuele weer zien voor de komende dagen wanneer ze een zoekopdracht hebben ingevuld bij onze filtering.
+    De API die deze service zal leveren is de API open-meteo.
+    Deze API geeft de mogelijkheid om het weer op het IJsselmeer te tracken (door middel van coördinaten in het midden van het IJsselmeer), en weer te geven op onze website.
+    Ook kan Open-Meteo actuele informatie geven over de wind, maximale en minimale temperatuur en of er neerslag komt \parencite{openmeteo}.
+    Om inspiratie op te doen is de website van Buienradar bekeken.
+    Deze website geeft het actuele weer op een bepaalde plaats weer \parencite{buienradar}.
+    Buienradar geeft de belangrijkste informatie van het weer op een overzichtelijke manier weer, wat wij ook moeten implementeren op onze website.
+    Gezien er veel positieve reviews waren over de app van Buienradar, vonden we dit een goeie plek om inspiratie op te doen.
+
+    Ook was er inspiratie nodig voor de website.
+    Voor het ontwerp hebben we Dribbble gebruikt.
+    Dit is een platform dat een grote collectie aan designideeën aanbiedt \parencite{dribbble}.
+    Met de keywords: ``Boat'', ``Boats'', ``Yacht'', ``Boat Rental'' en ``Yacht Rental'', hebben we kunnen sparren over hoe we willen dat onze website eruit komt te zien.
+    We hebben gekozen voor een minimalistisch en overzichtelijk design.
+    Op onze website moeten de boten duidelijk, zonder te veel informatie, worden weergegeven.
+    De informatie wordt pas gegeven zodra de gebruiker op de boot klikt.
+    Dit voorkomt een cognitieve overload.
+
+
+    \section{Ontwerp (1244/1500 woorden)}
+    In dit deel omschrijven wij het ontwerp van de website van IJsselmeer Yachts.
+    Voor onze website gebruiken wij HTML, CSS en Javascript.
+    Dit is de basis voor onze website.
+    Met HTML, afkorting van HyperText Markup Language, zullen wij de structuur van onze webpagina maken.
+    Deze programmeertaal zorgt ervoor dat wij de inhoud, zoals tekst, linkjes en afbeeldingen kunnen implementeren in onze website.
+    CSS, afkorting voor Cascading Style Sheet, zullen wij gebruiken om de opmaak van onze inhoud te maken, door kleuren, lettertypen en lay-outs.
+    CSS zorgt dus voor de visuele aspecten van onze webpagina.
+    Javascript zullen wij gebruiken om onze website interactief en dynamisch te maken.
+    Dit zullen wij gebruiken voor de implementatie van onze gekozen API\textquotesingle s, dummyjson en open meteo.
+    Hier zullen wij later in dit stuk uitgebreider over schrijven.
+
+    Wij, de founders van IJsselmeer Yachts, zullen een website maken die ervoor zorgt dat bezoekers boten kunnen huren waarmee ze op het IJsselmeer kunnen varen.
+    IJsselmeer Yachts heeft een groot aanbod aan boten beschikbaar voor verhuur.
+
+    We willen luxeproducten aanbieden en de juiste klantendoelgroep daarvoor aantrekken.
+    Daarom moet onze website een luxe uitstraling hebben.
+    We hebben gekozen voor de kleuren donkerblauw en paars als hoofd kleuren, omdat wij vinden dat dat voor een luxe uitstraling en beleving zorgt.
+    Verder gebruiken we wit, grijs en zwart voor de tekstkleuren, lichtblauw voor de knoppen, wit voor de borders om de betreffende plaatjes en roze voor het selecteren van de plaatjes.
+    
+    Wij maken ook gebruik van het web-framework Bootstrap om het bouwen van de website makkelijker en sneller te maken.
+    Bootstrap bestaat uit verschillende kant-en-klare componenten die in een website gebouwd kunnen worden om een gelijk uitstraling te geven aan een website.
+    
+    De website bestaat van boven naar benende, een header/navigatiebal waar links naar verschillende pagina's staan.
+    Deze verwijzen bezoekers naar pagina's zoals het aanbod aan boten, de locaties waar we naartoe kunnen varen, hoe contact met ons opgenomen kan worden en wie wij zijn.
+    Verder is in het van het scherm te zien wat het doel van de desbetreffende pagina is, wat hier getoond wordt verderop beter uitgelegd.
+    Onderaan is een footer te zien waar dezelfde links als de navigatiebalk te zien zijn.
+    
+    Als de bezoeker op de hoofdpagina van de website komt, zal meteen een plaatje van een boot te zien zijn.
+    Ook is er een filtersysteem aanwezig om een boot te reserveren.
+    Dit zorgt ervoor dat het doel van de website meteen duidelijk is.
+    Ook ziet de gebruiker de quote ``\emph{Welkom tot het goede leven!}'' die het gevoel dat wij willen overbrengen met onze site uit.
+    Als de gebruiker naar beneden scrolt, zijn meerdere reviews te zien van verschillende mensen die gebruik hebben gemaakt van de service van IJsselmeer Yachts.
+    Dit geeft de gebruiker meer vertrouwen in onze service en in de website.
+    \parencite{HU201442} Hiervoor hebben wij de dummyjson API gebruikt (besproken in achtergrondonderzoek).
+    We hebben ervoor gezorgd dat de reviews dynamisch bewegen van rechts naar links zodat de gebruiker elke keer nieuwe reviews kan bekijken.
+    
+    Wanneer de gebruiker op ``Onze boten'' klikt óf via het filtersysteem een gewenst formaat/capaciteit selecteert, dan zijn alle boten die wij als bedrijf verhuren te zien.
+    Er kan óók hier gefilterd worden op lengte, en het aantal zitplekken die er in de boot aanwezig moeten zijn.
+    Deze wensen van de bezoeker worden vervolgens iets vergroot, om ervoor te zorgen dat boten die in de buurt van de wens komen, ook getoond worden.
+    Ook wordt op deze pagina een weerbericht getoond waarin weerdetails van het IJsselmeer getoond worden en er een advies gegeven wordt wat voor type boot het beste voor die dag is.
+    Hiervoor moet de gebruiker uiteraard wel zijn gewenste vertrek dag hebben ingevuld.
+    Daarnaast wordt er een advies gegeven over water drinken/zonnebrand als het warm wordt of een dikke jas als het kouder wordt.
+    Als de gebruiker verder naar beneden scrolt, zullen alle opties van de mogelijke boten die binnen de filters vallen worden getoond.
+    Hier ziet de gebruiker een plaatje van de boot, hoeveel personen op de boot kunnen, Hoe lang de boot is, wanneer hij gebouwd is en hoe duur de boot is per week.
+    De boten zullen in een grid weergegeven worden wat een strakke uitstraling geeft.
+    De gebruiker kan op een van de boten klikken, om vervolgens details over deze boot te kunnen zien.
+    Bovenaan deze pagina staat ook, wanneer een bezoeker een gewenste huurdatum ingevuld heeft, een weerbericht voor die specifieke dag.
+    Deze data vragen wij op van \url{https://api.open-meteo.com}.
+    Deze levert verschillende data aan zoals minimale en maximale temperatuur, regenval tussen 09:00 en 21:00 en hoe hard het waait.
+    Dit wordt vervolgens getoond aan de gebruiker in de vorm van een nette tekst die aangeeft of er ook zonnebrand gesmeerd moet worden, of dat een dikke jas een beter plan is.
+    
+    Op de detail pagina is het mogelijk maken om een boot te huren.
+    Op deze pagina zullen opnieuw de specificaties van de boot te zien zijn met een groter plaatje van de boot.
+    Zo kunnen de bezoekers opnieuw na gaan of dit wel écht de juiste optie is.
+    Ook is er een manier om te berekenen hoeveel geld het de gebruiker ongeveer zou kosten als hij/zij de boot voor x dagen wil huren, met een x aantal gasten.
+    Onder de specificaties en de reserveringsmogelijkheid staat nog een diepgaandere beschrijving van de boot.
+    
+    Op de ``Bestemmingen'' pagina bieden wij een grotere service aan dan alleen het IJsselmeer.
+    De boten die wij aanbieden zijn vaak erg groot, en soms willen klanten meer ontdekken dan alleen het IJsselmeer.
+    Daarom willen wij de service bieden om naar andere bestemmingen te varen.
+    Op deze pagina kan de gebruiker ons aanbod zien van verre reizen die meer willen dat alleen het IJsselmeer.
+    
+    Op de ``contact'' pagina kunnen bezoekers van de website in contact komen met deoprichters van de website.
+    Hier is een form waar bezoekers hun eventuele vragen of opmerkingen voor IJsselmeer Yachts.
+    Het is een simpel formulier waar de gebruiker een naam, emailadres en bericht in kan vullen.
+    Dit om het voor de gebruiker zo laagdrempelig mogelijk te maken om in contact te komen met ons.
+    
+    De ``about'' pagina is de plek waar bezoekers achtergrondinformatie kunnen vinden over onze website.
+    Zo staat er een verhaal over het verleden van IJsselmeer Yachts.
+    Ook kan de gebruiker de oprichters van het bedrijf vinden.
+    Zo weet de gebruiker ook wie er achter de website en het bedrijf zit, en dit wekt meer vertrouwen.
+    Om de reviews aan de gebruiker te laten zien maken we gebruik van een API van DummyJson.
+    Deze API is bedoeld om nep data te kunnen opvragen zolang de echte data nog niet beschikbaar is \parencite{dummyjson}.
+    We interpreteren de ontvangen data, om deze duidelijker te laten zien aan de gebruiker.
+    Zo komt er namelijk een getal binnen (via de API) om aan te geven hoeveel sterren de vorige bezoeker gegeven heeft, maar om dit visueel aantrekkelijk aan de gebruiker te laten zien, zetten we met Javascript de tekst om in ster iconen.
+
+    \subsection{Bezoekersreis}
+    De bezoekersreis binnen de website van IJsselmeer Yachts is bewust logisch en stapsgewijs opgebouwd, met als doel bezoekers op een natuurlijke manier te begeleiden richting het huren van een boot.
+    De reis begint op de hoofdpagina, waar direct duidelijk wordt wat de website aanbiedt.
+    Door het tonen van een grote, sfeerbepalende afbeelding van een boot in combinatie met een zichtbaar filtersysteem wordt meteen gecommuniceerd dat de kern van de website draait om het huren van luxe boten.
+    
+    Na binnenkomst op de homepage volgt de oriëntatiefase.
+    In deze fase krijgt de bezoeker de mogelijkheid om via filters alvast een eerste selectie te maken op basis van wensen zoals capaciteit en formaat van de boot.
+    Tegelijkertijd zorgen de getoonde reviews voor sociale bevestiging.
+    Door ervaringen van eerdere klanten zichtbaar te maken, ontstaat sneller vertrouwen in de aangeboden service.
+    De dynamische weergave van deze reviews trekt de aandacht zonder de bezoeker af te leiden van het hoofddoel.
+    
+    Wanneer een bezoeker besluit verder te gaan, leidt de navigatie of het filtersysteem naar de pagina ``Onze boten''.
+    Hier verschuift de focus van oriëntatie naar vergelijking.
+    Het overzicht van beschikbare boten, weergegeven in een strak grid, maakt het eenvoudig om verschillende opties naast elkaar te bekijken.
+    Filters blijven beschikbaar, zodat de selectie verder verfijnd kan worden.
+    Tegelijkertijd wordt aanvullende context geboden in de vorm van een weerbericht en praktisch vaaradvies, wat bijdraagt aan een realistisch en betrouwbaar beeld van de huurervaring.
+    
+    Na het selecteren van een specifieke boot komt de bezoeker terecht op de detailpagina.
+    In deze fase staat bevestiging centraal.
+    Door grotere afbeeldingen, uitgebreide specificaties en een diepgaandere beschrijving kan gecontroleerd worden of de gekozen boot daadwerkelijk aansluit bij de verwachtingen.
+    De prijsindicatie op basis van huurperiode en aantal gasten helpt om mogelijke twijfel weg te nemen en voorkomt verrassingen.
+    Ook het opnieuw tonen van weersinformatie voor de gekozen datum ondersteunt het gevoel van voorbereiding en controle.
+    
+    Tot slot biedt de website aanvullende pagina's, zoals bestemmingen, contact en about, die niet direct gericht zijn op conversie maar wel een belangrijke ondersteunende rol spelen.
+    Deze pagina's versterken het vertrouwen in het bedrijf, geven extra informatie en verlagen de drempel om contact op te nemen.
+    Op deze manier vormt de bezoekersreis een samenhangend geheel waarin oriëntatie, vergelijking, bevestiging en vertrouwen elkaar logisch opvolgen.
+    
+    \section{Implementatie (1500)}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\columnwidth]{images/image1}
+        \caption{De thuis-pagina van IJsselmeer yachts}     \label{fig:home-page}
+    \end{figure} De website is uiteindelijk opgebouwd uit een reeks webpagina's die strak op elkaar aansluiten, al heeft dat proces onderweg de nodige haperingen laten zien.
+
+    \begin{multicols}{2}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\columnwidth]{images/image2}
+            \caption{Ongefilterd zoeken op jachten}
+            \label{fig:all-boats-page}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\columnwidth]{images/image3}
+            \caption{Gefilterd zoeken op jachten}
+            \label{fig:filtered-boats-page}
+        \end{figure}
+    \end{multicols}
+
+
+    \section{Reflectie}\label{reflectie}
+    Onze groep bestond uit 2 personen die al wat meer ervaring hadden met web ontwikkeling en 2 personen die wat minder, maar nog steeds ervaring, hiermee hadden.
+    Deze verdeling bleek achteraf heel erg prettig te zijn, omdat op deze manier niemand lang met problemen hoefde te blijven zitten.
+    Er was altijd wel iemand in de groep die een oplossing wist, waardoor de ontwikkeling van de website heel soepel verliep.
+
+    \subsection{Communicatie}
+    De communicatie binnen onze groep was een van de sterkste punten.
+    In plaats van meteen te beginnen, werd er eerst besproken wat de algemene designkeuzes waren voor de website.
+    Door dit goed van tevoren te bespreken, was het eigenlijk niet nodig om later hele stukken van de website opnieuw te maken, omdat het niet paste bij de overall look and feel van de website.
+    Het brainstormen over het uiterlijk en de functionaliteiten van de website deden we vooral tijdens de werkcolleges.
+    We deden dit omdat we tijdens de werkcolleges elkaar makkelijker dingen kunnen laten zien die we gevonden hadden, en ook kun je elkaar makkelijker concepten uitleggen door het bijvoorbeeld even snel te schetsen.
+    Al snel bleek dat we niet met z'n allen dezelfde mening hadden wat betreft het uiterlijk.
+    Zo vond de een dat de website ``clean'' moest blijven, wat vooral wit betekende met een paar accentkleuren, en de ander vond dat we juist veel kleur moesten toepassen op onze site.
+    De oplossing die we hiervoor vonden, was om bronnen te zoeken die beide keuzes zouden moeten ondersteunen.
+    Na de bronnen met de hele groep vergeleken te hebben, kwamen we erop uit dat de keuze voor kleur toch de betere keuze was.
+    Juist doordat we ook bronnen hebben gebruikt, en niet gewoon 1 kant hebben gekozen, was iedereen in de groep oké met de keuze.
+    Nu konden we namelijk als groep beargumenteren waarom 1 optie beter was dan de andere.
+    Daarbij kwam ook nog het feit dat we niet 1 kant gekozen hebben, wat frictie binnen de groep voorkwam.
+    Gezien er thuis vooral ontwikkeld werd, is er ook een WhatsApp-groepsapp gemaakt.
+    Hier konden vragen gesteld worden en werden nog twijfels over het uiterlijk van de website besproken.
+    De reden voor thuis ontwikkeling was simpel, als je alleen werkt dan werk je efficiënter.
+    Gezien de belangrijkste dingen al overlegd waren, was efficiëntie voor ons dus belangrijk tijdens de ontwikkeling.
+    Wat betreft de communicatie waren er ook wat verbeterpunten.
+    Zo is elke pagina ontwikkeld door 1 persoon.
+    Deze persoon had dan ook de vrije keuze om alles te doen op die pagina wat hij wilde, zolang het maar aan de designkeuze voldaan werd.
+    Hierdoor werd er dus alleen bij de merge (later meer hierover) gekeken naar de pagina inhoudelijk.
+    Gezien de pagina tijdens de merge al klaar is, kwam het erop neer dat er eigenlijk niet zo veel veranderd meer veranderd werd aan de pagina.
+    Hierdoor hadden we als groep minder invloed op de inhoud van de pagina's.
+    Dit zou voor een volgende keer beter kunnen.
+    Dat betekent dat we de volgende keer niet alleen de designkeuzes met ons allen goed moeten bespreken, maar ook dieper op de inhoud van elke pagina in moeten gaan.
+    Gelukkig bracht het zojuist genoemde verbeterpunt niet veel problemen met zich mee.
+    Meestal vond de hele groep het prima wat de ontwikkelaar op zijn pagina gemaakt had, wat ervoor zorgde dat ook hier geen frictie ontstond.
+
+    \subsection{Versie management}
+    Gezien de gehele groep bestond uit dubbele bachelors (Informatica / Informatiekunde) had iedereen al ervaring met GitHub.
+    Dit kwam goed uit, want voor dit project besloten we ook snel dat het gebruik van GitHub belangrijk was.
+    Aan het begin van het project pushten we al onze commits op de main branch.
+    Dit werd gedaan omdat er een pipeline aangemaakt was op de main branch, die alle wijzigingen meteen zou doorsturen naar de webspace van Matt ter Steege.
+    Al snel ontdekten we dat dit toch niet handig was.
+    Er ontstonden onnodig complexe merge conflicts en iedereen werkte met de verkeerde versie, omdat er niet constant gepulled werd.
+    Daarnaast verloren we ook voortgang, gezien de merges sommige aanpassingen weer volledig ongedaan maakte.
+    Vanwege dit probleem werd er besloten om met branches te werken.
+    Voor elk onderdeel werd er een nieuwe branch aangemaakt en pas als de ontwikkeling van dat onderdeel helemaal klaar was, werd de branch overgezet naar main.
+    Het voordeel hiervan was dat de merg conflicten een stuk minder complex waren.
+    Het nadeel was dat je de veranderingen niet direct kan zien op de webspace.
+    Dit nadeel was acceptabel, omdat dit project vooral bestond uit HTML- en CSS-files.
+    Deze bestanden kun je direct openen in de browser (lokaal) en daarom kun je op deze manier je veranderingen direct zien.
+    Een afspraak die we maakten als groep was dat we onze veranderingen zo snel mogelijk zouden pushen.
+    Aan het begin werd dit niet gedaan, waardoor de groep geen goed beeld had van de dingen die al klaar waren, en de onderdelen waar nog tijd besteed aan besteed moest worden.
+    Voor een volgend project is het belangrijk dat we meteen beginnen met het gebruiken van branches.
+    Hierdoor verliezen we geen voortgang en ontstaan er minder frustraties aan het begin.
+
+    \subsection{Persoonlijke reflecties}
+
+    \subsubsection{Max Harmsen} Al voordat ik met dit project begon, had ik al best wat ervaring met HTML en CSS.
+    Hierdoor hadden deze 2 talen weinig verrassingen voor mij.
+    Toch wou ik graag wat nieuws leren en besloot daarom wat meer gebruik te maken van JavaScript.
+    Deze taal had ik namelijk niet tot nauwelijks gebruikt in mijn andere projecten, dus hier wist ik nog niet heel erg veel van.
+    Ik kwam erachter dat JavaScript wat betreft structuur redelijk overeenkomt met C\# (een taal die ik in het vorige blok geleerd heb), maar dat de syntax net anders is.
+    Hierdoor kreeg ik het gevoel dat ik niet weer helemaal vanaf 0 moest beginnen, wat me motiveerde om niet alleen het hoogstnodige JavaScript te gebruiken, maar ook JavaScript te gebruiken om de site visueel aantrekkelijker te maken.
+    Een voorbeeld hiervan is het omzetten van de het getal dat de sterren aangeeft (vanuit de API-endpoint) naar daadwerkelijke ster-icons die de gebruiker kan zien.
+    Daarnaast heb ik ook geleerd hoe ik door middel van JavaScript een API-endpoint kan bevragen en de informatie die het endpoint teruggeeft.
+    Ik had namelijk nog nooit gewerkt met het principe van async-functies.
+    Dit JavaScript-principe gaat ervan uit dat er op sommige regels code gewacht moet worden voordat de rest uitgevoerd kan worden.
+    In het geval van het bevragen van een API-endpoint is dit uiteraard het geval.
+    Zodra je het endpoint bevraagt, dan heb je niet meteen de informatie van je endpoint ontvangen; hier gaat tijd overheen.
+    Gezien die informatie vanuit het endpoint verwerkt wordt in die functie, moet je dus wachten tot het endpoint zijn informatie heeft teruggegeven en daarvoor moet je async gebruiken.
+
+    \subsubsection{Tom Huisman} Toen ik hoorde dat we voor dit project een website mochten gaan maken, was ik heel blij.
+    Dit vind ik namelijk heel leuk om te doen.
+    Ik had al wel enige ervaring met HTML, CSS en JavaScript, maar in vergelijking met mijn groepsgenoten was dit nog weinig.
+    Het voordeel van groepsgenoten met veel ervaring is: dat als ik tegen problemen aanliep, kon ik dat meteen vragen en had ik eigenlijk binnen 10 seconden wel een oplossing.
+    Dit was soms heel fijn, maar kon ook enorm frustrerend werken.
+    Dit komt omdat ik over sommige dingen wel 10 minuten deed, terwijl ik wist dat het binnen een korte tijd gefixt kon zijn, alleen zou ik er zelf minder van leren.
+    Daardoor koos ik er soms voor om het zelf uit te zoeken, want daar heb ik uiteindelijk het meeste aan.
+    Wel heb ik nog veel kunnen leren van mijn groepsgenoten, omdat hun ervaring met het bouwen van websites veel handige tips en tricks met zich meebracht.
+    Zo leerden ze me dat ik de webpagina lokaal op Google kon openen, element kon inspecteren, waardoor mijn wijzigingen meteen zichtbaar werden.
+    Dit was vooral handig met het finetunen van bepaalde posities.
+    Ik heb mijn webpagina-skills echt kunnen verbeteren door dit project, waar ik enorm blij mee ben.
+    Dit gaat mij later in mijn loopbaan
+    weer verder
+    helpen!
+
+    \subsubsection{Matt ter Steege}
+    Dit was niet de eerste keer dat ik website bouw.
+    Ik heb al aardig wat eerdere ervaring met het maken van verschillende websites die allemaal weer verschillende doelen hebben, dus mijn kennis over HTML, JS en CSS zijn al aardig goed.
+    Echter was dit wel de eerste keer dat ik een website heb gemaakt waar Bootstrap gebruikt (moet) worden, dus dat was zeker een nieuwe ervaring en heeft me op dat gebied ook al wat meer kennis opgeleverd.
+    Ook ben ik gewend normaal alleen te werken, dus dit was ook een goede oefening om te leren hoe een groepsproject het best gecoördineerd kan worden door goede afspraken en elkaar niet in de weg zitten door het gebruik van verschillende branches op Git.
+    Ik heb hier uiteindelijk veel van geleerd.
+    Meer op het gebied van hoe werken in een team werkt dan op het gebied van nieuwe kennis op programmeer niveau.
+
+    \subsubsection{Mika Kalshoven}
 
-    \section{Quick start — clone and compile}
-    If you just want to get going:
-
-    \begin{enumerate}
-        \item Clone the repo:
-        \begin{verbatim}
-git clone https://github.com/MattterSteege/Universitaire-papers.git
-cd Universitaire-papers
-        \end{verbatim}
-
-        \item Compile locally (recommended):
-        \begin{verbatim}
-./buildLatexDocument.sh # or for a full clean build:
-# OR
-./fullBuild.sh # cleans aux files, rebuilds bibliography, rebuilds doc
-        \end{verbatim}
-
-        \item Or upload the repo to Overleaf (drag-and-drop) and press Compile.
-    \end{enumerate}
-
-    Common compile issues:
-    \begin{itemize}
-        \item \texttt{Package xstring} / \texttt{tcolorbox} missing $\to$ install via TeX Live or MikTeX.
-        \item If font differences appear on different machines, check \texttt{paperSettings.tex} for font/encoding directives.
-    \end{itemize}
-
-% -------------
-% FILE OVERVIEW
-% -------------
-
-
-    \section{File overview}
-    \begin{description}[leftmargin=!,labelwidth=3.5cm]
-        \item[\texttt{main.tex}] This file — the manual and demo.
-        \item[\texttt{paperSettings.tex}] Document-level settings (margins, title behaviors, optional flags).
-        \item[\texttt{standardCommands.tex}] The macro library we document below.
-        \item[\texttt{main.bib}] Bibliography file used by examples.
-        \item[\texttt{buildLatexDocument.sh}] Simple build script to compile the document.
-        \item[\texttt{fullBuild.sh}] Full build script that cleans aux files and
-        \item[\texttt{renewBibliography.sh}] Script to regenerate the bibliography only.
-    \end{description}
-
-% -------------
-% PAPERSETTINGS EXPLAINED
-% -------------
-
-
-    \section{Explaining \texttt{paperSettings.tex}}
-    Open \texttt{paperSettings.tex} in an editor. Typical contents and intent:
-
-    This file centralizes document-level settings so you don't have to hunt through the main document for margin tweaks or package options. Typical sections:
-    \begin{itemize}
-        \item \textbf{Page layout} — automatic title page or table of contents
-        \item \textbf{editor data} — author names, affiliations, etc.
-        \item \textbf{editor version} — toggle editor notes on/off
-    \end{itemize}
-
-    Why separate settings? Because when you move from one paper to another you often want the same macros and same visuals, so keeping them in an settings file makes sure that all your documents stay consistent.
-
-% -------------
-% STANDARD COMMANDS: OVERVIEW
-% -------------
-
-
-    \section{standardCommands.tex — overview and philosophy}
-    This file is a small-but-practical macro library. The design goals:
-    \begin{itemize}
-        \item Reduce repetitive formatting tasks (spacing, simple block quotes).
-        \item Give editors lightweight in-line commentary tools that can be toggled off.
-        \item Offer a compact table helper for quickly making consistent tabular output.
-        \item Provide tiny text utilities to avoid retyping small helpers.
-    \end{itemize}
-
-    Below we explain each macro or group of macros and show usage examples. The examples below are live — compile this document to see real output.
-
-% -----------------------
-% SPACING & LAYOUT UTILITIES
-% -----------------------
-
-
-    \section{Spacing \& layout utilities}
-    These utilities are tiny vertical-space shortcuts:
-    \begin{itemize}
-        \item \verb|\vsmall| — small vertical gap (~0.1 cm)
-        \item \verb|\vmed| — medium vertical gap (~0.3 cm)
-        \item \verb|\vlarge| — larger vertical gap (~0.6 cm)
-    \end{itemize}
-
-    \subsection*{Example}
-    Text above the gap.\vsmall
-
-    This line follows a \verb|\vsmall| gap.
-
-    \vmed
-
-    This one follows a \verb|\vmed| gap.
-
-    \vlarge
-
-    And this follows a \verb|\vlarge| gap.
-
-    \vsmall
-
-    \noindent\textit{Why use these:} consistent vertical rhythm. Instead of sprinkling magic numbers everywhere, use named gaps that can be tuned centrally.
-
-% -----------------------
-% LOREM PLACEHOLDER
-% -----------------------
-
-
-    \section{Text placeholder \& formatting utilities}
-
-    \subsection[\textbackslash lorem]{\textbackslash lorem}
-    Use \verb|\lorem| for draft sections to hold spacing while writing.
-
-    \lorem
-
-    \subsection{\textbackslash uitspraak{<quote>}{<bibkey>}{<page>}}
-    This macro automatically switches between inline short quotes and block long quotes using a word count threshold (short = inline, long = right-aligned block). It expects a BibTeX key so it can print author/year.
-
-    \smallskip
-    \noindent\textbf{Inline example} (short quote):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective reality}{PhysRev.47.777}{47}
-
-    \smallskip
-    \noindent\textbf{Block quote example} (longer quote — we simulate length):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective realitywhich is independent of any theory, and the physical concepts with which the theory operates. These concepts are intended to correspond with the objective reality, and by means of these concepts we picture this reality to ourselves.}{PhysRev.47.777}{7}
-
-    \noindent\textit{Notes:}
-    \begin{itemize}
-        \item The macro uses \verb|\StrCount| to decide length; be careful with unusual punctuation that might miscount words.
-        \item It outputs citations using \verb|\citeauthor| and \verb|\citeyear| (so if you see a value like \textbf{PhysRev.47.777}, then try to use the fullBuild script to refresh references).
-    \end{itemize}
-
-    \subsection{\textbackslash prepostparencite[<pre>][<post>]{<bibkey>}}
-    Usage: \verb|\prepostparencite[see][, for more info]{PhysRev.47.777}|
-
-    The macro prints: \verb|(see Author, Year, for more info)| using \texttt{natbib}'s \verb|\parencite| internally, adding optional pre- and post-text around the citation.
-
-    \noindent Example:
-    \prepostparencite[nagemaakt van][]{PhysRev.47.777}
-
-% -----------------------
-% QUESTION COMMAND
-% -----------------------
-
-    \subsection{\textbackslash question{<text>}}
-    Usage: \verb|\question{What is the impact of this design choice?}|
-
-    This produces a centered, italic prompt inside the page width, good for highlighting reflective questions or section prompts.
-
-    \subsection*{Example}
-    \question{What happens to readability when margins are tightened?}
-
-    \noindent You can use these prompts inside methodology sections or to flag points you want to discuss later.
-
-% -----------------------
-% EDITOR TOOLS & COMMENTS
-% -----------------------
-
-    \newpage
-
-
-    \section{Editor tools \& comments}
-    These macros are controlled by a boolean \verb|\boolean{editorsversion}| (defined in \texttt{paperSettings.tex}). When \verb|true|, editor notes show in red; when \verb|false|, they vanish.
-
-    \begin{itemize}
-        \item \verb|\editorsonly{<text>}| — inserts a small red inline editor note.
-        \item \verb|editorsonlyBox| environment — boxed comment for reviewers.
-        \item \verb|\editorsfootnote{<text>}| — red footnote used only in editors mode.
-        \item When editors mode is active the file also runs \verb|\nocite{*}| so all bib entries are visible in review drafts. (required a full build to refresh)
-    \end{itemize}
-
-    \subsection*{Example (simulating editors mode)}
-
-    \par\vspace{0.05in}%
-    {\footnotesize\noindent\textcolor{red!70!black}{\textbf{Editor's note:} This is an inline editor note visible only in editors mode.}}%
-    \par\vspace{0.05in}%
-
-    \par\medskip%
-    \begin{tcolorbox}
-    [%
-        enhanced,
-        breakable,
-        colback=red!5,
-        colframe=red!20!white,
-        boxrule=0pt,
-        borderline north={1pt}{0pt}{red!40!white},
-        sharp corners,
-        before skip=6pt,
-        after skip=6pt,
-        title={\textcolor{red!60!black}{\footnotesize Comment for editors:}},
-        coltitle=red!70!black,
-        fonttitle=\bfseries,
-        top=2pt,
-        bottom=2pt,
-        left=4pt,
-        right=4pt
-    ]%
-        This box is shown to editors only. Use it for long comments that you don't want in the final text. \\\\ \lorem
-    \end{tcolorbox}%
-
-    \noindent\textit{Note:} Toggle \verb|\setboolean{editorsversion}{true}| in \texttt{paperSettings.tex} while drafting, and set to \verb|false| when producing the student/readable version. \textcolor{red!70!black}{\footnote{\textcolor{red!70!black}{Editor's note: Can't forget the footnoot :)}}}%
-
-% -----------------------
-% TEXT PROCESSING UTILITIES
-% -----------------------
-
-
-    \section{Text processing utilities}
-
-    \subsection{\textbackslash spliteveryn{<n>}{<text>}}
-    Splits the input text into lines with a maximum of \verb|n| characters. Useful for creating artificially wrapped blocks in narrow contexts.
-
-    \smallskip
-    \noindent Example (split every 20 chars):\\
-    \spliteveryn{20}{This is an example of splitting text every twenty characters so you can see the behavior.}
-
-    \subsection{\textbackslash IfNonEmpty{<text>}{<action>}}
-    Run \verb|<action>| only when \verb|<text>| is not empty. Useful for optional elements like captions. (mostly meant for internal use in other macros)
-
-% -----------------------
-% SIMPLE TABLE ENVIRONMENT
-% -----------------------
-
-
-    \section{SimpleTable environment}
-    A small helper that wraps \texttt{tabularx} to produce consistent minimal tables. Usage skeleton:
-
-    \begin{verbatim}
-\begin{SimpleTable}[<col spec>]{<caption>}{<label>}
-    \TableHeader{Col A & Col B & Col C}
-    \TableRow{Data 1 & Data 2 & Data 3}
-    \TableNote{This is a footnote for the table.}
-\end{SimpleTable}
-    \end{verbatim}
-
-    Key components:
-    \begin{itemize}
-        \item \verb|<col spec>|: column specification using the following syntax (e.g., \texttt{s\{2\} s\{1\} s\{.5\}} for three columns with relative widths).
-        \item \verb|\TableHeader{\ldots}|: prints the header row in bold with a rule below.
-        \item \verb|\TableSubHeader{\ldots}|: prints a sub-header row with a thinner rule below.
-        \item \verb|\TableRow{\ldots}|: prints a data row with a thin separator below.
-        \item \verb|\TableHighlightRow{\ldots}|: prints a highlighted row for emphasis.
-        \item \verb|\TableNote{\ldots}|: adds a small footnote-like line below the table.
-    \end{itemize}
-
-    Note, that the \ldots means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
-    \begin{itemize}
-        \item The table width automatically matches the text width.
-        \item The table caption and label are set in the environment arguments.
-        \item Column widths are relative, so you can use decimal values to create flexible layouts.
-        \item Some rows have automatic rules, and/or text formatting (bold, underline, etc.) to ensure consistency.
-    \end{itemize}
-
-    \subsection*{Rendered example}
-    \begin{SimpleTable}[s{1} s{1} s{1}]{Example table showing the SimpleTable environment.}{tab:example}
-        \TableHeader{Metric & Value & Note}
-        \TableRow{Accuracy & 92\% & Sampled}
-        \TableRow{Precision & 88\% & Early stage}
-        \TableNote{This table is produced by the SimpleTable helper.}
-    \end{SimpleTable}
-
-% -----------------------
-% BIBLIOGRAPHY
-% -----------------------
-
-
-    \section{Bibliography — how to use the \texttt{.bib} file}
-    This document uses \texttt{main.bib} in the repo. Keep your BibTeX keys tidy, prefer short descriptive keys like \verb|kelly2023ring|.
-
-    Compile steps if using BibTeX:
-    \begin{enumerate}
-        \item \verb|./fullBuild.sh| (runs pdflatex, biber, pdflatex x2)
-        \item[] Or manually:
-        \item \verb|pdflatex main.tex|
-        \item \verb|biber main|
-        \item \verb|pdflatex main.tex|
-        \item \verb|pdflatex main.tex|
-    \end{enumerate}
-
-    Below is the auto-generated references list using APA style.:
-    \printbibliography
-
-
-% -----------------------
-% TROUBLESHOOTING & TIPS
-% -----------------------
-
-
-    \section{Troubleshooting \& tips}
-    \begin{itemize}
-        \item \textbf{Undefined macros or missing packages:} Install missing packages or ensure you are compiling with an up-to-date TeX distribution.
-        \item \textbf{Editor notes still visible in final PDF:} Check \texttt{paperSettings.tex} for the boolean controlling editor mode.
-        \item \textbf{Citation macros not printing author/year:} Ensure \texttt{natbib} is loaded and the BibTeX process runs.
-        \item \textbf{Tables too wide:} Adjust the column spec or reduce content; the SimpleTable wrapper uses \texttt{tabularx} so you can use X-like specifiers.
-    \end{itemize}
-
-% -----------------------
-% FINAL NOTES
-% -----------------------
-
-
-    \section{Final notes (a small rant)}
-    I wrote these helpers because I wanted the same style across projects — and because it felt faster to reach for a small macro than to remember the obscure package flag I used the last time. If something in \texttt{standardCommands.tex} annoys you, change it. These files are meant to be edited, extended, and — yes — occasionally abused when you're in a hurry.
-
-    \section*{Acknowledgments}
-    Thanks to all the open-source LaTeX package authors whose work makes documents like this possible
-
-    \section*{License}
-    This repository is licensed under the MIT License:
-    \begin{verbatim}
-MIT License
-Copyright (c) 2025 Matt
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-    \end{verbatim}
-
-% ----------------------------
-% REMOVE TILL HERE ONCE COPIED
-% ----------------------------
 
 \end{document}
