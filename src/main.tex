@@ -25,6 +25,7 @@
 
     \onecolumn
 
+
     \section{Propositielogica}
     Propositielogica is de studie van bewijzen.
     Een propositie is te beantwoorden met waar of niet waar
@@ -117,7 +118,7 @@
     Mocht het nou gebeuren dat elke rij waar is, ofwel de combinatie van input waardes maakt niet uit voor de uitkomst; deze is altijd waar.
     Dan heet dat een \textbf{tautologie}.
     Voor het omgekeerde (altijd onwaar), geld dat dit een \textbf{contradictie} heet.
-    
+
     Deze afleiding kan je maken door de regels te gebruiken die hieronder stan geschreven (er zijn er nog meer).
 
     \begin{multicols}{3}
@@ -175,6 +176,7 @@
         \end{itemize}
 
     \end{multicols}
+
 
     \section{sets}
     Propositielogica heeft ook een manier om over een groep dingen te redeneren, \textit{\textbf{sets}}.
@@ -546,7 +548,7 @@
 
     \subsection*{Negatie-Eliminatie ($\neg-E$)}
     \textbf{Bewijs dat P waar is én bewijs dat P niet waar is ($\neg P$)}, dan krijg je dus $P \land \neg P$, die stelling komt altijd uit op $\neg P$, want waar én onwaar is onwaar.
-    
+
     \subsection*{equivalentie-Introdcutie ($\Leftrightarrow-I$)}
     Als je $P \Leftrightarrow Q$ wilt bewijzen, dan moet je dus de 2 onderdelen hiervan bewijzen.
     Namelijk: \textbf{Bewijs $P \implies Q$, bewijs $Q \implies P$, daarom houdt $P \Leftrightarrow Q$}.
@@ -616,6 +618,7 @@
         \TableRow{1 & 0 & 0 & 1 & 0 & 0}
         \TableRow{1 & 1 & 1 & 0 & 0 & 1}
     \end{SimpleTable}
+
 
     \section{functies}
     Als je op elk element in eens set een verandering wilt doorvoeren, dan kan je daar een functie voor gebruiken.
@@ -740,7 +743,6 @@
 
     \end{multicols}
 
-
     \subsection{terminologie}
     $A$ noemen we het \textbf{domein}, en $B$ noemen we het \textbf{codomein}.
     Je kan ook meerdere argumenten meegeven: $f : A \times B \times C \longrightarrow D$
@@ -857,6 +859,7 @@
 
     \newpage
 
+
     \section{Relaties}
 
     Een relatie is een manier om elementen van een set met elkaar te verbinden.
@@ -903,6 +906,7 @@
 
     \ruleline{Alles hierboven is stof voor de eerste midterm}
 
+
     \section{Inductie incomplete}
     Elke inductie is omschreven met 3 stappen:
     \begin{enumerate}
@@ -914,19 +918,19 @@
 
     \begin{multicols}{2}
 
-    \noindent Voor de set $\mathbb{N}$ natuurlijke nummers, gaat het als volgt:
-    \begin{itemize}
-        \item $0 \in \mathbb{N}$.
-        \item voor elke $n \in \mathbb{N}$, voeg $(n + 1) \in \mathbb{N}$.
-        \item Er zijn geen andere getallen uit $\mathbb{N}$.
-    \end{itemize}
+        \noindent Voor de set $\mathbb{N}$ natuurlijke nummers, gaat het als volgt:
+        \begin{itemize}
+            \item $0 \in \mathbb{N}$.
+            \item voor elke $n \in \mathbb{N}$, voeg $(n + 1) \in \mathbb{N}$.
+            \item Er zijn geen andere getallen uit $\mathbb{N}$.
+        \end{itemize}
 
-    \noindent Voor de set even natuurlijke nummers, gaat het als volgt:
-    \begin{itemize}
-        \item $0 \in \mathbb{N}$.
-        \item voor elke $n \in \mathbb{N}$, voeg $(n + 2) \in \mathbb{N}$, wanneer $(n - 2) \in \mathbb{N}$, waar $n \neq 0$ bestaat
-        \item Er zijn geen andere getallen uit $\mathbb{N}$.
-    \end{itemize}
+        \noindent Voor de set even natuurlijke nummers, gaat het als volgt:
+        \begin{itemize}
+            \item $0 \in \mathbb{N}$.
+            \item voor elke $n \in \mathbb{N}$, voeg $(n + 2) \in \mathbb{N}$, wanneer $(n - 2) \in \mathbb{N}$, waar $n \neq 0$ bestaat
+            \item Er zijn geen andere getallen uit $\mathbb{N}$.
+        \end{itemize}
 
     \end{multicols}
 
@@ -934,7 +938,6 @@
     Dit is een hele korte manier om inductie te schrijven:
     $w::= \epsilon | 0w | 1w$, hier staat dat $\epsilon$ is een word w, dan is 0w een word in de set én 1w is ook een word in de set.
     Dus dan kan je bijv. $w = {0}$ nemen, dan krijg je na een iteratie $w = {0, 10, 00}$
-
 
     \subsection{propositonele formules}
     Je kan ook propositonele formules op de volgende manier schrijven:
@@ -955,7 +958,9 @@
 
     \subsection{Game trees}
 
+
     \section{Natural deduction}
+
     \subsection{Inference rules}
     Deze relaties kun je door middel van een formule weergeven.
     Bijvoorbeeld:
@@ -1082,10 +1087,10 @@
     Je hebt dan allemaal regels die al kant en klaar zijn en die moet je dan invullen met de data die je hebt
     dus bijvoorbeeld:
 
-    $\frac{P   Q}{P \land Q}$, P moet waar zijn en Q moet waar zijn en dan is P en Q waar.
+    $\frac{P Q}{P \land Q}$, P moet waar zijn en Q moet waar zijn en dan is P en Q waar.
     Maar je kan voor P bijvoorbeeld ook $P = A \lor B$ invullen, en dan moet je dus bewijzen dat $A \lor B$ waar is.
     dan krijg je een nieuwe regel:
-    $\frac{A \lor B   Q}{(A \lor B) \land Q}$
+    $\frac{A \lor B Q}{(A \lor B) \land Q}$
     Die A of B is dan op zichzelf ook weer een breuk en zo gaat dat door.
 
     Een lijst van alle regels van natuurlijke deductie in propositielogica:
@@ -1113,8 +1118,68 @@
     Deze kan je vervolgens samenvoegen om complexere stellingen te bewijzen.
 
     \begin{voorbeeld}{$P \land Q \imp$}
+    \end{voorbeeld}
+
 
     \section{Redenering over progamma's}
+
+
+    \section{Hoare logica}
+     Hoare logica is bedoeld om formeel te redeneren over de correctheid van computerprogramma's.
+     Het maakt gebruik van zogenaamde Hoare triples, die de vorm hebben: $\{P\} C \{Q\}$.
+     Hierin is P de preconditie, C het commando (of programma), en Q de postconditie.
+     De betekenis van een Hoare triple is dat als de preconditie P waar is voordat het commando C wordt uitgevoerd, dan zal de postconditie Q waar zijn nadat C is uitgevoerd, op voorwaarde dat C correct wordt uitgevoerd (d.w.z. zonder fouten of uitzonderingen).
+    \\$\{P\} C \{Q\} \leftarrow$ ``Voor elke staat $\sigma$ die voldoet aan P, als we $\langle p, \sigma \rangle$ uitvoeren (het commando p in de staat $\sigma$) en dit leidt tot een nieuwe staat $\tau$, dan voldoet $\tau'$ aan Q.''
+
+    \begin{voorbeeld}{Hoare triple}
+        Stel we hebben de volgende Hoare triple:
+        \[
+            \{x = 3\} \quad y := x + 1 \quad \{y = 4\}
+        \]
+        Deze triple zegt dat als de preconditie $x = 3$ waar is voordat we het commando $y := x + 1$ uitvoeren, dan zal de postconditie $y = 4$ waar zijn nadat het commando is uitgevoerd.
+        Laten we dit stap voor stap bekijken:
+        \begin{itemize}
+            \item Preconditie: We beginnen met de aanname dat $x = 3$.
+            \item Commando: We voeren het commando $y := x + 1$ uit. Dit betekent dat we de waarde van $x$ (die 3 is) nemen en er 1 bij optellen, waardoor $y$ de waarde 4 krijgt.
+            \item Postconditie: Na het uitvoeren van het commando, hebben we $y = 4$. Dit voldoet aan de postconditie die we wilden bewijzen.
+        \end{itemize}
+        Dus de Hoare triple is correct, omdat de preconditie leidt tot de postconditie na het uitvoeren van het commando.
+
+        \\\\\\
+
+        Een ander voorbeeld is de volgende Hoare triple:
+        \[
+            \{x = A \land y = B\} \quad z := x; x := y; y := z \quad \{x = B \land y = A\}
+        \]
+        Deze triple beschrijft een commando dat de waarden van $x$ en $y$ verwisselt.
+        Laten we dit stap voor stap bekijken:
+        \begin{itemize}
+            \item Preconditie: We beginnen met de aanname dat $x = A$ en $y = B$.
+            \item Commando: We voeren het commando $z := x; x := y; y := z$ uit.
+            Dit betekent dat we eerst de waarde van $x$ opslaan in een tijdelijke variabele $z$, vervolgens de waarde van $y$ toewijzen aan $x$, en ten slotte de waarde van $z$ (die oorspronkelijk $x$ was) toewijzen aan $y$.
+            \item Postconditie: Na het uitvoeren van het commando, hebben we $x = B$ en $y = A$.
+            Dit voldoet aan de postconditie die we wilden bewijzen.
+        \end{itemize}
+        Dus de Hoare triple is correct, omdat de preconditie leidt tot de postconditie na het uitvoeren van het commando.
+
+        \\\\\\
+
+        Een laatste voorbeeld is de volgende Hoare triple:
+        \[
+            \{true\} \text{while true do p := 0 od} \{p = 500\}
+        \]
+        Deze triple beschrijft een oneindige lus die altijd het commando $p := 0$ uitvoert.
+        Laten we dit stap voor stap bekijken:
+        \begin{itemize}
+            \item Preconditie: We beginnen met de aanname dat de preconditie altijd waar is (aangeduid door $true$).
+            \item Commando: We voeren het commando $while true do p := 0$ od uit.
+            Dit betekent dat we een oneindige lus hebben die altijd het commando $p := 0$ uitvoert.
+            \item Postconditie: Na het uitvoeren van het commando, hebben we $p = 500$.
+            Dit voldoet niet aan de postconditie die we wilden bewijzen, omdat $p$ altijd 0 zal zijn na het uitvoeren van het commando.
+        \end{itemize}
+        Dus de Hoare triple is niet correct, omdat de preconditie niet leidt tot de postconditie na het uitvoeren van het commando.
+   \end{voorbeeld}
+
 
 
 \end{document}

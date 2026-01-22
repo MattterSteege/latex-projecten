@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f047d-d874-470b-ae8a-2756d2b48e7c" name="Changes" comment="revise natural deduction section and expand on assumptions">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="revise natural deduction section and expand on assumptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
@@ -23,6 +23,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MattterSteege"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MattterSteege/latex-projecten",
+    "accountId": "de0ffcbc-f745-4097-96ea-8cd8e96926ad"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -36,8 +48,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Shell Script.Build Latex Document.executor": "Run",
     "Shell Script.Full build.executor": "Run",
@@ -64,13 +78,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a37f047d-d874-470b-ae8a-2756d2b48e7c" name="Changes" comment="" />
+      <changelist id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="revise natural deduction section and expand on assumptions" />
       <created>1768299671424</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1768299671424</updated>
       <workItem from="1768299674047" duration="647000" />
       <workItem from="1768306395736" duration="19131000" />
+      <workItem from="1769070590919" duration="1792000" />
     </task>
     <task id="LOCAL-00001" summary="revise document structure and add new sections">
       <option name="closed" value="true" />
