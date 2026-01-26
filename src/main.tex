@@ -907,7 +907,7 @@
     \ruleline{Alles hierboven is stof voor de eerste midterm}
 
 
-    \section{Inductie incomplete}
+    \section{Inductie}
     Elke inductie is omschreven met 3 stappen:
     \begin{enumerate}
         \item De \textbf{base case}, die verteld dat er sommige elementen in een set zit
@@ -934,18 +934,119 @@
 
     \end{multicols}
 
-    \subsection{Backus-Naur Form}
-    Dit is een hele korte manier om inductie te schrijven:
-    $w::= \epsilon | 0w | 1w$, hier staat dat $\epsilon$ is een word w, dan is 0w een word in de set én 1w is ook een word in de set.
-    Dus dan kan je bijv. $w = {0}$ nemen, dan krijg je na een iteratie $w = {0, 10, 00}$
+    \subsection{Backus-Naur Form (BNF)}
+    BNF is een manier om formeel de syntax van talen te definiëren.
+    Het bestaat uit regels die aangeven hoe symbolen kunnen worden gecombineerd om geldige zinnen of expressies te vormen.
+    Elke regel heeft een linkerkant (non-terminal symbool) en een rechterkant (combinatie van terminal en non-terminal symbolen).
+    De notatie gebruikt meestal de volgende symbolen:
+    \begin{itemize}
+        \item \textbf{Non-terminal symbolen}: Dit zijn symbolen die verder kunnen worden uitgebreid of vervangen door andere symbolen. Ze worden meestal geschreven in hoekige haken, zoals <expression>, <term>, etc.
+        \item \textbf{Terminal symbolen}: Dit zijn de basis symbolen die niet verder kunnen worden uitgebreid. Ze vertegenwoordigen de daadwerkelijke tekens of woorden in de taal, zoals cijfers, letters, of specifieke keywords.
+        \item \textbf{Productie regels}: Dit zijn de regels die aangeven hoe non-terminal symbolen kunnen worden vervangen door combinaties van terminal en non-terminal symbolen. Ze worden meestal geschreven in de vorm: <non-terminal> ::= <combinatie van symbolen>.
+    \end{itemize}
+    \\\\
 
-    \subsection{propositonele formules}
-    Je kan ook propositonele formules op de volgende manier schrijven:
-    $p, q ::= true | false | p \land q | p \lor q | \neg p | p \implies q | p \Leftrightarrow q$
-    Door deze definitie kan je inductie gebruiken. Om te bewijzen dat een property R houdt voor alle propositonele formules, moet je de volgende stappen volgen:
+    \begin{multicols}{2}
+        Een goed voorbeeld is een binary tree:
+        \begin{verbatim}
+        <Node> ::= b | N(<Node>, <Node>)
+        \end{verbatim}
+        Dit betekent dat een <Node> ofwel een blad (b) is, of een knoop (N) met twee sub-nodes.
 
 
-    \section{Games incomplete}
+        \begin{figure}[H]
+            \centering
+            \resizebox{0.5\columnwidth}{!}{%
+                \begin{tikzpicture}
+                    \tikzstyle{every node}=[font=\LARGE]
+                    \node [font=\LARGE] at (18.75,8.5) {N};
+                    \node [font=\LARGE] at (21.25,8.5) {N};
+                    \node [font=\LARGE] at (22.5,7.25) {N};
+                    \node [font=\LARGE] at (20,9.75) {N};
+                    \node [font=\LARGE] at (23.75,6) {N};
+                    \draw (20.25,9.5) to[short] (20.75,9);
+                    \draw (19.5,9.5) to[short] (19,9);
+                    \draw (21,8.25) to[short] (20.5,7.75);
+                    \draw (22.75,7) to[short] (23.25,6.5);
+                    \draw (21.5,8.25) to[short] (22,7.75);
+                    \draw (23.5,5.75) to[short] (23,5.25);
+                    \draw (24,5.75) to[short] (24.5,5.25);
+                    \draw (19,8.25) to[short] (19.5,7.75);
+                    \draw (18.5,8.25) to[short] (18,7.75);
+                    \draw (22.25,7) to[short] (21.75,6.5);
+                    \node [font=\LARGE] at (21.25,6) {b};
+                    \node [font=\LARGE] at (22.5,4.75) {b};
+                    \node [font=\LARGE] at (20.75,7.25) {b};
+                    \node [font=\LARGE] at (25,4.75) {b};
+                    \node [font=\LARGE] at (19.25,7.25) {b};
+                    \node [font=\LARGE] at (17.5,7.25) {b};
+                \end{tikzpicture}
+            }%
+        \end{figure}
+    \end{multicols}
+    \hline
+    \vlarge
+    Een ander voorbeeld is een eenvoudige BNF-definitie voor een taal die bestaat uit getallen en optellingen:
+    \begin{verbatim}
+    <expression> ::= <term> | <term> + <expression>
+    <term> ::= <digit> | <digit> <term>
+    <digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+    \end{verbatim}
+    Deze regels geven aan dat een <expression> kan bestaan uit een <term>, of een <term> gevolgd door een '+' en nog een <expression>.
+    Een <term> kan bestaan uit een <digit> of een <digit> gevolgd door nog een <term>.
+    Een <digit> kan een van de cijfers 0 tot 9 zijn.
+    \\\\
+    Zo kan je een hele simpele programmeertaal definiëren met BNF.
+    \begin{verbatim}
+    <program> ::= x:=<e> | <program>; <program> | if <e> then <program> else <program> | while <b> do <program>
+    <e> ::= n | x | e + e | e - e | e * e | e / e
+    <b> ::= true | false | e = e | e <= e | not b | b and b | b or b
+    \end{verbatim}
+    Hierboven is een simpele programmeertaal gedefinieerd met toewijzingen, sequenties, conditionals en loops.
+    Expressies kunnen getallen, variabelen en basis rekenkundige operaties bevatten.
+    Booleaanse expressies kunnen waarheidswaarden, vergelijkingen en logische operaties bevatten
+
+    \subsection{inductief gedefineerde functies}
+    Net zoals je inductief een set kan definiëren, kan je ook inductief een functie definiëren.
+    Dit doe je door een basis geval te definiëren en een inductie stap.
+    Bijvoorbeeld, de factorial functie kan je zo definiëren:
+    \begin{align*}
+        0! &= 1; \quad \text{(basis geval)}\\
+        n! &= n \times (n - 1)! \quad \text{voor } n > 0 \quad \text{(inductie stap)}
+    \end{gather*}
+    Bijvoorbeeld, om $5!$ te berekenen, gebruik je de inductieve definitie:
+    \begin{align*}
+        5! &= 5 \times 4!\\
+            &= 5 \times (4 \times 3!)\\
+            &= 5 \times (4 \times (3 \times 2!))\\
+            &= 5 \times (4 \times (3 \times (2 \times 1!)))\\
+            &= 5 \times (4 \times (3 \times (2 \times (1 \times 0!))))\\
+            &= 5 \times (4 \times (3 \times (2 \times (1 \times 1))))\\
+            &= 120
+    \end{align*}
+
+    \subsection{Recursieve functies}
+    Recursieve functies zijn functies die zichzelf aanroepen om een probleem op te lossen.
+    Je schrijft het als volgt:
+    \[
+        f(n) =
+        \begin{cases}
+            1, & \text{als } n \leq 0; \\
+            f(n/2), & \text{als } n > 1 \text{ even}; \\
+            f(3n + 1), & \text{als } n > 1 \text{ oneven}.
+        \end{cases}
+    \]
+
+    In dit voorbeeld is de functie f gedefinieerd met drie gevallen:
+    \begin{itemize}
+        \item Als n kleiner dan of gelijk aan 0 is, retourneert f de waarde 1.
+        \item Als n groter dan 1 is en even, roept f zichzelf aan met de waarde n gedeeld door 2.
+        \item Als n groter dan 1 is en oneven, roept f zichzelf aan met de waarde 3n + 1.
+    \end{itemize}
+    Recursieve functies zijn krachtig omdat ze complexe problemen kunnen oplossen door ze op te splitsen in kleinere, beter beheersbare subproblemen.
+    Het is echter belangrijk om ervoor te zorgen dat recursieve functies een basisgeval hebben om oneindige lussen te voorkomen.
+
+    \section{Games}
     Een paar definitie's:
     \begin{itemize}
         \item \textbf{Game of chance}, Zoals roulette of dobbelstenen, waarbij de uitkomst volledig afhankelijk is van toeval.
@@ -956,8 +1057,7 @@
         \item \textbf{lossing strategy}, Een strategie die ervoor zorgt dat een speler altijd verliest, ongeacht wat de tegenstander doet.
     \end{itemize}
 
-    \subsection{Game trees}
-
+    De rest van de stof is te vinden in hoofdstuk 10 van het boek, of slide 12.
 
     \section{Natural deduction}
 
@@ -1122,13 +1222,59 @@
 
 
     \section{Redenering over progamma's}
+    In dit gedeelte behandelen we hoe we formeel kunnen redeneren over computerprogramma's.
 
+    Hier heb je verschillende soorten semantiek:
+    \begin{itemize}
+        \item $\sigma$: een staat, die de waarden van alle variabelen op een bepaald moment in het programma vertegenwoordigt.
+        Je schrijft dit als een functie die variabelen naar hun waarden mappt.
+        \item $\langle p, \sigma \rangle \rightarrow \sigma'$: Dit is de operationele semantiek, die beschrijft hoe een programma $p$ wordt uitgevoerd in een staat $\sigma$ en resulteert in een nieuwe staat $\sigma'$.
+        \item $[[p]](\sigma) = \sigma'$: Dit is de denotationale semantiek, die een programma $p$ beschrijft als een functie die een staat $\sigma$ naar een nieuwe staat $\sigma'$ mapt.
+    \end{itemize}
+
+    Zoals je hebt gezien bij natuurlijke deductie, kan je ook regels opstellen voor programmeertalen.
+
+    \[
+        \frac{\llbracket e\rrbracket(\sigma) = n}{\langle x := e, \sigma \rangle \rightarrow \sigma[x \mapsto n]}\text{Assign}
+    \]
+    Deze regel zegt dat als de expressie $e$ in de staat $\sigma$ evalueert naar de waarde $n$, dan zal het toewijzingscommando $x := e$ in de staat $\sigma$ resulteren in een nieuwe staat $\sigma'$ waarin de variabele $x$ de waarde $n$ heeft.
+
+    \[
+        \frac{\llbracket b\rrbracket(\sigma) = true \quad \langle p, \sigma \rangle \rightarrow \sigma'}{\langle \text{if } b \text{ then } p \text{ else } q, \sigma \rangle \rightarrow \sigma'}\text{If-True}
+    \]
+    Deze regel zegt dat als de booleaanse expressie $b$ in de staat $\sigma$ evalueert naar waar, en het commando $p$ in de staat $\sigma$ resulteert in een nieuwe staat $\sigma'$, dan zal het if-commando in de staat $\sigma$ ook resulteren in de staat $\sigma'$.
+
+    \[
+        \frac{\llbracket b\rrbracket(\sigma) = false \quad \langle q, \sigma \rangle \rightarrow \sigma'}{\langle \text{if } b \text{ then } p \text{ else } q, \sigma \rangle \rightarrow \sigma'}\text{If-False}
+    \]
+    Deze regel zegt dat als de booleaanse expressie $b$ in de staat $\sigma$ evalueert naar onwaar, en het commando $q$ in de staat $\sigma$ resulteert in een nieuwe staat $\sigma'$, dan zal het if-commando in de staat $\sigma$ ook resulteren in de staat $\sigma'$.
+
+    \begin{voorbeeld}{een conditional uitvoeren}
+        Stel dat we de volgende staat hebben: $\sigma(x) = 3, \quad \sigma(y) = 10$
+        En het volgende programma: \verb|if x < y then z := x + 1 else z := y + 1|
+        Als we hier de derivatie regels op toepassen, krijgen we het volgende:
+        \\\\
+        \[
+            \frac{
+                \llbracket x < y \rrbracket(\sigma) = true \quad
+                \frac{
+                    \llbracket x \rrbracket(\sigma) = 3
+                }
+                {
+                    \langle r := x, \sigma \rangle \rightarrow \sigma[r \mapsto 3]
+                }
+            }
+            {
+                \langle \text{if } x < y \text{ then } r := x \text{ else } r := y, \sigma \rangle \rightarrow \sigma[r \mapsto 3]
+            }
+        \]
+    \end{voorbeeld}
 
     \section{Hoare logica}
-     Hoare logica is bedoeld om formeel te redeneren over de correctheid van computerprogramma's.
-     Het maakt gebruik van zogenaamde Hoare triples, die de vorm hebben: $\{P\} C \{Q\}$.
-     Hierin is P de preconditie, C het commando (of programma), en Q de postconditie.
-     De betekenis van een Hoare triple is dat als de preconditie P waar is voordat het commando C wordt uitgevoerd, dan zal de postconditie Q waar zijn nadat C is uitgevoerd, op voorwaarde dat C correct wordt uitgevoerd (d.w.z. zonder fouten of uitzonderingen).
+    Hoare logica is bedoeld om formeel te redeneren over de correctheid van computerprogramma's.
+    Het maakt gebruik van zogenaamde Hoare triples, die de vorm hebben: $\{P\} C \{Q\}$.
+    Hierin is P de preconditie, C het commando (of programma), en Q de postconditie.
+    De betekenis van een Hoare triple is dat als de preconditie P waar is voordat het commando C wordt uitgevoerd, dan zal de postconditie Q waar zijn nadat C is uitgevoerd, op voorwaarde dat C correct wordt uitgevoerd (d.w.z. zonder fouten of uitzonderingen).
     \\$\{P\} C \{Q\} \leftarrow$ ``Voor elke staat $\sigma$ die voldoet aan P, als we $\langle p, \sigma \rangle$ uitvoeren (het commando p in de staat $\sigma$) en dit leidt tot een nieuwe staat $\tau$, dan voldoet $\tau'$ aan Q.''
 
     \begin{voorbeeld}{Hoare triple}
@@ -1178,8 +1324,7 @@
             Dit voldoet niet aan de postconditie die we wilden bewijzen, omdat $p$ altijd 0 zal zijn na het uitvoeren van het commando.
         \end{itemize}
         Dus de Hoare triple is niet correct, omdat de preconditie niet leidt tot de postconditie na het uitvoeren van het commando.
-   \end{voorbeeld}
-
+    \end{voorbeeld}
 
 
 \end{document}
