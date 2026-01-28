@@ -594,6 +594,7 @@
 
     \ruleline{Alles hierboven is voor de midterm, alles hieronder is voor de final}
 
+
     \section[visualisatietechnieken - \textbf{InformatieVisualisatie}]{visualisatietechnieken}
 
     \subsection{Definitie}
@@ -708,6 +709,7 @@
     Bij de linker is de data-ink ratio heel laag, terwijl die bij de rechter hoog is.
 
     \subsection{Mark en channels}
+
     \subsubsection{Marks}
     zijn de basisvormen die worden gebruikt om data te representeren in een visualisatie.
     De meest voorkomende marks zijn punten, lijnen en vlakken.
@@ -758,6 +760,7 @@
 
     \end{multicols}
 
+
     \section{Theoretische fundamenten}
 
     \subsection{Visuele perceptie}
@@ -774,19 +777,19 @@
 
     \begin{multicols}{2}
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\linewidth]{image/kleurenblindheid}
-        \caption{}
-        \label{fig:kleurenblindheid}
-    \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{image/kleurenblindheid}
+            \caption{}
+            \label{fig:kleurenblindheid}
+        \end{figure}
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\linewidth]{image/kleurenblindheid_pallete}
-        \caption{}
-        \label{fig:kleurenblindheid_pallete}
-    \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{image/kleurenblindheid_pallete}
+            \caption{}
+            \label{fig:kleurenblindheid_pallete}
+        \end{figure}
 
     \end{multicols}
 
@@ -807,16 +810,6 @@
 
     \textbf{Chromostereopsis}: Dit is een optische illusie waarbij kleuren op verschillende afstanden lijken te liggen.
     Bijvoorbeeld, rode objecten lijken dichterbij te zijn dan blauwe objecten.
-
-    \subsection{Het geneste model INCOMPLEET}
-    Tamara Munzner heeft het geneste model ontwikkeld om het proces van het ontwerpen van informatievisualisaties te structureren.
-    Het model bestaat uit vier niveaus:
-    \begin{itemize}
-        \item \textbf{Domain problem and data character}: Begrijp het probleem en de data.
-        \item \textbf{Data and task abstraction}: Abstracteer de data en taken.
-        \item \textbf{Visual encoding and interaction design}: Ontwerp de visuele representatie en interactie.
-        \item \textbf{Algorithm design}: Ontwerp de algoritmen voor het genereren van de visualisatie.
-    \end{itemize}
 
     \subsection{Klassieke visualisatie-types}
 
@@ -880,6 +873,63 @@
         }%
     \end{figure}
 
+    \section{Het geneste model}
+
+    Tamara Munzner heeft een model om visualisaties te ontwerpen én te valideren.
+    Het komt er op neer dat je vier niveaus hebt waarop je fouten kan maken, en dat je op elk niveau moet valideren of je ontwerp klopt.
+    Dit moet je doen voordat je verder gaat naar het volgende niveau.
+    Doe je dit niet, dan gaat het altijd mis op volgende niveaus.
+
+    Het model bestaat uit vier geneste niveaus.
+    Elk niveau levert input aan het volgende, en elk niveau kent zijn eigen typische fouten en bijbehorende manieren om die fouten te toetsen.
+
+    \subsection{De vier niveaus}
+
+    \begin{enumerate}
+        \item \textbf{Domeinprobleem en data}
+        Eerst moet je begrijpen wat gebruikers daadwerkelijk doen en welke data daarbij hoort, in hun eigen taal en context.
+        Het risico hier is simpel: je lost een probleem op dat zij helemaal niet hebben.
+        Validatie gebeurt door observatie, interviews en veldstudies.
+
+        \item \textbf{Abstractie naar operaties en datatypen}
+        Vervolgens vertaal je het domeinprobleem naar generieke operaties (zoals vergelijken, filteren, clusteren) en datatypen (tabellen, grafen, tijdreeksen).
+        Dit is vaak het zwakste punt in visualisatie-ontwerp.
+        De klassieke fout: je kiest een verkeerde abstractie, waardoor de visualisatie per definitie niet helpt.
+        Dit kun je alleen valideren door echte gebruikers hun eigen werk te laten doen met het systeem.
+
+        \item \textbf{Visuele encodering en interactie}
+        Pas hier beslis je hoe iets eruitziet en hoe gebruikers ermee werken.
+        De vraag is niet of het mooi is, maar of het de gekozen abstractie effectief overbrengt.
+        Validatie kan via ontwerp-argumentatie, perceptuele principes, labstudies (tijd en fouten), en analyse van resultaatbeelden.
+
+        \item \textbf{Algoritmes}
+        Het binnenste niveau gaat over performance en correctheid: is het snel genoeg, schaalbaar, en technisch juist?
+        Validatie gebeurt via complexiteitsanalyse en metingen van tijd en geheugen.
+    \end{enumerate}
+
+    \subsection{Kernidee: fouten werken door}
+
+    De niveaus zijn genest, niet onafhankelijk. Een fout hogerop besmet alles eronder:
+    \begin{itemize}
+        \item een verkeerd probleem $\rightarrow$ niemand gebruikt je tool;
+        \item een verkeerde abstractie $\rightarrow$ je laat gebruikers het verkeerde zien;
+        \item een slechte encodering $\rightarrow$ mensen begrijpen het niet;
+        \item een traag algoritme $\rightarrow$ het systeem is onbruikbaar.
+    \end{itemize}
+
+    Daarom is validatie op één niveau nooit genoeg. Veel vormen van validatie zijn per definitie \emph{downstream}: je kunt een hoger niveau pas echt toetsen als de lagere niveaus al werken.
+
+    \subsection{Belangrijkste aanbevelingen}
+
+    Munzner doet drie expliciete aanbevelingen:
+    \begin{enumerate}
+        \item Maak duidelijk \emph{op welk niveau} je bijdrage zit, zeker als een paper meerdere niveaus raakt.
+        \item Benoem expliciet welke aannames je maakt over hogere niveaus die je niet onderzoekt.
+        \item Accepteer en waardeer meer papers die zich uitsluitend richten op domein- en probleemkarakterisatie.
+    \end{enumerate}
+
+    De onderliggende boodschap is streng maar terecht: veel zwakke visualisatiepapers falen niet omdat de techniek slecht is, maar omdat nooit scherp is vastgesteld welk probleem eigenlijk wordt opgelost en waarom de gekozen abstractie klopt.
+
     \section{misleiden met visualisaties}
     Het is heel makkelijk om mensen te misleiden met visualisaties.
     Bijvoorbeeld door de y-as niet bij 0 te laten beginnen, of door 3D-effecten te gebruiken die de verhoudingen vertekend weergeven.
@@ -925,9 +975,50 @@
     Ook kan je door toeval patronen zien die er niet zijn.
     Grappige voorbeelden hiervan kan je op de website \url{https://www.tylervigen.com/spurious-correlations} vinden.
 
-    \section{}
-
     \section{interactieve visualisaties}
+    Interactieve visualisaties zijn in sommige gevallen betern om:
+    \begin{itemize}
+        \item Grote datasets te verkennen
+        \item Visueel verhaal te vertellen
+        \item Data te verkennen zonder verhaal
+        \item Mensen betrokkener maken bij de data
+    \end{itemize}
+    \\\\
+    Er zijn verschillende soorten interacties die je kan gebruiken in interactieve visualisaties:
+    \begin{itemize}
+        \item \textbf{Exploreren} (zoomen, pannen, filteren)
+        maakt het mogelijk om door de data te navigeren.
+        Dit kan bijvoorbeeld door in- en uit te zoomen op een kaart, of door te pannen door een grote dataset.
+
+        \item \textbf{Connecteren} (selecteren, highlighten)
+        maakt het mogelijk om relaties tussen verschillende data-elementen te zien.
+        Bijvoorbeeld door het highlighten van gerelateerde punten in een scatterplot als je een punt selecteert.
+
+        \item \textbf{Filteren} (data subsetten)
+        stelt gebruikers in staat om alleen de data te zien die relevant is voor hun analyse.
+        Dit kan bijvoorbeeld door middel van dropdown-menu's of schuifregelaars.
+        Je kan dan in een dataset of leeftijd van inwoners in Utrecht filteren op mannen of vrouwen,
+        of mensen tussen de 20 en 30 jaar.
+
+        \item \textbf{Configureren} (visualisatie aanpassen)
+        laat gebruikers de visualisatie aanpassen aan hun voorkeuren.
+        Dit kan bijvoorbeeld door het wijzigen van kleuren, vormen of groottes van de marks.
+        kort: je kan de visualisatie personaliseren.
+
+        \item \textbf{Encoderen} (data representatie aanpassen)
+        maakt het mogelijk om de manier waarop data wordt weergegeven te veranderen.
+        Bijvoorbeeld door het wisselen tussen een staafdiagram en een lijngrafiek.
+        Of een scatterplot naar een dotplot.
+
+        \item \textbf{Samenvatten/detailleren} (niveau van detail aanpassen)
+        stelt gebruikers in staat om het niveau van detail in de visualisatie aan te passen.
+        Dit kan bijvoorbeeld door het in- en uitzoomen op een kaart, of door het tonen van meer of minder gegevenspunten.
+
+        \item \textbf{Selecteren} (items kiezen)
+        maakt het mogelijk om specifieke data-elementen te kiezen voor verdere analyse.
+        Dit kan bijvoorbeeld door het klikken op een punt in een scatterplot om meer informatie te zien over dat punt.
+
+    \end{itemize}
 
 
 \end{document}

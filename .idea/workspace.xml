@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Enhance visualizations and clarify design principles in main.tex; update workspace configuration">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Update bibliography and enhance document structure in main.tex">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core" beforeDir="false" afterPath="$PROJECT_DIR$/src/core" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
@@ -17,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="mmi" />
+        <entry key="$PROJECT_DIR$" value="Informatie-Uitwisseling-Webopdracht" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,35 +49,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;BibTeX.main bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Renew Bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full compile.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full-compile.sh.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Informatie-Uitwisseling&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "BibTeX.main bibliography.executor": "Run",
+    "LaTeX.main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe",
+    "Shell Script.Build Latex Document.executor": "Run",
+    "Shell Script.Full build.executor": "Run",
+    "Shell Script.Renew Bibliography.executor": "Run",
+    "Shell Script.full compile.executor": "Run",
+    "Shell Script.full-compile.sh.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "Informatie-Uitwisseling",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\images" />
@@ -90,7 +92,7 @@
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\out" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Build Latex Document" />
+  <component name="RunManager" selected="Shell Script.Full build" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
