@@ -18,14 +18,14 @@
 \include{core/paperSettings} % import custom general paper settings
 \include{core/standardCommands} % import custom commands and packages
 
-\def\documentTitle      {} % replace with actual document title
+\def\documentTitle      {Informatie Uitwisseling Visualisatie Opdracht} % replace with actual document title
 \def\documentSubtitle   {} % replace with actual subtitle if any, else leave empty
-\def\authorName         {} % replace with actual author name
-\def\authorEmail        {} % replace with actual author email
+\def\authorName         {Matt ter Steege} % replace with actual author name
+\def\authorEmail        {m.j.ter.steege@students.uu.nl} % replace with actual author email
 \def\institutionName    {Universiteit Utrecht} % replace with actual institution name
 \def\institutionCountry {Nederland} % replace with actual institution location
 \def\institutionCity    {Utrecht} % replace with actual institution location
-\def\dueDate            {} % replace with actual due date
+\def\dueDate            {30-01-2026} % replace with actual due date
 
 \def\editorsVersion     {false} % true om editorsnote e.d. te tonen, false voor verbergen
 \def\makeTitlePage      {true}  % true om titelpagina te maken, false om over te slaan
@@ -36,382 +36,254 @@
 % -----------------------------------------
 \begin{document}
 
-% ----------------------------
-% REMOVE FROM HERE ONCE COPIED
-% ----------------------------
 
-    \begin{center}
-        \small
-        Repository: \url{https://github.com/MattterSteege/Universitaire-papers} \\
-        This document explains how to use the template, the meaning of settings,
-        and demonstrates every custom command from \texttt{standardCommands.tex}.
-    \end{center}
+    \newpage~
+    \newpage
 
-    \vmed
-    \clearpage
+    \begin{figure}[H]
+        \centering
 
-    \onecolumn
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding1}
+            \end{figure}
 
-% -------------
-% INTRO SECTION
-% -------------
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding2}
+            \end{figure}
 
-
-    \section{Introduction — what this repo gives you}
-    This repository is a compact but opinionated LaTeX template intended to make writing short academic papers and reports fast and consistent.
-
-    In short, you get:
-    \begin{itemize}
-        \item \textbf{A small settings file} (\texttt{paperSettings.tex}) that centralizes document-level choices (margins, fonts, packages).
-        \item \textbf{A macro library} (\texttt{standardCommands.tex}) that provides frequently used helpers: spacing utilities, quote formatting, editor-only notes, simple table helpers, and tiny text-processing utilities.
-        \item \textbf{A bibliography file} (\texttt{main.bib}) for references.
-        \item \textbf{This documentation} (\texttt{main.tex}) for your main entry point, explaining how to use the settings and macros.
-        \vmed
-        \item \textbf{Bash build scripts} to compile the document locally or on Overleaf.
-    \end{itemize}
-
-    This `main.tex` acts as a \emph{user manual} and a demonstration. Open it, compile it, and you will see rendered examples next to the explanation.
-
-% -------------
-% QUICK START
-% -------------
-
-
-    \section{Quick start — clone and compile}
-    If you just want to get going:
-
-    \begin{enumerate}
-        \item Clone the repo:
-        \begin{verbatim}
-git clone https://github.com/MattterSteege/Universitaire-papers.git
-cd Universitaire-papers
-        \end{verbatim}
-
-        \item Compile locally (recommended):
-        \begin{verbatim}
-./buildLatexDocument.sh # or for a full clean build:
-# OR
-./fullBuild.sh # cleans aux files, rebuilds bibliography, rebuilds doc
-        \end{verbatim}
-
-        \item Or upload the repo to Overleaf (drag-and-drop) and press Compile.
-    \end{enumerate}
-
-    Common compile issues:
-    \begin{itemize}
-        \item \texttt{Package xstring} / \texttt{tcolorbox} missing $\to$ install via TeX Live or MikTeX.
-        \item If font differences appear on different machines, check \texttt{paperSettings.tex} for font/encoding directives.
-    \end{itemize}
-
-% -------------
-% FILE OVERVIEW
-% -------------
-
-
-    \section{File overview}
-    \begin{description}[leftmargin=!,labelwidth=3.5cm]
-        \item[\texttt{main.tex}] This file — the manual and demo.
-        \item[\texttt{paperSettings.tex}] Document-level settings (margins, title behaviors, optional flags).
-        \item[\texttt{standardCommands.tex}] The macro library we document below.
-        \item[\texttt{main.bib}] Bibliography file used by examples.
-        \item[\texttt{buildLatexDocument.sh}] Simple build script to compile the document.
-        \item[\texttt{fullBuild.sh}] Full build script that cleans aux files and
-        \item[\texttt{renewBibliography.sh}] Script to regenerate the bibliography only.
-    \end{description}
-
-% -------------
-% PAPERSETTINGS EXPLAINED
-% -------------
-
-
-    \section{Explaining \texttt{paperSettings.tex}}
-    Open \texttt{paperSettings.tex} in an editor. Typical contents and intent:
-
-    This file centralizes document-level settings so you don't have to hunt through the main document for margin tweaks or package options. Typical sections:
-    \begin{itemize}
-        \item \textbf{Page layout} — automatic title page or table of contents
-        \item \textbf{editor data} — author names, affiliations, etc.
-        \item \textbf{editor version} — toggle editor notes on/off
-    \end{itemize}
-
-    Why separate settings? Because when you move from one paper to another you often want the same macros and same visuals, so keeping them in an settings file makes sure that all your documents stay consistent.
-
-% -------------
-% STANDARD COMMANDS: OVERVIEW
-% -------------
-
-
-    \section{standardCommands.tex — overview and philosophy}
-    This file is a small-but-practical macro library. The design goals:
-    \begin{itemize}
-        \item Reduce repetitive formatting tasks (spacing, simple block quotes).
-        \item Give editors lightweight in-line commentary tools that can be toggled off.
-        \item Offer a compact table helper for quickly making consistent tabular output.
-        \item Provide tiny text utilities to avoid retyping small helpers.
-    \end{itemize}
-
-    Below we explain each macro or group of macros and show usage examples. The examples below are live — compile this document to see real output.
-
-% -----------------------
-% SPACING & LAYOUT UTILITIES
-% -----------------------
-
-
-    \section{Spacing \& layout utilities}
-    These utilities are tiny vertical-space shortcuts:
-    \begin{itemize}
-        \item \verb|\vsmall| — small vertical gap (~0.1 cm)
-        \item \verb|\vmed| — medium vertical gap (~0.3 cm)
-        \item \verb|\vlarge| — larger vertical gap (~0.6 cm)
-    \end{itemize}
-
-    \subsection*{Example}
-    Text above the gap.\vsmall
-
-    This line follows a \verb|\vsmall| gap.
-
-    \vmed
-
-    This one follows a \verb|\vmed| gap.
-
-    \vlarge
-
-    And this follows a \verb|\vlarge| gap.
-
-    \vsmall
-
-    \noindent\textit{Why use these:} consistent vertical rhythm. Instead of sprinkling magic numbers everywhere, use named gaps that can be tuned centrally.
-
-% -----------------------
-% LOREM PLACEHOLDER
-% -----------------------
-
-
-    \section{Text placeholder \& formatting utilities}
-
-    \subsection[\textbackslash lorem]{\textbackslash lorem}
-    Use \verb|\lorem| for draft sections to hold spacing while writing.
-
-    \lorem
-
-    \subsection{\textbackslash uitspraak{<quote>}{<bibkey>}{<page>}}
-    This macro automatically switches between inline short quotes and block long quotes using a word count threshold (short = inline, long = right-aligned block). It expects a BibTeX key so it can print author/year.
-
-    \smallskip
-    \noindent\textbf{Inline example} (short quote):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective reality}{PhysRev.47.777}{47}
-
-    \smallskip
-    \noindent\textbf{Block quote example} (longer quote — we simulate length):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective realitywhich is independent of any theory, and the physical concepts with which the theory operates. These concepts are intended to correspond with the objective reality, and by means of these concepts we picture this reality to ourselves.}{PhysRev.47.777}{7}
-
-    \noindent\textit{Notes:}
-    \begin{itemize}
-        \item The macro uses \verb|\StrCount| to decide length; be careful with unusual punctuation that might miscount words.
-        \item It outputs citations using \verb|\citeauthor| and \verb|\citeyear| (so if you see a value like \textbf{PhysRev.47.777}, then try to use the fullBuild script to refresh references).
-    \end{itemize}
-
-    \subsection{\textbackslash prepostparencite[<pre>][<post>]{<bibkey>}}
-    Usage: \verb|\prepostparencite[see][, for more info]{PhysRev.47.777}|
-
-    The macro prints: \verb|(see Author, Year, for more info)| using \texttt{natbib}'s \verb|\parencite| internally, adding optional pre- and post-text around the citation.
-
-    \noindent Example:
-    \prepostparencite[nagemaakt van][]{PhysRev.47.777}
-
-% -----------------------
-% QUESTION COMMAND
-% -----------------------
-
-    \subsection{\textbackslash question{<text>}}
-    Usage: \verb|\question{What is the impact of this design choice?}|
-
-    This produces a centered, italic prompt inside the page width, good for highlighting reflective questions or section prompts.
-
-    \subsection*{Example}
-    \question{What happens to readability when margins are tightened?}
-
-    \noindent You can use these prompts inside methodology sections or to flag points you want to discuss later.
-
-% -----------------------
-% EDITOR TOOLS & COMMENTS
-% -----------------------
+        \caption{Boven de visualisatie van de NOS, Onder de visualisatie van mij.}
+        \label{fig:info-uitwisseling-1}
+    \end{figure}
 
     \newpage
 
+    \section{Bezoekersgedrag Coronamaatregelen}
 
-    \section{Editor tools \& comments}
-    These macros are controlled by a boolean \verb|\boolean{editorsversion}| (defined in \texttt{paperSettings.tex}). When \verb|true|, editor notes show in red; when \verb|false|, they vanish.
+    \parencite{Ben21}
 
-    \begin{itemize}
-        \item \verb|\editorsonly{<text>}| — inserts a small red inline editor note.
-        \item \verb|editorsonlyBox| environment — boxed comment for reviewers.
-        \item \verb|\editorsfootnote{<text>}| — red footnote used only in editors mode.
-        \item When editors mode is active the file also runs \verb|\nocite{*}| so all bib entries are visible in review drafts. (required a full build to refresh)
-    \end{itemize}
+    \lorem
+    \lorem
+    \lorem
 
-    \subsection*{Example (simulating editors mode)}
+    \newpage
 
-    \par\vspace{0.05in}%
-    {\footnotesize\noindent\textcolor{red!70!black}{\textbf{Editor's note:} This is an inline editor note visible only in editors mode.}}%
-    \par\vspace{0.05in}%
+    \begin{figure}[H]
+        \centering
 
-    \par\medskip%
-    \begin{tcolorbox}
-    [%
-        enhanced,
-        breakable,
-        colback=red!5,
-        colframe=red!20!white,
-        boxrule=0pt,
-        borderline north={1pt}{0pt}{red!40!white},
-        sharp corners,
-        before skip=6pt,
-        after skip=6pt,
-        title={\textcolor{red!60!black}{\footnotesize Comment for editors:}},
-        coltitle=red!70!black,
-        fonttitle=\bfseries,
-        top=2pt,
-        bottom=2pt,
-        left=4pt,
-        right=4pt
-    ]%
-        This box is shown to editors only. Use it for long comments that you don't want in the final text. \\\\ \lorem
-    \end{tcolorbox}%
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding3}
+            \end{figure}
 
-    \noindent\textit{Note:} Toggle \verb|\setboolean{editorsversion}{true}| in \texttt{paperSettings.tex} while drafting, and set to \verb|false| when producing the student/readable version. \textcolor{red!70!black}{\footnote{\textcolor{red!70!black}{Editor's note: Can't forget the footnoot :)}}}%
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding4}
+            \end{figure}
 
-% -----------------------
-% TEXT PROCESSING UTILITIES
-% -----------------------
+        \caption{Boven de visualisatie van het NRC, Onder de visualisatie van mij.}
+        \label{fig:info-uitwisseling-2}
+    \end{figure}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=5cm]{images/colorpallete2_colorblind}
+        \caption{Kleurenpalet voor verschillende kleurenzienstoornissen}
+        \label{fig:colorpallete2_colorblind}
+    \end{figure}
 
-    \section{Text processing utilities}
+    \newpage
 
-    \subsection{\textbackslash spliteveryn{<n>}{<text>}}
-    Splits the input text into lines with a maximum of \verb|n| characters. Useful for creating artificially wrapped blocks in narrow contexts.
+    \section{Leesvaardigheidsscores Nederlandse scholieren}
 
-    \smallskip
-    \noindent Example (split every 20 chars):\\
-    \spliteveryn{20}{This is an example of splitting text every twenty characters so you can see the behavior.}
+    Deze bron heb ik gevonden op het NRC, een landelijke krant die hier verslag deed over de dalende leesvaardigheidsscores van de Nederlandse scholieren. \parencite{Cla23}
+    Ik heb hem gevonden door te zoeken op onderwerpen die vaak grafisch worden weergegeven, zoals onderwijsresultaten.
+    \newline\newline
+    Bij de linker (originele) grafiek is gekozen om aan te geven dat de dramatische keldering heeft gemaakt, echter is dit wel vertekend, omdat de grafiek niet op 0 begint, maar op 450.
+    Dit is, als je er snel een blik op werpt zoals je in een krantenartikel vaak doet, erg \textbf{misleidend}.
+    Niet alleen is de Y-as niet helemaal geweldig gekozen, ook op de X-as schaadt er wat.
+    Hier is op het cruciaalste punt (vanaf het moment van schrijven) namelijk vorig jaar een gat van 4 in plaats van 3 jaar gemaakt.
+    Dit wordt echter niet goed visueel gecommuniceerd, door bijvoorbeeld de X-as tussen die punten een jaar breder te maken.
+    Zo kun je erg lastig redeneren of er tussen 2015 en 2018 dezelfde jaarlijkse daling is ingezet als tussen 2018 en 2022.
+    \newline\newline
+    Als ik naar de grafiek kijken (en het bijbehordende artikel lees) dan is het vooral de bedoeling om de lezer te laten zien dat Nederland extreem slecht scoort in vergelijking met andere landen/regio’s.
+    Daarom heb ik in mijn verbeterde grafiek de focus gelegd op het vergelijken van de verschillende landen/regio’s.
+    Ik heb hier gekozen voor een barchart, omdat dit het makkelijkst is om verschillende landen met elkaar te vergelijken.
+    De landen/regio’s zijn op laag naar hoog in het eerste meetjaar (2003) gesorteerd, en deze volgorde is vastgehouden door de vervolgende jaren heen.
+    Zo kun je makkelijk zien hoe landen/regio’s zich ten opzichte van elkaar hebben ontwikkeld.
 
-    \subsection{\textbackslash IfNonEmpty{<text>}{<action>}}
-    Run \verb|<action>| only when \verb|<text>| is not empty. Useful for optional elements like captions. (mostly meant for internal use in other macros)
-
-% -----------------------
-% SIMPLE TABLE ENVIRONMENT
-% -----------------------
+    Ook heb ik hier gekozen voor een kleurenschema dat goed bestand is tegen verschillende soorten kleurenblindheid.
+    Er is getest op Protan- Deuter- en Tritanopie en bij alle soorten bleven de kleuren goed te onderscheiden van elkaar.
+    Daarnaast is de Y-as hier wel op 0 begonnen, zodat de verschillen in scores eerlijker worden weergegeven.
 
 
-    \section{SimpleTable environment}
-    A small helper that wraps \texttt{tabularx} to produce consistent minimal tables. Usage skeleton:
+    \newpage
 
-    \begin{verbatim}
-\begin{SimpleTable}[<col spec>]{<caption>}{<label>}
-    \TableHeader{Col A & Col B & Col C}
-    \TableRow{Data 1 & Data 2 & Data 3}
-    \TableNote{This is a footnote for the table.}
-\end{SimpleTable}
-    \end{verbatim}
+    \begin{figure}[H]
+        \centering
 
-    Key components:
-    \begin{itemize}
-        \item \verb|<col spec>|: column specification using the following syntax (e.g., \texttt{s\{2\} s\{1\} s\{.5\}} for three columns with relative widths).
-        \item \verb|\TableHeader{\ldots}|: prints the header row in bold with a rule below.
-        \item \verb|\TableSubHeader{\ldots}|: prints a sub-header row with a thinner rule below.
-        \item \verb|\TableRow{\ldots}|: prints a data row with a thin separator below.
-        \item \verb|\TableHighlightRow{\ldots}|: prints a highlighted row for emphasis.
-        \item \verb|\TableNote{\ldots}|: adds a small footnote-like line below the table.
-    \end{itemize}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding5}
+            \end{figure}
 
-    Note, that the \ldots means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
-    \begin{itemize}
-        \item The table width automatically matches the text width.
-        \item The table caption and label are set in the environment arguments.
-        \item Column widths are relative, so you can use decimal values to create flexible layouts.
-        \item Some rows have automatic rules, and/or text formatting (bold, underline, etc.) to ensure consistency.
-    \end{itemize}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding6}
+            \end{figure}
 
-    \subsection*{Rendered example}
-    \begin{SimpleTable}[s{1} s{1} s{1}]{Example table showing the SimpleTable environment.}{tab:example}
-        \TableHeader{Metric & Value & Note}
-        \TableRow{Accuracy & 92\% & Sampled}
-        \TableRow{Precision & 88\% & Early stage}
-        \TableNote{This table is produced by the SimpleTable helper.}
-    \end{SimpleTable}
+        \caption{Boven de visualisatie van Oost, Onder de visualisatie van mij.}
+        \label{fig:info-uitwisseling-3}
+    \end{figure}
 
-% -----------------------
-% BIBLIOGRAPHY
-% -----------------------
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=5cm]{images/colorpallete3_colorblind}
+        \caption{Kleurenpalet voor verschillende kleurenzienstoornissen}
+        \label{fig:colorpallete3_colorblind}
+    \end{figure}
+
+    \newpage
+
+    \section{Zetelverdeling Tweede Kamer 2021 vs 2023}
+
+    De linker grafiek (tevens de originele grafiek) heb ik gevonden op de website van Oost, die verslag doet over voornamelijk Overijssel. \parencite{Oos23}
+
+    In de linker grafiek gebeurt heel veel.
+    Je ziet een momentopname van 2021 en 2023 van de zetelverdeling van de Tweede Kamer.
+    Maar ook de winst en verlies tussen de twee jaren.
+    Deze grafiek gebruikt oppervlakte, ronding en ook verbergen ze de onzekerheid aangezien het om een prognose en 6\% van de stemmen nog niet zijn meegenomen in de visualisatie.
+    Verder is de data-inkt ratio toch tamelijk laag, omdat er erg veel poespas gebruikt is om hetzelfde aan te geven.
+
+    Om deze grafiek te verbeteren heb ik in dit geval heb ik gekozen voor een barchart waarbij de start en eindposities de start en eindwaardes van de hoeveelheid zetels die wordt (verwacht) behaald te worden.
+    Ik heb hier gekozen voor een dubbele encodering.
+    Als eerste de kleur van de balken, in dit geval het rood/groen kleurenschema.
+    Deze is wel slechter te zien door mensen met Protanomalie of Protanopie, maar aangezien er tegelijkertijd gebruik wordt gemaakt van de richting van de balk om aan te geven of er een positieve of negatieve verschuiving in het behaalde aantal zetels is, kan deze grafiek ook makkelijk door mensen met (een vorm van) kleurenblindheid bekeken worden.
+
+    Ik heb alleen helaas niet kunnen vinden wat de onzekerheid van de grafiek was, aangezien deze nu ook in mijn verbeterde grafiek niet aanwezig is.
+    Had ik deze wel gevonden, dan was deze in schuifgestreepte manier terug te vinden aan het einde van de balk in dezelfde kleur als de balk zelf.
+
+    \newpage
+
+    \begin{figure}[H]
+        \centering
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding7}
+            \end{figure}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding8}
+            \end{figure}
+
+        \caption{Boven de visualisatie van het CBS, Onder de visualisatie van mij.}
+        \label{fig:info-uitwisseling-4}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=5cm]{images/colorpallete4_colorblind}
+        \caption{Kleurenpalet voor verschillende kleurenzienstoornissen}
+        \label{fig:colorpallete4_colorblind}
+    \end{figure}
+
+    \newpage
+
+    \section{Autokleuren in Nederland}
+
+    De linker grafiek van het CBS \parencite{CBS22} laat de verdeling van autokleuren in Nederland zien.
+    Er gebeurt te veel tegelijk.
+    De data wordt weergegeven met kleine autootjes die in schuine rijen liggen, met een duidelijk perspectief en een soort 3D-effect.
+    Er is duidelijk een visualisatietijger een goede woensdagmiddag mee bezig geweest en het ziet er leuk uit.
+    Hierdoor wordt het helaas wel lastiger dan nodig om de data af te lezen.
+    Hoeveel scheelt blauw nu precies met wit?
+
+    Daarnaast is de data-ink ratio laag.
+    Een groot deel van de gebruikte inkt gaat op aan decoratie: de autovormpjes, de hellende compositie, de achtergrondkleur en de schaduwwerking.
+    Al die elementen dragen niets bij aan het beantwoorden van de vraag welke autokleuren dominant zijn in Nederland.
+    Ze leiden af en maken het lastiger om patronen te herkennen.
+    De grafische integriteit komt daarmee onder druk te staan, omdat de visuele impact niet meer in verhouding staat tot de feitelijke data.
+
+    Om dit te verbeteren heb ik gekozen voor een veel eenvoudigere visualisatie, namelijk een vlakke, overzichtelijke verdeling waarin elke kleur een duidelijk afgebakend vlak krijgt met het bijbehorende percentage.
+    In deze grafiek wordt alleen oppervlakte gebruikt, zonder perspectief of diepte.
+    De verhoudingen zijn direct zichtbaar en vergelijkbaar.
+    Grijs is onmiskenbaar het grootst, gevolgd door zwart, en daarna pas blauw en wit.
+    De kleinere categorieën verdwijnen niet, maar eisen ook niet onnodig aandacht op.
+
+    Door alle niet-essentiële elementen weg te laten, is de data-ink ratio aanzienlijk hoger.
+    Vrijwel alles wat je ziet, is data.
+    Er is geen poespas, geen decoratie en geen visuele ruis.
+    Je krijgt zo in één oogopslag inzicht in de verdeling van autokleuren in Nederland.
+    Dat maakt deze simpele grafiek niet alleen rustiger, maar vooral eerlijker en effectiever dan de originele.
+
+    Deze grafiek is helaas niet heel goed te bekijken door mensen met een vorm van kleurenblindheid.
+    Echter is hiertegen wel te argumenteren dat de mensen met kleurenblindheid waarschijnlijk ook niet heel erg geïnteresseerd zijn in autokleuren, aangezien zij deze zelf ook niet goed kunnen onderscheiden.
+    Ook zou het niet logisch zijn om te proberen een kleurenpalet te maken dat voor alle vormen van kleurenblindheid goed te onderscheiden is, want dan wordt het lastiger voor mensen zonder kleurenblindheid om de kleuren te linken aan de daadwerkelijke autokleuren.
+
+    \newpage
+
+    \begin{figure}[H]
+        \centering
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding9}
+            \end{figure}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/Afbeelding10}
+            \end{figure}
+
+        \caption{Boven de visualisatie van Trouw, Onder de visualisatie van mij.}
+        \label{fig:info-uitwisseling-5}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=5cm]{images/colorpallete5_colorblind}
+        \caption{Kleurenpalet voor verschillende kleurenzienstoornissen}
+        \label{fig:colorpallete5_colorblind}
+    \end{figure}
+
+    \newpage
+
+    \section{Gezondheidsrisico's bij twintigers}
+
+    \parencite{Alw16} heeft deze kleurrijke grafiek in de Trouw gepubliceerd.
+    Hij laat de toename van gezondheidsrisico’s onder twintigers zien, uitgesplitst naar geslacht.
+
+    In de originele grafiek werd gewerkt met twee rijen poppetjes, blauw voor mannen en roze voor vrouwen.
+    Elk poppetje had drie bolletjes die de drie gezondheidsrisico’s moesten voorstellen.
+    Op het eerste gezicht oogt dat speels, maar zodra je probeert te begrijpen hoeveel iets toeneemt, dan wordt het lastig.
+    De bolletjes vertegenwoordigen percentages, maar die percentages zijn niet visueel in verhouding.
+    De cirkels zijn met bijvoorbeeld 45.8\% misschien (want cirkels aflezen is lastig…) 10x kleiner dan 6.9 procent.
+    Dat is natuurlijk een extreem misleidend beeld.
+
+    Daarnaast zijn de cirkels die wél met elkaar in verhouding zijn ook erg lastig met elkaar te vergelijken, omdat de gele cirkels bij de mannen tussen de twee einde verdubbeld, terwijl ze erg bijna het zelfde uitzien.
+
+    Daarnaast is de data-ink ratio laag: veel inkt gaat naar poppetjes, kleuren en decoratie, terwijl de daadwerkelijke informatie amper preciezer wordt.
+
+    In de verbeterde grafiek heb ik dit volledig omgedraaid.
+    Ik heb gekozen voor lijndiagrammen, uitgesplitst per gezondheidsrisico: bloeddrukverlagers, obesitas en overgewicht.
+    De tijd staat op de horizontale as, het percentage op de verticale as.
+    Mannen en vrouwen worden onderscheiden met kleur, maar delen exact dezelfde schaal.
+    Daardoor ontstaat meteen duidelijkheid.
+    Ik zie niet alleen dat elk risico toeneemt, maar ook hoe snel, hoe sterk en wie er hoger zit.
+
+    De belangrijkste channel wordt ingezet: positie op een gemeenschappelijke schaal.
+    De lijnen maken trends zichtbaar zonder extra uitleg.
+    Vooral bij overgewicht springt het verschil tussen mannen en vrouwen er direct uit.
+    Dat hoef je niet te interpreteren, dat zie je gewoon.
+
+    Ook hier is de data-ink ratio hoog.
+    Er is nauwelijks decoratie, geen symbolen die niets toevoegen, geen visuele grapjes.
+    Vrijwel alles wat je ziet, draagt bij aan begrip.
 
 
-    \section{Bibliography — how to use the \texttt{.bib} file}
-    This document uses \texttt{main.bib} in the repo. Keep your BibTeX keys tidy, prefer short descriptive keys like \verb|kelly2023ring|.
-
-    Compile steps if using BibTeX:
-    \begin{enumerate}
-        \item \verb|./fullBuild.sh| (runs pdflatex, biber, pdflatex x2)
-        \item[] Or manually:
-        \item \verb|pdflatex main.tex|
-        \item \verb|biber main|
-        \item \verb|pdflatex main.tex|
-        \item \verb|pdflatex main.tex|
-    \end{enumerate}
-
-    Below is the auto-generated references list using APA style.:
-    \printbibliography
-
-
-% -----------------------
-% TROUBLESHOOTING & TIPS
-% -----------------------
-
-
-    \section{Troubleshooting \& tips}
-    \begin{itemize}
-        \item \textbf{Undefined macros or missing packages:} Install missing packages or ensure you are compiling with an up-to-date TeX distribution.
-        \item \textbf{Editor notes still visible in final PDF:} Check \texttt{paperSettings.tex} for the boolean controlling editor mode.
-        \item \textbf{Citation macros not printing author/year:} Ensure \texttt{natbib} is loaded and the BibTeX process runs.
-        \item \textbf{Tables too wide:} Adjust the column spec or reduce content; the SimpleTable wrapper uses \texttt{tabularx} so you can use X-like specifiers.
-    \end{itemize}
-
-% -----------------------
-% FINAL NOTES
-% -----------------------
-
-
-    \section{Final notes (a small rant)}
-    I wrote these helpers because I wanted the same style across projects — and because it felt faster to reach for a small macro than to remember the obscure package flag I used the last time. If something in \texttt{standardCommands.tex} annoys you, change it. These files are meant to be edited, extended, and — yes — occasionally abused when you're in a hurry.
-
-    \section*{Acknowledgments}
-    Thanks to all the open-source LaTeX package authors whose work makes documents like this possible
-
-    \section*{License}
-    This repository is licensed under the MIT License:
-    \begin{verbatim}
-MIT License
-Copyright (c) 2025 Matt
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-    \end{verbatim}
-
-% ----------------------------
-% REMOVE TILL HERE ONCE COPIED
-% ----------------------------
+    \newpage
 
 \end{document}
