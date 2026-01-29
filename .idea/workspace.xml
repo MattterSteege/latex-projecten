@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Update section titles and enhance content clarity in main.tex">
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/colorpallete2_colorblind.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/colorpallete3_colorblind.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/colorpallete4_colorblind.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/colorpallete5_colorblind.png" afterDir="false" />
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/src/images/colorpallete1_colorblind.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +17,6 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Informatie-Uitwisseling-Webopdracht" />
         <entry key="$PROJECT_DIR$" value="mmi" />
       </map>
     </option>
@@ -58,35 +48,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "BibTeX.main bibliography.executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe",
-    "Shell Script.Build Latex Document.executor": "Run",
-    "Shell Script.Full build.executor": "Run",
-    "Shell Script.Renew Bibliography.executor": "Run",
-    "Shell Script.full compile.executor": "Run",
-    "Shell Script.full-compile.sh.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "Informatie-UItwisseling-Visualisatie-Opdracht",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;BibTeX.main bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Renew Bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.full compile.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.full-compile.sh.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Informatie-UItwisseling-Visualisatie-Opdracht&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\images" />
@@ -101,7 +91,7 @@
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\out" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Build Latex Document" />
+  <component name="RunManager" selected="Shell Script.Full build" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -167,7 +157,8 @@
       <workItem from="1769423428579" duration="12087000" />
       <workItem from="1769440319514" duration="121000" />
       <workItem from="1769616479427" duration="2756000" />
-      <workItem from="1769710872736" duration="5720000" />
+      <workItem from="1769710872736" duration="5908000" />
+      <workItem from="1769716852149" duration="160000" />
     </task>
     <task id="LOCAL-00001" summary="Add project configuration files and standard LaTeX commands">
       <option name="closed" value="true" />
@@ -521,7 +512,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769619238740</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Update bibliography entries and enhance document structure in main.tex">
+      <option name="closed" value="true" />
+      <created>1769716730340</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1769716730340</updated>
+    </task>
+    <task id="LOCAL-00046" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1769716827524</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1769716827524</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,8 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename citation command and improve formatting for clarity" />
-    <MESSAGE value="Update paper layout and formatting for improved readability and structure" />
     <MESSAGE value="Rename citation command for consistency and improve formatting in main document" />
     <MESSAGE value="Update document settings and enhance table formatting for improved clarity and usability" />
     <MESSAGE value="Add README, LICENSE, and update paper settings for bibliography inclusion" />
@@ -564,7 +569,9 @@
     <MESSAGE value="Update bibliography entries and enhance workspace configuration" />
     <MESSAGE value="update section titles and enhance content clarity in main.tex" />
     <MESSAGE value="Update section titles and enhance content clarity in main.tex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update section titles and enhance content clarity in main.tex" />
+    <MESSAGE value="Update bibliography entries and enhance document structure in main.tex" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
