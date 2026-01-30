@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="cleanup">
-      <change afterPath="$PROJECT_DIR$/src/images/colorpallete1_colorblind.png" afterDir="false" />
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Add color palette figure for color vision deficiencies in main.tex">
+      <change afterPath="$PROJECT_DIR$/src/code/graph1.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/graph2.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/graph3.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/graph4.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/graph5.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Afbeelding2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Afbeelding2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/colorpallete1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/colorpallete1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/colorpallete1_colorblind.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/colorpallete1_colorblind.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,37 +56,38 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;BibTeX.main bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Renew Bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full compile.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full-compile.sh.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Informatie-UItwisseling-Visualisatie-Opdracht&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "BibTeX.main bibliography.executor": "Run",
+    "LaTeX.main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe",
+    "Shell Script.Build Latex Document.executor": "Run",
+    "Shell Script.Full build.executor": "Run",
+    "Shell Script.Renew Bibliography.executor": "Run",
+    "Shell Script.full compile.executor": "Run",
+    "Shell Script.full-compile.sh.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "Informatie-UItwisseling-Visualisatie-Opdracht",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/code",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\code" />
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\images" />
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten" />
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\src\images" />
@@ -158,7 +167,8 @@
       <workItem from="1769440319514" duration="121000" />
       <workItem from="1769616479427" duration="2756000" />
       <workItem from="1769710872736" duration="5908000" />
-      <workItem from="1769716852149" duration="160000" />
+      <workItem from="1769716852149" duration="210000" />
+      <workItem from="1769790449727" duration="5817000" />
     </task>
     <task id="LOCAL-00001" summary="Add project configuration files and standard LaTeX commands">
       <option name="closed" value="true" />
@@ -528,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769716827524</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add color palette figure for color vision deficiencies in main.tex">
+      <option name="closed" value="true" />
+      <created>1769717057021</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1769717057021</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename citation command for consistency and improve formatting in main document" />
     <MESSAGE value="Update document settings and enhance table formatting for improved clarity and usability" />
     <MESSAGE value="Add README, LICENSE, and update paper settings for bibliography inclusion" />
     <MESSAGE value="Disable bibliography generation in paper settings" />
@@ -571,7 +588,8 @@
     <MESSAGE value="Update section titles and enhance content clarity in main.tex" />
     <MESSAGE value="Update bibliography entries and enhance document structure in main.tex" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="Add color palette figure for color vision deficiencies in main.tex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add color palette figure for color vision deficiencies in main.tex" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

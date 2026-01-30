@@ -15,6 +15,7 @@
 
 % ----------- Document settings -----------
 \documentclass[nonacm, sigconf, balance=true]{acmart}
+\usepackage{listings}
 \include{core/paperSettings} % import custom general paper settings
 \include{core/standardCommands} % import custom commands and packages
 
@@ -30,7 +31,7 @@
 \def\editorsVersion     {false} % true om editorsnote e.d. te tonen, false voor verbergen
 \def\makeTitlePage      {true}  % true om titelpagina te maken, false om over te slaan
 \def\makeTOCpage        {true}  % true om inhoudsopgave te maken, false om over te slaan
-\def\makeBibliography   {true}  % true om bibliografie te maken, false om over te slaan
+\def\makeBibliography   {false}  % true om bibliografie te maken, false om over te slaan
 
 \def\listMark           {-} % itemize marker, e.g. '-', '*', '\textbullet', etc.
 % -----------------------------------------
@@ -66,13 +67,33 @@
 
     \newpage
 
-    \section{Bezoekersgedrag Coronamaatregelen}
+   \section[Bezoekersgedrag Coronamaatregelen]{Bezoekersgedrag Coronamaatregelen (Foute kleurkeuze \& te veel informatie)}
 
-    \parencite{Ben21}
-
-    \lorem
-    \lorem
-    \lorem
+    Deze grafiek heb ik gevonden op de website van de NOS \parencite{Ben21}.
+    Ik wist dat er genoeg grafieken te vinden waren over het effect van de coronamaatregelen.
+    Deze grafiek kwam redelijk snel naar en ik was er ook redelijk snel door overrompeld.
+    \newline\newline
+    In de eerste visualisatie van de NOS gebeurt erg veel tegelijk.
+    Als je naar een nieuwsbericht kijkt, dan wil je snel de belangrijkste informatie kunnen vinden.
+    In deze grafiek is dat lastig, omdat er erg veel verschillende soorten informatie worden weergegeven.
+    Het grootste probleem is dat in het algemeen de data veel te precies wordt weergegeven.
+    Je ziet rustig 8 data punten per maand, terwijl dit niet nodig is om de trend te kunnen zien.
+    Hierdoor wordt het erg druk en onoverzichtelijk.
+    Ook is het kleurenschema niet heel goed gekozen.
+    Er wordt gebruik gemaakt van rood, geel, blauw en groen, een \textbf{foutieve kleur}combinatie voor mensen met kleurenblindheid.
+    Dit is voor mensen met prot-, deuter- en tritanopie erg lastig te onderscheiden.
+    \newline\newline
+    In mijn verbeterde grafiek heb ik gekozen voor een lijn grafiek, omdat ik dit voor de originele grafiek een erg goede keuze vond.
+    Ik heb ook gespeeld met een heatmap, maar dit vond ik uiteindelijk toch minder overzichtelijk.
+    Ik heb ervoor gekozen om de data uit te dunnen tot 1 datapunt per maand.
+    Zoals Van der Rohe al zei: ``Less is more''.
+    Hierdoor is de grafiek een stuk rustiger en overzichtelijker geworden.
+    Daarnaast heb ik gekozen voor een kleurenschema dat goed bestand is tegen verschillende soorten kleurenblindheid.
+    Ik heb het kleurenpalet op alle 3 de soorten getest en bij alle soorten bleven de kleuren goed te onderscheiden van elkaar.
+    \newline\newline
+    Ik heb de lockdown periodes aangegeven met een lichte grijze balk op de achtergrond in plaats van een enkele lijn, dit geeft de daadwerkelijke periode beter weer.
+    De ``aanscherping maatregelen'' lijn heb ik weggelaten, omdat de data daarna afgekapt werd en je dus geen conclusies kunt trekken over het effect hiervan op het bezoekersgedrag.
+    De labels zijn naar de beginpunten van de lijnen verplaatst, zodat je niet steeds heen en weer hoeft te kijken tussen de lijnen en de legenda onderaan de grafiek.
 
     \newpage
 
@@ -102,7 +123,8 @@
 
     \newpage
 
-    \section{Leesvaardigheidsscores Nederlandse scholieren}
+    %\section{Leesvaardigheidsscores Nederlandse scholieren (misleidende grafiek)}
+   \section[Leesvaardigheidsscores Nederlandse scholieren]{Leesvaardigheidsscores Nederlandse scholieren (misleidende grafiek)}
 
     Deze bron heb ik gevonden op het NRC, een landelijke krant die hier verslag deed over de dalende leesvaardigheidsscores van de Nederlandse scholieren. \parencite{Cla23}
     Ik heb hem gevonden door te zoeken op onderwerpen die vaak grafisch worden weergegeven, zoals onderwijsresultaten.
@@ -119,7 +141,7 @@
     Ik heb hier gekozen voor een barchart, omdat dit het makkelijkst is om verschillende landen met elkaar te vergelijken.
     De landen/regio’s zijn op laag naar hoog in het eerste meetjaar (2003) gesorteerd, en deze volgorde is vastgehouden door de vervolgende jaren heen.
     Zo kun je makkelijk zien hoe landen/regio’s zich ten opzichte van elkaar hebben ontwikkeld.
-
+    \newline\newline
     Ook heb ik hier gekozen voor een kleurenschema dat goed bestand is tegen verschillende soorten kleurenblindheid.
     Er is getest op Protan- Deuter- en Tritanopie en bij alle soorten bleven de kleuren goed te onderscheiden van elkaar.
     Daarnaast is de Y-as hier wel op 0 begonnen, zodat de verschillen in scores eerlijker worden weergegeven.
@@ -153,21 +175,27 @@
 
     \newpage
 
-    \section{Zetelverdeling Tweede Kamer 2021 vs 2023}
+    %\section{Zetelverdeling Tweede Kamer 2021 vs 2023 (Suboptimale channels \& lage data-ink ratio)}
+   \section[Zetelverdeling Tweede Kamer 2021 vs 2023]{Zetelverdeling Tweede Kamer 2021 vs 2023 (Suboptimale channels \& lage data-ink ratio)}
 
     De linker grafiek (tevens de originele grafiek) heb ik gevonden op de website van Oost, die verslag doet over voornamelijk Overijssel. \parencite{Oos23}
-
+    \newline\newline
     In de linker grafiek gebeurt heel veel.
     Je ziet een momentopname van 2021 en 2023 van de zetelverdeling van de Tweede Kamer.
     Maar ook de winst en verlies tussen de twee jaren.
     Deze grafiek gebruikt oppervlakte, ronding en ook verbergen ze de onzekerheid aangezien het om een prognose en 6\% van de stemmen nog niet zijn meegenomen in de visualisatie.
-    Verder is de data-inkt ratio toch tamelijk laag, omdat er erg veel poespas gebruikt is om hetzelfde aan te geven.
-
+    Deze grafiek gebruikt dus \textbf{suboptimale channels} om de data weer te geven.
+    Oppervlakte is een slechte channel om hoeveelheden mee weer te geven, omdat mensen moeite hebben met het inschatten van oppervlakte.
+    Daarnaast is ronding ook een slechte channel, omdat mensen moeite hebben met het inschatten van hoeken.
+    Er staat weliswaar een label in of naast elke stuk van de halve cirkels, maar dit had al niet gehoeven als er betere channels waren gebruikt.
+    Verder is de \txtbf{data-inkt ratio} toch tamelijk laag, omdat er erg veel poespas gebruikt is om hetzelfde aan te geven.
+    Het wapen van Nederland is erg leuk, maar draagt niets bij aan het begrijpen van de data (of misschien wilde ze je gewoon afschrikken van de grafiek, wie weet).
+    \newline\newline
     Om deze grafiek te verbeteren heb ik in dit geval heb ik gekozen voor een barchart waarbij de start en eindposities de start en eindwaardes van de hoeveelheid zetels die wordt (verwacht) behaald te worden.
     Ik heb hier gekozen voor een dubbele encodering.
     Als eerste de kleur van de balken, in dit geval het rood/groen kleurenschema.
     Deze is wel slechter te zien door mensen met Protanomalie of Protanopie, maar aangezien er tegelijkertijd gebruik wordt gemaakt van de richting van de balk om aan te geven of er een positieve of negatieve verschuiving in het behaalde aantal zetels is, kan deze grafiek ook makkelijk door mensen met (een vorm van) kleurenblindheid bekeken worden.
-
+    \newline\newline
     Ik heb alleen helaas niet kunnen vinden wat de onzekerheid van de grafiek was, aangezien deze nu ook in mijn verbeterde grafiek niet aanwezig is.
     Had ik deze wel gevonden, dan was deze in schuifgestreepte manier terug te vinden aan het einde van de balk in dezelfde kleur als de balk zelf.
 
@@ -199,7 +227,8 @@
 
     \newpage
 
-    \section{Autokleuren in Nederland}
+    %\section{Autokleuren in Nederland (lage data-ink ratio)}
+   \section[Autokleuren in Nederland]{Autokleuren in Nederland (lage data-ink ratio)}
 
     De linker grafiek van het CBS \parencite{CBS22} laat de verdeling van autokleuren in Nederland zien.
     Er gebeurt te veel tegelijk.
@@ -207,25 +236,25 @@
     Er is duidelijk een visualisatietijger een goede woensdagmiddag mee bezig geweest en het ziet er leuk uit.
     Hierdoor wordt het helaas wel lastiger dan nodig om de data af te lezen.
     Hoeveel scheelt blauw nu precies met wit?
-
-    Daarnaast is de data-ink ratio laag.
+    \newline\newline
+    Daarnaast is de \textbf{data-ink ratio laag}.
     Een groot deel van de gebruikte inkt gaat op aan decoratie: de autovormpjes, de hellende compositie, de achtergrondkleur en de schaduwwerking.
     Al die elementen dragen niets bij aan het beantwoorden van de vraag welke autokleuren dominant zijn in Nederland.
     Ze leiden af en maken het lastiger om patronen te herkennen.
     De grafische integriteit komt daarmee onder druk te staan, omdat de visuele impact niet meer in verhouding staat tot de feitelijke data.
-
+    \newline\newline
     Om dit te verbeteren heb ik gekozen voor een veel eenvoudigere visualisatie, namelijk een vlakke, overzichtelijke verdeling waarin elke kleur een duidelijk afgebakend vlak krijgt met het bijbehorende percentage.
     In deze grafiek wordt alleen oppervlakte gebruikt, zonder perspectief of diepte.
     De verhoudingen zijn direct zichtbaar en vergelijkbaar.
     Grijs is onmiskenbaar het grootst, gevolgd door zwart, en daarna pas blauw en wit.
     De kleinere categorieën verdwijnen niet, maar eisen ook niet onnodig aandacht op.
-
+    \newline\newline
     Door alle niet-essentiële elementen weg te laten, is de data-ink ratio aanzienlijk hoger.
     Vrijwel alles wat je ziet, is data.
     Er is geen poespas, geen decoratie en geen visuele ruis.
     Je krijgt zo in één oogopslag inzicht in de verdeling van autokleuren in Nederland.
     Dat maakt deze simpele grafiek niet alleen rustiger, maar vooral eerlijker en effectiever dan de originele.
-
+    \newline\newline
     Deze grafiek is helaas niet heel goed te bekijken door mensen met een vorm van kleurenblindheid.
     Echter is hiertegen wel te argumenteren dat de mensen met kleurenblindheid waarschijnlijk ook niet heel erg geïnteresseerd zijn in autokleuren, aangezien zij deze zelf ook niet goed kunnen onderscheiden.
     Ook zou het niet logisch zijn om te proberen een kleurenpalet te maken dat voor alle vormen van kleurenblindheid goed te onderscheiden is, want dan wordt het lastiger voor mensen zonder kleurenblindheid om de kleuren te linken aan de daadwerkelijke autokleuren.
@@ -258,39 +287,86 @@
 
     \newpage
 
-    \section{Gezondheidsrisico's bij twintigers}
+    %\section{Gezondheidsrisico's bij twintigers (misleidende grafiek)}
+   \section[Gezondheidsrisico's bij twintigers]{Gezondheidsrisico's bij twintigers (misleidende grafiek)}
 
     \parencite{Alw16} heeft deze kleurrijke grafiek in de Trouw gepubliceerd.
     Hij laat de toename van gezondheidsrisico’s onder twintigers zien, uitgesplitst naar geslacht.
-
+    \newline\newline
     In de originele grafiek werd gewerkt met twee rijen poppetjes, blauw voor mannen en roze voor vrouwen.
     Elk poppetje had drie bolletjes die de drie gezondheidsrisico’s moesten voorstellen.
     Op het eerste gezicht oogt dat speels, maar zodra je probeert te begrijpen hoeveel iets toeneemt, dan wordt het lastig.
     De bolletjes vertegenwoordigen percentages, maar die percentages zijn niet visueel in verhouding.
     De cirkels zijn met bijvoorbeeld 45.8\% misschien (want cirkels aflezen is lastig…) 10x kleiner dan 6.9 procent.
     Dat is natuurlijk een extreem misleidend beeld.
-
+    \newline\newline
     Daarnaast zijn de cirkels die wél met elkaar in verhouding zijn ook erg lastig met elkaar te vergelijken, omdat de gele cirkels bij de mannen tussen de twee einde verdubbeld, terwijl ze erg bijna het zelfde uitzien.
-
+    Dit is voor Trouw natuurlijk een mooie manier om het dramatische karakter van de toename te benadrukken, maar het schaadt de grafische integriteit.
+    Voor lezers is het een aardig \textbf{misleidend}e grafiek.
+    \newline\newline
     Daarnaast is de data-ink ratio laag: veel inkt gaat naar poppetjes, kleuren en decoratie, terwijl de daadwerkelijke informatie amper preciezer wordt.
-
+    \newline\newline
     In de verbeterde grafiek heb ik dit volledig omgedraaid.
     Ik heb gekozen voor lijndiagrammen, uitgesplitst per gezondheidsrisico: bloeddrukverlagers, obesitas en overgewicht.
     De tijd staat op de horizontale as, het percentage op de verticale as.
     Mannen en vrouwen worden onderscheiden met kleur, maar delen exact dezelfde schaal.
     Daardoor ontstaat meteen duidelijkheid.
     Ik zie niet alleen dat elk risico toeneemt, maar ook hoe snel, hoe sterk en wie er hoger zit.
-
+    \newline\newline
     De belangrijkste channel wordt ingezet: positie op een gemeenschappelijke schaal.
     De lijnen maken trends zichtbaar zonder extra uitleg.
     Vooral bij overgewicht springt het verschil tussen mannen en vrouwen er direct uit.
     Dat hoef je niet te interpreteren, dat zie je gewoon.
-
-    Ook hier is de data-ink ratio hoog.
-    Er is nauwelijks decoratie, geen symbolen die niets toevoegen, geen visuele grapjes.
-    Vrijwel alles wat je ziet, draagt bij aan begrip.
-
-
     \newpage
+
+    \printbibliography
+
+    \onecolumn
+
+    \appendix
+
+
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+    \lstdefinestyle{Rstyle}{
+        backgroundcolor=\color{backcolour},
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{magenta},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\ttfamily\footnotesize,
+        breakatwhitespace=false,
+        breaklines=true,
+        captionpos=b,
+        keepspaces=true,
+        numbers=left,
+        numbersep=5pt,
+        showspaces=false,
+        showstringspaces=false,
+        showtabs=false,
+        tabsize=2
+    }
+
+    \lstset{style=Rstyle}
+
+
+    \section{Broncode grafiek 1}
+    \lstinputlisting[language=R,label={lst:Bezoekersgedrag},caption={R code voor bezoekersgedrag coronamaatregelen}]{code/graph1.R}
+    \newpage
+    \section{Broncode grafiek 2}
+    \lstinputlisting[language=R,label={lst:Leesvaardigheidsscores},caption={R code voor leesvaardigheidsscores Nederlandse scholieren}]{code/graph2.R}
+    \newpage
+    \section{Broncode grafiek 3}
+    De broncode voor grafiek 3 is helaas verloren gegaan.
+    \newpage
+    \section{Broncode grafiek 4}
+    \lstinputlisting[language=R,label={lst:Autokleuren},caption={R code voor autokleuren in Nederland}]{code/graph4.R}
+    \newpage
+    \section{Broncode grafiek 5}
+    \lstinputlisting[language=R,label={lst:Gezondheidsrisico's},caption={R code voor gezondheidsrisico's bij twintigers}]{code/graph5.R}
 
 \end{document}
