@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Add R scripts for visualizations of mobility data and health risks">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Add R script for visualizations of mobility data and update workspace configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/graph5.R" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/graph5.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,35 +48,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "BibTeX.main bibliography.executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe",
-    "Shell Script.Build Latex Document.executor": "Run",
-    "Shell Script.Full build.executor": "Run",
-    "Shell Script.Renew Bibliography.executor": "Run",
-    "Shell Script.full compile.executor": "Run",
-    "Shell Script.full-compile.sh.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "Informatie-UItwisseling-Visualisatie-Opdracht",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;BibTeX.main bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Renew Bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.full compile.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.full-compile.sh.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Informatie-UItwisseling-Visualisatie-Opdracht&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\code" />
@@ -92,7 +92,7 @@
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\out" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Full build" />
+  <component name="RunManager" selected="Shell Script.Build Latex Document" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -160,7 +160,8 @@
       <workItem from="1769616479427" duration="2756000" />
       <workItem from="1769710872736" duration="5908000" />
       <workItem from="1769716852149" duration="210000" />
-      <workItem from="1769790449727" duration="6028000" />
+      <workItem from="1769790449727" duration="6043000" />
+      <workItem from="1769798823904" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="Add project configuration files and standard LaTeX commands">
       <option name="closed" value="true" />
@@ -546,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769798264714</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Add R script for visualizations of mobility data and update workspace configuration">
+      <option name="closed" value="true" />
+      <created>1769798440218</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1769798440218</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add README, LICENSE, and update paper settings for bibliography inclusion" />
     <MESSAGE value="Disable bibliography generation in paper settings" />
     <MESSAGE value="Refactor document structure and enhance table of contents functionality" />
     <MESSAGE value="removed unnecessary stuff" />
@@ -589,7 +597,8 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="Add color palette figure for color vision deficiencies in main.tex" />
     <MESSAGE value="Add R scripts for visualizations of mobility data and health risks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add R scripts for visualizations of mobility data and health risks" />
+    <MESSAGE value="Add R script for visualizations of mobility data and update workspace configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add R script for visualizations of mobility data and update workspace configuration" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
