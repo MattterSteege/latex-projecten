@@ -2,7 +2,6 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 
-# Data invoeren
 data <- data.frame(
   Periode = c("1987-1991", "1993-1997", "1998-2002", "2003-2007"),
   Vrouwen_Overgewicht = c(16.2, 28.1, 39.1, 45.8),
