@@ -30,13 +30,93 @@
 \def\editorsVersion     {false} % true om editorsnote e.d. te tonen, false voor verbergen
 \def\makeTitlePage      {true}  % true om titelpagina te maken, false om over te slaan
 \def\makeTOCpage        {true}  % true om inhoudsopgave te maken, false om over te slaan
-\def\makeBibliography   {true}  % true om bibliografie te maken, false om over te slaan
+\def\makeBibliography   {false}  % true om bibliografie te maken, false om over te slaan
 
 \def\listMark           {-} % itemize marker, e.g. '-', '*', '\textbullet', etc.
 % -----------------------------------------
 \begin{document}
 
+    \onecolumn
 
+    \section{Relationele model \& algebra}
 
+    \subsection{defenities}
+
+    \begin{table}[h]
+        \centering
+        \resizebox{0.6\textwidth}{!}{%
+            \begin{tabular}{|l|l|l|l|}
+                \hline
+                \multicolumn{4}{|c|}{\textbf{\color{olive}Relatieschema: Movie}} \\ \hline
+                \rowcolor{gray!20}
+                \textbf{\color{teal}movid} &
+                \textbf{\color{teal}title} &
+                \textbf{\color{teal}year} &
+                \textbf{\color{teal}rating} \\ \hline
+                tt0469494 & There will be blood & 2007 & 8,1 \\ \hline
+                tt0086879 & Amadeus & 1984 & 8,4 \\ \hline
+                tt0102926 & The silence of the lambs & 1991 & 8,6 \\ \hline
+                ... & ... & ... & ... \\ \hline
+            \end{tabular}
+        }
+    \end{table}
+
+    \vsmall
+
+    \textbf{Uitleg gekoppeld aan de tabel:}
+
+    \begin{itemize}
+        \item \textbf{\color{olive}Movie} is het \textbf{relatieschema} $R$
+        $R(\text{movid}, \text{title}, \text{year}, \text{rating})$
+
+        \item De \textbf{\color{teal}kolomnamen} zijn de \textbf{attributen}
+        $attr(R) = \{\text{movid}, \text{title}, \text{year}, \text{rating}\}$
+
+        \item Het aantal attributen is 4, dus de \textbf{degree} is 4
+
+        \item Elke rij in de tabel is één \textbf{tuple}
+        Bijvoorbeeld:
+        $<\text{tt0469494}, \text{There will be blood}, 2007, 8{,}1>$
+
+        \item Elk attribuut heeft zijn \textbf{domein}:
+        \begin{itemize}
+            \item movid $\rightarrow$ string
+            \item title $\rightarrow$ string
+            \item year $\rightarrow$ integer
+            \item rating $\rightarrow$ float
+        \end{itemize}
+
+        \item Alle rijen samen vormen de \textbf{relatie} $r(Movie)$
+    \end{itemize}
+
+    \subsection{Keys}
+    \begin{itemize}
+        \item \textbf{Key} is een attribuut of combinatie van attributen die een tuple uniek identificeert binnen een relatie.
+        Bijvoorbeeld: movid is een key voor Movie.
+
+        \item \textbf{Superkey} is een attribuut of combinatie van attributen die een tuple uniek identificeert, maar kan ook extra attributen bevatten.
+        Bijvoorbeeld: (movid, title) is een superkey voor Movie.\\
+        Definitie: Een set van attributen $K \subseteq attr(R)$ is een superkey als voor elke relatie $r(R)$: $\forall t_1, t_2 \in r(R): t_1[K] = t_2[K] \Rightarrow t_1 = t_2$.
+        of: "Als twee tuples dezelfde waarden hebben voor alle attributen in K, dan zijn het dezelfde tuples."
+
+        \item \textbf{Candidate key} is een minimale superkey, wat betekent dat het geen extra attributen bevat die niet nodig zijn voor unieke identificatie.
+        Bijvoorbeeld: movid is een candidate key voor Movie.
+        Definitie: Een set van attributen $K \subseteq attr(R)$ is een candidate key als K een superkey is en geen echte subset van K een superkey is.
+        of: "Er is geen kleinere subset van attributen die ook een superkey is."
+
+        \item \textbf{Primary key} is de gekozen candidate key die wordt gebruikt om tuples uniek te identificeren binnen een relatie.
+        Bijvoorbeeld: movid is de primary key voor Movie.
+
+        \item \textbf{Foreign key} is een attribuut of combinatie van attributen in een relatie die verwijst naar de primary key van een andere relatie.
+        Bijvoorbeeld: in een relatie Actor met attribuut movid als foreign key die verwijst naar de primary key movid in Movie.
+        Dit kan je gebruiken om aan te geven in welke films een acteur heeft gespeeld.
+        Definitie: Een set attributen $K \in attr(R)$ is een foreign key van relatie $R_j$ als candidate key.
+        $R_i[K]$ verwijst naar de primary key van relatie $R_j$.
+        of: "De waarden van K in $R_i$ moeten overeenkomen met de waarden van de primary key in $R_j$."
+
+        \item \textbf{Key constraints} zorgen ervoor dat de waarden van de key-attributen uniek zijn binnen de relatie en niet null mogen zijn.
+
+        \item De \textbf{referential integrity constraints} zorgen ervoor dat de waarden van de foreign key-attributen overeenkomen met de waarden van de primary key in de gerelateerde relatie, of null zijn als er geen overeenkomst is.
+    \end{itemize}
 \end{document}
 
