@@ -151,6 +151,12 @@
 
         \item \textbf{division} ($\div$), de division-operator retourneert de tuples uit de eerste relatie die overeenkomen met alle tuples in de tweede relatie.
         Voorbeeld: $R_1 \div R_2$ geeft alle tuples uit relatie $R_1$ die overeenkomen met alle tuples in relatie $R_2$ op basis van een gemeenschappelijk attribuut.
+
+        \item \textbf{Assignment \& renaming} $T := $<alg_expr>, de assignment-operator wijst het resultaat van een relationele algebra-expressie toe aan een nieuwe relatie $T$.
+        Voorbeeld: $T := \sigma_{\text{year} > 2000}(Movie)$ creëert een nieuwe relatie $T$ die alle films bevat die zijn uitgebracht na het jaar 2000.
+
+        \item \textbf{Renaming on the fly} ($\rho(T)$(<alg_expr>), de renaming-operator wijst het resultaat van een relationele algebra-expressie toe aan een nieuwe relatie $T$ zonder een permanente naam te creëren.
+        Voorbeeld: $\rho(T)(\sigma_{\text{year} > 2000}(Movie))$ creëert een tijdelijke relatie $T$ die alle films bevat die zijn uitgebracht na het jaar 2000, maar deze relatie is alleen beschikbaar binnen de context van deze expressie.
     \end{itemize}
 
     \begin{voorbeeld}{bibliotheek schema}
@@ -173,8 +179,6 @@
             \item $\text{Reader}\bowtie (\text{Loan}\bowtie \sigma_{\text{author} = 'Dickens'}(\text{Book}))$ combineert de lezers met de leningen van Dickens' boeken om alle lezers te vinden die deze boeken hebben geleend.
             \item $\pi_{\text{name}}(\ldots)$ projecteert alleen de namen van deze lezers.
         \end{itemize}
-
-
     \end{voorbeeld}
 
 \end{document}
