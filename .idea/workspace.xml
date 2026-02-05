@@ -13,6 +13,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Matt/WebstormProjects/latex-projecten" value="39FHuZf05TtUzX5lMTBRkhJgtz3" />
+    </persistenceIdMap>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -22,13 +27,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="39FHuZf05TtUzX5lMTBRkhJgtz3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Ontwerpen-Van-Interactieve-Systemen&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -37,6 +55,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Shell Script.Build Latex Document" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Update main.tex with document title, author details, and initial content structure">
       <option name="closed" value="true" />
@@ -54,8 +79,30 @@
       <option name="project" value="LOCAL" />
       <updated>1770283413983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add initial content on human factors and cognitive ergonomics to main.tex">
+      <option name="closed" value="true" />
+      <created>1770283856747</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770283856747</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Add initial content on human factors and cognitive ergonomics to main.tex" />
+      <created>1770285123317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770285123317</updated>
+      <workItem from="1770285124751" duration="58000" />
+      <workItem from="1770285267749" duration="21000" />
+      <workItem from="1770285506485" duration="1217000" />
+      <workItem from="1770291069609" duration="1530000" />
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor document settings and add initial content structure" />
@@ -63,5 +110,13 @@
     <MESSAGE value="Update main.tex with document title, author details, and initial content structure" />
     <MESSAGE value="Add initial content on human factors and cognitive ergonomics to main.tex" />
     <option name="LAST_COMMIT_MESSAGE" value="Add initial content on human factors and cognitive ergonomics to main.tex" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
