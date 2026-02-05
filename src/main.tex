@@ -38,6 +38,7 @@
 
     \onecolumn
 
+
     \section{Relationele model \& algebra}
 
     \subsection{defenities}
@@ -53,10 +54,10 @@
                 \textbf{\color{teal}title} &
                 \textbf{\color{teal}year} &
                 \textbf{\color{teal}rating} \\ \hline
-                tt0469494 & There will be blood & 2007 & 8,1 \\ \hline
-                tt0086879 & Amadeus & 1984 & 8,4 \\ \hline
+                tt0469494 & There will be blood      & 2007 & 8,1 \\ \hline
+                tt0086879 & Amadeus                  & 1984 & 8,4 \\ \hline
                 tt0102926 & The silence of the lambs & 1991 & 8,6 \\ \hline
-                ... & ... & ... & ... \\ \hline
+                ...       & ...                      & ...  & ... \\ \hline
             \end{tabular}
         }
     \end{table}
@@ -118,5 +119,63 @@
 
         \item De \textbf{referential integrity constraints} zorgen ervoor dat de waarden van de foreign key-attributen overeenkomen met de waarden van de primary key in de gerelateerde relatie, of null zijn als er geen overeenkomst is.
     \end{itemize}
+
+    \subsection{Selectie \& Projectie}
+
+    \begin{itemize}
+        \item \textbf{Selectie} ($\sigma_p$), $\sigma$ is een operator die rijen (tuples) selecteert uit een relatie op basis van het predicaat $p$.
+
+        \item \textbf{and ($\land$)} en \textbf{or ($\lor$)} worden gebruikt om meerdere voorwaarden te combineren in het predicaat.
+        Voorbeeld: $\sigma_{\text{year} > 2000 \land \text{rating} > 8}(Movie)$ selecteert alle films uit de Movie-relatie die zijn uitgebracht na het jaar 2000 en een beoordeling hoger dan 8 hebben.
+
+        \item \textbf{Projectie} ($\pi_L$), $\pi$ is een operator die kolommen (attributen) selecteert uit een relatie op basis van de lijst van attributen $L$.
+        Voorbeeld: $\pi_{\text{title}, \text{year}}(Movie)$ projecteert alleen de titel en het jaar van de films uit de Movie-relatie.
+
+        \item \textbf{union} ($\cup$), de unie-operator combineert de resultaten van twee relaties door alle unieke tuples uit beide relaties te behouden.
+        Voorbeeld: $R_1 \cup R_2$ geeft alle unieke tuples die voorkomen in zowel relatie $R_1$ als relatie $R_2$.
+        
+        \item \textbf{intersection} ($\cap$), de intersectie-operator retourneert de tuples die voorkomen in beide relaties.
+        Voorbeeld: $R_1 \cap R_2$ geeft alle tuples die in zowel relatie $R_1$ als relatie $R_2$ voorkomen.
+
+        \item \textbf{set difference} ($-$), de verschil-operator retourneert de tuples die voorkomen in de eerste relatie maar niet in de tweede.
+        Voorbeeld: $R_1 - R_2$ geeft alle tuples die in relatie $R_1$ voorkomen maar niet in relatie $R_2$.
+
+        \item \textbf{cartesian product} ($\times$), het cartesisch product combineert elke tuple van de eerste relatie met elke tuple van de tweede relatie.
+        Voorbeeld: $R_1 \times R_2$ geeft alle mogelijke combinaties van tuples uit relatie $R_1$ en relatie $R_2$.
+
+        \item \textbf{thetha-join} ($\bowtie_{\theta}$), de theta-join-operator combineert tuples uit twee relaties op basis van een opgegeven voorwaarde $\theta$.
+        Voorbeeld: $R_1 \bowtie_{\text{R1.attr} = \text{R2.attr}} R_2$ combineert tuples uit relatie $R_1$ en relatie $R_2$ waar de waarden van het attribuut attr gelijk zijn.
+
+        \item \textbf{natural join} ($\bowtie$), de natural join-operator combineert tuples uit twee relaties op basis van gemeenschappelijke attributen met dezelfde naam.
+        Voorbeeld: $R_1 \bowtie R_2$ combineert tuples uit relatie $R_1$ en relatie $R_2$ waar de waarden van de gemeenschappelijke attributen gelijk zijn.
+
+        \item \textbf{division} ($\div$), de division-operator retourneert de tuples uit de eerste relatie die overeenkomen met alle tuples in de tweede relatie.
+        Voorbeeld: $R_1 \div R_2$ geeft alle tuples uit relatie $R_1$ die overeenkomen met alle tuples in relatie $R_2$ op basis van een gemeenschappelijk attribuut.
+    \end{itemize}
+
+    \begin{voorbeeld}{bibliotheek schema}
+        Stel je hebt de volgende schema's voor een bibliotheekdatabase:
+        \begin{itemize}
+            \item \textbf{Book}(\text{book\_id}, \text{title}, \text{author}, \text{year})
+            \item \textbf{Member}(\text{member\_id}, \text{name}, \text{join\_date})
+            \item \textbf{Loan}(\text{loan\_id}, \text{book\_id}, \text{member\_id}, \text{loan\_date}, \text{return\_date})
+        \end{itemize}
+
+        \vsmall
+
+        \textbf{Geef alle namen van lezers die minstens één boek hebben geleend van Dickens.}\\
+        \[\pi_{\text{name}}(\text{Reader}\bowtie (\text{Loan}\bowtie \sigma_{\text{author} = 'Dickens'}(\text{Book})))\]
+
+        Uitleg:\\
+        \begin{itemize}
+            \item $\sigma_{\text{author} = 'Dickens'}(\text{Book})$ selecteert alle boeken geschreven door Dickens.
+            \item $\text{Loan}\bowtie \sigma_{\text{author} = 'Dickens'}(\text{Book})$ combineert de leningen met de geselecteerde boeken om alle leningen van Dickens' boeken te vinden.
+            \item $\text{Reader}\bowtie (\text{Loan}\bowtie \sigma_{\text{author} = 'Dickens'}(\text{Book}))$ combineert de lezers met de leningen van Dickens' boeken om alle lezers te vinden die deze boeken hebben geleend.
+            \item $\pi_{\text{name}}(\ldots)$ projecteert alleen de namen van deze lezers.
+        \end{itemize}
+
+
+    \end{voorbeeld}
+
 \end{document}
 
