@@ -181,5 +181,50 @@
         \end{itemize}
     \end{voorbeeld}
 
-\end{document}
+    \section{Enity Relationship diagrams (ERD)}
+    Als je een database wilt maken, dan is het belangrijk dat je het domein goed modelleert.
+    Een ERD is een grafische weergave van de entiteiten, attributen en relaties binnen een domein.
+    Het helpt bij het ontwerpen van databases door de structuur en de onderlinge verbanden duidelijk te maken.
+
+    ER diagrammen hebben verschillende componenten:
+    \begin{itemize}
+        \item \textbf{Rechthoek} Geeft een entiteit weer, bijvoorbeeld een persoon, plaats of ding.
+        \item \textbf{Ovaal} Geeft een attribuut weer, bijvoorbeeld een naam, leeftijd of adres.
+        \item \textbf{Ruit} Geeft een relatie weer tussen entiteiten, bijvoorbeeld "werkt bij" of "heeft".
+        \item \textbf{Lijn} Verbindt entiteiten, attributen en relaties om de structuur van het domein te tonen.
+    \end{itemize}
+
+    Deze lijnen/relaties kunnen ook kardinaliteiten hebben, zoals 1:1, 1:N of M:N, om aan te geven hoeveel entiteiten er betrokken zijn bij de relatie.\\
+    1:1 (één-op-één) betekent dat één entiteit van het ene type overeenkomt met precies één entiteit van het andere type.\\
+    1:N (één-op-veel) betekent dat één entiteit van het ene type overeenkomt met meerdere entiteiten van het andere type.\\
+    M:N (veel-op-veel) betekent dat meerdere entiteiten van het ene type overeenkomen met meerdere entiteiten van het andere type.\\
+
+    Ook kan je deelname aan een relatie aangeven als verplicht (1,\ldots) of optioneel (0,\ldots), wat aangeeft of een entiteit deel moet nemen aan de relatie of niet.
+
+    %TODO: ERD voorbeeld toevoegen met annotaties
+
+    Zwakke entiteiten kunnen alleen bestaan in relatie tot een andere entiteit, en hebben een gedeeltelijke sleutel die samen met de sleutel van de gerelateerde entiteit een unieke identificatie vormt.
+    Bijvoorbeeld een afboeking als je iets koopt kan alleen als je een bankrekening hebt, en de afboeking heeft een gedeeltelijke sleutel die samen met de rekeningnummer van de bankrekening een unieke identificatie vormt.
+
+    \section{Functional dependencies \& normalisatie}
+
+    \subsection{Normalisatietheorie}
+    Wanneer is een databaseontwerp goed?\\
+
+
+    %TODO: uitleg normalisatie
+
+    \subsection{Functional dependencies}
+    FD heeft een notatie die als volgt gaat:\\
+    In plaats van:
+    $X = {A, B,C}$ en $Y = {D, E}$\\
+    $X \cup Y = {A, B, C, D, E}$\\
+    Schrijf je:
+    $X = ABC$ en $Y = DE$\\
+    $XY = ABCDE$\\
+
+
+
+
+    \end{document}
 
