@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Refactor main.tex to enhance document structure and add new sections">
+    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Enhance main.tex with new sections on conceptual and physical design, and update workspace configuration for full build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       <recent name="C:\Users\mattt\Documents\Uni\latex-projecten\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Full build" />
+  <component name="RunManager" selected="Shell Script.Build Latex Document" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -99,7 +98,15 @@
       <workItem from="1770285506485" duration="1217000" />
       <workItem from="1770291069609" duration="1530000" />
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Enhance main.tex with new sections on conceptual and physical design, and update workspace configuration for full build">
+      <option name="closed" value="true" />
+      <created>1770888172641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770888172641</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +117,8 @@
     <MESSAGE value="Update LaTeX document with relational model content and remove unused bibliography entry" />
     <MESSAGE value="Update main.tex with document title, author details, and initial content structure" />
     <MESSAGE value="Add initial content on human factors and cognitive ergonomics to main.tex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initial content on human factors and cognitive ergonomics to main.tex" />
+    <MESSAGE value="Enhance main.tex with new sections on conceptual and physical design, and update workspace configuration for full build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance main.tex with new sections on conceptual and physical design, and update workspace configuration for full build" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
