@@ -133,7 +133,7 @@
 
         \item \textbf{union} ($\cup$), de unie-operator combineert de resultaten van twee relaties door alle unieke tuples uit beide relaties te behouden.
         Voorbeeld: $R_1 \cup R_2$ geeft alle unieke tuples die voorkomen in zowel relatie $R_1$ als relatie $R_2$.
-        
+
         \item \textbf{intersection} ($\cap$), de intersectie-operator retourneert de tuples die voorkomen in beide relaties.
         Voorbeeld: $R_1 \cap R_2$ geeft alle tuples die in zowel relatie $R_1$ als relatie $R_2$ voorkomen.
 
@@ -181,6 +181,7 @@
         \end{itemize}
     \end{voorbeeld}
 
+
     \section{Enity Relationship diagrams (ERD)}
     Als je een database wilt maken, dan is het belangrijk dat je het domein goed modelleert.
     Een ERD is een grafische weergave van de entiteiten, attributen en relaties binnen een domein.
@@ -206,6 +207,7 @@
     Zwakke entiteiten kunnen alleen bestaan in relatie tot een andere entiteit, en hebben een gedeeltelijke sleutel die samen met de sleutel van de gerelateerde entiteit een unieke identificatie vormt.
     Bijvoorbeeld een afboeking als je iets koopt kan alleen als je een bankrekening hebt, en de afboeking heeft een gedeeltelijke sleutel die samen met de rekeningnummer van de bankrekening een unieke identificatie vormt.
 
+
     \section{Functional dependencies \& normalisatie}
 
     \subsection{Normalisatietheorie}
@@ -215,16 +217,63 @@
     %TODO: uitleg normalisatie
 
     \subsection{Functional dependencies}
-    FD heeft een notatie die als volgt gaat:\\
-    In plaats van:
-    $X = {A, B,C}$ en $Y = {D, E}$\\
-    $X \cup Y = {A, B, C, D, E}$\\
-    Schrijf je:
-    $X = ABC$ en $Y = DE$\\
-    $XY = ABCDE$\\
+    Stel je hebt een universum $R(A,B,C,D)$.
+    Je hebt de regels $A \rightarrow B, B \rightarrow C, A \rightarrow C$
 
+    Dan kan je concluderen dat $A \rightarrow AB \rightarrow ABC$, ofwel $A \rightarrow ABC$.\\\\
 
+    Stel je hebt $A \rightarrow BCD$, dan kan je zeggen $A \rightarrow B$
 
+    \begin{voorbeeld}{Voorbeeld van functionele afhankelijkheden}
+        We hebben een schema $R(ABCDEFG)$ en een set FD's: $F = {C \rightarrow DE, A \rightarrow C, G \rightarrow D, B \rightarrow G}$\\
+        We willen de closure van $A$ berekenen, oftewel $A^+$, om te zien welke attributen functioneel afhankelijk zijn van $A$.\\
+        We beginnen met $A^+ = \{A\}$ (omdat $A$ altijd functioneel afhankelijk is van zichzelf).\\
+        We kijken naar de FD's in $F$ en zien dat $A \rightarrow C$ in $F$ zit, dus we voegen $C$ toe aan $A^+$: $A^+ = \{A, C\}$.\\
+        Nu kijken we opnieuw naar de FD's en zien dat $C \rightarrow DE$ in $F$ zit, en aangezien $C$ al in $A^+$ zit, kunnen we $D$ en $E$ ook toevoegen aan $A^+$: $A^+ = \{A, C, D, E\}$.\\
+        We kijken nogmaals naar de FD's, maar er zijn geen FD's meer die we kunnen toepassen op de attributen in $A^+$, dus we zijn klaar.\\
 
-    \end{document}
+        \\\\
+        Stel wel willen $(AB)^+$ weten (notitie, dat is dus NIET $AB^+$, want dat is $A(B)^+$)\\
 
+    \end{voorbeeld}
+
+    \subsection{Decompositie}
+
+    \begin{voorbeeld}{XYZ-regel (Verliesvrij)}
+        Gegeven \(R(ABCDE)\) en FD's \(F = \{A \rightarrow C,\; C \rightarrow BE,\; A \rightarrow E\}\).\\
+        Beschouw de decompositie \(R_1 = (AC)\) en \(R_2 = (ABDE)\).\\
+        \vspace{\baselineskip}
+        De gemeenschappelijke attributen zijn \(X = R_1 \cap R_2 = \{A\}\).\\ Schrijf \(Y = R_1 \setminus X = \{C\}\) en \(Z = R_2 \setminus X = \{B,D,E\}\).\\
+        \vspace{\baselineskip} 
+        Volgens de XYZ-regel is de decompositie verliesvrij als \(X \rightarrow Y\) of \(X \rightarrow Z\) geldt (met betrekking tot \(F^+\)).\\
+        Controleer \(A \rightarrow C\) en \(A \rightarrow BDE\):\\
+        uit \(F\) volgt \(A \rightarrow C\) en \(A \rightarrow E\), maar er is geen \(A \rightarrow B\) en geen \(A \rightarrow D\).\\
+        Dus geldt \(A \rightarrow C\) maar niet \(A \rightarrow BDE\).\\
+        \vspace{\baselineskip}
+        Conclusie: de decompositie \( (AC)\; (ABDE)\) is verliesvrij volgens de gegeven FD's.\\
+    \end{voorbeeld}
+
+    \vspace{\baselineskip}
+
+    \begin{voorbeeld}{XYZ-regel (niet verliesvrij)}
+        Gegeven \(R(ABCDE)\) en FD's \(F = \{A \rightarrow C,\; C \rightarrow BE,\; A \rightarrow E\}\).\\
+        Beschouw de decompositie \(R_1 = (AC)\) en \(R_2 = (CBDE)\).\\
+        \vspace{\baselineskip}
+        De gemeenschappelijke attributen zijn \(X = R_1 \cap R_2 = \{C\}\).\\
+        Schrijf \(Y = R_1 \setminus X = \{A\}\) en \(Z = R_2 \setminus X = \{B,D,E\}\).\\
+        \vspace{\baselineskip}
+        Volgens de XYZ-regel is de decompositie verliesvrij als \(X \rightarrow Y\) of \(X \rightarrow Z\) geldt (met betrekking tot \(F^+\)).\\
+        Controleer \(C \rightarrow A\) en \(C \rightarrow BDE\):\\
+        uit \(F\) volgt \(C \rightarrow B\) en \(C \rightarrow E\), maar er is geen \(C \rightarrow A\) en geen \(C \rightarrow D\).\\
+        Dus geldt noch \(C \rightarrow A\) noch \(C \rightarrow BDE\).\\
+        \vspace{\baselineskip}
+        Conclusie: de decompositie \( (AC)\; (CBDE)\) is niet verliesvrij volgens de gegeven FD's.\\
+    \end{voorbeeld}
+
+    %TODO: Je hebt de XYZ regel, dan kan je checken of 2 dingen gelijk zijn:
+    %vraag HW online
+    %Dan moet je koijken tussen 2 sets, welke letter(s) gelijk zijn
+    % ALS X mogelijk te bereikin is, dat is het deel van de sets dat je overhoud als je de gemeenschappelijke letters weglaat, dan kan je concluderen dat de 2 sets gelijk zijn.
+    %De Y is wat resteertn als je de gemeenschappelijke letters weglaat, en dat is wat je overhoudt als je de XYZ regel toepast.
+
+\end{document}
