@@ -1,31 +1,16 @@
-% main.tex
-% Universitaire Papers - Full Documentation & Usage Guide
-% Author: Matt
-% Purpose: A self-contained manual that explains paperSettings.tex,
-%          standardCommands.tex and demonstrates how to use the macros.
-%
-% Save this file as main.tex in the root of the repo alongside:
-%   - paperSettings.tex
-%   - standardCommands.tex
-%   - main.bib
-%
-% Compile with: buildLatexDocument.sh (or fullBuild.sh)
-% Or upload to Overleaf and compile there.
-% -----------------------------------------
-
 % ----------- Document settings -----------
 \documentclass[nonacm, sigconf, balance=true]{acmart}
 \include{core/paperSettings} % import custom general paper settings
 \include{core/standardCommands} % import custom commands and packages
 
-\def\documentTitle      {} % replace with actual document title
+\def\documentTitle      {Investigating the organisation strategy, business model, ict and sustainability topics of IKEA} % replace with actual document title
 \def\documentSubtitle   {} % replace with actual subtitle if any, else leave empty
-\def\authorName         {} % replace with actual author name
+\def\authorName         {Max Harmsen - 2335778 - m.harmsen2@students.uu.nl,\\Matt ter Steege - 9932003 - m.j.tersteege@students.uu.nl,\\Marc Jan van Veldhuizen - 1263285 - j.m.vanveldhuizen@students.uu.nl} % replace with actual author name
 \def\authorEmail        {} % replace with actual author email
 \def\institutionName    {Universiteit Utrecht} % replace with actual institution name
 \def\institutionCountry {Nederland} % replace with actual institution location
 \def\institutionCity    {Utrecht} % replace with actual institution location
-\def\dueDate            {} % replace with actual due date
+\def\dueDate            {20-02-2026} % replace with actual due date
 
 \def\editorsVersion     {false} % true om editorsnote e.d. te tonen, false voor verbergen
 \def\makeTitlePage      {true}  % true om titelpagina te maken, false om over te slaan
@@ -33,385 +18,328 @@
 \def\makeBibliography   {true}  % true om bibliografie te maken, false om over te slaan
 
 \def\listMark           {-} % itemize marker, e.g. '-', '*', '\textbullet', etc.
+
 % -----------------------------------------
+
 \begin{document}
-
-% ----------------------------
-% REMOVE FROM HERE ONCE COPIED
-% ----------------------------
-
-    \begin{center}
-        \small
-        Repository: \url{https://github.com/MattterSteege/Universitaire-papers} \\
-        This document explains how to use the template, the meaning of settings,
-        and demonstrates every custom command from \texttt{standardCommands.tex}.
-    \end{center}
-
-    \vmed
-    \clearpage
 
     \onecolumn
 
-% -------------
-% INTRO SECTION
-% -------------
-
-
-    \section{Introduction — what this repo gives you}
-    This repository is a compact but opinionated LaTeX template intended to make writing short academic papers and reports fast and consistent.
-
-    In short, you get:
-    \begin{itemize}
-        \item \textbf{A small settings file} (\texttt{paperSettings.tex}) that centralizes document-level choices (margins, fonts, packages).
-        \item \textbf{A macro library} (\texttt{standardCommands.tex}) that provides frequently used helpers: spacing utilities, quote formatting, editor-only notes, simple table helpers, and tiny text-processing utilities.
-        \item \textbf{A bibliography file} (\texttt{main.bib}) for references.
-        \item \textbf{This documentation} (\texttt{main.tex}) for your main entry point, explaining how to use the settings and macros.
-        \vmed
-        \item \textbf{Bash build scripts} to compile the document locally or on Overleaf.
-    \end{itemize}
-
-    This `main.tex` acts as a \emph{user manual} and a demonstration. Open it, compile it, and you will see rendered examples next to the explanation.
-
-% -------------
-% QUICK START
-% -------------
 
+    \section{Our chosen organization}
+    IKEA Netherlands (from now on mentioned as IKEA) is a concern generating over 1.6 billion in revenue in the year 2024.
+    The company has stores in 62 countries all over the world.
+    Almost every household in the Netherlands has one or more products bought at IKEA, so this company comes close to our own lives.
+    Their vision is to create a better daily life for as many people as possible.
+    This goes further than interior, because they want to have a positive impact on the world.
+    They also have an idea about how their business should work
+    \uitspraak{to offer a wide range of well-designed, functional home furnishing products at prices so low that as many people as possible will be able to afford them.}{ikea_vision_values_nd}{1}
+
+    The company IKEA was founded in 1943 in Älmhult  (Sweden) by Feodor Ingvar Kamprad.
+    He started when he was 17 years old with his first intention, selling products to farmers.
+    In 1947, the company started with furniture, and in 1951, it switched completely to furniture.
+    In 1973, the first shop outside of Sweden was opened in Zürich, and in 1978, the first store opened its doors in the Netherlands.
+    The classic Swedish meatballs were introduced in the year 1985.
+
+    Even with a revenue of 1.6 billion, IKEA is available on the stock market; they have always been a family business, and in 1982, they became a part of the INGKA foundation.
+    The work culture at IKEA is characterised by equality.
+    They try to reflect the society, and their goal is to be as close as possible by 2027 \parencite{ikea_kansengelijkheid_2024}.
+
+    The methods we are using are getting data from websites on the internet.
+    The first place we got data for our report is the website of IKEA itself here are a lot of public articles.
+    Another source we used are articles retrieved from the KVK.
+
+
+    \section{Strategy}
+
+    \subsection{Strategic focus of IKEA}
+
+    \begin{multicols}{2}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[height=10\baselineskip]{images/Afbeelding1}
+            \caption{Placement of IKEA in the diagram derived from the assignment \prepostparencite[][, p. 2]{uu_brightspace_2026}.}
+            \label{fig:strategic_focus}
+        \end{figure}
+
+        When looking at the dimensions of strategic focus  (figure \ref{fig:strategic_focus}), IKEA would be placed in the top left corner of the diagram.
+        IKEA has 3 main profit departments, being physical stores, online stores, and IKEA Food (IKEA physical stores and the online stores have the same inventory).
+        This inventory ranges from ovens and stoves to beds but also includes furniture like tables and couches and even smart home solutions.
+        Together with the fact that IKEA also provides a restaurant that serves not only coffee but also three-course meals too, one can conclude that IKEA’s competitive scope is \textit{broad}.
+        This observation would place IKEA in the top half of the diagram.
+    \end{multicols}
+
+    Now, continuing to the x-axis of the diagram.
+    One of IKEA’s key values is \textit{cost-consciousness} \parencite{ikea_culture_nd}.
+    This means that IKEA wants to be as accessible as possible for everybody, even if one has little to spend.
+    This key value is also acted upon.
+    In the annual report of 2024, the board of directors stated the following:
+    \uitspraak{The gross profit on sales landed on EUR 577 million, -1.9\% compared to the prior year. This is partly caused by lower sales prices to encourage customer spending, despite the increase in cost prices.}{ikea_nl_annual_2024}{}
+    This statement shows that IKEA Nederland not only recognises the key values of IKEA, but they also act upon them, even if it means losing profit compared to the previous year.
+    This would place IKEA into the \textit{low-cost} box and therefore in the top left corner of the diagram.
+
+    Not only does IKEA focus on low costs for the customer, but it also differentiates itself on multiple levels.
+    Think of the iconic Swedish meatballs, which are served at every IKEA restaurant throughout the country, or the distinctive blue and yellow colour combination.
+    Recognition of this strong branding became evident during the World Branding Awards, where IKEA won the Best Brand award globally in the category Furniture – Home Living \parencite{world_branding_awards_nd}.
+    However, IKEA does not only differentiate itself by its strong brand.
+    The main characteristic of IKEA products is the fact that one has to build their just-bought product themselves.
+    Few companies have managed to implement the DIY (Do It Yourself) into their products on the same scale as IKEA has.
+    However, not only does the flat packaging (or DIY packages) differentiate IKEA from other companies, but it also cuts costs in both transport and assembly.
+    Therefore, returning to one of IKEA’s key values, namely being cost-conscious.
+    Although the diagram lets one assume a company can either focus on uniqueness or on low costs, IKEA shows that one can be unique while focusing on lowering costs.
+
+    To conclude, IKEA belongs in the top-left corner of the strategic diagram (figure \ref{fig:strategic_focus}).
+    This is the result of the large scale on which IKEA operates, together with its key value being cost-conscious.
+    The biggest thing that makes IKEA unique (being their iconic DIY packages) also contributes to the cost-effective mindset, which concludes the decision that IKEA should be placed in the \textit{low-cost leadership }box.
+
+    \subsection{Analyse the forces impacting the organisation}
+    Using Porter’s five forces model, we will now analyse the external factors that might influence how IKEA should be structured to maintain a stable market share over the years.
+
+    \subsection*{Competitive Rivalry}
+    The number of rivals who operate on the same scale as IKEA (throughout the whole Netherlands) is low.
+    However, IKEA does compete with small, local furniture stores that also focus on low prices.
+    Think of second-hand furniture stores and discount stores.
+    The advantage that IKEA has over its rivals is that every product of IKEA is new, and IKEA products among themselves are unified, meaning they match with each other.
+    When buying the furniture from, for example, a discount store, the different products might not match as well.
+
+    The furniture market of the Netherlands is mature, meaning that there will not be much growth or decline.
+    This means that whenever all market shares are already divided among the companies, and if an organisation wants to expand, it has to take some market share from a competitor.
+    This makes the competitive rivalry higher from the point of view of IKEA.
+
+    This competitive rivalry increases due to the fact that the products of IKEA differentiate themselves mainly through the DIY concept, but apart from that, the products stay ordinary.
+    This means that customers will only keep buying from IKEA when the prices stay low, meaning that the prices of IKEA must stay competitive in comparison to their rivals.
+
+    To conclude, the competitive rivalry of IKEA is medium to high.
+    This is mainly caused by the fact that the furniture market of the Netherlands has already matured, and the products of IKEA do not differentiate themselves enough for the customers to keep choosing them when the price increases.
+
+    \subsection*{Power of Suppliers}
+    IKEA has over 2100 different suppliers throughout the world \parencite{ikea_suppliers_nd}.
+    Since IKEA Netherlands is part of IKEA Global, it has access to almost all 2,100 suppliers.
+    Each of these suppliers does have to live up to the IWAY regulations of IKEA.
+    Important aspects of the IWAY standard are implementing environmental improvements during production, fair compensation for employees and regulating the use of wood for IKEA products to make sure they live up to the environmental obligations of IKEA \parencite{iway_standard_nd}.
+    Since not all suppliers may abide by these standards, IKEA’s pool of possible suppliers decreases.
+    This results in more power for the suppliers that do abide by the IWAY standards since IKEA might not be able to find a good replacement.
+    However, the scale of IKEA dissolves any real power of the suppliers.
+    Because of IKEA’s large scale, the suppliers are dependent on IKEA.
+    It is more than realistic to assume that IKEA is one of the main consumers of those suppliers.
+    This means that they cannot simply leave IKEA, which will result in a low power of suppliers.
+
+    \subsection*{Power of Customers}
+    IKEA has 12 stores throughout the Netherlands \parencite{ikea_stores_nd}.
+    These 12 stores together generated a turnover of 1.24 billion euros in 2021 \parencite{ikea_sales_figures_nd}.
+    In 2021, all these stores, except Delft, welcomed 21.3 million paying customers \parencite{ikea_customers_nd}.
+    The numbers of 2021 are analysed because this was the latest year in which IKEA published the number of customers they welcomed.
+    Using these numbers, one can conclude that the average ticket price was around €58.21.
+    This means that each customer contributes far below 0.0001\% to the total turnover of IKEA.
+    Based on these numbers, one can conclude that the customer power of single customers of IKEA is exceptionally low.
+
+    However, most customers do have one common divider, being the fact that they are extremely price sensitive.
+    IKEA is known for their low prices, and that is one of the reasons it is attractive to customers, but as soon as another company has the same products for a lower price, a lot of customers might switch.
+    Since most customers are greatly informed through online reviews and price comparisons, this is a real threat to IKEA.
+
+    To conclude, one customer doesn’t have any power when looking at the financial numbers of IKEA.
+    However, because of the large common divider between most of the customers being the low price, this group of customers could change supplier altogether, resulting in a problem for IKEA.
+    Therefore, the power of customers is medium.
+
+    \subsection*{Threat of Entrants}
+    Entering the market as a new brand with the goal of competing with IKEA is immensely difficult.
+    First of all, the scale of IKEA is already enormous, with 12 physical stores that run 7 days a week spread across the Netherlands \parencite{ikea_stores_nd}.
+    Due to this scale, IKEA benefits from a lower purchasing price because of the ability to bulk purchase its products from its suppliers and therefore lowers its fixed costs.
+    All those stores also have to be supplied every day to make sure their stock does not run out, which requires a complex distribution plan including routes, tactical placement of warehouses and the availability of enough trucks.
+    Those warehouses not only have to be built or hired, but they also have to be filled with enough inventory to back up all the different stores.
+    To get all this right as a startup would not only be complicated but also require an enormous initial investment that many startups will not be able to achieve.
+    Together with the physical stores, the entrant would also need to set up an online webstore with the associated delivery options and an intuitive interface.
+    This webstore is significant since IKEA made 486 million euros from only online sales in 2024 \parencite{ikea_nl_annual_2024}.
+
+    In short, the threat of entrants into the market of IKEA is low.
+    This is mainly due to the large initial investments and complex organisation of a company of this size.
+
+    \subsection*{Threat of Substitute Products}
+    When looking for a viable substitute for IKEA products, one should look at two factors.
+    The first factor to consider is the relative price performance.
+    Does the price of the product influence the buyer’s decision of the buyer much?
+    In the case of IKEA, this is definitely the case, since their main selling point is the low price \parencite{ikea_culture_nd}.
+    This means that if another product is cheaper, the customer is likely to switch.
+    The willingness to go elsewhere is supported by the second factor, the sense that products are similar.
+    IKEA products do not have a definite differentiation.
+    Most of their products are very similar to other versions of the product.
+    The only small differentiation of the product is the clear DIY booklets that are provided with every construction set.
+    As soon as the DIY booklet of another company is as clear as that of IKEA, customers quickly perceive the products to be the same, resulting in a switch.
+
+    In conclusion, the threat of substitute products is high for IKEA.
+    This threat is mainly constructed by the fact that IKEA products do not differentiate themselves except for the low price they are offered at.
+
+
+
+    % When you need landscape page do this
+    \begin{landscapepage}
+
+        \section{Business Model Canvas}
+        % rotate the canvas to landscape
+
+        \begin{figure}[H]
+            \centering
+            \resizebox{25cm}{!}{%
+            \begin{tabular}{|l|l|lll|l|}
+                \hline
+                \textbf{Key Partners}                                                                                           & \textbf{Key Activities}                                                                                                & \multicolumn{2}{l|}{\textbf{Value Propositions}}                                                                                  & \textbf{Customer Relationships}                                                                            & \textbf{Customer Segments}                                                                               \\
+                \hline
+                \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Suppliers\end{tabular}               & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Product design and development\end{tabular} & \multicolumn{2}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Affordable prices \end{tabular}}   & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Self-serive\end{tabular}        & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Young adults\end{tabular}     \\
+                \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Franchisees\end{tabular}             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Supply chain management\end{tabular}        & \multicolumn{2}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Functional design \end{tabular}}   & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Co-creation\end{tabular}        & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Families\end{tabular}         \\
+                \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Logistic providers\end{tabular}      & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Retail operations\end{tabular}              & \multicolumn{2}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Wide product range \end{tabular}}  & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Customer support\end{tabular}   & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Starters\end{tabular}         \\
+                \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Technology partners\end{tabular}     & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Marketing and advertising\end{tabular}      & \multicolumn{2}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Shopping experience \end{tabular}} & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Loyalty programs\end{tabular}   & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Homeowners\end{tabular}       \\
+                \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Sustainability partners\end{tabular} & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Sustainablility initiative\end{tabular}     & \multicolumn{2}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Sustainability \end{tabular}}      & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Community building\end{tabular} & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Renters\end{tabular}          \\
+                &                                                                                                                        & \multicolumn{2}{l|}{}                                                                                                             &                                                                                                            & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}DIY enthusiasts\end{tabular}  \\
+                \cline{2-2}\cline{5-5}
+                & \textbf{Key Resources}                                                                                                 & \multicolumn{2}{l|}{}                                                                                                             & \textbf{Channels}                                                                                          &                                                                                                          \\
+                \cline{2-2}\cline{5-5}
+                & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Brand reputation\end{tabular}               & \multicolumn{2}{l|}{}                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Physical store\end{tabular}     &                                                                                                          \\
+                & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Intellectual property\end{tabular}          & \multicolumn{2}{l|}{}                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Online store\end{tabular}       &                                                                                                          \\
+                & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Supply chain\end{tabular}                   & \multicolumn{2}{l|}{}                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Mobile app \end{tabular}        &                                                                                                          \\
+                &                                                                                                                        & \multicolumn{2}{l|}{}                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Catalog \end{tabular}           &                                                                                                          \\
+                &                                                                                                                        & \multicolumn{2}{l|}{}                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Social media\end{tabular}       &                                                                                                          \\
+                &                                                                                                                        & \multicolumn{2}{l|}{}                                                                                                             &                                                                                                            &                                                                                                          \\
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Cost Structure}}                                                                                                  & \multicolumn{3}{l|}{\textbf{Revenue Streams}}                                                                                                                                                                                                                                                                                                                                                                                                       \\
+                \hline
+                \multicolumn{3}{|l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Cost of goods sold\end{tabular}}               & \multicolumn{3}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Product sales \end{tabular}}                                                                                                                                                                                                                                                                                                                         \\
+                \multicolumn{3}{|l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Logisitcs and ditribution\end{tabular}}        & \multicolumn{3}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Food and beverage sales \end{tabular}}                                                                                                                                                                                                                                                                                                               \\
+                \multicolumn{3}{|l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}~Retail operations\end{tabular}}               & \multicolumn{3}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Service sales \end{tabular}}                                                                                                                                                                                                                                                                                                                         \\
+                \multicolumn{3}{|l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Marketing and advertising\end{tabular}}        & \multicolumn{3}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Franchise sales \end{tabular}}                                                                                                                                                                                                                                                                                                                       \\
+                \multicolumn{3}{|l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Employee salaries and benefits\end{tabular}}   & \multicolumn{3}{l|}{\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l@{}}Rental income \end{tabular}}                                                                                                                                                                                                                                                                                                                         \\
+                \hline
+            \end{tabular}
+            }
+            \caption{Business Model Canvas template.}
+            \label{fig:business_model_canvas_template}
+        \end{figure}
+
+    \end{landscapepage}
+
+    The key partners of IKEA are quite straightforward; the suppliers of the materials used for creating their BILLY bookcase or POÄNG armchair are a necessity.
+    They make up around 65\% of their operating costs \parencite{ikea_nl_annual_2022}.
+    Furthermore, IKEA has a franchise structure; \textit{almost} every Dutch store is a franchise.
+
+    IKEA is also invested in being sustainable and improving the environment \parencite{ikea_culture_nd}.
+    It is visible in their partners' activities and values.
+
+    The customer reach is enormous.
+    They are making furniture, utensils, and the like.
+    These products are targeted at all age groups.
+    From students who have to find a new lamp for their new dorm to grandparents who want to gift their grandchildren a new plush.
+    This is all with the mindset that wealth does not matter.
+    Everyone who wants a closet, chair or storage container is welcome to a physical or online store.
+
+    IKEA incorporates a lot of technology into either their products or their customer experience.
+    The website and mobile apps make creating a decorated room or an organised closet very easy.
+    IKEA also has a ‘family’ program \parencite{ikea_family_benefits_nd} that offers members discounts on targeted items and provides other financial benefits.
+
+
+    \section{Information and communication technology}
+
+    \subsection{Explain the role of ICT regarding the strategy and business model}
+    Explain the role of ICT regarding the strategy and business model.
+
+    \subsection*{ERP}
+    Starting with the ERP programmes.
+    These programmes are used to automate basic workflows, such as managing finances, supply chains and inventories \parencite{oracle_erp_nd}.
+    To keep it manageable, only ERP programmes focused on inventory management will be considered.
+    These ERPs track the inventory of each store, automatically order new supplies to prevent some items from being out of stock and analyse whether the sales are going as planned \parencite{erp_inventory_nd}.
+    For large organisations such as IKEA, such an ERP is crucial to get a good overview of all 12 stores, since all these stores rely on the same inventory.
+    When a human has to keep track of a large variety of products, items can be easily overlooked and therefore later be out of stock, which will result in unsatisfied customers.
+    An ERP, however, can easily manage a large inventory, which enables IKEA to sustain one of its value propositions: a wide product range.
+    An ERP also improves the relationship between IKEA and key partners such as the suppliers and logistics providers because these parties are getting the order on time, and no rush is needed.
+    By decreasing the number of humans that are involved in the inventory process, one of the largest recurring costs can be lowered: the wages of employees.
+    However, the disadvantage of an ERP system is the high initial cost.
+    The organisation also has to change to get used to using the ERP, which might cause resistance within the organisation and take time to set up.
+
+    \subsection*{Predictive analytics}
+    In order to support the ERP, the second point will be discussed, namely, predictive analytics.
+    While ERPs manage workflows based on available data, predictive analytics can take all those data points and make predictions for the future.
+    When using such programmes, IKEA can gain an advantage compared to rivals (point one of Porter’s models), since IKEA can predict what customers are prone to buy and therefore make sure to change its inventory in time.
+    Not only do predictive analytics give IKEA an advantage, but they also lower the threat of new entrants.
+    Predictive analytics only work when there are enough data points, from a wide range of categories, to analyse.
+    Since IKEA has so many stores across the Netherlands, a lot of data is saved, and therefore, the predictions will be more accurate.
+    A new entrant does not have a large data set to base their predictions on, which will result in little to no useful predictions, which then gives IKEA an advantage to be quicker with new developments.
+    The problem is that IKEA also has to keep the data up to date.
+    This means that IKEA has to somehow track customers to analyse their buying patterns.
+    To do this, a membership has to be implemented, and it has to be implemented in such a way that customers are willing to become members.
+    For IKEA, this meant giving out free coffee and unlimited return time on all products \parencite{ikea_family_signup_nd}.
+    These free options also come with a cost, which IKEA must be willing to accept to keep having useful predictions.
+
+    \subsection*{E-commerce}
+    The last technology that IKEA is using is e-commerce.
+    E-commerce is a vital part of IKEA, generating over 486 million euros in 2024 alone \parencite{ikea_jaarrekening_2024}.
+    When looking at the customer segments of the BMC, one can derive that a great part of IKEA’s target group is relatively young.
+    This generation was raised with a mobile phone in their hand, and they also prefer to make purchases online.
+    Online purchases are also valued higher since the customer has the feeling there is a better availability of stock and price \parencite{szymanski_2018}.
+    The power of the customer does increase because customers can now compare prices more easily.
+    First, they had to go to a physical store, remember the prices and go to another physical store to compare those prices.
+    When all the prices and stock are available online, this barrier to comparing between stores has vanished.
+    However, since a large customer segment prefers buying online, IKEA has to keep up by creating its own e-commerce to make sure it does not fall behind its rivals.
+
+
+    \section{Sustainability topics}
+
+    \subsection{Materiallity assessment}
+    The internal stakeholders of IKEA are its employees, from both the stores and logistics.
+    The second group of internal stakeholders is the INGKA group (the only shareholder of IKEA) and the top management of IKEA Netherlands B.V.
+    The external stakeholders are the customers, suppliers, external logistics, the Dutch government, and competitors.
+
+    The ESG list first environmental: the CO2 output, the use of eco-friendly materials, recycling and upcycling of old used products \parencite{ikea_sustainable_materials_2026}, waste management, energy usage inside shops and the reduction of packing material.
+
+    The second social: the work environment in production, diversification and inclusion \parencite{ikea_equality_2026}, employee safety, product pricing for customers, and product safety \parencite{ikea_product_safety_2026}.
+
+    The last governance: anti-corruption, ethical restocking, data and privacy security and whistleblower policy.
+
+    Those ESG points can be ranked in terms of how important they are for IKEA; in this case, they will be measured in two point the importance for the organisation (financial and strategic) and the second point importance for the stakeholders.
+
+    The most important few for both points are CO2 output, the use of eco-friendly materials, work environment in the production, product safety, ethnical restocking.
+    The next few are a bit less important: recycling and upcycling, waste management, packaging reduction, employee safety, diversity and inclusion, product price for customers, anti-corruption, data and privacy security.
+    The least important on this list are the energy usage in stores and the whistle-blower policy.
+
+    \subsection{Stakeholder analysis}
+
+    \begin{multicols}{2}
+    IKEA has, since it is an enormous company, a lot of stakeholders (Which are visualised in figure \ref{fig:afbeelding2}).
+    The internal stakeholders are the (more than 140.000) employees, the franchisees and their managers and the top management of the INGKA group.
+
+    Since IKEA is a private company, they do not have stockowners and/or investors, maining that the only shareholder of IKEA is Stichting INGKA Foundation.
+
+    External stakeholders are the customers, the suppliers, and the partners, like UNICEF and WWF.
+    But debatably the second biggest external stakeholder is the planet we live on.
+    IKEA invests a lot of money into renewable energy, phasing out fossil fuels and replanting trees \parencite{ingka_investment_2024}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=12\baselineskip]{images/Afbeelding2}
+        \caption{Stakeholder analysis of IKEA.}
+        \label{fig:afbeelding2}
+    \end{figure}
+
+    \end{multicols}
+
+    \subsection{Materiality matrix}
+    The ESG list first environmental: the CO2 output, the use of ecofriendly materials, recycling and upcycling of old used products, waste management, energy usage inside shops and the reducing of packing material.
+    The second social: the work environment in the production, diversification and inclusion, the safety of employees, the price of products for customers and product safety.
+    The last governance: anti-corruption, ethical restocking, data and privacy security and whistleblower policy.
+    We could add for environmental Plant-based food, and electric vehicle usage.
+    For social anti-discrimination mental health programs.
+    And for government integration off ESG in planning and tactics for the company.
+    The full materiality matrix can be found in figure \ref{fig:afbeelding3}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\linewidth]{images/Afbeelding3}
+        \caption{Materiallity Matrix of IKEA}
+        \label{fig:afbeelding3}
+    \end{figure}
 
-    \section{Quick start — clone and compile}
-    If you just want to get going:
 
-    \begin{enumerate}
-        \item Clone the repo:
-        \begin{verbatim}
-git clone https://github.com/MattterSteege/Universitaire-papers.git
-cd Universitaire-papers
-        \end{verbatim}
 
-        \item Compile locally (recommended):
-        \begin{verbatim}
-./buildLatexDocument.sh # or for a full clean build:
-# OR
-./fullBuild.sh # cleans aux files, rebuilds bibliography, rebuilds doc
-        \end{verbatim}
 
-        \item Or upload the repo to Overleaf (drag-and-drop) and press Compile.
-    \end{enumerate}
 
-    Common compile issues:
-    \begin{itemize}
-        \item \texttt{Package xstring} / \texttt{tcolorbox} missing $\to$ install via TeX Live or MikTeX.
-        \item If font differences appear on different machines, check \texttt{paperSettings.tex} for font/encoding directives.
-    \end{itemize}
 
-% -------------
-% FILE OVERVIEW
-% -------------
 
-
-    \section{File overview}
-    \begin{description}[leftmargin=!,labelwidth=3.5cm]
-        \item[\texttt{main.tex}] This file — the manual and demo.
-        \item[\texttt{paperSettings.tex}] Document-level settings (margins, title behaviors, optional flags).
-        \item[\texttt{standardCommands.tex}] The macro library we document below.
-        \item[\texttt{main.bib}] Bibliography file used by examples.
-        \item[\texttt{buildLatexDocument.sh}] Simple build script to compile the document.
-        \item[\texttt{fullBuild.sh}] Full build script that cleans aux files and
-        \item[\texttt{renewBibliography.sh}] Script to regenerate the bibliography only.
-    \end{description}
-
-% -------------
-% PAPERSETTINGS EXPLAINED
-% -------------
-
-
-    \section{Explaining \texttt{paperSettings.tex}}
-    Open \texttt{paperSettings.tex} in an editor. Typical contents and intent:
-
-    This file centralizes document-level settings so you don't have to hunt through the main document for margin tweaks or package options. Typical sections:
-    \begin{itemize}
-        \item \textbf{Page layout} — automatic title page or table of contents
-        \item \textbf{editor data} — author names, affiliations, etc.
-        \item \textbf{editor version} — toggle editor notes on/off
-    \end{itemize}
-
-    Why separate settings? Because when you move from one paper to another you often want the same macros and same visuals, so keeping them in an settings file makes sure that all your documents stay consistent.
-
-% -------------
-% STANDARD COMMANDS: OVERVIEW
-% -------------
-
-
-    \section{standardCommands.tex — overview and philosophy}
-    This file is a small-but-practical macro library. The design goals:
-    \begin{itemize}
-        \item Reduce repetitive formatting tasks (spacing, simple block quotes).
-        \item Give editors lightweight in-line commentary tools that can be toggled off.
-        \item Offer a compact table helper for quickly making consistent tabular output.
-        \item Provide tiny text utilities to avoid retyping small helpers.
-    \end{itemize}
-
-    Below we explain each macro or group of macros and show usage examples. The examples below are live — compile this document to see real output.
-
-% -----------------------
-% SPACING & LAYOUT UTILITIES
-% -----------------------
-
-
-    \section{Spacing \& layout utilities}
-    These utilities are tiny vertical-space shortcuts:
-    \begin{itemize}
-        \item \verb|\vsmall| — small vertical gap (~0.1 cm)
-        \item \verb|\vmed| — medium vertical gap (~0.3 cm)
-        \item \verb|\vlarge| — larger vertical gap (~0.6 cm)
-    \end{itemize}
-
-    \subsection*{Example}
-    Text above the gap.\vsmall
-
-    This line follows a \verb|\vsmall| gap.
-
-    \vmed
-
-    This one follows a \verb|\vmed| gap.
-
-    \vlarge
-
-    And this follows a \verb|\vlarge| gap.
-
-    \vsmall
-
-    \noindent\textit{Why use these:} consistent vertical rhythm. Instead of sprinkling magic numbers everywhere, use named gaps that can be tuned centrally.
-
-% -----------------------
-% LOREM PLACEHOLDER
-% -----------------------
-
-
-    \section{Text placeholder \& formatting utilities}
-
-    \subsection[\textbackslash lorem]{\textbackslash lorem}
-    Use \verb|\lorem| for draft sections to hold spacing while writing.
-
-    \lorem
-
-    \subsection{\textbackslash uitspraak{<quote>}{<bibkey>}{<page>}}
-    This macro automatically switches between inline short quotes and block long quotes using a word count threshold (short = inline, long = right-aligned block). It expects a BibTeX key so it can print author/year.
-
-    \smallskip
-    \noindent\textbf{Inline example} (short quote):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective reality}{PhysRev.47.777}{47}
-
-    \smallskip
-    \noindent\textbf{Block quote example} (longer quote — we simulate length):
-
-    \uitspraak{Any serious consideration of a physical theory must take into account the distinction between the objective realitywhich is independent of any theory, and the physical concepts with which the theory operates. These concepts are intended to correspond with the objective reality, and by means of these concepts we picture this reality to ourselves.}{PhysRev.47.777}{7}
-
-    \noindent\textit{Notes:}
-    \begin{itemize}
-        \item The macro uses \verb|\StrCount| to decide length; be careful with unusual punctuation that might miscount words.
-        \item It outputs citations using \verb|\citeauthor| and \verb|\citeyear| (so if you see a value like \textbf{PhysRev.47.777}, then try to use the fullBuild script to refresh references).
-    \end{itemize}
-
-    \subsection{\textbackslash prepostparencite[<pre>][<post>]{<bibkey>}}
-    Usage: \verb|\prepostparencite[see][, for more info]{PhysRev.47.777}|
-
-    The macro prints: \verb|(see Author, Year, for more info)| using \texttt{natbib}'s \verb|\parencite| internally, adding optional pre- and post-text around the citation.
-
-    \noindent Example:
-    \prepostparencite[nagemaakt van][]{PhysRev.47.777}
-
-% -----------------------
-% QUESTION COMMAND
-% -----------------------
-
-    \subsection{\textbackslash question{<text>}}
-    Usage: \verb|\question{What is the impact of this design choice?}|
-
-    This produces a centered, italic prompt inside the page width, good for highlighting reflective questions or section prompts.
-
-    \subsection*{Example}
-    \question{What happens to readability when margins are tightened?}
-
-    \noindent You can use these prompts inside methodology sections or to flag points you want to discuss later.
-
-% -----------------------
-% EDITOR TOOLS & COMMENTS
-% -----------------------
-
-    \newpage
-
-
-    \section{Editor tools \& comments}
-    These macros are controlled by a boolean \verb|\boolean{editorsversion}| (defined in \texttt{paperSettings.tex}). When \verb|true|, editor notes show in red; when \verb|false|, they vanish.
-
-    \begin{itemize}
-        \item \verb|\editorsonly{<text>}| — inserts a small red inline editor note.
-        \item \verb|editorsonlyBox| environment — boxed comment for reviewers.
-        \item \verb|\editorsfootnote{<text>}| — red footnote used only in editors mode.
-        \item When editors mode is active the file also runs \verb|\nocite{*}| so all bib entries are visible in review drafts. (required a full build to refresh)
-    \end{itemize}
-
-    \subsection*{Example (simulating editors mode)}
-
-    \par\vspace{0.05in}%
-    {\footnotesize\noindent\textcolor{red!70!black}{\textbf{Editor's note:} This is an inline editor note visible only in editors mode.}}%
-    \par\vspace{0.05in}%
-
-    \par\medskip%
-    \begin{tcolorbox}
-    [%
-        enhanced,
-        breakable,
-        colback=red!5,
-        colframe=red!20!white,
-        boxrule=0pt,
-        borderline north={1pt}{0pt}{red!40!white},
-        sharp corners,
-        before skip=6pt,
-        after skip=6pt,
-        title={\textcolor{red!60!black}{\footnotesize Comment for editors:}},
-        coltitle=red!70!black,
-        fonttitle=\bfseries,
-        top=2pt,
-        bottom=2pt,
-        left=4pt,
-        right=4pt
-    ]%
-        This box is shown to editors only. Use it for long comments that you don't want in the final text. \\\\ \lorem
-    \end{tcolorbox}%
-
-    \noindent\textit{Note:} Toggle \verb|\setboolean{editorsversion}{true}| in \texttt{paperSettings.tex} while drafting, and set to \verb|false| when producing the student/readable version. \textcolor{red!70!black}{\footnote{\textcolor{red!70!black}{Editor's note: Can't forget the footnoot :)}}}%
-
-% -----------------------
-% TEXT PROCESSING UTILITIES
-% -----------------------
-
-
-    \section{Text processing utilities}
-
-    \subsection{\textbackslash spliteveryn{<n>}{<text>}}
-    Splits the input text into lines with a maximum of \verb|n| characters. Useful for creating artificially wrapped blocks in narrow contexts.
-
-    \smallskip
-    \noindent Example (split every 20 chars):\\
-    \spliteveryn{20}{This is an example of splitting text every twenty characters so you can see the behavior.}
-
-    \subsection{\textbackslash IfNonEmpty{<text>}{<action>}}
-    Run \verb|<action>| only when \verb|<text>| is not empty. Useful for optional elements like captions. (mostly meant for internal use in other macros)
-
-% -----------------------
-% SIMPLE TABLE ENVIRONMENT
-% -----------------------
-
-
-    \section{SimpleTable environment}
-    A small helper that wraps \texttt{tabularx} to produce consistent minimal tables. Usage skeleton:
-
-    \begin{verbatim}
-\begin{SimpleTable}[<col spec>]{<caption>}{<label>}
-    \TableHeader{Col A & Col B & Col C}
-    \TableRow{Data 1 & Data 2 & Data 3}
-    \TableNote{This is a footnote for the table.}
-\end{SimpleTable}
-    \end{verbatim}
-
-    Key components:
-    \begin{itemize}
-        \item \verb|<col spec>|: column specification using the following syntax (e.g., \texttt{s\{2\} s\{1\} s\{.5\}} for three columns with relative widths).
-        \item \verb|\TableHeader{\ldots}|: prints the header row in bold with a rule below.
-        \item \verb|\TableSubHeader{\ldots}|: prints a sub-header row with a thinner rule below.
-        \item \verb|\TableRow{\ldots}|: prints a data row with a thin separator below.
-        \item \verb|\TableHighlightRow{\ldots}|: prints a highlighted row for emphasis.
-        \item \verb|\TableNote{\ldots}|: adds a small footnote-like line below the table.
-    \end{itemize}
-
-    Note, that the \ldots means you separate columns with \& as usual in LaTeX tables. There are also a couple of automatic features:
-    \begin{itemize}
-        \item The table width automatically matches the text width.
-        \item The table caption and label are set in the environment arguments.
-        \item Column widths are relative, so you can use decimal values to create flexible layouts.
-        \item Some rows have automatic rules, and/or text formatting (bold, underline, etc.) to ensure consistency.
-    \end{itemize}
-
-    \subsection*{Rendered example}
-    \begin{SimpleTable}[s{1} s{1} s{1}]{Example table showing the SimpleTable environment.}{tab:example}
-        \TableHeader{Metric & Value & Note}
-        \TableRow{Accuracy & 92\% & Sampled}
-        \TableRow{Precision & 88\% & Early stage}
-        \TableNote{This table is produced by the SimpleTable helper.}
-    \end{SimpleTable}
-
-% -----------------------
-% BIBLIOGRAPHY
-% -----------------------
-
-
-    \section{Bibliography — how to use the \texttt{.bib} file}
-    This document uses \texttt{main.bib} in the repo. Keep your BibTeX keys tidy, prefer short descriptive keys like \verb|kelly2023ring|.
-
-    Compile steps if using BibTeX:
-    \begin{enumerate}
-        \item \verb|./fullBuild.sh| (runs pdflatex, biber, pdflatex x2)
-        \item[] Or manually:
-        \item \verb|pdflatex main.tex|
-        \item \verb|biber main|
-        \item \verb|pdflatex main.tex|
-        \item \verb|pdflatex main.tex|
-    \end{enumerate}
-
-    Below is the auto-generated references list using APA style.:
-    \printbibliography
-
-
-% -----------------------
-% TROUBLESHOOTING & TIPS
-% -----------------------
-
-
-    \section{Troubleshooting \& tips}
-    \begin{itemize}
-        \item \textbf{Undefined macros or missing packages:} Install missing packages or ensure you are compiling with an up-to-date TeX distribution.
-        \item \textbf{Editor notes still visible in final PDF:} Check \texttt{paperSettings.tex} for the boolean controlling editor mode.
-        \item \textbf{Citation macros not printing author/year:} Ensure \texttt{natbib} is loaded and the BibTeX process runs.
-        \item \textbf{Tables too wide:} Adjust the column spec or reduce content; the SimpleTable wrapper uses \texttt{tabularx} so you can use X-like specifiers.
-    \end{itemize}
-
-% -----------------------
-% FINAL NOTES
-% -----------------------
-
-
-    \section{Final notes (a small rant)}
-    I wrote these helpers because I wanted the same style across projects — and because it felt faster to reach for a small macro than to remember the obscure package flag I used the last time. If something in \texttt{standardCommands.tex} annoys you, change it. These files are meant to be edited, extended, and — yes — occasionally abused when you're in a hurry.
-
-    \section*{Acknowledgments}
-    Thanks to all the open-source LaTeX package authors whose work makes documents like this possible
-
-    \section*{License}
-    This repository is licensed under the MIT License:
-    \begin{verbatim}
-MIT License
-Copyright (c) 2025 Matt
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-    \end{verbatim}
-
-% ----------------------------
-% REMOVE TILL HERE ONCE COPIED
-% ----------------------------
 
 \end{document}
