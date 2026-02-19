@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="update README.md for opdrach 2">
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Afbeelding3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Add landscape page environment and update bibliography entries">
       <change beforePath="$PROJECT_DIR$/src/core" beforeDir="false" afterPath="$PROJECT_DIR$/src/core" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/paperSettings.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/paperSettings.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/standardCommands.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/standardCommands.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,15 +164,7 @@
       <workItem from="1769799504880" duration="15000" />
       <workItem from="1769881973209" duration="93000" />
       <workItem from="1770825379381" duration="3070000" />
-      <workItem from="1771514540904" duration="9814000" />
-    </task>
-    <task id="LOCAL-00004" summary="Refine table captions and enhance content clarity in main text">
-      <option name="closed" value="true" />
-      <created>1759950474494</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1759950474494</updated>
+      <workItem from="1771514540904" duration="10064000" />
     </task>
     <task id="LOCAL-00005" summary="Add editor notes, enhance figure captions, and implement custom quote command">
       <option name="closed" value="true" />
@@ -567,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770828068137</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Add landscape page environment and update bibliography entries">
+      <option name="closed" value="true" />
+      <created>1771528197234</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1771528197234</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed unnecessary stuff" />
     <MESSAGE value="readded necessary stuff" />
     <MESSAGE value="completed MMI paper" />
     <MESSAGE value="setup of main LaTeX repo" />
@@ -610,7 +600,8 @@
     <MESSAGE value="Add R script for visualizations of mobility data and update workspace configuration" />
     <MESSAGE value="Update main.tex with identified graph issues and adjust workspace configuration" />
     <MESSAGE value="update README.md for opdrach 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md for opdrach 2" />
+    <MESSAGE value="Add landscape page environment and update bibliography entries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add landscape page environment and update bibliography entries" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
