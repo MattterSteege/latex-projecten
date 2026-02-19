@@ -155,7 +155,7 @@
     \textbf{Präganz}: Mensen organiseren visuele informatie op de meest eenvoudige en stabiele manier.
 
 
-    \section{Conceptueel en fysiek ontwerp}
+    \section{Ontwerpprocess}
     Het conceptuele model beschrijft de kennis in een interactief systeem.
 
     Het double diamond model laat zien hoe je van een visie naar een ontwerp komt.
@@ -201,16 +201,15 @@
         \item \textbf{sammenvatten} van alle scenario's
     \end{itemize}
 
-    %TODO: objectmodel
-
     \subsection{Fysiek ontwerp}
     Hier wordt de vraag ``Hoe wordt het systeem gerealiseerd?'' gesteld.
     Het bestaat uit 3 delen, het operationeel ontwerp (interne werking), het representatieve ontwerp (kleuren, vormen), en interactieontwerp (verdelen van functies).
 
     \textbf{skeuomorphic design}: het afleiden van fysieke modellen naar digitale modellen.\\\\
 
-    %TODO: Kijken of dit alles is.
+    \subsection{ontwerpprocess}
 
+    %TODO: S6 Dia 30-56
 
     \section{Ethiek en design}
 
@@ -253,6 +252,7 @@
     \textbf{Utilitarisme}: De morele waarde van een handeling is gebaseerd op de gevolgen ervan, en het doel is om het grootste geluk voor het grootste aantal mensen te bereiken. (Bentham, Epicurus, Mill)\\
     \textbf{Virtue ethics}: De morele waarde van een handeling is gebaseerd op de (kardinale) deugden van de persoon die de handeling uitvoert, zoals moed, rechtvaardigheid, wijsheid, etc. lees ``gulden middenweg'' (socrates, plato, aristoteles)\\
 
+
     \section{Usability}
     Dit bestaat uit een paar onderdelene:
 
@@ -261,7 +261,6 @@
         \item \textbf{Usability}: hoe makkelijk is het voor gebruikers om hun doelen te bereiken met het systeem.
         \item \textbf{Acceptability}: hoe goed past het systeem bij de waarden en normen van de gebruikers en de samenleving.
     \end{itemize}
-
 
     \subsection{Accessibility}
     Dit gaat over het ontwerpen van systemen die toegankelijk zijn voor iedereen, inclusief mensen met een beperking.
@@ -318,7 +317,78 @@
     Enkele voorbeelden van heuristieken zijn:
 
 
+    \section{PACT-analyse}
+    \textbf{PACT} staat voor People, Activities, Contexts en Technologies.
+    Het is een raamwerk dat kan worden gebruikt om de verschillende aspecten van een interactief systeem te analyseren en te ontwerpen.
 
+    \subsection{Mensen (People)}
+    Mensen hebben fysieke verschillen, denk aan kleurenblindheid, bij- en verziendheid, gehoorverlies, bewegingsproblemen met vingers, etc.
+    Ook fysieke en cognitieve verschillen %TODO
 
+    Fitts's Law: De tijd die nodig is om een doel te bereiken is afhankelijk van de afstand tot het doel en de grootte van het doel.
+    \[T = a + b \log_2(\frac{D}{W} + 1)\]
+    Waarbij T de tijd is, D de afstand tot het doel, W de grootte van het doel, en a en b zijn empirisch bepaalde constanten.
+    De formule hoef je niet te weten voor de toets.
+
+    \textbf{mentale modellen}:
+    \begin{itemize}
+        \item \textbf{Designers conceptual mode}: de voorstelling die de ontwerper heeft van hoe het systeem werkt.
+        \item \textbf{System image}: de manier waarop het systeem zich presenteert aan de gebruiker, inclusief de interface, feedback, etc.
+        \item \textbf{User's conceptual model}: de voorstelling die de gebruiker heeft van hoe het systeem werkt, gebaseerd op hun interacties met het systeem en hun mentale modellen van vergelijkbare systemen.
+    \end{itemize}
+
+    Hier is het dus de bedoeling dat je als ontwerper een systeem maakt dat overeenkomt met het mentale model van de gebruiker, zodat ze het systeem gemakkelijk kunnen begrijpen en gebruiken.
+    Je wilt dus dat mensen eigenlijk in één oogopslag kunnen zien hoe het systeem werkt, zonder dat ze er veel over na hoeven te denken. (\textbf{Thinking fast})
+
+    \begin{voorbeeld}{Mentale modellen (contactloos betalen)}
+        \textbf{beschrijf in termen van systeem 1 (‘thinking fast’) wat je voorstelling is}
+        \begin{itemize}
+            \item als je je kaart bij de lezer houdt wordt het bedrag betaald:
+            \item mijn bankrekening krijgt een seintje om het geld naar zijn/haar bankrekening over te schrijven
+        \end{itemize}
+
+        \textbf{Is het mentale model misschien gebaseerd op een ander voorwerp of handeling?}
+        \begin{itemize}
+            \item Hier: op een contante, gepaste betaling: je geeft het bedrag en klaar wanneer schiet dit mentale model tekort of moet het aangepast worden?
+            \item Bij een hoog bedrag, want dan moet pincode ingetypt worden
+            \item wanneer je een bericht krijgt dat de transactie onderbroken is.
+            Uit dit bericht is niet duidelijk waarom dat is.
+            Het suggereert dat ik iets fout doe.
+            \item Wanneer dat geld er niet is op je rekening
+        \end{itemize}
+        In alle drie de situaties is de routine niet afdoende en moeten de verkoper en ik met systeem 2 bedenken wat de volgende handeling is
+    \end{voorbeeld}
+
+    \textbf{Sociale verschillen}: opleiding, werk, identiteit, sociale netwerken, taal, cultuur, etc.
+
+    \subsection{Activiteiten (Activities)}
+    Activiteiten zijn de taken en doelen die gebruikers willen bereiken met het systeem.
+    Het is belangrijk om te begrijpen welke activiteiten gebruikers willen uitvoeren, zodat je een systeem kunt ontwerpen dat hen helpt deze activiteiten efficiënt en effectief uit te voeren.
+
+    \begin{itemize}
+        \item \textbf{Frequentie}: doe je iets eenmaal, enkele keren, of vaak?
+        \item \textbf{Tijdsdruk}: maakt makkelijke dingen moeilijk.
+        \item \textbf{Continu of onderbroken}: kun je verder waar je gebleven was.
+        \item \textbf{Reponstijd}:
+        \begin{itemize}
+            \item 100ms: hand oog coördinatie
+            \item 1s: oorzaak-gevolg, gebruikers kunnen nog steeds een vloeiende interactie hebben.
+            \item >5s: gebruikers zullen waarschijnlijk afgeleid raken en hun aandacht verliezen.
+        \end{itemize}
+        \item \textbf{Alleen of met anderen}:
+        \item \textbf{Complexiteit}: is het lastig om de stappen uit te voeren
+        \item \textbf{Fouten}: fysieke/digitale veiligheid, consequenties/herstel, voorkomen van fouten, etc.
+        \item \textbf{Content}: data-invoer, interactie met beeld
+    \end{itemize}
+
+    %TODO: omgeving en tech uitwerken/checken
+    \subsection{Omgeving (Contexts)}
+    Dit bestaat uit de fysieke omgeving, zoals licht, geluid, temperatuur, etc.
+    Ook de sociale omgeving, zoals of je alleen bent of met anderen, etc.
+    En ook de organisationele omgeving, zoals wetgeving, AVG, regels, etc.
+
+    \subsection{Technologie (Technologies)}
+    Dit bestaat uit alle input- en outputapparaten, zoals toetsenborden, muizen, touchscreens, spraakherkenning, etc.
+    Ook de software, zoals besturingssystemen, applicaties, etc.
 
 \end{document}
