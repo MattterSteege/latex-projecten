@@ -8,3 +8,4 @@ Ik zal elke opdracht met een tag aangeven en hieronder in een lisjt zetten met l
 
 
 * Human factors: [Opdracht 2](https://github.com/MattterSteege/latex-projecten/blob/3e4de5c97e51d32c37e91b2aaea81d6b8187696a/out/main.pdf)
+* Heuritic evaluation [Opdracht 3](https://github.com/MattterSteege/latex-projecten/blob/1d1fe7f863c21ae1e9fc20672ebff14c0cd61c03/out/main.pdf)
