@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor introduction and conclusion sections for clarity and coherence">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor introduction and conclusion sections for improved clarity">
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,14 +193,6 @@
       <workItem from="1769881973209" duration="93000" />
       <workItem from="1770825379381" duration="3070000" />
       <workItem from="1771514540904" duration="10064000" />
-    </task>
-    <task id="LOCAL-00006" summary="Enhance editor comments and structure in main text, add citation command for editors">
-      <option name="closed" value="true" />
-      <created>1760107538416</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1760107538416</updated>
     </task>
     <task id="LOCAL-00007" summary="Enhance editor comments and structure in main text, add citation command for editors">
       <option name="closed" value="true" />
@@ -586,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771583907437</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Refactor introduction and conclusion sections for improved clarity">
+      <option name="closed" value="true" />
+      <created>1771584279412</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1771584279412</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +604,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completed MMI paper" />
     <MESSAGE value="setup of main LaTeX repo" />
     <MESSAGE value="import from first MMI paper to new github repo system" />
     <MESSAGE value="lecture 13-11-2025" />
@@ -629,7 +628,8 @@
     <MESSAGE value="update README.md for opdrach 2" />
     <MESSAGE value="Add landscape page environment and update bibliography entries" />
     <MESSAGE value="Refactor introduction and conclusion sections for clarity and coherence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor introduction and conclusion sections for clarity and coherence" />
+    <MESSAGE value="Refactor introduction and conclusion sections for improved clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor introduction and conclusion sections for improved clarity" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
