@@ -420,4 +420,127 @@ WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden g
         \item \textbf{DISTINCT} wordt gebruikt in een SELECT-query om dubbele rijen uit het resultaat te verwijderen, zodat alleen unieke
         \item \textbf{EXISTS} wordt gebruikt in een WHERE-clausule om te controleren of een subquery resultaten oplevert.
     \end{itemize}
+
+    \section{Normalisatie}
+    Tijdens het normaliseren is het de bedoeling dat je de database opsplitst in meerdere tabellen om: \textbf{1.} redundantie te verminderen, \textbf{2.} lossless te zijn.
+
+    \subsection{Indexen}
+    Indexen zijn datastructuren die worden gebruikt om de snelheid van gegevensopvragingen in een database te verbeteren.
+    Ze werken als een soort inhoudsopgave voor de database, waardoor het sneller is om specifieke records te vinden zonder de hele tabel te hoeven doorzoeken.
+    Indexen kunnen worden gemaakt op één of meer kolommen van een tabel, en ze kunnen verschillende vormen aannemen, zoals B-tree indexen, hash indexen, of bitmap indexen, afhankelijk van het type gegevens en de query's die worden uitgevoerd.
+    Het gebruik van indexen kan de prestaties van zoekopdrachten aanzienlijk verbeteren, vooral bij grote datasets, maar het kan ook extra opslagruimte vereisen en de prestaties van schrijfoperaties (zoals INSERT, UPDATE, DELETE) verminderen, omdat de indexen ook moeten worden bijgewerkt.
+
+    \subsection{Boyce-Codd Normal Form (BCNF)}
+    De \textbf{Boyce-Codd Normal Form (BCNF)} is een strengere vorm van normalisatie dan de derde normaalvorm (3NF).
+    Een relatie is in BCNF als voor elke functionele afhankelijkheid \(X \rightarrow Y\) geldt dat \(X\) een superkey is.
+    Dit betekent dat er geen functionele afhankelijkheden mogen zijn waarbij de determinant \(X\) geen superkey is.
+    BCNF elimineert dus alle anomalieën die kunnen ontstaan door functionele afhankelijkheden waarbij de determinant geen superkey is, waardoor het ontwerp van de database robuuster en efficiënter wordt.
+
+    \begin{voorbeeld}{BCNF voorbeeld}
+        \begin{SimpleTable}[s{}s{}s{}]{}{}
+            \TableHeader{Student & Teacher & Course}
+            \TableRow{Alice & Dr. Smith & Math}
+            \TableRow{Alice & Dr. Jones & History}
+            \TableRow{Bob & Dr. Smith & Math}
+            \TableRow{Bob & Dr. Stoned & History}
+        \end{SimpleTable}
+
+        \vmed
+
+        Hieruit kunnen we opmaken dat de FD's zijn: \\
+        \begin{itemize}
+            \item (Student, Course) $\rightarrow$ Teacher (omdat elke student in een bepaald vak maar één docent heeft)
+            \item (Student, Teacher) $\rightarrow$ Course (omdat elke student bij een bepaalde docent maar één vak volgt)
+            \item Teacher $\rightarrow$ Course (omdat elke docent maar één vak geeft)
+        \end{itemize}
+
+        Hierdoor zijn de candidate keys (Student, Course) en (Student, Teacher), maar Teacher is geen superkey omdat er meerdere docenten zijn die hetzelfde vak geven.
+        Dus deze relatie is niet in BCNF.
+        We kunnen deze relatie decomponeren in twee relaties: \\
+
+        \begin{itemize}
+            \item R1(Teacher, Course) met de FD Teacher $\rightarrow$ Course
+            \item R2(Student, Teacher) met de FD (Student, Teacher) $\rightarrow$ Course
+        \end{itemize}
+
+        Nu zijn beide relaties in BCNF, omdat in R1 Teacher een superkey is en in R2 (Student, Teacher) een superkey is.
+    \end{voorbeeld}
+
+    \newpage
+
+    \definecolor{kindred}{HTML}{C93A21}
+
+    \subsection{Minimal cover calculation}
+    Een minimal cover van een set functionele afhankelijkheden is een equivalentie van die set waarbij alle functionele afhankelijkheden in de minimal cover minimaal zijn, wat betekent dat er geen overbodige functionele afhankelijkheden zijn en dat de rechterkant van elke functionele afhankelijkheid slechts één attribuut bevat.
+    Het berekenen van een minimal cover gaat als volgt:
+
+    \noindent Stel je hebt de volgende set functionele afhankelijkheden:\\
+    \[F = \{A \rightarrow D,B \rightarrow HA, GH \rightarrow AKL, CH \rightarrow BK, G \rightarrow BC\}\]
+    Calculate a minimal cover for \textbf{F}
+
+    \begin{multicols}{2}
+        \item Stap 1 is om de rechterkant van elke functionele afhankelijkheid te splitsen in enkelvoudige attributen:
+
+        \newcolumn
+
+        \begin{itemize}
+            \item A $\rightarrow$ D
+            \item B $\rightarrow$ H
+            \item B $\rightarrow$ A
+            \item GH $\rightarrow$ A
+            \item GH $\rightarrow$ K
+            \item GH $\rightarrow$ L
+            \item CH $\rightarrow$ B
+            \item CH $\rightarrow$ K
+            \item G $\rightarrow$ B
+            \item G $\rightarrow$ C
+        \end{itemize}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        \item Stap 2 is de linkerkant van elke functionele afhankelijkheid minimaliseren door te controleren of er overbodige attributen zijn:
+
+        \newcolumn
+
+        \begin{itemize}
+            \item A $\rightarrow$ D
+            \item B $\rightarrow$ H
+            \item B $\rightarrow$ A
+            \item G\textcolor{kindred}{H} $\rightarrow$ A ($G^+ = GBCHAKLD$, dus G $\rightarrow$ A)
+            \item G\textcolor{kindred}{K} $\rightarrow$ A ($G^+ = GBCHAKLD$, dus G $\rightarrow$ K)
+            \item G\textcolor{kindred}{L} $\rightarrow$ A ($G^+ = GBCHAKLD$, dus G $\rightarrow$ L)
+            \item CH $\rightarrow$ B (Kan niet versimpeld worden, want $C^+ \rightarrow {C}$ en $H^+ \rightarrow {H}$)
+            \item CH $\rightarrow$ K (Kan niet versimpeld worden, want $C^+ \rightarrow {C}$ en $H^+ \rightarrow {H}$)
+            \item G $\rightarrow$ B
+            \item G $\rightarrow$ C
+        \end{itemize}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        \item Stap 3 is om te kijken over er overbodige functionele afhankelijkheden zijn door te controleren of ze kunnen worden afgeleid uit de andere functionele afhankelijkheden:
+
+        \newcolumn
+
+        \begin{itemize}
+            \item A $\rightarrow$ D
+            \item B $\rightarrow$ H
+            \item B $\rightarrow$ A
+            \item \textcolor{kindred}{G $\rightarrow$ A} (kan worden afgeleid uit G $\rightarrow$ B en B $\rightarrow$ A, dus overbodig)
+            \item \textcolor{kindred}{G $\rightarrow$ K} (kan worden afgeleid uit G $\rightarrow$ C en C $\rightarrow$ K, dus overbodig)
+            \item G $\rightarrow$ L (kan \textit{niet meer} worden afgeleid, want G $\rightarrow$ A is al weg)
+            \item CH $\rightarrow$ B
+            \item CH $\rightarrow$ K
+            \item G $\rightarrow$ B
+            \item G $\rightarrow$ C
+        \end{itemize}
+    \end{multicols}
+
+    De minimal cover van F is dus:
+    \[F_{min} = \{A \rightarrow D, B \rightarrow HA, G \rightarrow LBC, CH \rightarrow BK\}\]
+    (opmerking: G $\rightarrow$ LBC is een notatie die betekent dat G $\rightarrow$ L, G $\rightarrow$ B en G $\rightarrow$ C allemaal in de minimal cover zitten)
+
+
+    \newpage
+    %VANAF DIA 42
+
 \end{document}
