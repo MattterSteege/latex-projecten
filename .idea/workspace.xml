@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor conclusion section for improved clarity and update figure width">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
-    </list>
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor materiality matrix section for improved clarity and update figure formatting" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,15 +197,7 @@
       <workItem from="1769881973209" duration="93000" />
       <workItem from="1770825379381" duration="3070000" />
       <workItem from="1771514540904" duration="10064000" />
-      <workItem from="1771586900334" duration="622000" />
-    </task>
-    <task id="LOCAL-00009" summary="Update editor commands and improve content clarity in main text">
-      <option name="closed" value="true" />
-      <created>1760373655281</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1760373655281</updated>
+      <workItem from="1771586900334" duration="1240000" />
     </task>
     <task id="LOCAL-00010" summary="Add text splitting command and new table macros for improved document formatting">
       <option name="closed" value="true" />
@@ -595,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771585362486</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Refactor materiality matrix section for improved clarity and update figure formatting">
+      <option name="closed" value="true" />
+      <created>1771587637079</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1771587637081</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +609,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lecture 13-11-2025" />
     <MESSAGE value="lecture 11-11-2025" />
     <MESSAGE value="update submodule" />
     <MESSAGE value="Revise Functions" />
@@ -638,7 +633,8 @@
     <MESSAGE value="Refactor introduction and conclusion sections for improved clarity" />
     <MESSAGE value="Refactor data gathering section for improved clarity" />
     <MESSAGE value="Refactor conclusion section for improved clarity and update figure width" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor conclusion section for improved clarity and update figure width" />
+    <MESSAGE value="Refactor materiality matrix section for improved clarity and update figure formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor materiality matrix section for improved clarity and update figure formatting" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
