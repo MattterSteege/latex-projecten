@@ -14,6 +14,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Matt/WebstormProjects/latex-projecten" value="33Z1xufiJoLD663G1ohr06ueolI" />
+    </persistenceIdMap>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -24,45 +29,45 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOQViBa87FICms",
-        "number": 1
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOQViBa87FICms&quot;,
+        &quot;number&quot;: 1
       },
-      "lastSeen": 1771583314782
+      &quot;lastSeen&quot;: 1771583314782
     },
     {
-      "id": {
-        "id": "PR_kwDOQViBa87FINTJ",
-        "number": 2
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOQViBa87FINTJ&quot;,
+        &quot;number&quot;: 2
       },
-      "lastSeen": 1771583813437
+      &quot;lastSeen&quot;: 1771583813437
     },
     {
-      "id": {
-        "id": "PR_kwDOQViBa87FISS7",
-        "number": 3
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOQViBa87FISS7&quot;,
+        &quot;number&quot;: 3
       },
-      "lastSeen": 1771584196931
+      &quot;lastSeen&quot;: 1771584196931
     }
   ]
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MattterSteege/latex-projecten.git",
-    "accountId": "07d3ed08-c7e9-481e-9381-47e02e2ed769"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MattterSteege/latex-projecten.git&quot;,
+    &quot;accountId&quot;: &quot;07d3ed08-c7e9-481e-9381-47e02e2ed769&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -76,36 +81,37 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;BibTeX.main bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;Shell Script.Build Latex Document.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Full build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Renew Bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full compile.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.full-compile.sh.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Organisaties-en-ICT-opdracht&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "BibTeX.main bibliography.executor": "Run",
+    "LaTeX.main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\mattt\\AppData\\Roaming\\JetBrains\\WebStorm2024.2\\plugins\\Shell Script\\shellcheck.exe",
+    "Shell Script.Build Latex Document.executor": "Run",
+    "Shell Script.Full build.executor": "Run",
+    "Shell Script.Renew Bibliography.executor": "Run",
+    "Shell Script.full compile.executor": "Run",
+    "Shell Script.full-compile.sh.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "Organisaties-en-ICT-opdracht",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Coding/Webstorm/Projects/LaTeX-Projecten/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\images" />
@@ -121,11 +127,11 @@
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\out" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Full build" />
+  <component name="RunManager" selected="Shell Script.Build Latex Document" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
       </set>
     </attachedChunks>
   </component>
@@ -195,14 +201,7 @@
       <workItem from="1769881973209" duration="93000" />
       <workItem from="1770825379381" duration="3070000" />
       <workItem from="1771514540904" duration="10064000" />
-    </task>
-    <task id="LOCAL-00008" summary="Refactor document settings and improve editor commands for clarity">
-      <option name="closed" value="true" />
-      <created>1760370389357</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1760370389357</updated>
+      <workItem from="1771586900334" duration="622000" />
     </task>
     <task id="LOCAL-00009" summary="Update editor commands and improve content clarity in main text">
       <option name="closed" value="true" />
@@ -588,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771584775729</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Refactor conclusion section for improved clarity and update figure width">
+      <option name="closed" value="true" />
+      <created>1771585362486</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1771585362486</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
