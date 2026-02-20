@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Add normalization section with BCNF and minimal cover calculation to LaTeX document">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor introduction and conclusion sections for clarity and coherence">
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,13 @@
         "number": 2
       },
       "lastSeen": 1771583813437
+    },
+    {
+      "id": {
+        "id": "PR_kwDOQViBa87FISS7",
+        "number": 3
+      },
+      "lastSeen": 1771584196931
     }
   ]
 }]]></component>
@@ -188,14 +193,6 @@
       <workItem from="1769881973209" duration="93000" />
       <workItem from="1770825379381" duration="3070000" />
       <workItem from="1771514540904" duration="10064000" />
-    </task>
-    <task id="LOCAL-00005" summary="Add editor notes, enhance figure captions, and implement custom quote command">
-      <option name="closed" value="true" />
-      <created>1760025066577</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1760025066577</updated>
     </task>
     <task id="LOCAL-00006" summary="Enhance editor comments and structure in main text, add citation command for editors">
       <option name="closed" value="true" />
@@ -581,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771528197234</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Refactor introduction and conclusion sections for clarity and coherence">
+      <option name="closed" value="true" />
+      <created>1771583907437</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1771583907437</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +604,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="readded necessary stuff" />
     <MESSAGE value="completed MMI paper" />
     <MESSAGE value="setup of main LaTeX repo" />
     <MESSAGE value="import from first MMI paper to new github repo system" />
@@ -624,7 +628,8 @@
     <MESSAGE value="Update main.tex with identified graph issues and adjust workspace configuration" />
     <MESSAGE value="update README.md for opdrach 2" />
     <MESSAGE value="Add landscape page environment and update bibliography entries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add landscape page environment and update bibliography entries" />
+    <MESSAGE value="Refactor introduction and conclusion sections for clarity and coherence" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor introduction and conclusion sections for clarity and coherence" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
