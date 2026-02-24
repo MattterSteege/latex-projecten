@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Add landscape page environment and update bibliography entries">
+    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Refactor materiality matrix section for improved clarity and update figure formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core" beforeDir="false" afterPath="$PROJECT_DIR$/src/core" afterDir="false" />
@@ -63,7 +63,7 @@
       <recent name="C:\Users\mattt\Documents\Uni\latex-projecten\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Build Latex Document" />
+  <component name="RunManager" selected="Shell Script.Full build" />
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,6 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1770803810589</updated>
       <workItem from="1770803820067" duration="1038000" />
+      <workItem from="1771922212662" duration="316000" />
+      <workItem from="1771923197314" duration="2032000" />
     </task>
     <task id="LOCAL-00004" summary="update to add line height skip">
       <option name="closed" value="true" />

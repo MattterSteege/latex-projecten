@@ -421,6 +421,7 @@ WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden g
         \item \textbf{EXISTS} wordt gebruikt in een WHERE-clausule om te controleren of een subquery resultaten oplevert.
     \end{itemize}
 
+
     \section{Normalisatie}
     Tijdens het normaliseren is het de bedoeling dat je de database opsplitst in meerdere tabellen om: \textbf{1.} redundantie te verminderen, \textbf{2.} lossless te zijn.
 
@@ -431,6 +432,8 @@ WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden g
     Het gebruik van indexen kan de prestaties van zoekopdrachten aanzienlijk verbeteren, vooral bij grote datasets, maar het kan ook extra opslagruimte vereisen en de prestaties van schrijfoperaties (zoals INSERT, UPDATE, DELETE) verminderen, omdat de indexen ook moeten worden bijgewerkt.
 
     \subsection{Boyce-Codd Normal Form (BCNF)}
+    *Als iets in BCNF is, dan is het ook in 3NF, maar als iets in 3NF is, dan is het niet per se in BCNF.\\\noindent
+
     De \textbf{Boyce-Codd Normal Form (BCNF)} is een strengere vorm van normalisatie dan de derde normaalvorm (3NF).
     Een relatie is in BCNF als voor elke functionele afhankelijkheid \(X \rightarrow Y\) geldt dat \(X\) een superkey is.
     Dit betekent dat er geen functionele afhankelijkheden mogen zijn waarbij de determinant \(X\) geen superkey is.
@@ -542,5 +545,58 @@ WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden g
 
     \newpage
     %VANAF DIA 42
+    % Dependancy preservinguu
+    % 3NF
+
+    \subsection{3NF}
+
+    \subsection{4NF}
+    *Als iets in 4NF is, dan is het ook in BCNF, maar als iets in BCNF is, dan is het niet per se in 4NF!\\\noindent
+
+    De vierde normaalvorm probeert multivalued dependencies te elimineren, wat een situatie is waarin een attribuut afhankelijk is van een andere attribuut, maar niet van de hele sleutel.
+    Een relatie is in 4NF als voor elke multivalued dependency \(X \twoheadrightarrow Y\) geldt dat \(X\) een superkey is.
+    Dit betekent dat er geen multivalued dependencies mogen zijn waarbij de determinant \(X\) geen superkey is, waardoor het ontwerp van de database nog robuuster wordt en verdere anomalieën worden voorkomen.
+
+    \begin{voorbeeld}{4NF voorbeeld}
+
+        \begin{SimpleTable}[s{}s{}s{}]{}{}
+            \TableHeader{Persoon & Huisdier & Auto}
+            \TableRow{Alice & Hond & BMW}
+            \TableRow{Alice & Kat & BMW}
+            \TableRow{Alice & Hond & Audi}
+            \TableRow{Alice & Kat & Audi}
+            \TableRow{Bob & Hond & Audi}
+            \TableRow{Bob & Kat & Audi}
+        \end{SimpleTable}
+
+        \vspace{\baselineskip}
+
+        Als je dit leest, dan kan je denken dat Alice heel rijk is, 4 huisdieren en 4 dure auto's.
+        Maar niks is minder waar, want Alice heeft \textit{maar} 2 huisdieren en 2 auto's.
+        Namelijk, Alice heeft een hond en een kat, en ze heeft een BMW en een Audi.
+        Maar vanwege het cartesisch product van de huisdieren en auto's in de tabel, lijkt het alsof Alice 4 huisdieren en 4 auto's heeft, terwijl ze er maar 2 van elk heeft.
+        Dit is een voorbeeld van een multivalued dependency, waarbij de huisdieren en auto's onafhankelijk van elkaar zijn, maar toch in dezelfde tabel staan, wat leidt tot redundantie en verwarring.
+        De oplossing hiervoor is 4NF:
+
+        \begin{multicols}{2}
+            \begin{SimpleTable}[s{}s{}]{}{}
+                \TableHeader{Persoon & Huisdier}
+                \TableRow{Alice & Hond}
+                \TableRow{Alice & Kat}
+                \TableRow{Bob & Hond}
+                \TableRow{Bob & Kat}
+            \end{SimpleTable}
+
+            \newcolumn
+
+            \begin{SimpleTable}[s{}s{}]{}{}
+                \TableHeader{Persoon & Auto}
+                \TableRow{Alice & BMW}
+                \TableRow{Alice & Audi}
+                \TableRow{Bob & Audi}
+            \end{SimpleTable}
+        \end{multicols}
+
+    \end{voorbeeld}
 
 \end{document}
