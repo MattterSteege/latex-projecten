@@ -34,6 +34,7 @@
 
 \def\listMark           {-} % itemize marker, e.g. '-', '*', '\textbullet', etc.
 % -----------------------------------------
+
 \begin{document}
 
     \onecolumn
@@ -200,6 +201,7 @@
     \end{itemize}
 
     \newpage
+
 
     \section{Organisatie strategiën}
 
@@ -523,6 +525,7 @@
         \end{itemize}
     \end{itemize}
 
+
     \section{Organisatiestructuren}
     Om een goede structuur te behouden in een organisatie kan je een organigram maken, deze geeft de relatie tussen werknemers weer.
     Zo kan je aan geven wie de baas is van wie en waar je staat in een organisatie.
@@ -569,6 +572,106 @@
     In horizontale organisatiestructuren vindt je vaan een \textbf{Full-time integrator} die ervoor zorgt dat er een goede communicatie is tussen verschillende teams, en dat er een goede samenwerking is tussen verschillende teams.
     Deze vind je vaak terug onder de naam van projectmanager, product manager, etc.
 
+
     \section{Verschillende stijlen van organisatiestructuren}
+    %TODO
+
+
+
+    \section{Business process management (BPM)}
+    %TODO:
+
+    \subsection{visualisatie van processen}
+    Je kan activiteiten en processen visualiseren door middel van een BPMN (Business Process Model and Notation) diagram.
+
+    De belangrijkste elementen zijn:
+
+    % new BPMN shapes and colours using TikZ
+    \tikzset{
+        bpmnEvent/.style={circle, draw=black, very thick, fill=orange!20, minimum size=12mm},
+        bpmnTask/.style={rectangle, rounded corners=2mm, draw=black, very thick, fill=blue!10, minimum width=30mm, minimum height=8mm},
+        bpmnGateway/.style={diamond, draw=black, very thick, fill=purple!10, aspect=2, minimum width=10mm, inner sep=1pt},
+        bpmnData/.style={draw=black, very thick, fill=cyan!10, minimum width=26mm, minimum height=8mm},
+        bpmnActor/.style={draw=black, very thick, fill=green!10, minimum width=18mm, minimum height=14mm, rounded corners=1mm}
+    }
+
+    \begin{multicols}{2}
+        Activiteiten: Dit zijn de taken die moeten worden uitgevoerd om een proces te voltooien.
+        Voorbeelden zijn: "Bestelling plaatsen", "Betaling verwerken", "Product verzenden", etc.
+        \newcolumn
+
+        \begin{tikzpicture}[baseline=(activity.base)]
+                \node[bpmnTask] (activity) {Activiteit};
+        \end{tikzpicture}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        Gebeurtenissen: Dit zijn de triggers die een proces starten, onderbreken of beëindigen.
+        Voorbeelden zijn: "Bestelling ontvangen", "Betaling succesvol", "Product geleverd", etc.
+
+        \newcolumn
+
+        \begin{tikzpicture}[baseline=(evt.base)]
+                \node[bpmnEvent] (evt) {Gebeurtenis};
+        \end{tikzpicture}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        Beslissingen: Dit zijn de punten in het proces waar een keuze moet worden gemaakt op basis van bepaalde criteria.
+        Voorbeelden zijn: "Is betaling succesvol?", "Is product op voorraad?", etc.
+
+        \newcolumn
+
+        \begin{tikzpicture}[baseline=(gw.base)]
+                \node[bpmnGateway] (gw) {};
+                \node[font=\small] at (gw) {+};
+        \end{tikzpicture}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        Bedrijfsobjecten (Data): Dit zijn de gegevens of documenten die worden gebruikt of geproduceerd tijdens het proces.
+        Voorbeelden zijn: "Bestelling", "Factuur", "Product", etc.
+
+        \newcolumn
+
+        \begin{tikzpicture}[baseline=(d.base)]
+            % data object rectangle with small folded corner
+            \node[bpmnData] (d) {};
+            \begin{scope}[shift={(d.north east)}, xshift=-6mm, yshift=-2mm]
+                \draw[fill=cyan!15, draw=none] (0,0) -- (-3mm,0) -- (0,-3mm) -- cycle;
+            \end{scope}
+            \node at (d) {Bedrijfsobject};
+        \end{tikzpicture}
+    \end{multicols}
+
+    \begin{multicols}{2}
+        Actoren: Dit zijn de mensen, systemen of organisaties die betrokken zijn bij het uitvoeren van het proces.
+        Voorbeelden zijn: "Klant", "Medewerker", "Leverancier", etc.
+
+        \newcolumn
+
+        \begin{tikzpicture}[baseline=(a.base)]
+                \node[bpmnActor] (a) {};
+                % simple person icon above label
+                \node[circle, draw=black, fill=green!15, minimum size=5mm] at ([yshift=3mm]a.north) {};
+                \node at (a) {Actor};
+        \end{tikzpicture}
+    \end{multicols}
+
+    \begin{voorbeeld}{Voorbeeld BPMN diagram}
+
+        \begin{itemize}
+            \item Het process start als er een aankoop is ontvangen van een gebruiker
+            \item  De eerste is activiteit is het bevestingen van de aankoop
+            \item Vervolgens is het product verscheept
+            \item Daarna is de rekening gestuurd
+            \item De betaling is ontvangen
+            \item De bestelling wordt gearchiveerd en het process is compleet
+        \end{itemize}
+
+            %CREATE TIKZ PICTURE
+
+    \end{voorbeeld}
+
 
 \end{document}
