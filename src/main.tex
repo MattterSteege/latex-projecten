@@ -270,157 +270,6 @@
         Conclusie: de decompositie \( (AC)\; (CBDE)\) is niet verliesvrij volgens de gegeven FD's.\\
     \end{voorbeeld}
 
-    \newpage
-
-
-    \section{SQL}
-
-    %SQL code style
-    \definecolor{dkgreen}{rgb}{0,0.6,0}
-    \definecolor{gray}{rgb}{0.5,0.5,0.5}
-    \definecolor{mauve}{rgb}{0.58,0,0.82}
-    \lstset{language=SQL,
-        basicstyle={\small\ttfamily},
-        belowskip=3mm,
-        breakatwhitespace=true,
-        breaklines=true,
-        classoffset=0,
-        columns=flexible,
-        commentstyle=\color{dkgreen},
-        framexleftmargin=0.25em,
-        frameshape={}{yy}{}{}, %To remove to vertical lines on left, set `frameshape={}{}{}{}`
-        keywordstyle=\color{blue},
-        numbers=none, %If you want line numbers, set `numbers=left`
-        numberstyle=\tiny\color{gray},
-        showstringspaces=false,
-        stringstyle=\color{mauve},
-        tabsize=3,
-        xleftmargin =1em
-    }
-
-    SQL (Structured Query Language) is een gestandaardiseerde programmeertaal die wordt gebruikt voor het beheren en manipuleren van relationele databases.
-    SQL biedt een krachtige en flexibele manier om gegevens op te vragen, in te voegen, bij te werken en te verwijderen, evenals om de structuur van databases te definiëren en te beheren.
-
-    Om SQL uit te leggen gebruik ik deze tabel als voorbeeld:
-
-    \vspace{\baselineskip}
-
-    \noindent\textbf{CREATE TABLE} wordt gebruikt om een nieuwe tabel in de database te maken.
-
-    \begin{lstlisting}[style=SQL]
-CREATE TABLE Books ( -- de naam van de tabel
-    book_id INT PRIMARY KEY, -- een integer kolom die dient als primaire sleutel
-    title VARCHAR(255) NOT NULL, -- string, maximaal 255 tekens, mag niet null zijn
-    author VARCHAR(255) NOT NULL,
-    year INT,
-    genre VARCHAR(100)
-);
-    \end{lstlisting}
-
-    \[ \downarrow \]
-
-    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
-        \TableHeader{book\_id & title & author & year & genre}
-    \end{SimpleTable}
-
-    \vspace{3\baselineskip}
-
-    \noindent\textbf{INSERT INTO} wordt gebruikt om nieuwe rijen (records) toe te voegen aan een tabel.
-    Je moet strings tussen aanhalingstekens zetten, en getallen niet.
-
-    \begin{lstlisting}[style=SQL]
-INSERT INTO Books (book_id, title, author, year, genre) VALUES -- naam en kolommen waarin je wilt invoegen
-(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction'),
-(2, 'To Kill a Mockingbird', 'Harper Lee', 1960, 'Fiction'),
-(3, 'A Brief History of Time', 'Stephen Hawking', 1988, 'Science'),
-(4, 'The Art of Computer Programming', 'Donald Knuth', 1968, 'Computer Science'),
-(5, 'The Lord of the Rings', 'J.R.R. Tolkien', 1954, 'Fantasy');
-    \end{lstlisting}
-
-    \[ \downarrow \]
-
-    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
-        \TableHeader{book\_id & title & author & year & genre}
-        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & Fiction}
-        \TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction}
-        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
-        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
-        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
-    \end{SimpleTable}
-
-    \vspace{3\baselineskip}
-
-    \noindent\textbf{UPDATE} wordt gebruikt om bestaande records in een tabel bij te werken.
-    Je moet een WHERE-clausule gebruiken om aan te geven welke records je wilt bijwerken, anders worden alle records bijgewerkt.
-
-    \begin{lstlisting}[style=SQL]
-UPDATE Books
-SET genre = 'Classic Fiction' -- de nieuwe waarde die je wilt instellen
-WHERE book_id = 1; -- de voorwaarde om te bepalen welke record(s) worden bijgewerkt
-    \end{lstlisting}
-
-    \[ \downarrow \]
-
-    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
-        \TableHeader{book\_id & title & author & year & genre}
-        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & \textbf{Classic Fiction}}
-        \TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction}
-        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
-        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
-        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
-    \end{SimpleTable}
-
-    \vspace{3\baselineskip}
-
-    \noindent\textbf{DELETE} wordt gebruikt om records uit een tabel te verwijderen.
-    Je moet een WHERE-clausule gebruiken om aan te geven welke records je wilt verwijderen, anders worden alle records verwijderd.
-
-    \begin{lstlisting}[style=SQL]
-DELETE FROM Books
-WHERE book_id = 2; -- de voorwaarde om te bepalen welke record(s) worden verwijderd
-    \end{lstlisting}
-
-    \[ \downarrow \]
-
-    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
-        \TableHeader{book\_id & title & author & year & genre}
-        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & Classic Fiction}
-        %\TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction} % Deze rij is verwijderd
-        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
-        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
-        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
-    \end{SimpleTable}
-
-    \vspace{3\baselineskip}
-
-    \noindent\textbf{SELECT} wordt gebruikt om gegevens op te vragen uit een tabel.
-    Je kunt specifieke kolommen selecteren, alle kolommen selecteren, en je kunt ook voorwaarden gebruiken om te filteren welke rijen worden geretourneerd.
-    \begin{lstlisting}[style=SQL]
-SELECT title, author
-FROM Books
-WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden geselecteerd
-    \end{lstlisting}
-
-    \[ \downarrow \]
-
-    \begin{SimpleTable}[s{}s{}]{}{}
-        \TableHeader{title & author}
-        \TableRow{A Brief History of Time & Stephen Hawking}
-    \end{SimpleTable}
-
-    \vspace{3\baselineskip}
-
-    Andere keywords die je vaak zult tegenkomen in SQL zijn:
-    \begin{itemize}
-        \item \textbf{JOIN} wordt gebruikt om rijen van twee of meer tabellen te combineren op basis van een gerelateerde kolom tussen hen.
-        \item \textbf{GROUP BY} wordt gebruikt in combinatie met aggregatiefuncties (zoals COUNT, SUM, AVG, MAX, MIN) om rijen te groeperen die dezelfde waarden hebben in opgegeven kolommen.
-        \item \textbf{ORDER BY} wordt gebruikt om de resultaten van een query te sorteren op basis van een of meer kolommen, in oplopende (ASC) of
-        \item \textbf{IN} wordt gebruikt in een WHERE-clausule om te controleren of een waarde overeenkomt met een waarde in een lijst van waarden.
-        \item \textbf{LIKE} wordt gebruikt in een WHERE-clausule om te zoeken naar een opgegeven patroon in een kolom.
-        \item \textbf{DISTINCT} wordt gebruikt in een SELECT-query om dubbele rijen uit het resultaat te verwijderen, zodat alleen unieke
-        \item \textbf{EXISTS} wordt gebruikt in een WHERE-clausule om te controleren of een subquery resultaten oplevert.
-    \end{itemize}
-
 
     \section{Normalisatie}
     Tijdens het normaliseren is het de bedoeling dat je de database opsplitst in meerdere tabellen om: \textbf{1.} redundantie te verminderen, \textbf{2.} lossless te zijn.
@@ -598,5 +447,225 @@ WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden g
         \end{multicols}
 
     \end{voorbeeld}
+
+
+    \section{SQL}
+
+    \textbf{SQL} (Structured Query Language) is een gestandaardiseerde programmeertaal die wordt gebruikt voor het beheren en manipuleren van relationele databases.\\
+    \textbf{DQL} means Data Query Language, which is used for querying and retrieving data from a database.\\
+    \textbf{DML} means Data Manipulation Language, which is used for inserting, updating, and deleting data in a database.\\
+    \textbf{DDL} means Data Definition Language, which is used for defining and managing the structure of a database, including creating, altering, and dropping tables and other database objects.\\
+    \textbf{DCL} means Data Control Language, which is used for controlling access to data in a database, including granting and revoking permissions to users and roles.
+
+    \subsection{DDL}
+
+    %SQL code style
+    \definecolor{dkgreen}{rgb}{0,0.6,0}
+    \definecolor{gray}{rgb}{0.5,0.5,0.5}
+    \definecolor{mauve}{rgb}{0.58,0,0.82}
+    \lstset{language=SQL,
+        basicstyle={\small\ttfamily},
+        belowskip=3mm,
+        breakatwhitespace=true,
+        breaklines=true,
+        classoffset=0,
+        columns=flexible,
+        commentstyle=\color{dkgreen},
+        framexleftmargin=0.25em,
+        frameshape={}{yy}{}{}, %To remove to vertical lines on left, set `frameshape={}{}{}{}`
+        keywordstyle=\color{blue},
+        numbers=none, %If you want line numbers, set `numbers=left`
+        numberstyle=\tiny\color{gray},
+        showstringspaces=false,
+        stringstyle=\color{mauve},
+        tabsize=3,
+        xleftmargin =1em
+    }
+
+    SQL (Structured Query Language) is een gestandaardiseerde programmeertaal die wordt gebruikt voor het beheren en manipuleren van relationele databases.
+    SQL biedt een krachtige en flexibele manier om gegevens op te vragen, in te voegen, bij te werken en te verwijderen, evenals om de structuur van databases te definiëren en te beheren.
+
+    Om SQL uit te leggen gebruik ik deze tabel als voorbeeld:
+
+    \vspace{\baselineskip}
+
+    \noindent\textbf{CREATE TABLE} wordt gebruikt om een nieuwe tabel in de database te maken.
+
+    \begin{lstlisting}[style=SQL]
+CREATE TABLE Books ( -- de naam van de tabel
+    book_id INT PRIMARY KEY, -- een integer kolom die dient als primaire sleutel
+    title VARCHAR(255) NOT NULL, -- string, maximaal 255 tekens, mag niet null zijn
+    author VARCHAR(255) NOT NULL,
+    year INT,
+    genre VARCHAR(100)
+);
+    \end{lstlisting}
+
+    \[ \downarrow \]
+
+    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
+        \TableHeader{book\_id & title & author & year & genre}
+    \end{SimpleTable}
+
+    \vspace{3\baselineskip}
+
+    \noindent\textbf{INSERT INTO} wordt gebruikt om nieuwe rijen (records) toe te voegen aan een tabel.
+    Je moet strings tussen aanhalingstekens zetten, en getallen niet.
+
+    \begin{lstlisting}[style=SQL]
+INSERT INTO Books (book_id, title, author, year, genre) VALUES -- naam en kolommen waarin je wilt invoegen
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction'),
+(2, 'To Kill a Mockingbird', 'Harper Lee', 1960, 'Fiction'),
+(3, 'A Brief History of Time', 'Stephen Hawking', 1988, 'Science'),
+(4, 'The Art of Computer Programming', 'Donald Knuth', 1968, 'Computer Science'),
+(5, 'The Lord of the Rings', 'J.R.R. Tolkien', 1954, 'Fantasy');
+    \end{lstlisting}
+
+    \[ \downarrow \]
+
+    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
+        \TableHeader{book\_id & title & author & year & genre}
+        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & Fiction}
+        \TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction}
+        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
+        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
+        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
+    \end{SimpleTable}
+
+    \vspace{3\baselineskip}
+
+    \noindent\textbf{UPDATE} wordt gebruikt om bestaande records in een tabel bij te werken.
+    Je moet een WHERE-clausule gebruiken om aan te geven welke records je wilt bijwerken, anders worden alle records bijgewerkt.
+
+    \begin{lstlisting}[style=SQL]
+UPDATE Books
+SET genre = 'Classic Fiction' -- de nieuwe waarde die je wilt instellen
+WHERE book_id = 1; -- de voorwaarde om te bepalen welke record(s) worden bijgewerkt
+    \end{lstlisting}
+
+    \[ \downarrow \]
+
+    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
+        \TableHeader{book\_id & title & author & year & genre}
+        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & \textbf{Classic Fiction}}
+        \TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction}
+        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
+        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
+        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
+    \end{SimpleTable}
+
+    \vspace{3\baselineskip}
+
+    \noindent\textbf{DELETE} wordt gebruikt om records uit een tabel te verwijderen.
+    Je moet een WHERE-clausule gebruiken om aan te geven welke records je wilt verwijderen, anders worden alle records verwijderd.
+
+    \begin{lstlisting}[style=SQL]
+DELETE FROM Books
+WHERE book_id = 2; -- de voorwaarde om te bepalen welke record(s) worden verwijderd
+    \end{lstlisting}
+
+    \[ \downarrow \]
+
+    \begin{SimpleTable}[s{}s{}s{}s{}s{}]{}{}
+        \TableHeader{book\_id & title & author & year & genre}
+        \TableRow{1 & The Great Gatsby & F. Scott Fitzgerald & 1925 & Classic Fiction}
+        %\TableRow{2 & To Kill a Mockingbird & Harper Lee & 1960 & Fiction} % Deze rij is verwijderd
+        \TableRow{3 & A Brief History of Time & Stephen Hawking & 1988 & Science}
+        \TableRow{4 & The Art of Computer Programming & Donald Knuth & 1968 & Computer Science}
+        \TableRow{5 & The Lord of the Rings & J.R.R. Tolkien & 1954 & Fantasy}
+    \end{SimpleTable}
+
+    \vspace{3\baselineskip}
+
+    \noindent\textbf{SELECT} wordt gebruikt om gegevens op te vragen uit een tabel.
+    Je kunt specifieke kolommen selecteren, alle kolommen selecteren, en je kunt ook voorwaarden gebruiken om te filteren welke rijen worden geretourneerd.
+    \begin{lstlisting}[style=SQL]
+SELECT title, author
+FROM Books
+WHERE genre = 'Science'; -- de voorwaarde om te bepalen welke record(s) worden geselecteerd
+    \end{lstlisting}
+
+    \[ \downarrow \]
+
+    \begin{SimpleTable}[s{}s{}]{}{}
+        \TableHeader{title & author}
+        \TableRow{A Brief History of Time & Stephen Hawking}
+    \end{SimpleTable}
+
+    \vspace{3\baselineskip}
+
+    Andere keywords die je vaak zult tegenkomen in SQL zijn:
+    \begin{itemize}
+        \item \textbf{JOIN} wordt gebruikt om rijen van twee of meer tabellen te combineren op basis van een gerelateerde kolom tussen hen.
+        \item \textbf{GROUP BY} wordt gebruikt in combinatie met aggregatiefuncties (zoals COUNT, SUM, AVG, MAX, MIN) om rijen te groeperen die dezelfde waarden hebben in opgegeven kolommen.
+        \item \textbf{ORDER BY} wordt gebruikt om de resultaten van een query te sorteren op basis van een of meer kolommen, in oplopende (ASC) of
+        \item \textbf{IN} wordt gebruikt in een WHERE-clausule om te controleren of een waarde overeenkomt met een waarde in een lijst van waarden.
+        \item \textbf{LIKE} wordt gebruikt in een WHERE-clausule om te zoeken naar een opgegeven patroon in een kolom.
+        \item \textbf{DISTINCT} wordt gebruikt in een SELECT-query om dubbele rijen uit het resultaat te verwijderen, zodat alleen unieke
+        \item \textbf{EXISTS} wordt gebruikt in een WHERE-clausule om te controleren of een subquery resultaten oplevert.
+    \end{itemize}
+
+    \vspace{\baselineskip}
+
+    \noindent Ook heeft DDL constraints zoals PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, en DEFAULT die worden gebruikt om regels en beperkingen op te leggen aan de gegevens in de database.
+    Deze kan je op keys zetten, zoals
+
+    \begin{lstlisting}[style=SQL]
+CONSTRAINT Book_pk PRIMARY KEY (book_id)
+    \end{lstlisting}
+
+    of op andere kolommen, zoals
+
+    \begin{lstlisting}[style=SQL]
+CONSTRAINT Year_check CHECK (year > 0)
+    \end{lstlisting}
+
+    \subsubsection{Views}
+    zijn virtuele tabellen die worden gedefinieerd door een SQL-query.
+    Ze bevatten geen fysieke gegevens, maar tonen in plaats daarvan de resultaten van de query wanneer ze worden opgevraagd.
+
+    \begin{lstlisting}[style=SQL]
+CREATE VIEW ScienceBooks AS
+SELECT title, author
+FROM Books
+WHERE genre = 'Science';
+    \end{lstlisting}
+
+    Nu kan je de view gebruiken alsof het een echte tabel is:
+    \begin{lstlisting}[style=SQL]
+SELECT * FROM ScienceBooks;
+    \end{lstlisting}
+
+    \subsection{DML (triggers)}
+    zijn speciale soorten opgeslagen procedures die automatisch worden uitgevoerd (of "getriggerd") wanneer bepaalde gebeurtenissen plaatsvinden in de database, zoals het invoegen, bijwerken of verwijderen van records in een tabel.
+    Triggers worden vaak gebruikt om de integriteit van gegevens te handhaven, automatisch berekeningen uit te voeren, of om auditlogs bij te houden van wijzigingen in de database.
+
+    \begin{lstlisting}[style=SQL]
+CREATE TRIGGER UpdateBookCount
+AFTER INSERT ON Books
+FOR EACH ROW
+BEGIN
+    UPDATE BookCounts
+    SET count = count + 1
+    WHERE genre = NEW.genre;
+END;
+    \end{lstlisting}
+
+    \subsection{DCL}
+    DCL (Data Control Language) is een subset van SQL die wordt gebruikt om de toegang tot gegevens in een database te beheren en te controleren.
+    De belangrijkste DCL-commando's zijn GRANT en REVOKE, die worden gebruikt om gebruikersrechten toe te kennen of in te trekken voor specifieke database-objecten zoals tabellen, views, of procedures.
+
+    \subsection{SQL Injection}
+    SQL-injectie is een beveiligingsaanval waarbij een aanvaller kwaadaardige SQL-code in een invoerveld van een webapplicatie injecteert, met als doel de database te manipuleren, gegevens te stelen, of zelfs volledige controle over de database te krijgen.
+    Een voorbeeld hiervan is wanneer een webapplicatie een SQL-query uitvoert op basis van gebruikersinvoer zonder deze correct te valideren of te ontsmetten, waardoor een aanvaller bijvoorbeeld een query kan injecteren die alle gebruikersgegevens retourneert of een nieuwe gebruiker met beheerdersrechten kan aanmaken.
+
+    \vspace{\baselineskip}
+
+    \begin{lstlisting}[style=SQL]
+-- Kwetsbare code
+String query = "SELECT * FROM Users WHERE username = '" + userInput + "' AND password = '" + passwordInput + "'";
+    \end{lstlisting}
+
+    In dit voorbeeld kan een aanvaller de `userInput` of `passwordInput` manipuleren om kwaadaardige SQL-code in te voeren, zoals `'; DROP TABLE Users; --`, wat zou resulteren in het verwijderen van de hele `Users`-tabel als de query wordt uitgevoerd.
 
 \end{document}
