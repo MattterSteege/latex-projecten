@@ -189,6 +189,29 @@
     Neem als voorbeeld een het prullenbak icoontje, het geeft gelijk de asociatie van ``weggooien''.
     Hierdoor leren gebruikers snel wat de bedoeling is en hoe het werkt.
 
+    \subsection{UX Ontwerpproces}
+    Je gaat hier in 3 stappen naar een ontwerp toe werken:
+
+    \begin{enumerate}
+        \item Voorstellinge van het werkdnde idee, speciaal de interactie.
+        \item lo-fi ontwerp: schetsen, wireframes, etc. van hoe het eruit zal zien en hoe gebruikers ermee zullen interageren.
+        \item hi-fi ontwerp: een meer gedetailleerd en realistisch ontwerp, met kleuren, typografie, afbeeldingen, etc., en met werkende interactie-elementen.
+        De interactie moet echt zijn, de werking mag je faken.
+    \end{enumerate}
+
+    Je moet ook begrijpen wat de stakeholders willen/verwachten, en hoe je een ontwerp kunt maken dat aansluit bij deze verwachtingen.
+
+    Daarna komt de evaluatie, door middel van experts die heuristische evaluaties doen, of door middel van gebruikers die gebruikerstesten doen, etc.
+    Je kan door verschillende metrieken (denk aan eye-tracking, snelheid, tevredenheid, leertijd, aantal fouten, \ldots) meten hoe goed je ontwerp is, en waar het verbeterd kan worden
+
+    \subsection{Persona's en scenario's}
+    Dit zijn fictieve personages die representatief zijn voor de doelgroep van een product of dienst.
+    Ze worden gebruikt om de behoeften, doelen, gedragingen en pijnpunten van de gebruikers te begrijpen en te communiceren.
+    Persona's helpen ontwerpers om zich in te leven in de gebruikers en om ontwerpen te maken die aansluiten bij hun behoeften en verwachtingen.
+
+    Deze persona's kan je vervolgens gebruiken om scenario's te maken, dit zijn verhalen die beschrijven hoe een persona een bepaald doel bereikt met behulp van het product of de dienst.
+    Zo kan je beter begrijpen hoe gebruikers met het product zullen interageren, en waar ze mogelijk problemen kunnen tegenkomen.
+
     \subsection{conceptueel ontwerp}
     Dit beantwoord de vraag: ``Wat is dit voor systeem''.
     Het produceert een blauwdruk voor wat het systeem moet doen, wat het heeft en welke elementen er zijn.
@@ -205,11 +228,7 @@
     Hier wordt de vraag ``Hoe wordt het systeem gerealiseerd?'' gesteld.
     Het bestaat uit 3 delen, het operationeel ontwerp (interne werking), het representatieve ontwerp (kleuren, vormen), en interactieontwerp (verdelen van functies).
 
-    \textbf{skeuomorphic design}: het afleiden van fysieke modellen naar digitale modellen.\\\\
-
-    \subsection{ontwerpprocess}
-
-    %TODO: S6 Dia 30-56
+    \textbf{skeuomorphic design}: het afleiden van fysieke modellen naar digitale modellen.
 
 
     \section{Ethiek en design}
@@ -226,10 +245,6 @@
         \item Er kan een hoop mis gaan met ontwerp van techologie, met consequenties voor stakeholders.
         \item Het is geen natuurverschijnsel maar een menselijk product, dus daar mogen we iets van vinden.
     \end{itemize}
-
-    \begin{Voorbeeld}{Music Mood App}
-        %TODO: Uitwerken
-    \end{Voorbeeld}
 
     \subsection{Value Sensitive Design}
     Dit is een ontwerpmethode van Batya Friedman die vooral in gaat op waardes.
@@ -298,9 +313,8 @@
     Dit gaat over hoe goed een systeem past bij de waarden en normen van de gebruikers en de samenleving.
     Er zijn verschillende factoren die acceptability beïnvloeden, zoals is het politiek acceptabel, gemakkelijk om te gebruiken, sociale en culturele gewoonte (werkt het zoals je denkt dat het werkt), nuttigheid (efficient, en effectief?), economisch (betaalbaar en eerlijk).
 
-    %TODO: AFMAKEN
-
-    \subsection{Usability}
+    Acceptability kan door verschillende methoden worden gemeten, zo kan je aan TAM (Technology Acceptance Model) doen, waarbij je kijkt naar de perceived usefulness en perceived ease of use van een systeem, en hoe deze factoren de acceptatie van het systeem beïnvloeden.
+    Deze is later uitgebreid en dat is het UTAUT (Unified Theory of Acceptance and Use of Technology) model, waarbij je ook kijkt naar social influence, facilitating conditions, etc.
 
     \subsection{System Usability Scale (SUS)} is een meting voor Usabilityonderzoek.
     Het zijn 10 vragen die op de 3 usability-critera berusten: Effectiviteit, Efficientie en tevredenheid.
@@ -338,7 +352,7 @@
 
     \subsection{Mensen (People)}
     Mensen hebben fysieke verschillen, denk aan kleurenblindheid, bij- en verziendheid, gehoorverlies, bewegingsproblemen met vingers, etc.
-    Ook fysieke en cognitieve verschillen %TODO
+    Ook fysieke en cognitieve verschillen zoals leeftijd, geslacht, opleiding, etc.
 
     Fitts's Law: De tijd die nodig is om een doel te bereiken is afhankelijk van de afstand tot het doel en de grootte van het doel.
     \[T = a + b \log_2(\frac{D}{W} + 1)\]
@@ -396,8 +410,6 @@
         \item \textbf{Content}: data-invoer, interactie met beeld
     \end{itemize}
 
-    %TODO: omgeving en tech uitwerken/checken
-
     \subsection{Omgeving (Contexts)}
     Dit bestaat uit de fysieke omgeving, zoals licht, geluid, temperatuur, etc.
     Ook de sociale omgeving, zoals of je alleen bent of met anderen, etc.
@@ -408,8 +420,8 @@
     Ook de software, zoals besturingssystemen, applicaties, etc.
 
 
-    %TODO: bagger samenvatting van cross-channel UX
     \section{Cross-Channel UX}
+
     \subsection{The elements of UX}
     Elke User Experience bestaat uit 5 elementen:
     \begin{itemize}
@@ -436,8 +448,6 @@
     Zo kan je ook een sitemap maken, of een flowchart, om de structuur van de User Experience te visualiseren en te plannen.\\
     A: Home → B1: klik op boeken, B2: klik op contact, B3: klik op over ons → C1: boeken overzicht, C2: boek details, etc.
 
-
-    %CHECK DE DEFINITIES VAN DE LAATSTE 4 DIMENSIES
     \newline
     \noindent\textbf{Ontology}: Wat zijn de concepten en relaties in een bepaald domein, en hoe kunnen deze worden gebruikt om de structuur van een User Experience te ontwerpen?\\
     \textbf{Topology}: Hoe kunnen de verschillende onderdelen van een User Experience worden georganiseerd en verbonden, zodat gebruikers gemakkelijk kunnen navigeren en hun doelen kunnen bereiken?\\
@@ -454,7 +464,35 @@
     Je gaat hier werken aan het uiterlijk van de interface, zoals kleuren, typografie, afbeeldingen, etc., en aan de interactie-elementen, zoals knoppen, formulieren, etc., om ervoor te zorgen dat gebruikers gemakkelijk kunnen navigeren en hun doelen kunnen bereiken.
 
     \subsection{User Journey}
-    %TODO: read book
+    Goede UX draait niet alleen om losse interactiemomenten, maar om de volledige keten van interacties die samen een dienst vormen.
+    Die keten wordt de user journey of customer journey genoemd.
+    Het gaat erom alle contactmomenten – digitaal én fysiek – zo te ontwerpen dat ze samen één consistente, samenhangende ervaring opleveren.
+    Een gebruiker kan bijvoorbeeld via reclame een dienst ontdekken, online oriënteren, via mobiel reserveren, fysiek een locatie bezoeken en achteraf feedback geven.
+    Al die momenten moeten op elkaar aansluiten.
+
+    Touchpoints zijn cruciaal.
+    Kleine ontwerpfouten kunnen grote gevolgen hebben, zoals het voorbeeld van een bestelknop die niet werkte bij bedragen onder een bepaald minimum.
+
+    Service design kent verschillende perspectieven.
+    Vanuit sales ligt de nadruk op conversie: van oriënteren naar kopen.
+    Vanuit interaction design ligt de focus op beleving: betrokkenheid, plezier en tevredenheid.
+    Het onderscheid tussen de “sales cycle” en de “experience cycle” benadrukt dat een dienst niet alleen moet verkopen, maar ook een betekenisvolle ervaring moet bieden.
+
+    Ontwerpers gebruiken vaak een \textbf{service blueprint} om de volledige dienst in kaart te brengen.
+    Daarin worden frontstage-elementen (wat de gebruiker ziet en doet) gekoppeld aan backstage-processen (interne systemen en ondersteuning).
+    Net als bij een concert: het publiek ziet de show, maar achter de schermen gebeurt veel om die ervaring mogelijk te maken.
+    Voor een consistente cross-channel ervaring is het essentieel dat systemen gebruikersinteracties registreren en data beschikbaar houden, bijvoorbeeld via cloudopslag.
+
+    Belangrijk is ook dat digitale en fysieke interacties in elkaar overlopen.
+    Bonnetjes, tickets, restaurantinrichting, winkelindeling of luchthavenbeveiliging zijn allemaal touchpoints die bijdragen aan de totale UX. UX stopt dus niet bij het scherm.
+
+    Een user journey bestaat meestal uit drie fasen: vóór, tijdens en na de ervaring.
+
+    \begin{itemize}
+        \item In de ‘voor’-fase draait het om zichtbaarheid, verwachtingen en vindbaarheid (zoals advertenties en zoekresultaten).
+        \item In de ‘tijdens’-fase ligt de focus op een soepele, aangename uitvoering van de taak.
+        \item In de ‘na’-fase reflecteert de gebruiker, deelt ervaringen en geeft feedback, wat weer invloed heeft op de ‘voor’-fase van anderen.
+    \end{itemize}
 
     \subsection{Cross-Channel UX}
     Dit onderdeel gaat over het ontwerpen van een consistente en naadloze User Experience over verschillende kanalen en touchpoints, zoals websites, mobiele apps, fysieke winkels, etc.
@@ -476,6 +514,7 @@
         \item Wayfinding: navigeer naar een bekende locatie
         \item Ex
     \end{itemize}
+
 
     \section{Experience design \& affect}
     \textbf{Experience design} is een beleving (engagement, plezier, esthetiek).
