@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Refactor materiality matrix section for improved clarity and update figure formatting">
-      <change afterPath="$PROJECT_DIR$/src/images/CrossChanelStrengths.png" afterDir="false" />
+    <list default="true" id="ef9cbc0d-c540-40be-8cc4-253a17ac84b3" name="Changes" comment="Add new sections on business process management and organizational structures in main.tex">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core" beforeDir="false" afterPath="$PROJECT_DIR$/src/core" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +27,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -53,6 +54,23 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\Matt\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="e594efe8-7179-4bea-8a0a-8931563a5534" />
+        <option name="reportName" value="latex-projecten/qodana/2026-02-26" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\Matt\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="e594efe8-7179-4bea-8a0a-8931563a5534" reportId="latex-projecten/qodana/2026-02-26" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mattt\Documents\Uni\latex-projecten\.idea" />
@@ -101,6 +119,7 @@
       <workItem from="1770285267749" duration="21000" />
       <workItem from="1770285506485" duration="1217000" />
       <workItem from="1770291069609" duration="1530000" />
+      <workItem from="1772094881568" duration="630000" />
     </task>
     <task id="LOCAL-00004" summary="Enhance main.tex with new sections on conceptual and physical design, and update workspace configuration for full build">
       <option name="closed" value="true" />
