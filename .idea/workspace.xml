@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Refactor materiality matrix section for improved clarity and update figure formatting">
+    <list default="true" id="c2562696-3c60-487e-9c9f-70fa6578f27a" name="Changes" comment="Update bibliography entries and enhance conclusion section for clarity and ethical focus">
+      <change afterPath="$PROJECT_DIR$/src/images/ER.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ES.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/HWE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/IKEA Netherlands B.V..png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Afbeelding1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Afbeelding2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Afbeelding3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,11 +128,11 @@
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\src\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matt\WebstormProjects\latex-projecten\src\images" />
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\images" />
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\core\build" />
       <recent name="D:\Coding\Webstorm\Projects\LaTeX-Projecten\src\core" />
       <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\src\images" />
-      <recent name="D:\Coding\Webstorm\Projects\Universitaire-papers\out" />
     </key>
   </component>
   <component name="RunManager" selected="Shell Script.Build Latex Document" />
@@ -200,14 +210,6 @@
       <workItem from="1770825379381" duration="3070000" />
       <workItem from="1771514540904" duration="10064000" />
       <workItem from="1771586900334" duration="1240000" />
-    </task>
-    <task id="LOCAL-00010" summary="Add text splitting command and new table macros for improved document formatting">
-      <option name="closed" value="true" />
-      <created>1760607756424</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1760607756424</updated>
     </task>
     <task id="LOCAL-00011" summary="Update editor settings and enhance table commands for improved clarity and structure">
       <option name="closed" value="true" />
@@ -593,7 +595,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771587637081</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Update bibliography entries and enhance conclusion section for clarity and ethical focus">
+      <option name="closed" value="true" />
+      <created>1772194865068</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1772194865069</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lecture 11-11-2025" />
     <MESSAGE value="update submodule" />
     <MESSAGE value="Revise Functions" />
     <MESSAGE value="t/m Mens-info 05 - Webnavigatie" />
@@ -636,7 +645,8 @@
     <MESSAGE value="Refactor data gathering section for improved clarity" />
     <MESSAGE value="Refactor conclusion section for improved clarity and update figure width" />
     <MESSAGE value="Refactor materiality matrix section for improved clarity and update figure formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor materiality matrix section for improved clarity and update figure formatting" />
+    <MESSAGE value="Update bibliography entries and enhance conclusion section for clarity and ethical focus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update bibliography entries and enhance conclusion section for clarity and ethical focus" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
