@@ -54,18 +54,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\Matt\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
-        <option name="reportGuid" value="e594efe8-7179-4bea-8a0a-8931563a5534" />
-        <option name="reportName" value="latex-projecten/qodana/2026-02-26" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\Matt\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="e594efe8-7179-4bea-8a0a-8931563a5534" reportId="latex-projecten/qodana/2026-02-26" />
