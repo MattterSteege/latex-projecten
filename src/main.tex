@@ -38,6 +38,7 @@
 \newcommand*{\MyDate}{}
 
 \definecolor{myturquoise}{HTML}{1ABC9C}
+\definecolor{myblack}{HTML}{131313}
 
 
 \setlength{\TPHorizModule}{1mm}
@@ -45,9 +46,24 @@
 
 %Settings for TOC
 \usepackage{tocloft}
+% TOC title styling
+\renewcommand{\cfttoctitlefont}{\Large\bfseries\color{myturquoise}}
+\renewcommand{\cftaftertoctitle}{\vspace{-3mm}}
+% Dot leaders density
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% Fonts for entries and page numbers
 \renewcommand{\cftsecfont}{\bfseries}
 \renewcommand{\cftsecpagefont}{\bfseries}
+\renewcommand{\cftsubsecfont}{}
+\renewcommand{\cftsubsecpagefont}{}
+% Spacing and indentation
+\setlength{\cftbeforesecskip}{3pt}
+\setlength{\cftbeforesubsecskip}{3pt}
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{0pt}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.5em}
+\setcounter{tocdepth}{2}
 
 %Settings for page layout
 \geometry{
@@ -59,7 +75,7 @@
 }
 
 %Settings for section titles
-\titleformat{\section}{\bfseries\Large}{}{0em}{}
+\titleformat{\section}[hang]{\Huge\bfseries}{\thesection\hspace{1mm}\textcolor{gray75}\mid\hspace{1mm}}{0pt}{\Huge\bfseries\vspace{-3mm}}
 \titleformat{\subsection}{\bfseries\large}{}{0em}{}
 \titleformat{\subsubsection}{\bfseries\normalsize}{}{0em}{}
 
@@ -130,7 +146,7 @@
 %black divider between title and toc (top midden)
         \begin{textblock*}{1mm}(75mm,60mm)
             \noindent\bfseries\LARGE
-            \begin{tcolorbox}[colback=black, colframe=black, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
+            \begin{tcolorbox}[colback=myblack, colframe=myblack, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
                 \vspace{203mm}
                 \hspace{0.5mm}
             \end{tcolorbox}
@@ -140,7 +156,8 @@
         \begin{textblock*}{190mm}(10mm,55mm)
             %1mm thick horizontal line
             \noindent\bfseries\LARGE
-            \par\noindent\rule{\textwidth}{1mm}
+%            \par\noindent\rule{\textwidth}{1mm}
+            \textcolor{myblack}{\rule{\textwidth}{1mm}}
         \end{textblock*}
 
 % TOC (top rechts)
@@ -150,14 +167,14 @@
 
 % Authors (links onder)
         \begin{textblock*}{80mm}(10mm,60mm)
-            \noindent\Large\textbf{Authors}\\
+            \noindent\Large\textbf{\textcolor{myturquoise}{Authors}}\\
             \MyAuthor
         \end{textblock*}
 
 % divider (links onder)
         \begin{textblock*}{60mm}(10mm,220mm)
             \noindent\bfseries\LARGE
-            \par\noindent\rule{\textwidth}{1mm}
+            \textcolor{myblack}{\rule{\textwidth}{1mm}}
         \end{textblock*}
 
 % Datum (iets onder authors)
@@ -186,6 +203,17 @@
 
     Duis sit amet dictum leo. Nullam pretium porta imperdiet. Donec lacinia ligula ipsum, vel accumsan mi euismod eleifend. Quisque dui dui, ultricies id laoreet sit amet, posuere vel turpis. Nullam ligula arcu, ultricies sed feugiat id, ultricies nec turpis. Proin sodales augue nec neque porta, eu sollicitudin dolor tincidunt. Suspendisse tempor suscipit lectus at ullamcorper. Aliquam erat volutpat. Praesent facilisis leo quam, quis laoreet velit cursus nec. Nunc dapibus urna urna, nec vehicula leo imperdiet eu. Vestibulum mattis rhoncus massa eget gravida. Integer viverra luctus tortor, eu eleifend est tempor eu. In vitae ante vel nibh posuere ultrices. Quisque commodo lacus eu quam dictum, sed commodo sem suscipit.
 
+    \subsection{Onderzoeksvraag}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis urna quam. Nunc ex tellus, pulvinar nec tortor ut, tincidunt fringilla quam. Donec et libero vitae turpis dictum elementum in sit amet nibh. Cras commodo pretium imperdiet. Suspendisse auctor enim aliquet metus finibus, nec pellentesque justo volutpat. Praesent scelerisque mi et ante luctus mattis sed eget justo. Proin vel ultricies purus. Vivamus velit neque, mollis ut magna in, accumsan commodo turpis. Duis malesuada porttitor nulla, non imperdiet lacus rhoncus non. Curabitur vitae leo eget velit sollicitudin pellentesque. Vestibulum egestas ex vitae eros vestibulum, ac porttitor nisl tincidunt. Quisque eu arcu in mauris blandit vehicula sit amet non lectus. Vivamus massa felis, efficitur ac magna nec, pellentesque dignissim justo. Donec tempus, sapien at dapibus lobortis, dui risus dapibus augue, non mattis nulla felis at odio. Vivamus tincidunt, sem vel imperdiet iaculis, magna augue mattis erat, at facilisis metus nunc in arcu. Praesent varius elit quis pharetra iaculis.
+
+    \subsubsection{Sub-onderzoeksvraag 1}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis urna quam. Nunc ex tellus, pulvinar nec tortor ut, tincidunt fringilla quam. Donec et libero vitae turpis dictum elementum in sit amet nibh. Cras commodo pretium imperdiet. Suspendisse auctor enim aliquet metus finibus, nec pellentesque justo volutpat. Praesent scelerisque mi et ante luctus mattis sed eget justo. Proin vel ultricies purus. Vivamus velit neque, mollis ut magna in, accumsan commodo turpis. Duis malesuada porttitor nulla, non imperdiet lacus rhoncus non. Curabitur vitae leo eget velit sollicitudin pellentesque. Vestibulum egestas ex vitae eros vestibulum, ac porttitor nisl tincidunt. Quisque eu arcu in mauris blandit vehicula sit amet non lectus. Vivamus massa felis, efficitur ac magna nec, pellentesque dignissim justo. Donec tempus, sapien at dapibus lobortis, dui risus dapibus augue, non mattis nulla felis at odio. Vivamus tincidunt, sem vel imperdiet iaculis, magna augue mattis erat, at facilisis metus nunc in arcu. Praesent varius elit quis pharetra iaculis.
+
+    \subsubsection{Sub-onderzoeksvraag 2}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis urna quam. Nunc ex tellus, pulvinar nec tortor ut, tincidunt fringilla quam. Donec et libero vitae turpis dictum elementum in sit amet nibh. Cras commodo pretium imperdiet. Suspendisse auctor enim aliquet metus finibus, nec pellentesque justo volutpat. Praesent scelerisque mi et ante luctus mattis sed eget justo. Proin vel ultricies purus. Vivamus velit neque, mollis ut magna in, accumsan commodo turpis. Duis malesuada porttitor nulla, non imperdiet lacus rhoncus non. Curabitur vitae leo eget velit sollicitudin pellentesque. Vestibulum egestas ex vitae eros vestibulum, ac porttitor nisl tincidunt. Quisque eu arcu in mauris blandit vehicula sit amet non lectus. Vivamus massa felis, efficitur ac magna nec, pellentesque dignissim justo. Donec tempus, sapien at dapibus lobortis, dui risus dapibus augue, non mattis nulla felis at odio. Vivamus tincidunt, sem vel imperdiet iaculis, magna augue mattis erat, at facilisis metus nunc in arcu. Praesent varius elit quis pharetra iaculis.
 
     \section{Methode}
 
@@ -198,5 +226,47 @@
     Sed elementum in magna a eleifend. Quisque ultrices vitae nisl nec tristique. Praesent vel congue diam. Morbi id turpis metus. Pellentesque augue est, semper sed gravida a, molestie ut urna. Vivamus sollicitudin mi non tristique fringilla. Pellentesque ac euismod turpis. Praesent vitae justo quis lorem luctus malesuada.
 
     Duis sit amet dictum leo. Nullam pretium porta imperdiet. Donec lacinia ligula ipsum, vel accumsan mi euismod eleifend. Quisque dui dui, ultricies id laoreet sit amet, posuere vel turpis. Nullam ligula arcu, ultricies sed feugiat id, ultricies nec turpis. Proin sodales augue nec neque porta, eu sollicitudin dolor tincidunt. Suspendisse tempor suscipit lectus at ullamcorper. Aliquam erat volutpat. Praesent facilisis leo quam, quis laoreet velit cursus nec. Nunc dapibus urna urna, nec vehicula leo imperdiet eu. Vestibulum mattis rhoncus massa eget gravida. Integer viverra luctus tortor, eu eleifend est tempor eu. In vitae ante vel nibh posuere ultrices. Quisque commodo lacus eu quam dictum, sed commodo sem suscipit.
+
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \section{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
+    \subsection{test}
 
 \end{document}
