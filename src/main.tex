@@ -13,50 +13,42 @@
 \newcommand\Originalauthor{}
 \let\Originalauthor\author
 \renewcommand*{\author}[1]{%
-  \Originalauthor{#1}%
-  \renewcommand*{\MyAuthor}{#1}%
+    \Originalauthor{#1}%
+    \renewcommand*{\MyAuthor}{#1}%
 }
-
 \newcommand*{\MyAuthor}{}
 
-%Title
 \newcommand\Originaltitle{}
 \let\Originaltitle\title
 \renewcommand*{\title}[1]{%
-  \Originaltitle{#1}%
-  \renewcommand*{\MyTitle}{#1}%
+    \Originaltitle{#1}%
+    \renewcommand*{\MyTitle}{#1}%
 }
 \newcommand*{\MyTitle}{}
 
-%Date
 \newcommand\Originaldate{}
 \let\Originaldate\date
 \renewcommand*{\date}[1]{%
-  \Originaldate{#1}%
-  \renewcommand*{\MyDate}{#1}%
+    \Originaldate{#1}%
+    \renewcommand*{\MyDate}{#1}%
 }
 \newcommand*{\MyDate}{}
 
 \definecolor{myturquoise}{HTML}{1ABC9C}
 \definecolor{myblack}{HTML}{131313}
 
-
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 
-%Settings for TOC
+% TOC settings
 \usepackage{tocloft}
-% TOC title styling
 \renewcommand{\cfttoctitlefont}{\Large\bfseries\color{myturquoise}}
 \renewcommand{\cftaftertoctitle}{\vspace{-3mm}}
-% Dot leaders density
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-% Fonts for entries and page numbers
 \renewcommand{\cftsecfont}{\bfseries}
 \renewcommand{\cftsecpagefont}{\bfseries}
 \renewcommand{\cftsubsecfont}{}
 \renewcommand{\cftsubsecpagefont}{}
-% Spacing and indentation
 \setlength{\cftbeforesecskip}{3pt}
 \setlength{\cftbeforesubsecskip}{3pt}
 \setlength{\cftsecindent}{0pt}
@@ -65,7 +57,63 @@
 \setlength{\cftsubsecnumwidth}{3.5em}
 \setcounter{tocdepth}{2}
 
-%Settings for page layout
+% =====================================================
+% SPLIT TOC FIX: use \@input instead of \@starttoc
+% so the .toc file can be read multiple times
+% =====================================================
+\makeatletter
+\newcount\TOClinecount
+
+\newcommand{\partialtableofcontents}[1]{%
+    \begingroup
+    \TOClinecount=0
+    \let\origcontentsline\contentsline
+    \def\contentsline##1##2##3##4{%
+        \advance\TOClinecount by 1
+        \ifnum\TOClinecount>#1\relax
+        \expandafter\@gobblefour
+        \else
+            \origcontentsline{##1}{##2}{##3}{##4}%
+        \fi
+    }%
+    \@input{\jobname.toc}%
+    \endgroup
+}
+
+\newcommand{\remainingtableofcontents}[1]{%
+    \begingroup
+    \TOClinecount=0
+    \let\origcontentsline\contentsline
+    \def\contentsline##1##2##3##4{%
+        \advance\TOClinecount by 1
+        \ifnum\TOClinecount>#1\relax
+        \origcontentsline{##1}{##2}{##3}{##4}%
+        \fi
+    }%
+    \@starttoc{toc}%
+    \endgroup
+}
+
+\newcommand{\TOCmoreThan}[1]{%
+    \begingroup
+    \TOClinecount=0%
+    \let\origcontentsline\contentsline
+    \def\contentsline##1##2##3##4{%
+        \advance\TOClinecount by 1\relax
+    }%
+    \@input{\jobname.toc}%
+    \ifnum\TOClinecount>#1\relax
+        \endgroup
+        \null\newpage
+    \else
+        \endgroup
+    \fi
+}
+
+\makeatother
+% =====================================================
+
+% Page layout
 \geometry{
     a4paper,
     left=20mm,
@@ -74,17 +122,17 @@
     bottom=20mm,
 }
 
-%Settings for section titles
+% Section titles
 \titleformat{\section}[hang]{\Huge\bfseries}{\thesection\hspace{1mm}\textcolor{gray75}\mid\hspace{1mm}}{0pt}{\Huge\bfseries\vspace{-3mm}}
 \titleformat{\subsection}{\bfseries\large}{}{0em}{}
 \titleformat{\subsubsection}{\bfseries\normalsize}{}{0em}{}
 
-%Settings for headers and footers
+% Headers and footers
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
-%Settings for hyperlinks
+% Hyperlinks
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -95,22 +143,21 @@
     pdfcreator={LaTeX}
 }
 
-%Settings for figures and tables
+% Figures and tables
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{subcaption}
 
-%bibliography settings
+% Bibliography
 \usepackage[backend=biber,style=apa]{biblatex}
 \DeclareLanguageMapping{dutch}{dutch-apa}
 \DefineBibliographyStrings{dutch}{andothers = {et al.}}
 \addbibresource{main.bib}
 \setlength\bibitemsep{0.25em}
 
-% == Document content ==
-
+% == Document ==
 \title{Investigating the organisation strategy, business model, ict and sustainability topics of IKEA}
 \date{\today}
 \author{
@@ -123,7 +170,6 @@
     \begin{titlepage}
         \thispagestyle{empty}
 
-% Turquoise M linksboven
         \begin{textblock*}{15mm}(10mm,0mm)
         {
             \begin{tcolorbox}[colback=myturquoise, colframe=myturquoise, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
@@ -132,18 +178,15 @@
                 \vspace{5mm}
             \end{tcolorbox}
         }
-
         \end{textblock*}
 
-% Titel (top links)
         \begin{textblock*}{190mm}(0mm,20mm)
-              \begin{minipage}[b][3cm][b]{\linewidth}
+            \begin{minipage}[b][3cm][b]{\linewidth}
                 \centering\bfseries\LARGE
                 \MyTitle
-              \end{minipage}
+            \end{minipage}
         \end{textblock*}
 
-%black divider between title and toc (top midden)
         \begin{textblock*}{1mm}(75mm,60mm)
             \noindent\bfseries\LARGE
             \begin{tcolorbox}[colback=myblack, colframe=myblack, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
@@ -152,38 +195,44 @@
             \end{tcolorbox}
         \end{textblock*}
 
-% black divider between title and authors (links midden)
         \begin{textblock*}{190mm}(10mm,55mm)
-            %1mm thick horizontal line
             \noindent\bfseries\LARGE
-%            \par\noindent\rule{\textwidth}{1mm}
             \textcolor{myblack}{\rule{\textwidth}{1mm}}
         \end{textblock*}
 
-% TOC (top rechts)
-        \begin{textblock*}{120mm}(80mm,54mm)
-            \tableofcontents
+        \begin{textblock*}{120mm}(80mm,60mm)
+            \noindent\Large\textbf{\textcolor{myturquoise}{Contents}}
+            \vspace{1mm}
+            \normalsize
+            \partialtableofcontents{34}
         \end{textblock*}
 
-% Authors (links onder)
         \begin{textblock*}{80mm}(10mm,60mm)
             \noindent\Large\textbf{\textcolor{myturquoise}{Authors}}\\
             \MyAuthor
         \end{textblock*}
 
-% divider (links onder)
         \begin{textblock*}{60mm}(10mm,220mm)
             \noindent\bfseries\LARGE
             \textcolor{myblack}{\rule{\textwidth}{1mm}}
         \end{textblock*}
 
-% Datum (iets onder authors)
         \begin{textblock*}{80mm}(10mm,225mm)
             \MyDate
         \end{textblock*}
 
+        %hide mistakes on first page bottom
+
+        \begin{textblock*}{297mm}(0mm,264mm)
+            \begin{tcolorbox}[colback=white, colframe=white, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
+                \vspace{31mm}
+            \end{tcolorbox}
+        \end{textblock*}
+
     \end{titlepage}
 
+    \TOCmoreThan{34}
+    \remainingtableofcontents{34}
     \null\newpage
 
 
@@ -227,46 +276,34 @@
 
     Duis sit amet dictum leo. Nullam pretium porta imperdiet. Donec lacinia ligula ipsum, vel accumsan mi euismod eleifend. Quisque dui dui, ultricies id laoreet sit amet, posuere vel turpis. Nullam ligula arcu, ultricies sed feugiat id, ultricies nec turpis. Proin sodales augue nec neque porta, eu sollicitudin dolor tincidunt. Suspendisse tempor suscipit lectus at ullamcorper. Aliquam erat volutpat. Praesent facilisis leo quam, quis laoreet velit cursus nec. Nunc dapibus urna urna, nec vehicula leo imperdiet eu. Vestibulum mattis rhoncus massa eget gravida. Integer viverra luctus tortor, eu eleifend est tempor eu. In vitae ante vel nibh posuere ultrices. Quisque commodo lacus eu quam dictum, sed commodo sem suscipit.
 
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \section{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
-    \subsection{test}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+
+
 
 \end{document}
+
