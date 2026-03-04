@@ -1,161 +1,5 @@
-\documentclass[a4paper,12pt]{article}
-
-% == Packages ==
-\usepackage{xcolor}
-\usepackage[absolute,overlay]{textpos}
-\usepackage[most]{tcolorbox}
-\usepackage{hyperref}
-\usepackage{titlesec}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-
-% == Settings ==
-\newcommand\Originalauthor{}
-\let\Originalauthor\author
-\renewcommand*{\author}[1]{%
-    \Originalauthor{#1}%
-    \renewcommand*{\MyAuthor}{#1}%
-}
-\newcommand*{\MyAuthor}{}
-
-\newcommand\Originaltitle{}
-\let\Originaltitle\title
-\renewcommand*{\title}[1]{%
-    \Originaltitle{#1}%
-    \renewcommand*{\MyTitle}{#1}%
-}
-\newcommand*{\MyTitle}{}
-
-\newcommand\Originaldate{}
-\let\Originaldate\date
-\renewcommand*{\date}[1]{%
-    \Originaldate{#1}%
-    \renewcommand*{\MyDate}{#1}%
-}
-\newcommand*{\MyDate}{}
-
-\definecolor{myturquoise}{HTML}{1ABC9C}
-\definecolor{myblack}{HTML}{131313}
-
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{1mm}
-
-% TOC settings
-\usepackage{tocloft}
-\renewcommand{\cfttoctitlefont}{\Large\bfseries\color{myturquoise}}
-\renewcommand{\cftaftertoctitle}{\vspace{-3mm}}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsecpagefont}{\bfseries}
-\renewcommand{\cftsubsecfont}{}
-\renewcommand{\cftsubsecpagefont}{}
-\setlength{\cftbeforesecskip}{3pt}
-\setlength{\cftbeforesubsecskip}{3pt}
-\setlength{\cftsecindent}{0pt}
-\setlength{\cftsubsecindent}{0pt}
-\setlength{\cftsecnumwidth}{2.5em}
-\setlength{\cftsubsecnumwidth}{3.5em}
-\setcounter{tocdepth}{2}
-
-% =====================================================
-% SPLIT TOC FIX: use \@input instead of \@starttoc
-% so the .toc file can be read multiple times
-% =====================================================
-\makeatletter
-\newcount\TOClinecount
-
-\newcommand{\partialtableofcontents}[1]{%
-    \begingroup
-    \TOClinecount=0
-    \let\origcontentsline\contentsline
-    \def\contentsline##1##2##3##4{%
-        \advance\TOClinecount by 1
-        \ifnum\TOClinecount>#1\relax
-        \expandafter\@gobblefour
-        \else
-            \origcontentsline{##1}{##2}{##3}{##4}%
-        \fi
-    }%
-    \@input{\jobname.toc}%
-    \endgroup
-}
-
-\newcommand{\remainingtableofcontents}[1]{%
-    \begingroup
-    \TOClinecount=0
-    \let\origcontentsline\contentsline
-    \def\contentsline##1##2##3##4{%
-        \advance\TOClinecount by 1
-        \ifnum\TOClinecount>#1\relax
-        \origcontentsline{##1}{##2}{##3}{##4}%
-        \fi
-    }%
-    \@starttoc{toc}%
-    \endgroup
-}
-
-\newcommand{\TOCmoreThan}[1]{%
-    \begingroup
-    \TOClinecount=0%
-    \let\origcontentsline\contentsline
-    \def\contentsline##1##2##3##4{%
-        \advance\TOClinecount by 1\relax
-    }%
-    \@input{\jobname.toc}%
-    \ifnum\TOClinecount>#1\relax
-        \endgroup
-        \null\newpage
-    \else
-        \endgroup
-    \fi
-}
-
-\makeatother
-% =====================================================
-
-% Page layout
-\geometry{
-    a4paper,
-    left=20mm,
-    right=20mm,
-    top=20mm,
-    bottom=20mm,
-}
-
-% Section titles
-\titleformat{\section}[hang]{\Huge\bfseries}{\thesection\hspace{1mm}\textcolor{gray75}\mid\hspace{1mm}}{0pt}{\Huge\bfseries\vspace{-3mm}}
-\titleformat{\subsection}{\bfseries\large}{}{0em}{}
-\titleformat{\subsubsection}{\bfseries\normalsize}{}{0em}{}
-
-% Headers and footers
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-
-% Hyperlinks
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={\MyTitle},
-    pdfproducer={LaTeX},
-    pdfcreator={LaTeX}
-}
-
-% Figures and tables
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{caption}
-\usepackage{subcaption}
-
-% Bibliography
-\usepackage[backend=biber,style=apa]{biblatex}
-\DeclareLanguageMapping{dutch}{dutch-apa}
-\DefineBibliographyStrings{dutch}{andothers = {et al.}}
-\addbibresource{main.bib}
-\setlength\bibitemsep{0.25em}
+% Preamble
+\documentclass{core/matttersteege}
 
 % == Document ==
 \title{Investigating the organisation strategy, business model, ict and sustainability topics of IKEA}
@@ -165,75 +9,8 @@
     matttersteege@gmail.com
 }
 
+% Document
 \begin{document}
-
-    \begin{titlepage}
-        \thispagestyle{empty}
-
-        \begin{textblock*}{15mm}(10mm,0mm)
-        {
-            \begin{tcolorbox}[colback=myturquoise, colframe=myturquoise, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
-                \vspace{5mm}
-                \bfseries\LARGE\color{white}\fontfamily{phv}\selectfont \hspace{2.32mm} M
-                \vspace{5mm}
-            \end{tcolorbox}
-        }
-        \end{textblock*}
-
-        \begin{textblock*}{190mm}(0mm,20mm)
-            \begin{minipage}[b][3cm][b]{\linewidth}
-                \centering\bfseries\LARGE
-                \MyTitle
-            \end{minipage}
-        \end{textblock*}
-
-        \begin{textblock*}{1mm}(75mm,60mm)
-            \noindent\bfseries\LARGE
-            \begin{tcolorbox}[colback=myblack, colframe=myblack, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
-                \vspace{203mm}
-                \hspace{0.5mm}
-            \end{tcolorbox}
-        \end{textblock*}
-
-        \begin{textblock*}{190mm}(10mm,55mm)
-            \noindent\bfseries\LARGE
-            \textcolor{myblack}{\rule{\textwidth}{1mm}}
-        \end{textblock*}
-
-        \begin{textblock*}{120mm}(80mm,60mm)
-            \noindent\Large\textbf{\textcolor{myturquoise}{Contents}}
-            \vspace{1mm}
-            \normalsize
-            \partialtableofcontents{34}
-        \end{textblock*}
-
-        \begin{textblock*}{80mm}(10mm,60mm)
-            \noindent\Large\textbf{\textcolor{myturquoise}{Authors}}\\
-            \MyAuthor
-        \end{textblock*}
-
-        \begin{textblock*}{60mm}(10mm,220mm)
-            \noindent\bfseries\LARGE
-            \textcolor{myblack}{\rule{\textwidth}{1mm}}
-        \end{textblock*}
-
-        \begin{textblock*}{80mm}(10mm,225mm)
-            \MyDate
-        \end{textblock*}
-
-        %hide mistakes on first page bottom
-
-        \begin{textblock*}{297mm}(0mm,264mm)
-            \begin{tcolorbox}[colback=white, colframe=white, boxrule=0pt, arc=0pt, left=0mm, right=0mm, top=0mm, bottom=0mm]
-                \vspace{31mm}
-            \end{tcolorbox}
-        \end{textblock*}
-
-    \end{titlepage}
-
-    \TOCmoreThan{34}
-    \remainingtableofcontents{34}
-    \null\newpage
 
 
     %==================
@@ -301,9 +78,21 @@
     \subsection{test2}
     \subsection{test2}
     \section{test2}
+    \section{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \subsection{test2}
+    \section{test2}
     \subsection{test2}
 
-
-
 \end{document}
-
