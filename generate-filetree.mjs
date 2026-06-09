@@ -46,7 +46,7 @@ function buildTree(dir, prefix = "", relPath = "") {
   entries.forEach((entry, i) => {
     const isLast   = i === entries.length - 1;
     const connector = isLast ? "└── " : "├── ";
-    const childPfx  = isLast ? "    " : "│   ";
+    const childPfx  = isLast ? "&nbsp;&nbsp;&nbsp;&nbsp;" : "│&nbsp;&nbsp;&nbsp;";
     const rel       = relPath ? `${relPath}/${entry.name}` : entry.name;
 
     if (entry.isDirectory()) {
@@ -55,7 +55,7 @@ function buildTree(dir, prefix = "", relPath = "") {
     } else {
       const ext = path.extname(entry.name).toLowerCase();
       if (INCLUDE_EXTENSIONS.has(ext)) {
-        const url  = `${BASE_URL}/${rel}`;
+        const url  = `${BASE_URL}/${rel.split("/").map(s => encodeURIComponent(s)).join("/")}`;
         const icon = ext === ".pdf" ? "📕" : "📄";
         lines.push(`${prefix}${connector}${icon} [${entry.name}](${url})`);
       }
@@ -68,15 +68,15 @@ function buildTree(dir, prefix = "", relPath = "") {
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 const treeLines = buildTree(ROOT);
-const treeBlock = treeLines.length ? treeLines.join("\n") : "_No files found._";
+const treeBlock = treeLines.length ? treeLines.join("<br>\n") : "_No files found._";
 
 const section = [
-  "## 📂 Repository Structure",
+  "## 📂 Samenvatting en opdrachten",
+  "Dit zijn alle samenvattingen en opdrachten die ik (met anderen) gemaakt heb voor de vakken die ik volg.",
+  "Geniet er van!",
   "",
   "<!-- FILE_TREE_START -->",
-  "```",
   treeBlock,
-  "```",
   "<!-- FILE_TREE_END -->",
   "",
 ].join("\n");
