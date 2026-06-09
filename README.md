@@ -1,41 +1,42 @@
 # latex-projecten
 
-## 📂 Repository Structure
+## 📂 Samenvatting en opdrachten
+Dit zijn alle samenvattingen en opdrachten die ik (met anderen) gemaakt heb voor de vakken die ik volg.
+Geniet er van!
 
 <!-- FILE_TREE_START -->
-```
-├── 📁 **[INFODB] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFODB] Samenvatting/main.pdf)
-├── 📁 **[INFODS] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFODS] Samenvatting/main.pdf)
-├── 📁 **[INFOGR] Samenvatting**
-│   ├── 📕 [Visuals.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOGR] Samenvatting/Visuals.pdf)
-│   └── 📕 [Wiskunde.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOGR] Samenvatting/Wiskunde.pdf)
-├── 📁 **[INFOIUW] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOIUW] Samenvatting/main.pdf)
-├── 📁 **[INFOIUW] Visualisatie opdracht**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOIUW] Visualisatie opdracht/main.pdf)
-├── 📁 **[INFOLI] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOLI] Samenvatting/main.pdf)
-├── 📁 **[INFOMMI] Paper**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOMMI] Paper/main.pdf)
-├── 📁 **[INFOOICT] Opdracht**
-│   ├── 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOICT] Opdracht/A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics.pdf)
-│   ├── 📕 [A2. Goal modelling.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOICT] Opdracht/A2. Goal modelling.pdf)
-│   ├── 📕 [A3. Modelling Business Processes.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOICT] Opdracht/A3. Modelling Business Processes.pdf)
-│   └── 📕 [A4. Business Intelligence Opportunities.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOICT] Opdracht/A4. Business Intelligence Opportunities.pdf)
-├── 📁 **[INFOOICT] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOICT] Samenvatting/main.pdf)
-├── 📁 **[INFOOIS] Samenvatting**
-│   └── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOOIS] Samenvatting/main.pdf)
-├── 📁 **[INFOWO] Opdracht**
-│   ├── 📕 [OM1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Opdracht/OM1.pdf)
-│   ├── 📕 [OM2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Opdracht/OM2.pdf)
-│   ├── 📕 [OM3.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Opdracht/OM3.pdf)
-│   ├── 📕 [OM4.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Opdracht/OM4.pdf)
-│   └── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Opdracht/OM5.pdf)
-├── 📁 **[INFOWO] Samenvatting**
-│   ├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Samenvatting/onderzoeksmethoden.pdf)
-│   └── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/[INFOWO] Samenvatting/statistiek.pdf)
-```
+├── 📁 **[INFODB] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODB%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFODS] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODS%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOGR] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [Visuals.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Visuals.pdf)<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [Wiskunde.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Wiskunde.pdf)<br>
+├── 📁 **[INFOIUW] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOIUW] Visualisatie opdracht**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Visualisatie%20opdracht/main.pdf)<br>
+├── 📁 **[INFOLI] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOLI%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOMMI] Paper**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMMI%5D%20Paper/main.pdf)<br>
+├── 📁 **[INFOOICT] Opdracht**<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A1.%20Investigating%20the%20Organisation%20Strategy%2C%20Business%20Model%2C%20ICT%20and%20Sustainability%20Topics.pdf)<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [A2. Goal modelling.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A2.%20Goal%20modelling.pdf)<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [A3. Modelling Business Processes.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A3.%20Modelling%20Business%20Processes.pdf)<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [A4. Business Intelligence Opportunities.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A4.%20Business%20Intelligence%20Opportunities.pdf)<br>
+├── 📁 **[INFOOICT] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOOIS] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOIS%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOWO] Opdracht**<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [OM1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM1.pdf)<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [OM2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM2.pdf)<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [OM3.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM3.pdf)<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [OM4.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM4.pdf)<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
+├── 📁 **[INFOWO] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf)<br>
+│&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)<br>
+└── 📄 [README.md](https://github.com/MattterSteege/latex-projecten/blob/master/README.md)
 <!-- FILE_TREE_END -->
