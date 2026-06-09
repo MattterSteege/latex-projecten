@@ -72,11 +72,11 @@ const treeBlock = treeLines.length ? treeLines.join("<br>\n") : "_No files found
 
 const section = [
   "## 📂 Samenvatting en opdrachten",
-  "Dit zijn alle samenvattingen en opdrachten die ik (met anderen) gemaakt heb voor de vakken die ik volg.",
-  "Geniet er van!",
   "",
   "<!-- FILE_TREE_START -->",
+  "```",
   treeBlock,
+  "```",
   "<!-- FILE_TREE_END -->",
   "",
 ].join("\n");
@@ -85,7 +85,7 @@ let content = fs.existsSync(README)
   ? fs.readFileSync(README, "utf8")
   : `# ${path.basename(ROOT)}\n\n`;
 
-const marker = /## 📂 Repository Structure\r?\n\r?\n<!-- FILE_TREE_START -->[\s\S]*?<!-- FILE_TREE_END -->\r?\n?/;
+const marker = /## 📂 Samenvatting en opdrachten\r?\n\r?\n<!-- FILE_TREE_START -->[\s\S]*?<!-- FILE_TREE_END -->\r?\n?/;
 
 content = marker.test(content)
   ? content.replace(marker, section)
