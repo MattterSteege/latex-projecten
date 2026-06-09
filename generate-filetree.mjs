@@ -46,7 +46,7 @@ function buildTree(dir, prefix = "", relPath = "") {
   entries.forEach((entry, i) => {
     const isLast   = i === entries.length - 1;
     const connector = isLast ? "└── " : "├── ";
-    const childPfx  = isLast ? "&nbsp;&nbsp;&nbsp;&nbsp;" : "│&nbsp;&nbsp;&nbsp;";
+    const childPfx  = isLast ? "&nbsp;&nbsp;&nbsp;&nbsp;" : "│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     const rel       = relPath ? `${relPath}/${entry.name}` : entry.name;
 
     if (entry.isDirectory()) {
