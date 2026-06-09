@@ -74,9 +74,7 @@ const section = [
   "## 📂 Samenvatting en opdrachten",
   "",
   "<!-- FILE_TREE_START -->",
-  "```",
   treeBlock,
-  "```",
   "<!-- FILE_TREE_END -->",
   "",
 ].join("\n");
