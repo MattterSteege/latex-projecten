@@ -3,7 +3,6 @@
 ## 📂 Samenvatting en opdrachten
 
 <!-- FILE_TREE_START -->
-```
 ├── 📁 **[INFODB] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODB%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFODS] Samenvatting**<br>
@@ -36,6 +35,6 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
 ├── 📁 **[INFOWO] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)
-```
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)<br>
+└── 📄 [README.md](https://github.com/MattterSteege/latex-projecten/blob/master/README.md)
 <!-- FILE_TREE_END -->
