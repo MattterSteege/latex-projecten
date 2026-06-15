@@ -32,7 +32,8 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM2.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM3.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM3.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM4.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM4.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM7.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM7.pdf)<br>
 ├── 📁 **[INFOWO] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)<br>
