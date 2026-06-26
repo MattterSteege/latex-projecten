@@ -27,13 +27,18 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFOOIS] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOIS%5D%20Samenvatting/main.pdf)<br>
+├── 📁 **[INFOWO] Honours**<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [article.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/article.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [honours.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/honours.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [video_script.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/video_script.pdf)<br>
 ├── 📁 **[INFOWO] Opdracht**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM1.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM2.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM3.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM3.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM4.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM4.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM7.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM7.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM7.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM7.pdf)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM8_Matt.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM8_Matt.pdf)<br>
 ├── 📁 **[INFOWO] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)<br>
