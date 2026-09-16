@@ -12,6 +12,8 @@
 ├── 📁 **[INFOGR] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [Visuals.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Visuals.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [Wiskunde.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Wiskunde.pdf)<br>
+├── 📁 **[INFOHON] 2e jaarsproject**<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [Proposal.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOHON%5D%202e%20jaarsproject/Proposal.pdf)<br>
 ├── 📁 **[INFOIUW] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFOIUW] Visualisatie opdracht**<br>
@@ -20,6 +22,8 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOLI%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFOMMI] Paper**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMMI%5D%20Paper/main.pdf)<br>
+├── 📁 **[INFOMSO] Samenvatting**<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFOOICT] Opdracht**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A1.%20Investigating%20the%20Organisation%20Strategy%2C%20Business%20Model%2C%20ICT%20and%20Sustainability%20Topics.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [A2. Goal modelling.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A2.%20Goal%20modelling.pdf)<br>
