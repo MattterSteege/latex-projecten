@@ -3,62 +3,21 @@
 ## 📂 Samenvatting en opdrachten
 
 <!-- FILE_TREE_START -->
-├── 📁 **[INFODB] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODB%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFODS] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODS%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOFP] Opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [deliverable.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/deliverable.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/main.pdf)<br>
-├── 📁 **[INFOFP] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOGR] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [Visuals.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Visuals.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [Wiskunde.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Wiskunde.pdf)<br>
-├── 📁 **[INFOHON] 2e jaarsproject**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [Proposal.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOHON%5D%202e%20jaarsproject/Proposal.pdf)<br>
-├── 📁 **[INFOIUW] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOIUW] Visualisatie opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Visualisatie%20opdracht/main.pdf)<br>
-├── 📁 **[INFOLI] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOLI%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOMMI] Paper**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMMI%5D%20Paper/main.pdf)<br>
-├── 📁 **[INFOMSO] Opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [Assignment1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment1.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [Assignment2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment2.pdf)<br>
-├── 📁 **[INFOMSO] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOOICT] Opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A1.%20Investigating%20the%20Organisation%20Strategy%2C%20Business%20Model%2C%20ICT%20and%20Sustainability%20Topics.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [A2. Goal modelling.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A2.%20Goal%20modelling.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [A3. Modelling Business Processes.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A3.%20Modelling%20Business%20Processes.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [A4. Business Intelligence Opportunities.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A4.%20Business%20Intelligence%20Opportunities.pdf)<br>
-├── 📁 **[INFOOICT] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOOIS] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOIS%5D%20Samenvatting/main.pdf)<br>
-├── 📁 **[INFOUE] Opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/main.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [opdracht_1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/opdracht_1.pdf)<br>
-├── 📁 **[INFOUE] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/main.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [mjts_template.cls.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/mjts_template.cls.pdf)<br>
-├── 📁 **[INFOWO] Honours**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [article.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/article.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [honours.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/honours.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [video_script.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/video_script.pdf)<br>
-├── 📁 **[INFOWO] Opdracht**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM1.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM1.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM2.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM2.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM3.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM3.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM4.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM4.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM5.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [OM7.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM7.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [OM8_Matt.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM8_Matt.pdf)<br>
-├── 📁 **[INFOWO] Samenvatting**<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [onderzoeksmethoden.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf)<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [statistiek.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf)<br>
-└── 📄 [README.md](https://github.com/MattterSteege/latex-projecten/blob/master/README.md)
+_37 documents across 13 courses_
+
+| Course | 📚 Summaries | 📝 Assignments | 📎 Other |
+|:--|:--|:--|:--|
+| **INFODB** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODB%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | · | · |
+| **INFODS** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODS%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | · | · |
+| **INFOFP** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | 📕 [deliverable](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/deliverable.pdf) <sub>2026-11-06</sub><br>📕 [Assignment](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/main.pdf) <sub>2026-11-06</sub> | · |
+| **INFOGR** | 📕 [Visuals](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Visuals.pdf) <sub>2026-11-06</sub><br>📕 [Wiskunde](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOGR%5D%20Samenvatting/Wiskunde.pdf) <sub>2026-11-06</sub> | · | · |
+| **INFOHON** | · | · | 📕 [2e jaarsproject: Proposal](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOHON%5D%202e%20jaarsproject/Proposal.pdf) <sub>2026-11-06</sub> |
+| **INFOIUW** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | · | 📕 [Visualisatie opdracht](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Visualisatie%20opdracht/main.pdf) <sub>2026-11-06</sub> |
+| **INFOLI** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOLI%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | · | · |
+| **INFOMMI** | · | · | 📕 [Paper](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMMI%5D%20Paper/main.pdf) <sub>2026-11-06</sub> |
+| **INFOMSO** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | 📕 [Assignment1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment1.pdf) <sub>2026-11-06</sub><br>📕 [Assignment2](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment2.pdf) <sub>2026-11-06</sub> | · |
+| **INFOOICT** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A1.%20Investigating%20the%20Organisation%20Strategy%2C%20Business%20Model%2C%20ICT%20and%20Sustainability%20Topics.pdf) <sub>2026-11-06</sub><br>📕 [A2. Goal modelling](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A2.%20Goal%20modelling.pdf) <sub>2026-11-06</sub><br>📕 [A3. Modelling Business Processes](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A3.%20Modelling%20Business%20Processes.pdf) <sub>2026-11-06</sub><br>📕 [A4. Business Intelligence Opportunities](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A4.%20Business%20Intelligence%20Opportunities.pdf) <sub>2026-11-06</sub> | · |
+| **INFOOIS** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOIS%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub> | · | · |
+| **INFOUE** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/main.pdf) <sub>2026-11-06</sub><br>📕 [mjts_template.cls](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/mjts_template.cls.pdf) <sub>2026-11-06</sub> | 📕 [Assignment](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/main.pdf) <sub>2026-11-06</sub><br>📕 [opdracht_1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/opdracht_1.pdf) <sub>2026-11-06</sub> | · |
+| **INFOWO** | 📕 [onderzoeksmethoden](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/onderzoeksmethoden.pdf) <sub>2026-11-06</sub><br>📕 [statistiek](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Samenvatting/statistiek.pdf) <sub>2026-11-06</sub> | 📕 [OM1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM1.pdf) <sub>2026-11-06</sub><br>📕 [OM2](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM2.pdf) <sub>2026-11-06</sub><br>📕 [OM3](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM3.pdf) <sub>2026-11-06</sub><br>📕 [OM4](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM4.pdf) <sub>2026-11-06</sub><br>📕 [OM5](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM5.pdf) <sub>2026-11-06</sub><br>📕 [OM7](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM7.pdf) <sub>2026-11-06</sub><br>📕 [OM8_Matt](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Opdracht/OM8_Matt.pdf) <sub>2026-11-06</sub> | 📕 [Honours: article](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/article.pdf) <sub>2026-11-06</sub><br>📕 [Honours: honours](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/honours.pdf) <sub>2026-11-06</sub><br>📕 [Honours: video_script](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOWO%5D%20Honours/video_script.pdf) <sub>2026-11-06</sub> |
 <!-- FILE_TREE_END -->
