@@ -12,7 +12,7 @@ import { execFileSync } from "child_process";
 
 // ── Config ────────────────────────────────────────────────────────────────────
 
-const SHOW_DATES = true; // last commit date next to each link
+const SHOW_DATES = false; // last commit date next to each link
 
 const INCLUDE_EXTENSIONS = new Set([".pdf", ".md", ".txt", ".docx", ".xlsx", ".csv"]);
 const SKIP_DIRS = new Set([".git", ".github", "node_modules", "__pycache__", ".venv", "venv", "dist", "build"]);
