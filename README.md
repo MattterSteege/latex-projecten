@@ -8,6 +8,7 @@
 ├── 📁 **[INFODS] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFODS%5D%20Samenvatting/main.pdf)<br>
 ├── 📁 **[INFOFP] Opdracht**<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📕 [deliverable.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/deliverable.pdf)<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Opdracht/main.pdf)<br>
 ├── 📁 **[INFOFP] Samenvatting**<br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📕 [main.pdf](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOFP%5D%20Samenvatting/main.pdf)<br>
