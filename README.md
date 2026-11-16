@@ -3,7 +3,7 @@
 ## 📂 Samenvatting en opdrachten
 
 <!-- FILE_TREE_START -->
-_37 documents across 13 courses_
+_38 documents across 13 courses_
 
 | Course | 📚 Summaries | 📝 Assignments | 📎 Other |
 |:--|:--|:--|:--|
@@ -15,7 +15,7 @@ _37 documents across 13 courses_
 | **INFOIUW** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Samenvatting/main.pdf) | · | 📕 [Visualisatie opdracht](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOIUW%5D%20Visualisatie%20opdracht/main.pdf) |
 | **INFOLI** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOLI%5D%20Samenvatting/main.pdf) | · | · |
 | **INFOMMI** | · | · | 📕 [Paper](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMMI%5D%20Paper/main.pdf) |
-| **INFOMSO** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Samenvatting/main.pdf) | 📕 [Assignment1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment1.pdf)<br>📕 [Assignment2](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment2.pdf) | · |
+| **INFOMSO** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Samenvatting/main.pdf) | 📕 [Assignment1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment1.pdf)<br>📕 [Assignment2](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment2.pdf)<br>📕 [Assignment3](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOMSO%5D%20Opdracht/Assignment3.pdf) | · |
 | **INFOOICT** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Samenvatting/main.pdf) | 📕 [A1. Investigating the Organisation Strategy, Business Model, ICT and Sustainability Topics](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A1.%20Investigating%20the%20Organisation%20Strategy%2C%20Business%20Model%2C%20ICT%20and%20Sustainability%20Topics.pdf)<br>📕 [A2. Goal modelling](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A2.%20Goal%20modelling.pdf)<br>📕 [A3. Modelling Business Processes](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A3.%20Modelling%20Business%20Processes.pdf)<br>📕 [A4. Business Intelligence Opportunities](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOICT%5D%20Opdracht/A4.%20Business%20Intelligence%20Opportunities.pdf) | · |
 | **INFOOIS** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOOIS%5D%20Samenvatting/main.pdf) | · | · |
 | **INFOUE** | 📕 [Summary](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/main.pdf)<br>📕 [mjts_template.cls](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Samenvatting/mjts_template.cls.pdf) | 📕 [Assignment](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/main.pdf)<br>📕 [opdracht_1](https://github.com/MattterSteege/latex-projecten/blob/master/%5BINFOUE%5D%20Opdracht/opdracht_1.pdf) | · |
